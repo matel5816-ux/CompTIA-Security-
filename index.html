@@ -174,7 +174,7 @@
             
             <div class="text-center mb-10">
                 <h2 class="text-3xl font-extrabold text-gray-800 mb-4">請選擇測驗模式</h2>
-                <p class="text-gray-600 font-medium">系統即將載入完整題庫。具備標記與跳題功能，提供最真實的考試體驗。<br>測驗過程中可隨時使用 <strong class="text-indigo-600">✨ 中文翻譯及深度解析</strong>，幫助快速掌握盲點。</p>
+                <p class="text-gray-600 font-medium">系統即將載入完整題庫。具備標記與跳題功能，提供最真實的考試體驗。<br>測驗過程中可隨時點擊「✨ 中文翻譯及題目解析」按鈕查看詳細解析。<br>交卷後也可在結果頁面點擊「展開完整詳解」查看每題的中文翻譯和觀念分析。</p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -208,10 +208,6 @@
             </div>
 
             <div class="mt-8 flex flex-col items-center gap-6">
-                <button onclick="openBatchTranslateModal()" class="flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-bold py-3 px-6 rounded-xl shadow-lg transition transform hover:scale-105">
-                    <span class="text-xl">🚀</span> 批量翻譯全部題目 (一鍵內嵌中文)
-                </button>
-
                 <div class="text-center text-xs font-semibold text-gray-400 border-t pt-6 w-full">
                     © Architecture & UI/UX Experience <br>
                     <span class="text-sm text-indigo-500/80 mt-1 inline-block tracking-widest uppercase">Designed by <span class="text-indigo-600 font-black">EnChung</span></span>
@@ -243,7 +239,7 @@
                 <!-- Question Text & In-Quiz AI Button -->
                 <div class="mb-4">
                     <p id="q-text" class="text-lg text-gray-800 leading-relaxed font-semibold mb-4"></p>
-                    <button id="translate-btn" onclick="translateCurrentQuestion()" class="text-sm bg-gradient-to-r from-indigo-50 to-blue-50 hover:from-indigo-100 hover:to-blue-100 text-indigo-700 font-bold py-2 px-4 rounded-lg shadow-sm transition border border-indigo-200 flex items-center gap-2">
+                    <button id="translate-btn" onclick="toggleAnalysis()" class="text-sm bg-gradient-to-r from-indigo-50 to-blue-50 hover:from-indigo-100 hover:to-blue-100 text-indigo-700 font-bold py-2 px-4 rounded-lg shadow-sm transition border border-indigo-200 flex items-center gap-2">
                         <span>✨</span> 中文翻譯及題目解析
                     </button>
                     <!-- Translation & Analysis Output -->
@@ -368,38 +364,6 @@
 
     </main>
 
-    <!-- 批量翻譯工具 Modal -->
-    <div id="batch-translate-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm hidden z-50 transition-opacity overflow-y-auto">
-        <div class="flex items-center justify-center min-h-screen px-4 py-6">
-            <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-2xl w-full border border-gray-100 relative overflow-hidden">
-                <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-emerald-500 to-teal-600"></div>
-
-                <h3 class="text-2xl font-extrabold text-gray-800 mb-2">批量翻譯工具</h3>
-                <p class="text-gray-600 text-sm mb-4">設定 Gemini API Key，一鍵翻譯全部 600 題（內嵌到題目中，無需 API 連線）</p>
-
-                <div class="space-y-4">
-                    <div>
-                        <label class="text-sm font-bold text-gray-700 mb-1 block">Gemini API Key</label>
-                        <input type="password" id="api-key-input" placeholder="粘貼您的 Gemini API Key" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                        <p class="text-xs text-gray-500 mt-1">💡 <a href="https://aistudio.google.com/" target="_blank" class="text-blue-600 underline">前往 Google AI Studio 獲取 API Key</a></p>
-                    </div>
-
-                    <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 text-sm text-blue-900">
-                        <p class="font-bold mb-2">翻譯進度</p>
-                        <div id="translate-progress" class="text-xs">準備就緒</div>
-                        <div id="translate-progress-bar" class="w-full h-2 bg-blue-200 rounded-full mt-2 overflow-hidden hidden">
-                            <div id="translate-progress-fill" class="h-full bg-blue-500 w-0 transition-all duration-300"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex justify-end gap-3 mt-6">
-                    <button onclick="closeBatchTranslateModal()" class="px-6 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold rounded-lg transition">取消</button>
-                    <button onclick="startBatchTranslate()" class="px-6 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-lg shadow-md transition">開始翻譯</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- 專屬驗證密碼鎖 Modal -->
     <div id="auth-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm hidden z-50 transition-opacity">
@@ -486,25 +450,6 @@
             }
         }
 
-        // --- Gemini API Configuration ---
-        const apiKey = ""; // API Key 會在執行環境自動注入
-        const geminiEndpoint = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent";
-        const chatHistories = {};
-
-        // Exponential backoff fetch function for Gemini API
-        async function fetchWithRetry(url, options, retries = 5, delay = 1000) {
-            try {
-                const response = await fetch(url, options);
-                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-                return await response.json();
-            } catch (error) {
-                if (retries > 0) {
-                    await new Promise(res => setTimeout(res, delay));
-                    return fetchWithRetry(url, options, retries - 1, delay * 2);
-                }
-                throw error;
-            }
-        }
 
         const questionPool = [
             { q: "Which of the following threat actors is the most likely to be hired by a foreign government to attack critical systems located in other countries?", options: ["Hacktivist", "Whistleblower", "Organized crime", "Unskilled attacker"], answer: [2], zh: {"q": "下列哪一種威脅行為者最有可能被外國政府雇用以攻擊位於其他國家的關鍵系統？", "opts": ["駭客主義者 (Hacktivist) - 因政治或社會理念而駭", "吹哨者 (Whistleblower) - 揭露內部不法情事", "組織犯罪集團 (Organized crime) - 為金錢利益而駭", "技術不熟練的攻擊者 (Unskilled attacker)"], "explain": "組織犯罪集團擁有充足財務資源、技術人力與成熟運作模式，最容易被外國政府以資金雇用執行國家利益相關的網路攻擊。Nation-state 雖然也常攻擊他國，但本題強調「被雇用」，即外包模式，最符合的就是組織犯罪集團。"} },
@@ -1154,9 +1099,6 @@
             userAnswers = new Array(totalQuestions).fill(null).map(() => []);
             flaggedQuestions = new Array(totalQuestions).fill(false);
 
-            // 清除上次的 AI 歷史
-            for(let key in chatHistories) delete chatHistories[key];
-
             document.getElementById('start-screen').classList.add('hidden');
             document.getElementById('result-screen').classList.add('hidden');
             document.getElementById('quiz-container').classList.remove('hidden');
@@ -1340,7 +1282,14 @@
         // 翻譯解析功能
         // 優先使用題目內嵌的 zh 欄位 (預先翻譯)，無則 fallback 到 AI API
         // ==========================
-        function renderEmbeddedTranslation(q) {
+        function renderAnalysis(q) {
+            if (!q.zh) {
+                return `<div class="bg-amber-50 p-4 rounded-xl border border-amber-200 shadow-sm text-amber-900">
+                    <p class="font-bold">📋 翻譯待補充</p>
+                    <p class="text-sm mt-2">本題的中文翻譯和詳細解析正在準備中，敬請期待。</p>
+                </div>`;
+            }
+
             const z = q.zh;
             const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
             let optionsHtml = '';
@@ -1367,97 +1316,27 @@
                 </div>`;
         }
 
-        async function translateCurrentQuestion() {
+        function toggleAnalysis() {
             const q = currentQuiz[currentIndex];
             const transBtn = document.getElementById('translate-btn');
             const transContainer = document.getElementById('translation-container');
 
-            // 優先：使用內嵌翻譯 (秒開、無 API 成本)
-            if (q.zh) {
+            // 切換顯示/隱藏
+            if (transContainer.classList.contains('hidden')) {
                 transContainer.classList.remove('hidden');
-                transContainer.innerHTML = renderEmbeddedTranslation(q);
-                transBtn.innerHTML = `<span>✨</span> 解析完成`;
-                transBtn.disabled = false;
+                transContainer.innerHTML = renderAnalysis(q);
+                transBtn.innerHTML = `<span>✨</span> 隱藏解析`;
                 transBtn.classList.replace('text-indigo-700', 'text-green-700');
                 transBtn.classList.replace('from-indigo-50', 'from-green-50');
                 transBtn.classList.replace('to-blue-50', 'to-emerald-50');
                 transBtn.classList.replace('border-indigo-200', 'border-green-200');
-                return;
-            }
-
-            // Fallback：API 即時翻譯
-            transBtn.disabled = true;
-            transBtn.innerHTML = `<svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-indigo-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> 生成解析中...`;
-            transContainer.classList.remove('hidden');
-            transContainer.innerHTML = "<span class='text-gray-500 italic font-bold'>本題尚未預翻譯，正在連線 AI 即時生成...</span>";
-
-            const correctText = q.answer.map(i => q.options[i]).join(" | ");
-            const optionsText = q.options.map((opt, i) => `${i+1}. ${opt}`).join("\n");
-
-            const promptText = `你是一個專業的 CompTIA Security+ 認證導師。請將這題翻譯為繁體中文，並直接公布正確答案，接著給出詳細的每一個選項解析。
-            
-英文題目：\n${q.q}\n
-英文選項：\n${optionsText}\n
-正確解答是：${correctText}
-
-請「嚴格使用以下 HTML 結構」輸出，不要包含 \`\`\`html 標籤，請直接輸出純 HTML 程式碼：
-
-<div class="space-y-4 text-left">
-    <div class="bg-blue-50 p-5 rounded-xl border border-blue-200 shadow-sm">
-        <h4 class="font-extrabold text-blue-900 mb-2 text-lg">📝 題目與選項翻譯</h4>
-        <p class="text-blue-900 font-medium mb-3">[將整段題目精確翻譯為繁體中文]</p>
-        <ul class="list-decimal ml-5 text-blue-800 space-y-1 font-medium">
-            <li>[選項 1 翻譯]</li>
-            <li>[選項 2 翻譯]</li>
-            <!-- 依序翻譯所有選項 -->
-        </ul>
-    </div>
-    <div class="bg-green-50 p-5 rounded-xl border border-green-200 shadow-sm">
-        <h4 class="font-extrabold text-green-900 mb-2 text-lg">✅ 正確解答與觀念解析</h4>
-        <p class="text-green-800 font-medium">[詳細解釋正確答案背後的資安核心觀念]</p>
-    </div>
-    <div class="bg-gray-50 p-5 rounded-xl border border-gray-200 shadow-sm">
-        <h4 class="font-extrabold text-gray-800 mb-3 text-lg">💡 選項深度分析 (盲點提示)</h4>
-        <ul class="space-y-4">
-            <!-- 務必針對「每一個」錯誤選項進行分析 -->
-            <li>
-                <div class="flex items-start">
-                    <span class="text-red-700 font-black bg-red-100 border border-red-200 px-2 py-0.5 rounded shadow-sm whitespace-nowrap mr-3 mt-0.5">錯誤選項:</span> 
-                    <span class="text-gray-700 font-medium">[解釋為何此選項不適用，以及容易混淆的盲點]</span>
-                </div>
-            </li>
-            <!-- 重複上方的 <li> 結構直到所有錯誤選項都解析完畢 -->
-        </ul>
-    </div>
-</div>`;
-
-            const payload = {
-                contents: [{ role: "user", parts: [{ text: promptText }] }],
-                systemInstruction: { parts: [{ text: "You are a professional IT security tutor. Output ONLY valid HTML structures as requested without markdown blocks." }] }
-            };
-
-            try {
-                const data = await fetchWithRetry(`${geminiEndpoint}?key=${apiKey}`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
-                let text = data.candidates?.[0]?.content?.parts?.[0]?.text;
-                if(text) {
-                    text = text.replace(/```html/g, '').replace(/```/g, ''); // 清理殘留標記
-                    transContainer.innerHTML = text;
-                    transBtn.innerHTML = `<span>✨</span> 解析完成`;
-                    transBtn.classList.replace('text-indigo-700', 'text-green-700');
-                    transBtn.classList.replace('from-indigo-50', 'from-green-50');
-                    transBtn.classList.replace('to-blue-50', 'to-emerald-50');
-                    transBtn.classList.replace('border-indigo-200', 'border-green-200');
-                } else {
-                    throw new Error("Empty translation");
-                }
-            } catch (e) {
-                transContainer.innerHTML = `<span class="text-red-500 font-bold">解析失敗，請檢查 API 連線狀態。</span>`;
-                transBtn.innerHTML = `<span>✨</span> 重試解析`;
-                transBtn.disabled = false;
+            } else {
+                transContainer.classList.add('hidden');
+                transBtn.innerHTML = `<span>✨</span> 中文翻譯及題目解析`;
+                transBtn.classList.replace('text-green-700', 'text-indigo-700');
+                transBtn.classList.replace('from-green-50', 'from-indigo-50');
+                transBtn.classList.replace('to-emerald-50', 'to-blue-50');
+                transBtn.classList.replace('border-green-200', 'border-indigo-200');
             }
         }
 
@@ -1618,7 +1497,7 @@
                             </div>
                             <div class="flex items-center gap-3">
                                 <span class="font-black ${statusColor} text-lg">${statusIcon}</span>
-                                <button onclick="goBackToQuestion(${idx})" class="text-xs font-bold text-indigo-600 bg-indigo-100 px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition cursor-pointer hover:bg-indigo-200">展開完整詳解</button>
+                                <button onclick="toggleDetailAnalysis(${idx})" class="text-xs font-bold text-indigo-600 bg-indigo-100 px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition cursor-pointer hover:bg-indigo-200">展開完整詳解</button>
                             </div>
                         </div>
                         <div class="p-6 cursor-default">
@@ -1654,6 +1533,49 @@
             }
         }
 
+        // 在結果頁面內顯示詳細解析
+        function toggleDetailAnalysis(idx) {
+            const q = currentQuiz[idx];
+            const analysisPanel = document.getElementById('result-analysis-panel');
+            const existingPanel = document.getElementById(`analysis-${idx}`);
+
+            if (existingPanel) {
+                // 如果已展開，則關閉
+                existingPanel.remove();
+            } else {
+                // 移除之前的詳解面板
+                const allPanels = document.querySelectorAll('[id^="analysis-"]');
+                allPanels.forEach(panel => panel.remove());
+
+                // 創建新的詳解面板並插入結果頁面的最上方
+                const analysisHTML = `
+                    <div id="analysis-${idx}" class="bg-gradient-to-br from-indigo-50 to-blue-50 p-8 rounded-2xl border-2 border-indigo-200 shadow-lg mb-8 sticky top-0 z-10">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-2xl font-extrabold text-indigo-900">📚 第 ${idx + 1} 題 - 詳細解析</h3>
+                            <button onclick="toggleDetailAnalysis(${idx})" class="text-indigo-600 hover:text-indigo-800 font-bold text-2xl">✕</button>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl border border-indigo-100 max-h-96 overflow-y-auto">
+                            ${renderAnalysis(q)}
+                        </div>
+                    </div>
+                `;
+
+                // 找到結果頁面並在最上方插入
+                const resultScreen = document.getElementById('result-screen');
+                const firstElement = resultScreen.querySelector('[class*="text-center mb-8"]');
+                if (firstElement) {
+                    firstElement.insertAdjacentHTML('afterend', analysisHTML);
+                } else {
+                    resultScreen.insertAdjacentHTML('afterbegin', analysisHTML);
+                }
+
+                // 平滑滾動到詳解面板
+                setTimeout(() => {
+                    document.getElementById(`analysis-${idx}`).scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+            }
+        }
+
         // 結果頁面內快速跳轉到對應題目的詳細回顧卡片
         function scrollToReviewCard(idx) {
             const reviewCard = document.querySelector(`[data-review-idx="${idx}"]`);
@@ -1667,20 +1589,6 @@
             }
         }
 
-        // 從結果頁面回到答題頁面檢視詳解
-        function goBackToQuestion(idx) {
-            currentIndex = idx;
-            document.getElementById('result-screen').classList.add('hidden');
-            document.getElementById('quiz-container').classList.remove('hidden');
-            document.getElementById('quiz-container').classList.add('flex');
-            document.getElementById('header-stats').classList.remove('hidden');
-            loadQuestion();
-            // 自動顯示翻譯解析
-            setTimeout(() => {
-                translateCurrentQuestion();
-            }, 100);
-        }
-
         function resetExam() {
             document.getElementById('start-screen').classList.remove('hidden');
             document.getElementById('result-screen').classList.add('hidden');
@@ -1688,124 +1596,6 @@
             if(timerInterval) clearInterval(timerInterval);
         }
 
-        // ============ 批量翻譯工具 ============
-        function openBatchTranslateModal() {
-            document.getElementById('batch-translate-modal').classList.remove('hidden');
-        }
-
-        function closeBatchTranslateModal() {
-            document.getElementById('batch-translate-modal').classList.add('hidden');
-        }
-
-        async function startBatchTranslate() {
-            const apiKey = document.getElementById('api-key-input').value.trim();
-            if (!apiKey) {
-                alert('請輸入 API Key');
-                return;
-            }
-
-            const progressDiv = document.getElementById('translate-progress');
-            const progressBar = document.getElementById('translate-progress-bar');
-            const progressFill = document.getElementById('translate-progress-fill');
-            progressBar.classList.remove('hidden');
-
-            let translatedCount = 0;
-            let totalToTranslate = questionPool.filter(q => !q.zh).length;
-
-            progressDiv.innerText = `開始翻譯... (0/${totalToTranslate})`;
-
-            // 分批翻譯（每次 15 題避免 API 限流）
-            const batchSize = 15;
-            for (let i = 0; i < questionPool.length; i += batchSize) {
-                const batch = questionPool.slice(i, Math.min(i + batchSize, questionPool.length))
-                    .filter(q => !q.zh)
-                    .slice(0, 15);
-
-                if (batch.length === 0) continue;
-
-                // 組合翻譯請求
-                let batchText = '';
-                batch.forEach((q, idx) => {
-                    const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
-                    const opts = q.options.map((o, j) => `${letters[j]}. ${o}`).join('\n');
-                    const ans = q.answer.map(a => letters[a]).join(', ');
-
-                    batchText += `【題 ${idx + 1}】\n${q.q}\n${opts}\n正答: ${ans}\n---\n`;
-                });
-
-                try {
-                    const response = await fetch(
-                        `${geminiEndpoint}?key=${apiKey}`,
-                        {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify({
-                                contents: [{
-                                    role: 'user',
-                                    parts: [{
-                                        text: `將這批 CompTIA Security+ 題目翻譯為繁體中文，返回 JSON 陣列，每項包含 q(題目)、opts(選項陣列)、explain(詳細分析)：\n${batchText}\n\n只返回 JSON，無其他文字。`
-                                    }]
-                                }]
-                            })
-                        }
-                    );
-
-                    if (!response.ok) throw new Error(`API Error: ${response.status}`);
-
-                    const data = await response.json();
-                    let result = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
-                    result = result.replace(/```json\n?|\n?```/g, '').trim();
-
-                    const translations = JSON.parse(result);
-                    batch.forEach((q, idx) => {
-                        if (translations[idx]) {
-                            q.zh = {
-                                q: translations[idx].q,
-                                opts: translations[idx].opts,
-                                explain: translations[idx].explain
-                            };
-                            translatedCount++;
-                        }
-                    });
-
-                    progressDiv.innerText = `翻譯中... (${translatedCount}/${totalToTranslate})`;
-                    progressFill.style.width = `${(translatedCount / totalToTranslate) * 100}%`;
-
-                    await new Promise(r => setTimeout(r, 1500)); // 避免 API 限流
-
-                } catch (e) {
-                    console.error('翻譯失敗:', e);
-                    progressDiv.innerText = `❌ 翻譯出錯: ${e.message}`;
-                    return;
-                }
-            }
-
-            // 保存到 localStorage
-            localStorage.setItem('translatedQuestions', JSON.stringify(questionPool));
-
-            progressDiv.innerHTML = `✅ 翻譯完成！已翻譯 ${translatedCount} 題。<br><span class="text-xs text-gray-600">題目已保存到瀏覽器存儲，刷新後依然可用。</span>`;
-            progressFill.style.width = '100%';
-
-            setTimeout(() => closeBatchTranslateModal(), 2000);
-        }
-
-        // 初始化時從 localStorage 恢復翻譯
-        window.addEventListener('load', () => {
-            const saved = localStorage.getItem('translatedQuestions');
-            if (saved) {
-                try {
-                    const saved_questions = JSON.parse(saved);
-                    saved_questions.forEach((saved_q, idx) => {
-                        if (saved_q.zh && questionPool[idx]) {
-                            questionPool[idx].zh = saved_q.zh;
-                        }
-                    });
-                    console.log('✅ 已從本地存儲恢復翻譯');
-                } catch (e) {
-                    console.error('恢復翻譯失敗:', e);
-                }
-            }
-        });
     </script>
 </body>
 </html>
