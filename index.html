@@ -1117,6 +1117,10 @@
             document.getElementById('quiz-container').classList.add('flex');
             document.getElementById('header-stats').classList.remove('hidden');
 
+            // 在答題時隱藏回頂部按鈕（因為答題頁面不需要）
+            document.getElementById('scroll-to-top-btn').classList.add('opacity-0', 'invisible');
+            document.getElementById('scroll-to-top-btn').classList.remove('opacity-100', 'visible');
+
             if (wantTime) {
                 document.getElementById('timer-container').classList.remove('hidden');
                 updateTimerDisplay();
@@ -1503,6 +1507,10 @@
             document.getElementById('header-stats').classList.add('hidden');
             resultScreen.classList.remove('hidden');
 
+            // 隱藏返回頂部按鈕
+            document.getElementById('scroll-to-top-btn').classList.add('opacity-0', 'invisible');
+            document.getElementById('scroll-to-top-btn').classList.remove('opacity-100', 'visible');
+
             let correctCount = 0;
             const reviewContainer = document.getElementById('review-container');
             const quickNavGrid = document.getElementById('quick-nav-grid');
@@ -1626,6 +1634,8 @@
             document.getElementById('start-screen').classList.remove('hidden');
             document.getElementById('result-screen').classList.add('hidden');
             document.getElementById('timer-text').classList.replace('text-red-400', 'text-amber-400');
+            document.getElementById('scroll-to-top-btn').classList.add('opacity-0', 'invisible');
+            document.getElementById('scroll-to-top-btn').classList.remove('opacity-100', 'visible');
             if(timerInterval) clearInterval(timerInterval);
             // 移除滾動監聽
             window.removeEventListener('scroll', handleResultPageScroll);
