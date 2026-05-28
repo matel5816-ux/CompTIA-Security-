@@ -207,9 +207,15 @@
                 </div>
             </div>
 
-            <div class="mt-8 text-center text-xs font-semibold text-gray-400 border-t pt-6">
-                © Architecture & UI/UX Experience <br> 
-                <span class="text-sm text-indigo-500/80 mt-1 inline-block tracking-widest uppercase">Designed by <span class="text-indigo-600 font-black">EnChung</span></span>
+            <div class="mt-8 flex flex-col items-center gap-6">
+                <button onclick="openBatchTranslateModal()" class="flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-bold py-3 px-6 rounded-xl shadow-lg transition transform hover:scale-105">
+                    <span class="text-xl">🚀</span> 批量翻譯全部題目 (一鍵內嵌中文)
+                </button>
+
+                <div class="text-center text-xs font-semibold text-gray-400 border-t pt-6 w-full">
+                    © Architecture & UI/UX Experience <br>
+                    <span class="text-sm text-indigo-500/80 mt-1 inline-block tracking-widest uppercase">Designed by <span class="text-indigo-600 font-black">EnChung</span></span>
+                </div>
             </div>
         </div>
 
@@ -311,11 +317,11 @@
         </div>
 
         <!-- Result Screen -->
-        <div id="result-screen" class="bg-white max-w-4xl w-full rounded-2xl shadow-xl p-6 sm:p-10 hidden my-4 border border-gray-100">
+        <div id="result-screen" class="bg-white max-w-6xl w-full rounded-2xl shadow-xl p-6 sm:p-10 hidden my-4 border border-gray-100">
             <div class="text-center mb-8 border-b border-gray-100 pb-8 relative">
                 <div class="absolute top-0 right-0 w-24 h-24 bg-green-50 rounded-bl-full -z-10 hidden" id="pass-bg"></div>
                 <div class="absolute top-0 right-0 w-24 h-24 bg-red-50 rounded-bl-full -z-10 hidden" id="fail-bg"></div>
-                
+
                 <h2 class="text-3xl font-extrabold text-gray-800 mb-2">測驗結算報告</h2>
                 <p class="text-gray-500 text-sm mb-6 font-medium">依據 CompTIA 官方標準換算 (滿分 900 分，及格 750 分)</p>
                 <div class="inline-block bg-white border border-gray-200 rounded-3xl px-12 py-6 shadow-sm">
@@ -326,8 +332,25 @@
                 <p id="raw-score-text" class="mt-2 text-sm font-bold text-gray-500"></p>
             </div>
 
+            <!-- 快速導覽卡片區域 -->
+            <div class="mb-8 border border-indigo-200 rounded-2xl p-6 bg-indigo-50">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-black text-gray-800 flex items-center gap-2">
+                        <span class="text-2xl">📊</span> 題目快速檢視 (點擊跳轉答題頁面)
+                    </h3>
+                    <div class="text-xs font-bold text-gray-600 space-x-3 flex">
+                        <span class="flex items-center gap-1"><span class="w-3 h-3 bg-green-500 rounded-full"></span>答對</span>
+                        <span class="flex items-center gap-1"><span class="w-3 h-3 bg-red-500 rounded-full"></span>答錯</span>
+                        <span class="flex items-center gap-1"><span class="w-3 h-3 bg-gray-400 rounded-full"></span>未回答</span>
+                    </div>
+                </div>
+                <div id="quick-nav-grid" class="grid grid-cols-5 sm:grid-cols-8 lg:grid-cols-12 gap-2 text-center">
+                    <!-- 快速導覽卡片將由 JS 注入 -->
+                </div>
+            </div>
+
             <div class="mb-6 flex flex-col sm:flex-row justify-between items-center gap-4 border-b border-gray-100 pb-6">
-                <h3 class="text-2xl font-extrabold text-gray-800">作答回顧與詳解</h3>
+                <h3 class="text-2xl font-extrabold text-gray-800">詳細答題回顧</h3>
                 <button onclick="resetExam()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2.5 px-6 rounded-xl shadow-md transition duration-200">
                     返回首頁重新測驗
                 </button>
@@ -344,6 +367,39 @@
         </div>
 
     </main>
+
+    <!-- 批量翻譯工具 Modal -->
+    <div id="batch-translate-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm hidden z-50 transition-opacity overflow-y-auto">
+        <div class="flex items-center justify-center min-h-screen px-4 py-6">
+            <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-2xl w-full border border-gray-100 relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-emerald-500 to-teal-600"></div>
+
+                <h3 class="text-2xl font-extrabold text-gray-800 mb-2">批量翻譯工具</h3>
+                <p class="text-gray-600 text-sm mb-4">設定 Gemini API Key，一鍵翻譯全部 600 題（內嵌到題目中，無需 API 連線）</p>
+
+                <div class="space-y-4">
+                    <div>
+                        <label class="text-sm font-bold text-gray-700 mb-1 block">Gemini API Key</label>
+                        <input type="password" id="api-key-input" placeholder="粘貼您的 Gemini API Key" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                        <p class="text-xs text-gray-500 mt-1">💡 <a href="https://aistudio.google.com/" target="_blank" class="text-blue-600 underline">前往 Google AI Studio 獲取 API Key</a></p>
+                    </div>
+
+                    <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 text-sm text-blue-900">
+                        <p class="font-bold mb-2">翻譯進度</p>
+                        <div id="translate-progress" class="text-xs">準備就緒</div>
+                        <div id="translate-progress-bar" class="w-full h-2 bg-blue-200 rounded-full mt-2 overflow-hidden hidden">
+                            <div id="translate-progress-fill" class="h-full bg-blue-500 w-0 transition-all duration-300"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-end gap-3 mt-6">
+                    <button onclick="closeBatchTranslateModal()" class="px-6 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold rounded-lg transition">取消</button>
+                    <button onclick="startBatchTranslate()" class="px-6 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-lg shadow-md transition">開始翻譯</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- 專屬驗證密碼鎖 Modal -->
     <div id="auth-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm hidden z-50 transition-opacity">
@@ -1478,7 +1534,7 @@
         function showResults() {
             const quizContainer = document.getElementById('quiz-container');
             const resultScreen = document.getElementById('result-screen');
-            
+
             quizContainer.classList.add('hidden');
             quizContainer.classList.remove('flex');
             document.getElementById('header-stats').classList.add('hidden');
@@ -1486,8 +1542,40 @@
 
             let correctCount = 0;
             const reviewContainer = document.getElementById('review-container');
+            const quickNavGrid = document.getElementById('quick-nav-grid');
             reviewContainer.innerHTML = '';
+            quickNavGrid.innerHTML = '';
 
+            // 生成快速導覽卡片
+            currentQuiz.forEach((q, idx) => {
+                const uAnsArr = userAnswers[idx] || [];
+                const isCorrect = arraysEqual(uAnsArr, q.answer);
+                const isUnanswered = uAnsArr.length === 0;
+
+                let navColor = 'bg-gray-300 text-white';  // 未回答 - 灰色
+                let navIcon = '○';
+
+                if (isUnanswered) {
+                    navColor = 'bg-gray-300 text-white';
+                    navIcon = '●';
+                } else if (isCorrect) {
+                    navColor = 'bg-green-500 text-white';
+                    navIcon = '✓';
+                } else {
+                    navColor = 'bg-red-500 text-white';
+                    navIcon = '✗';
+                }
+
+                const navCard = document.createElement('button');
+                navCard.className = `w-10 h-10 rounded-lg font-bold text-sm transition hover:scale-110 shadow-sm ${navColor}`;
+                navCard.innerHTML = navIcon;
+                navCard.title = `Q${idx + 1}: ${isUnanswered ? '未回答' : isCorrect ? '答對' : '答錯'}`;
+                navCard.onclick = () => goBackToQuestion(idx);
+
+                quickNavGrid.appendChild(navCard);
+            });
+
+            // 生成詳細回顧卡片
             currentQuiz.forEach((q, idx) => {
                 const uAnsArr = userAnswers[idx] || [];
                 const isCorrect = arraysEqual(uAnsArr, q.answer);
@@ -1502,7 +1590,7 @@
                 q.options.forEach((opt, oIdx) => {
                     let optClass = "text-gray-600 p-2 font-medium";
                     let icon = "<span class='inline-block w-6'></span>";
-                    
+
                     const isUserSelected = uAnsArr.includes(oIdx);
                     const isActuallyCorrect = q.answer.includes(oIdx);
 
@@ -1522,13 +1610,16 @@
                 const notAnsweredAlert = uAnsArr.length === 0 ? `<span class="ml-3 text-xs font-black tracking-widest text-red-600 bg-white px-2 py-1 rounded shadow-sm border border-red-200">未作答</span>` : '';
 
                 reviewContainer.innerHTML += `
-                    <div class="border ${cardBorder} rounded-2xl overflow-hidden shadow-sm mb-6 bg-white">
+                    <div class="border ${cardBorder} rounded-2xl overflow-hidden shadow-sm mb-6 bg-white group hover:shadow-lg transition cursor-pointer" onclick="goBackToQuestion(${idx})">
                         <div class="flex justify-between items-center px-6 py-4 ${bgHeader} border-b ${cardBorder}">
-                            <div class="flex items-center">
+                            <div class="flex items-center gap-2">
                                 <span class="font-extrabold text-gray-800 text-lg">Q${idx + 1}.</span>
                                 ${notAnsweredAlert}
                             </div>
-                            <span class="font-black ${statusColor} text-lg">${statusIcon}</span>
+                            <div class="flex items-center gap-3">
+                                <span class="font-black ${statusColor} text-lg">${statusIcon}</span>
+                                <span class="text-xs font-bold text-indigo-600 bg-indigo-100 px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition">點擊回顧詳解</span>
+                            </div>
                         </div>
                         <div class="p-6">
                             <p class="text-gray-800 font-bold mb-5 text-lg leading-relaxed">${q.q}</p>
@@ -1542,14 +1633,14 @@
 
             let finalScore = Math.round((correctCount / totalQuestions) * 900);
             document.getElementById('final-score').innerText = finalScore;
-            
+
             const rawScoreText = document.getElementById('raw-score-text');
-            rawScoreText.innerText = `原始答對題數: ${correctCount} / ${totalQuestions} 題`;
+            rawScoreText.innerText = `原始答對題數: ${correctCount} / ${totalQuestions} 題 (正確率: ${Math.round(correctCount / totalQuestions * 100)}%)`;
 
             const passStatus = document.getElementById('pass-status');
             const passBg = document.getElementById('pass-bg');
             const failBg = document.getElementById('fail-bg');
-            
+
             if (finalScore >= 750) {
                 passStatus.innerText = "🎉 PASS！已達到及格標準";
                 passStatus.className = "mt-6 font-black text-3xl text-green-600 drop-shadow-sm";
@@ -1563,12 +1654,145 @@
             }
         }
 
+        // 從結果頁面回到答題頁面檢視詳解
+        function goBackToQuestion(idx) {
+            currentIndex = idx;
+            document.getElementById('result-screen').classList.add('hidden');
+            document.getElementById('quiz-container').classList.remove('hidden');
+            document.getElementById('quiz-container').classList.add('flex');
+            document.getElementById('header-stats').classList.remove('hidden');
+            loadQuestion();
+            // 自動顯示翻譯解析
+            setTimeout(() => {
+                translateCurrentQuestion();
+            }, 100);
+        }
+
         function resetExam() {
             document.getElementById('start-screen').classList.remove('hidden');
             document.getElementById('result-screen').classList.add('hidden');
-            document.getElementById('timer-text').classList.replace('text-red-400', 'text-amber-400'); 
+            document.getElementById('timer-text').classList.replace('text-red-400', 'text-amber-400');
             if(timerInterval) clearInterval(timerInterval);
         }
+
+        // ============ 批量翻譯工具 ============
+        function openBatchTranslateModal() {
+            document.getElementById('batch-translate-modal').classList.remove('hidden');
+        }
+
+        function closeBatchTranslateModal() {
+            document.getElementById('batch-translate-modal').classList.add('hidden');
+        }
+
+        async function startBatchTranslate() {
+            const apiKey = document.getElementById('api-key-input').value.trim();
+            if (!apiKey) {
+                alert('請輸入 API Key');
+                return;
+            }
+
+            const progressDiv = document.getElementById('translate-progress');
+            const progressBar = document.getElementById('translate-progress-bar');
+            const progressFill = document.getElementById('translate-progress-fill');
+            progressBar.classList.remove('hidden');
+
+            let translatedCount = 0;
+            let totalToTranslate = questionPool.filter(q => !q.zh).length;
+
+            progressDiv.innerText = `開始翻譯... (0/${totalToTranslate})`;
+
+            // 分批翻譯（每次 15 題避免 API 限流）
+            const batchSize = 15;
+            for (let i = 0; i < questionPool.length; i += batchSize) {
+                const batch = questionPool.slice(i, Math.min(i + batchSize, questionPool.length))
+                    .filter(q => !q.zh)
+                    .slice(0, 15);
+
+                if (batch.length === 0) continue;
+
+                // 組合翻譯請求
+                let batchText = '';
+                batch.forEach((q, idx) => {
+                    const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
+                    const opts = q.options.map((o, j) => `${letters[j]}. ${o}`).join('\n');
+                    const ans = q.answer.map(a => letters[a]).join(', ');
+
+                    batchText += `【題 ${idx + 1}】\n${q.q}\n${opts}\n正答: ${ans}\n---\n`;
+                });
+
+                try {
+                    const response = await fetch(
+                        `${geminiEndpoint}?key=${apiKey}`,
+                        {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                contents: [{
+                                    role: 'user',
+                                    parts: [{
+                                        text: `將這批 CompTIA Security+ 題目翻譯為繁體中文，返回 JSON 陣列，每項包含 q(題目)、opts(選項陣列)、explain(詳細分析)：\n${batchText}\n\n只返回 JSON，無其他文字。`
+                                    }]
+                                }]
+                            })
+                        }
+                    );
+
+                    if (!response.ok) throw new Error(`API Error: ${response.status}`);
+
+                    const data = await response.json();
+                    let result = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
+                    result = result.replace(/```json\n?|\n?```/g, '').trim();
+
+                    const translations = JSON.parse(result);
+                    batch.forEach((q, idx) => {
+                        if (translations[idx]) {
+                            q.zh = {
+                                q: translations[idx].q,
+                                opts: translations[idx].opts,
+                                explain: translations[idx].explain
+                            };
+                            translatedCount++;
+                        }
+                    });
+
+                    progressDiv.innerText = `翻譯中... (${translatedCount}/${totalToTranslate})`;
+                    progressFill.style.width = `${(translatedCount / totalToTranslate) * 100}%`;
+
+                    await new Promise(r => setTimeout(r, 1500)); // 避免 API 限流
+
+                } catch (e) {
+                    console.error('翻譯失敗:', e);
+                    progressDiv.innerText = `❌ 翻譯出錯: ${e.message}`;
+                    return;
+                }
+            }
+
+            // 保存到 localStorage
+            localStorage.setItem('translatedQuestions', JSON.stringify(questionPool));
+
+            progressDiv.innerHTML = `✅ 翻譯完成！已翻譯 ${translatedCount} 題。<br><span class="text-xs text-gray-600">題目已保存到瀏覽器存儲，刷新後依然可用。</span>`;
+            progressFill.style.width = '100%';
+
+            setTimeout(() => closeBatchTranslateModal(), 2000);
+        }
+
+        // 初始化時從 localStorage 恢復翻譯
+        window.addEventListener('load', () => {
+            const saved = localStorage.getItem('translatedQuestions');
+            if (saved) {
+                try {
+                    const saved_questions = JSON.parse(saved);
+                    saved_questions.forEach((saved_q, idx) => {
+                        if (saved_q.zh && questionPool[idx]) {
+                            questionPool[idx].zh = saved_q.zh;
+                        }
+                    });
+                    console.log('✅ 已從本地存儲恢復翻譯');
+                } catch (e) {
+                    console.error('恢復翻譯失敗:', e);
+                }
+            }
+        });
     </script>
 </body>
 </html>
