@@ -291,6 +291,11 @@
             ☰
         </button>
 
+        <!-- 返回頂部浮動按鈕 -->
+        <button id="scroll-to-top-btn" class="fixed bottom-20 right-4 w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:scale-110 z-40" onclick="scrollToTop()" title="返回頂部">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+        </button>
+
         <!-- 手機抽屜：題目導覽 -->
         <div class="nav-drawer-backdrop" id="nav-drawer-backdrop" onclick="closeNavDrawer()"></div>
         <div class="nav-drawer" id="nav-drawer">
@@ -1410,6 +1415,84 @@
             return sortedA.every((val, index) => val === sortedB[index]);
         }
 
+        // 在結果頁面內顯示詳細解析
+        function toggleDetailAnalysis(idx) {
+            const q = currentQuiz[idx];
+            const analysisPanel = document.getElementById('result-analysis-panel');
+            const existingPanel = document.getElementById(`analysis-${idx}`);
+
+            if (existingPanel) {
+                // 如果已展開，則關閉
+                existingPanel.remove();
+            } else {
+                // 移除之前的詳解面板
+                const allPanels = document.querySelectorAll('[id^="analysis-"]');
+                allPanels.forEach(panel => panel.remove());
+
+                // 創建新的詳解面板並插入結果頁面的最上方
+                const analysisHTML = `
+                    <div id="analysis-${idx}" class="bg-gradient-to-br from-indigo-50 to-blue-50 p-8 rounded-2xl border-2 border-indigo-200 shadow-lg mb-8 sticky top-0 z-10">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-2xl font-extrabold text-indigo-900">📚 第 ${idx + 1} 題 - 詳細解析</h3>
+                            <button onclick="toggleDetailAnalysis(${idx})" class="text-indigo-600 hover:text-indigo-800 font-bold text-2xl">✕</button>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl border border-indigo-100 max-h-96 overflow-y-auto">
+                            ${renderAnalysis(q)}
+                        </div>
+                    </div>
+                `;
+
+                // 找到結果頁面並在最上方插入
+                const resultScreen = document.getElementById('result-screen');
+                const firstElement = resultScreen.querySelector('[class*="text-center mb-8"]');
+                if (firstElement) {
+                    firstElement.insertAdjacentHTML('afterend', analysisHTML);
+                } else {
+                    resultScreen.insertAdjacentHTML('afterbegin', analysisHTML);
+                }
+
+                // 平滑滾動到詳解面板
+                setTimeout(() => {
+                    document.getElementById(`analysis-${idx}`).scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+            }
+        }
+
+        // 結果頁面內快速跳轉到對應題目的詳細回顧卡片
+        function scrollToReviewCard(idx) {
+            const reviewCard = document.querySelector(`[data-review-idx="${idx}"]`);
+            if (reviewCard) {
+                reviewCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                // 突出顯示該卡片
+                reviewCard.classList.add('ring-4', 'ring-indigo-500', 'scale-105');
+                setTimeout(() => {
+                    reviewCard.classList.remove('ring-4', 'ring-indigo-500', 'scale-105');
+                }, 2000);
+            }
+        }
+
+        // 回頂部功能
+        function scrollToTop() {
+            const resultScreen = document.getElementById('result-screen');
+            resultScreen.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // 監聽結果頁面的滾動事件，顯示/隱藏回頂部按鈕
+        function handleResultPageScroll() {
+            const scrollBtn = document.getElementById('scroll-to-top-btn');
+            const scrollThreshold = 300; // 當滾動超過 300px 時顯示按鈕
+
+            if (window.scrollY > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+                scrollBtn.classList.remove('opacity-0', 'invisible');
+                scrollBtn.classList.add('opacity-100', 'visible');
+            } else {
+                scrollBtn.classList.add('opacity-0', 'invisible');
+                scrollBtn.classList.remove('opacity-100', 'visible');
+            }
+        }
+
+        // 在顯示結果頁面時添加滾動監聽
         function showResults() {
             const quizContainer = document.getElementById('quiz-container');
             const resultScreen = document.getElementById('result-screen');
@@ -1531,62 +1614,11 @@
                 failBg.classList.remove('hidden');
                 passBg.classList.add('hidden');
             }
-        }
 
-        // 在結果頁面內顯示詳細解析
-        function toggleDetailAnalysis(idx) {
-            const q = currentQuiz[idx];
-            const analysisPanel = document.getElementById('result-analysis-panel');
-            const existingPanel = document.getElementById(`analysis-${idx}`);
-
-            if (existingPanel) {
-                // 如果已展開，則關閉
-                existingPanel.remove();
-            } else {
-                // 移除之前的詳解面板
-                const allPanels = document.querySelectorAll('[id^="analysis-"]');
-                allPanels.forEach(panel => panel.remove());
-
-                // 創建新的詳解面板並插入結果頁面的最上方
-                const analysisHTML = `
-                    <div id="analysis-${idx}" class="bg-gradient-to-br from-indigo-50 to-blue-50 p-8 rounded-2xl border-2 border-indigo-200 shadow-lg mb-8 sticky top-0 z-10">
-                        <div class="flex justify-between items-center mb-4">
-                            <h3 class="text-2xl font-extrabold text-indigo-900">📚 第 ${idx + 1} 題 - 詳細解析</h3>
-                            <button onclick="toggleDetailAnalysis(${idx})" class="text-indigo-600 hover:text-indigo-800 font-bold text-2xl">✕</button>
-                        </div>
-                        <div class="bg-white p-4 rounded-xl border border-indigo-100 max-h-96 overflow-y-auto">
-                            ${renderAnalysis(q)}
-                        </div>
-                    </div>
-                `;
-
-                // 找到結果頁面並在最上方插入
-                const resultScreen = document.getElementById('result-screen');
-                const firstElement = resultScreen.querySelector('[class*="text-center mb-8"]');
-                if (firstElement) {
-                    firstElement.insertAdjacentHTML('afterend', analysisHTML);
-                } else {
-                    resultScreen.insertAdjacentHTML('afterbegin', analysisHTML);
-                }
-
-                // 平滑滾動到詳解面板
-                setTimeout(() => {
-                    document.getElementById(`analysis-${idx}`).scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }, 100);
-            }
-        }
-
-        // 結果頁面內快速跳轉到對應題目的詳細回顧卡片
-        function scrollToReviewCard(idx) {
-            const reviewCard = document.querySelector(`[data-review-idx="${idx}"]`);
-            if (reviewCard) {
-                reviewCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                // 突出顯示該卡片
-                reviewCard.classList.add('ring-4', 'ring-indigo-500', 'scale-105');
-                setTimeout(() => {
-                    reviewCard.classList.remove('ring-4', 'ring-indigo-500', 'scale-105');
-                }, 2000);
-            }
+            // 添加滾動監聽
+            window.addEventListener('scroll', handleResultPageScroll);
+            // 初始化按鈕狀態
+            handleResultPageScroll();
         }
 
         function resetExam() {
@@ -1594,6 +1626,8 @@
             document.getElementById('result-screen').classList.add('hidden');
             document.getElementById('timer-text').classList.replace('text-red-400', 'text-amber-400');
             if(timerInterval) clearInterval(timerInterval);
+            // 移除滾動監聽
+            window.removeEventListener('scroll', handleResultPageScroll);
         }
 
     </script>
