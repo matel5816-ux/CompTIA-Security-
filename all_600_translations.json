@@ -1,0 +1,6078 @@
+{
+  "1": {
+    "q": "下列哪種威脅行為者最有可能被外國政府雇用以攻擊位於其他國家的關鍵系統？",
+    "opts": [
+      "駭客主義者",
+      "吹哨者",
+      "組織犯罪集團",
+      "技術不熟練的攻擊者"
+    ],
+    "explain": "組織犯罪集團擁有充足財務資源、技術人力與成熟運作模式，最容易被外國政府雇用。"
+  },
+  "2": {
+    "q": "下列哪一項是用來在使用單向資料轉換演算法之前增加額外複雜度？",
+    "opts": [
+      "金鑰延展",
+      "資料遮罩",
+      "隱寫術",
+      "加鹽"
+    ],
+    "explain": "加鹽(Salting)是在密碼進行雜湊前加入隨機字串，可有效抵禦彩虹表攻擊。"
+  },
+  "3": {
+    "q": "員工點擊郵件連結被要求更新聯絡資訊並輸入登入資訊但收到找不到網頁錯誤。這屬於哪種社交工程攻擊？",
+    "opts": [
+      "品牌冒充",
+      "假借身分",
+      "錯字搶註域名",
+      "釣魚攻擊"
+    ],
+    "explain": "這是典型的釣魚(Phishing)攻擊。通過郵件連結進入假網站並輸入帳密。"
+  },
+  "4": {
+    "q": "企業欲限制內部網路的對外DNS流量，僅允許IP為10.50.10.25的設備。下列哪個防火牆ACL規則可達成？",
+    "opts": [
+      "允許所有→所有+拒絕10.50.10.25→所有",
+      "允許所有→10.50.10.25",
+      "允許所有→所有+拒絕所有→10.50.10.25",
+      "允許10.50.10.25→所有+拒絕所有→所有"
+    ],
+    "explain": "防火牆ACL是『白名單先行，最後拒絕』。先允許特定來源對外存取DNS(port 53)，再拒絕其他流量。"
+  },
+  "5": {
+    "q": "資料管理員要為SaaS應用設定身分驗證，減少員工需要管理的帳號。下列哪個方法可達成？",
+    "opts": [
+      "SSO",
+      "LEAP",
+      "MFA",
+      "PEAP"
+    ],
+    "explain": "SSO(Single Sign-On)允許使用一組憑證存取多個應用，滿足『減少憑證數量』的需求。"
+  },
+  "6": {
+    "q": "下列哪個情境最可能代表商業電郵入侵(BEC)攻擊？",
+    "opts": [
+      "員工收到顯示主管姓名的禮品卡要求",
+      "員工開啟附檔後收到付款勒索",
+      "服務台員工收到HR主管要求雲端管理帳號密碼的郵件",
+      "員工收到類似公司郵件入口的釣魚連結"
+    ],
+    "explain": "BEC特徵是攻擊者偽裝成內部高階主管，透過郵件要求機敏資訊或進行匯款。"
+  },
+  "7": {
+    "q": "公司已阻止資料庫管理員直接存取資料庫伺服器網段。DBA應使用下列哪個方式存取？",
+    "opts": [
+      "跳板伺服器",
+      "RADIUS",
+      "硬體安全模組",
+      "負載平衡器"
+    ],
+    "explain": "跳板伺服器是位於DMZ的中介伺服器，管理員必須先連線到此伺服器，再跳轉到受保護資源。"
+  },
+  "8": {
+    "q": "某組織對外網站因攻擊者利用緩衝區溢位漏洞而被入侵。應部署下列哪項以防範類似攻擊？",
+    "opts": [
+      "次世代防火牆(NGFW)",
+      "Web應用防火牆(WAF)",
+      "傳輸層加密(TLS)",
+      "軟體定義廣域網路(SD-WAN)"
+    ],
+    "explain": "WAF(Web Application Firewall)專門針對應用層的攻擊，包含Buffer Overflow、SQL Injection等。"
+  },
+  "9": {
+    "q": "管理員發現多名使用者從可疑IP登入。確認非本人後重設密碼，應實施下列哪項預防未來再次發生？",
+    "opts": [
+      "多因素驗證(MFA)",
+      "權限指派",
+      "存取管理",
+      "密碼複雜度"
+    ],
+    "explain": "MFA是預防憑證被盜用後仍能登入的最佳方案。即使密碼被竊，攻擊者仍需通過第二因素。"
+  },
+  "10": {
+    "q": "員工收到看似來自薪資部門的簡訊要求驗證憑證。這涉及哪兩種社交工程手法？",
+    "opts": [
+      "錯字搶註",
+      "釣魚",
+      "冒充",
+      "電話釣魚",
+      "簡訊釣魚",
+      "假訊息"
+    ],
+    "explain": "透過『簡訊』進行符合Smishing定義；假冒『薪資部門』符合Impersonation。"
+  },
+  "11": {
+    "q": "[網路安全題] Several employees received a fraudulent text message from someone clai...",
+    "opts": [
+      "Cancel current employee recognition gift cards.",
+      "Add a smishing exercise to the annual company training.",
+      "Issue a general email warning to the company.",
+      "Have the CEO change phone numbers.",
+      "Conduct a forensic investigation on the CEO’s phone.",
+      "Implement mobile device management."
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "12": {
+    "q": "[網路安全題] A company is required to use certied hardware when building networks. ...",
+    "opts": [
+      "A thorough analysis of the supply chain",
+      "A legally enforceable corporate acquisition policy",
+      "A right to audit clause in vendor contracts and SOWs",
+      "An in-depth penetration test of all suppliers and vendors"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "13": {
+    "q": "[第13題] Which of the following provides the details about the terms of a test ...",
+    "opts": [
+      "Rules of engagement",
+      "Supply chain analysis",
+      "Right to audit clause",
+      "Due diligence"
+    ],
+    "explain": "[第13題的詳細分析待補充]"
+  },
+  "14": {
+    "q": "[網路安全題] A penetration tester begins an engagement by performing port and servi...",
+    "opts": [
+      "Active",
+      "Passive",
+      "Defensive",
+      "Offensive"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "15": {
+    "q": "[第15題] Which of the following is required for an organization to properly man...",
+    "opts": [
+      "IRP",
+      "DRP",
+      "RPO",
+      "SDLC"
+    ],
+    "explain": "[第15題的詳細分析待補充]"
+  },
+  "16": {
+    "q": "[第16題] Which of the following vulnerabilities is associated with installing s...",
+    "opts": [
+      "Jailbreaking",
+      "Memory injection",
+      "Resource reuse",
+      "Side loading"
+    ],
+    "explain": "[第16題的詳細分析待補充]"
+  },
+  "17": {
+    "q": "[威脅題] A security analyst is reviewing the following logs: Which of the follo...",
+    "opts": [
+      "Password spraying",
+      "Account forgery",
+      "Pass-the-hash",
+      "Brute-force"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "18": {
+    "q": "[第18題] An analyst is evaluating the implementation of Zero Trust principles w...",
+    "opts": [
+      "Secured zones",
+      "Subject role",
+      "Adaptive identity",
+      "Threat scope reduction"
+    ],
+    "explain": "[第18題的詳細分析待補充]"
+  },
+  "19": {
+    "q": "[第19題] An engineer needs to nd a solution that creates an added layer of secu...",
+    "opts": [
+      "RDP server",
+      "Jump server",
+      "Proxy server",
+      "Hypervisor"
+    ],
+    "explain": "[第19題的詳細分析待補充]"
+  },
+  "20": {
+    "q": "[加密題] A company’s web lter is congured to scan the URL for strings and deny ...",
+    "opts": [
+      "encryption=off",
+      "http://",
+      "www.*.com",
+      ":443"
+    ],
+    "explain": "[關於加密演算法和安全機制的分析]"
+  },
+  "21": {
+    "q": "[網路安全題] During a security incident, the security operations team identified su...",
+    "opts": [
+      "access-list inbound deny ip source 0.0.0.0/0 destination 10.1.4.9/32",
+      "access-list inbound deny ip source 10.1.4.9/32 destination 0.0.0.0/0",
+      "access-list inbound permit ip source 10.1.4.9/32 destination 0.0.0.0/0",
+      "access-list inbound permit ip source 0.0.0.0/0 destination 10.1.4.9/32"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "22": {
+    "q": "[第22題] A company needs to provide administrative access to internal resources...",
+    "opts": [
+      "Implementing a bastion host",
+      "Deploying a perimeter network",
+      "Installing a WAF",
+      "Utilizing single sign-on"
+    ],
+    "explain": "[第22題的詳細分析待補充]"
+  },
+  "23": {
+    "q": "[網路安全題] A security analyst is reviewing alerts in the SIEM related to potentia...",
+    "opts": [
+      "Application",
+      "IPS/IDS",
+      "Network",
+      "Endpoint"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "24": {
+    "q": "[網路安全題] A cyber operations team informs a security analyst about a new tactic ...",
+    "opts": [
+      "Digital forensics",
+      "E-discovery",
+      "Incident response",
+      "Threat hunting"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "25": {
+    "q": "[第25題] A company purchased cyber insurance to address items listed on the ris...",
+    "opts": [
+      "Accept",
+      "Transfer",
+      "Mitigate",
+      "Avoid"
+    ],
+    "explain": "[第25題的詳細分析待補充]"
+  },
+  "26": {
+    "q": "[加密題] A security administrator would like to protect data on employees’ lapt...",
+    "opts": [
+      "Partition",
+      "Asymmetric",
+      "Full disk",
+      "Database"
+    ],
+    "explain": "[關於加密演算法和安全機制的分析]"
+  },
+  "27": {
+    "q": "[第27題] Which of the following security control types does an acceptable use p...",
+    "opts": [
+      "Detective",
+      "Compensating",
+      "Corrective",
+      "Preventive"
+    ],
+    "explain": "[第27題的詳細分析待補充]"
+  },
+  "28": {
+    "q": "[第28題] An IT manager informs the entire help desk staff that only the IT mana...",
+    "opts": [
+      "Hardening",
+      "Employee monitoring",
+      "Conguration enforcement",
+      "Least privilege"
+    ],
+    "explain": "[第28題的詳細分析待補充]"
+  },
+  "29": {
+    "q": "[第29題] Which of the following is the most likely to be used to document risks...",
+    "opts": [
+      "Risk tolerance",
+      "Risk transfer",
+      "Risk register",
+      "Risk analysis"
+    ],
+    "explain": "[第29題的詳細分析待補充]"
+  },
+  "30": {
+    "q": "[網路安全題] Which of the following should a security administrator adhere to when ...",
+    "opts": [
+      "Disaster recovery plan",
+      "Incident response procedure",
+      "Business continuity plan",
+      "Change management procedure"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "31": {
+    "q": "[威脅題] A company is expanding its threat surface program and allowing individ...",
+    "opts": [
+      "Open-source intelligence",
+      "Bug bounty",
+      "Red team",
+      "Penetration testing"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "32": {
+    "q": "[威脅題] Which of the following threat actors is the most likely to use large n...",
+    "opts": [
+      "Insider",
+      "Unskilled attacker",
+      "Nation-state",
+      "Hacktivist"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "33": {
+    "q": "[第33題] Which of the following enables the use of an input eld to run commands...",
+    "opts": [
+      "Cross-site scripting",
+      "Side loading",
+      "Buffer overow",
+      "SQL injection"
+    ],
+    "explain": "[第33題的詳細分析待補充]"
+  },
+  "34": {
+    "q": "[第34題] Employees in the research and development business unit receive extens...",
+    "opts": [
+      "Encrypted",
+      "Intellectual property",
+      "Critical",
+      "Data in transit"
+    ],
+    "explain": "[第34題的詳細分析待補充]"
+  },
+  "35": {
+    "q": "[第35題] A company has begun labeling all laptops with asset inventory stickers...",
+    "opts": [
+      "If a security incident occurs on the device, the correct employee can be notied.",
+      "The security team will be able to send user awareness training to the appropriate device.",
+      "Users can be mapped to their devices when conguring software MFA tokens.",
+      "User-based firewall policies can be correctly targeted to the appropriate laptops.",
+      "When conducting penetration testing, the security team will be able to target the desired laptops.",
+      "Company data can be accounted for when the employee leaves the organization."
+    ],
+    "explain": "[第35題的詳細分析待補充]"
+  },
+  "36": {
+    "q": "[第36題] A technician wants to improve the situational and environmental awaren...",
+    "opts": [
+      "Send out periodic security reminders.",
+      "Update the content of new hire documentation.",
+      "Modify the content of recurring training.",
+      "Implement a phishing campaign."
+    ],
+    "explain": "[第36題的詳細分析待補充]"
+  },
+  "37": {
+    "q": "[網路安全題] A newly appointed board member with cybersecurity knowledge wants the ...",
+    "opts": [
+      "Packet captures",
+      "Vulnerability scans",
+      "Metadata",
+      "Dashboard"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "38": {
+    "q": "[加密題] A systems administrator receives the following alert from a le integri...",
+    "opts": [
+      "The end user changed the le permissions.",
+      "A cryptographic collision was detected.",
+      "A snapshot of the le system was taken.",
+      "A rootkit was deployed."
+    ],
+    "explain": "[關於加密演算法和安全機制的分析]"
+  },
+  "39": {
+    "q": "[第39題] Which of the following roles, according to the shared responsibility m...",
+    "opts": [
+      "Client",
+      "Third-party vendor",
+      "Cloud provider",
+      "DBA"
+    ],
+    "explain": "[第39題的詳細分析待補充]"
+  },
+  "40": {
+    "q": "[第40題] A client asked a security company to provide a document outlining the ...",
+    "opts": [
+      "MSA",
+      "SLA",
+      "BPA",
+      "SOW"
+    ],
+    "explain": "[第40題的詳細分析待補充]"
+  },
+  "41": {
+    "q": "[網路安全題] A security team is reviewing the ndings in a report that was delivered...",
+    "opts": [
+      "Secure cookies",
+      "Version control",
+      "Input validation",
+      "Code signing"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "42": {
+    "q": "[網路安全題] Which of the following must be considered when designing a high-availa...",
+    "opts": [
+      "Ease of recovery",
+      "Ability to patch",
+      "Physical isolation",
+      "Responsiveness",
+      "Attack surface",
+      "Extensible authentication"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "43": {
+    "q": "[第43題] A technician needs to apply a high-priority patch to a production syst...",
+    "opts": [
+      "Air gap the system.",
+      "Move the system to a different network segment.",
+      "Create a change control request.",
+      "Apply the patch to the system."
+    ],
+    "explain": "[第43題的詳細分析待補充]"
+  },
+  "44": {
+    "q": "[第44題] Which of the following describes the reason root cause analysis should...",
+    "opts": [
+      "To gather IoCs for the investigation",
+      "To discover which systems have been affected",
+      "To eradicate any trace of malware on the network",
+      "To prevent future incidents of the same nature"
+    ],
+    "explain": "[第44題的詳細分析待補充]"
+  },
+  "45": {
+    "q": "[第45題] Which of the following is the most likely outcome if a large bank fail...",
+    "opts": [
+      "Fines",
+      "Audit ndings",
+      "Sanctions",
+      "Reputation damage"
+    ],
+    "explain": "[第45題的詳細分析待補充]"
+  },
+  "46": {
+    "q": "[第46題] A company is developing a business continuity strategy and needs to de...",
+    "opts": [
+      "Capacity planning",
+      "Redundancy",
+      "Geographic dispersion",
+      "Tabletop exercise"
+    ],
+    "explain": "[第46題的詳細分析待補充]"
+  },
+  "47": {
+    "q": "[第47題] A company’s legal department drafted sensitive documents in a SaaS app...",
+    "opts": [
+      "Data masking",
+      "Encryption",
+      "Geolocation policy",
+      "Data sovereignty regulation"
+    ],
+    "explain": "[第47題的詳細分析待補充]"
+  },
+  "48": {
+    "q": "[第48題] Which of the following is a hardware-specic vulnerability?...",
+    "opts": [
+      "Firmware version",
+      "Buffer overow",
+      "SQL injection",
+      "Cross-site scripting"
+    ],
+    "explain": "[第48題的詳細分析待補充]"
+  },
+  "49": {
+    "q": "[網路安全題] While troubleshooting a firewall configuration, a technician determine...",
+    "opts": [
+      "Documenting the new policy in a change request and submitting the request to change management",
+      "Testing the policy in a non-production environment before enabling the policy in the production network",
+      "Disabling any intrusion prevention signatures on the “deny any” policy prior to enabling the new policy",
+      "Including an “allow any” policy above the “deny any” policy"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "50": {
+    "q": "[第50題] An organization is building a new backup data center with cost-bene t ...",
+    "opts": [
+      "Real-time recovery",
+      "Hot",
+      "Cold",
+      "Warm"
+    ],
+    "explain": "[第50題的詳細分析待補充]"
+  },
+  "51": {
+    "q": "[第51題] A company requires hard drives to be securely wiped before sending dec...",
+    "opts": [
+      "Enumeration",
+      "Sanitization",
+      "Destruction",
+      "Inventory"
+    ],
+    "explain": "[第51題的詳細分析待補充]"
+  },
+  "52": {
+    "q": "[第52題] A systems administrator works for a local hospital and needs to ensure...",
+    "opts": [
+      "Private",
+      "Critical",
+      "Sensitive",
+      "Public"
+    ],
+    "explain": "[第52題的詳細分析待補充]"
+  },
+  "53": {
+    "q": "[第53題] A U.S.-based cloud-hosting provider wants to expand its data centers t...",
+    "opts": [
+      "Local data protection regulations",
+      "Risks from hackers residing in other countries",
+      "Impacts to existing contractual obligations",
+      "Time zone differences in log correlation"
+    ],
+    "explain": "[第53題的詳細分析待補充]"
+  },
+  "54": {
+    "q": "[第54題] Which of the following would be the best way to block unknown programs...",
+    "opts": [
+      "Access control list",
+      "Application allow list",
+      "Host-based firewall",
+      "DLP solution"
+    ],
+    "explain": "[第54題的詳細分析待補充]"
+  },
+  "55": {
+    "q": "[威脅題] A company hired a consultant to perform an offensive security assessme...",
+    "opts": [
+      "White",
+      "Purple",
+      "Blue",
+      "Red"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "56": {
+    "q": "[第56題] A software development manager wants to ensure the authenticity of the...",
+    "opts": [
+      "Testing input validation on the user input elds",
+      "Performing code signing on company-developed software",
+      "Performing static code analysis on the software",
+      "Ensuring secure cookies are use"
+    ],
+    "explain": "[第56題的詳細分析待補充]"
+  },
+  "57": {
+    "q": "[威脅題] Which of the following can be used to identify potential attacker acti...",
+    "opts": [
+      "Honeypot",
+      "Video surveillance",
+      "Zero Trust",
+      "Geofencing"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "58": {
+    "q": "[第58題] During an investigation, an incident response team attempts to underst...",
+    "opts": [
+      "Analysis",
+      "Lessons learned",
+      "Detection",
+      "Containment"
+    ],
+    "explain": "[第58題的詳細分析待補充]"
+  },
+  "59": {
+    "q": "[網路安全題] A security practitioner completes a vulnerability assessment on a comp...",
+    "opts": [
+      "Conduct an audit.",
+      "Initiate a penetration test.",
+      "Rescan the network.",
+      "Submit a report."
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "60": {
+    "q": "[第60題] An administrator was notied that a user logged in remotely after hours...",
+    "opts": [
+      "Penetration testing",
+      "Phishing campaign",
+      "External audit",
+      "Insider threat"
+    ],
+    "explain": "[第60題的詳細分析待補充]"
+  },
+  "61": {
+    "q": "[第61題] Which of the following allows for the attribution of messages to indiv...",
+    "opts": [
+      "Adaptive identity",
+      "Non-repudiation",
+      "Authentication",
+      "Access logs"
+    ],
+    "explain": "[第61題的詳細分析待補充]"
+  },
+  "62": {
+    "q": "[第62題] Which of the following is the best way to consistently determine on a ...",
+    "opts": [
+      "Automation",
+      "Compliance checklist",
+      "Attestation",
+      "Manual audit"
+    ],
+    "explain": "[第62題的詳細分析待補充]"
+  },
+  "63": {
+    "q": "[第63題] Which of the following tools can assist with detecting an employee who...",
+    "opts": [
+      "SCAP",
+      "NetFlow",
+      "Antivirus",
+      "DLP"
+    ],
+    "explain": "[第63題的詳細分析待補充]"
+  },
+  "64": {
+    "q": "[第64題] An organization recently updated its security policy to include the fo...",
+    "opts": [
+      "Identify embedded keys",
+      "Code debugging",
+      "Input validation",
+      "Static code analysis"
+    ],
+    "explain": "[第64題的詳細分析待補充]"
+  },
+  "65": {
+    "q": "[威脅題] A security analyst and the management team are reviewing the organizat...",
+    "opts": [
+      "Place posters around the o ce to raise awareness of common phishing activities.",
+      "Implement email security lters to prevent phishing emails from being delivered.",
+      "Update the EDR policies to block automatic execution of downloaded programs.",
+      "Create additional training for users to recognize the signs of phishing attempts."
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "66": {
+    "q": "[網路安全題] Which of the following has been implemented when a host-based firewall...",
+    "opts": [
+      "Compensating control",
+      "Network segmentation",
+      "Transfer of risk",
+      "SNMP traps"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "67": {
+    "q": "[第67題] The management team notices that new accounts that are set up manually...",
+    "opts": [
+      "Guard rail script",
+      "Ticketing work ow",
+      "Escalation script",
+      "User provisioning script"
+    ],
+    "explain": "[第67題的詳細分析待補充]"
+  },
+  "68": {
+    "q": "[第68題] A company is planning to set up a SIEM system and assign an analyst to...",
+    "opts": [
+      "Corrective",
+      "Preventive",
+      "Detective",
+      "Deterrent"
+    ],
+    "explain": "[第68題的詳細分析待補充]"
+  },
+  "69": {
+    "q": "[第69題] A systems administrator is looking for a low-cost application-hosting ...",
+    "opts": [
+      "Serverless framework",
+      "Type 1 hypervisor",
+      "SD-WAN",
+      "SDN"
+    ],
+    "explain": "[第69題的詳細分析待補充]"
+  },
+  "70": {
+    "q": "[第70題] A security operations center determines that the malicious activity de...",
+    "opts": [
+      "Tuning",
+      "Aggregating",
+      "Quarantining",
+      "Archiving"
+    ],
+    "explain": "[第70題的詳細分析待補充]"
+  },
+  "71": {
+    "q": "[第71題] A security analyst reviews domain activity logs and notices the follow...",
+    "opts": [
+      "The user jsmith’s account has been locked out.",
+      "A keylogger is installed on jsmith’s workstation.",
+      "An attacker is attempting to brute force jsmith’s account.",
+      "Ransomware has been deployed in the domain."
+    ],
+    "explain": "[第71題的詳細分析待補充]"
+  },
+  "72": {
+    "q": "[第72題] A company is concerned about weather events causing damage to the serv...",
+    "opts": [
+      "Clustering servers",
+      "Geographic dispersion",
+      "Load balancers",
+      "Off-site backups"
+    ],
+    "explain": "[第72題的詳細分析待補充]"
+  },
+  "73": {
+    "q": "[第73題] Which of the following is a primary security concern for a company set...",
+    "opts": [
+      "End of life",
+      "Buffer overow",
+      "VM escape",
+      "Jailbreaking"
+    ],
+    "explain": "[第73題的詳細分析待補充]"
+  },
+  "74": {
+    "q": "[威脅題] A company decided to reduce the cost of its annual cyber insurance pol...",
+    "opts": [
+      "MTTR",
+      "RTO",
+      "ARO",
+      "MTBF"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "75": {
+    "q": "[第75題] Which of the following is the most likely to be included as an element...",
+    "opts": [
+      "Reporting phishing attempts or other suspicious activities",
+      "Detecting insider threats using anomalous behavior recognition",
+      "Verifying information when modifying wire transfer data",
+      "Performing social engineering as part of third-party penetration testing"
+    ],
+    "explain": "[第75題的詳細分析待補充]"
+  },
+  "76": {
+    "q": "[第76題] Which of the following is the phase in the incident response process w...",
+    "opts": [
+      "Preparation",
+      "Recovery",
+      "Lessons learned",
+      "Analysis"
+    ],
+    "explain": "[第76題的詳細分析待補充]"
+  },
+  "77": {
+    "q": "[網路安全題] After a recent vulnerability scan, a security engineer needs to harden...",
+    "opts": [
+      "Console access",
+      "Routing protocols",
+      "VLANs",
+      "Web-based administration"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "78": {
+    "q": "[第78題] A security administrator needs a method to secure data in an environme...",
+    "opts": [
+      "SPF",
+      "GPO",
+      "NAC",
+      "FIM"
+    ],
+    "explain": "[第78題的詳細分析待補充]"
+  },
+  "79": {
+    "q": "[第79題] An administrator is reviewing a single server's security logs and disc...",
+    "opts": [
+      "Brute-force attack",
+      "Privilege escalation",
+      "Failed password audit",
+      "Forgotten password by the user"
+    ],
+    "explain": "[第79題的詳細分析待補充]"
+  },
+  "80": {
+    "q": "[網路安全題] A security engineer is implementing FDE for all laptops in an organiza...",
+    "opts": [
+      "Key escrow",
+      "TPM presence",
+      "Digital signatures",
+      "Data tokenization",
+      "Public key management",
+      "Certicate authority linking"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "81": {
+    "q": "[網路安全題] A security analyst scans a company's public network and discovers a ho...",
+    "opts": [
+      "Changing the remote desktop port to a non-standard number",
+      "Setting up a VPN and placing the jump server inside the firewall",
+      "Using a proxy for web connections from the remote desktop server",
+      "Connecting the remote server to the domain and increasing the password length"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "82": {
+    "q": "[威脅題] An enterprise has been experiencing attacks focused on exploiting vuln...",
+    "opts": [
+      "ACL",
+      "DLP",
+      "IDS",
+      "IPS"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "83": {
+    "q": "[第83題] Security controls in a data center are being reviewed to ensure data i...",
+    "opts": [
+      "Remote access points should fail closed.",
+      "Logging controls should fail open.",
+      "Safety controls should fail open.",
+      "Logical security controls should fail closed."
+    ],
+    "explain": "[第83題的詳細分析待補充]"
+  },
+  "84": {
+    "q": "[第84題] Which of the following would be best suited for constantly changing en...",
+    "opts": [
+      "RTOS",
+      "Containers",
+      "Embedded systems",
+      "SCADA"
+    ],
+    "explain": "[第84題的詳細分析待補充]"
+  },
+  "85": {
+    "q": "[第85題] Which of the following incident response activities ensures evidence i...",
+    "opts": [
+      "E-discovery",
+      "Chain of custody",
+      "Legal hold",
+      "Preservation"
+    ],
+    "explain": "[第85題的詳細分析待補充]"
+  },
+  "86": {
+    "q": "[威脅題] An accounting clerk sent money to an attacker's bank account after rec...",
+    "opts": [
+      "Standardizing security incident reporting",
+      "Executing regular phishing campaigns",
+      "Implementing insider threat detection measures",
+      "Updating processes for sending wire transfers"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "87": {
+    "q": "[第87題] A systems administrator is creating a script that would save time and ...",
+    "opts": [
+      "Off-the-shelf software",
+      "Orchestration",
+      "Baseline",
+      "Policy enforcement"
+    ],
+    "explain": "[第87題的詳細分析待補充]"
+  },
+  "88": {
+    "q": "[第88題] A company's marketing department collects, modies, and stores sensitiv...",
+    "opts": [
+      "Processor",
+      "Custodian",
+      "Subject",
+      "Owner"
+    ],
+    "explain": "[第88題的詳細分析待補充]"
+  },
+  "89": {
+    "q": "[第89題] Which of the following describes the maximum allowance of accepted ris...",
+    "opts": [
+      "Risk indicator",
+      "Risk level",
+      "Risk score",
+      "Risk threshold"
+    ],
+    "explain": "[第89題的詳細分析待補充]"
+  },
+  "90": {
+    "q": "[網路安全題] A security analyst receives alerts about an internal system sending a ...",
+    "opts": [
+      "A worm is propagating across the network.",
+      "Data is being exltrated.",
+      "A logic bomb is deleting data.",
+      "Ransomware is encrypting les."
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "91": {
+    "q": "[網路安全題] A technician is opening ports on a firewall for a new system being dep...",
+    "opts": [
+      "Default credentials",
+      "Non-segmented network",
+      "Supply chain vendor",
+      "Vulnerable software"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "92": {
+    "q": "[威脅題] A systems administrator is working on a solution with the following re...",
+    "opts": [
+      "Zero Trust",
+      "AAA",
+      "Non-repudiation",
+      "CIA"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "93": {
+    "q": "[第93題] Which of the following involves an attempt to take advantage of databa...",
+    "opts": [
+      "Buffer overow",
+      "SQL injection",
+      "VM escape",
+      "Memory injection"
+    ],
+    "explain": "[第93題的詳細分析待補充]"
+  },
+  "94": {
+    "q": "[第94題] Which of the following is used to validate a certicate when it is pres...",
+    "opts": [
+      "OCSP",
+      "CSR",
+      "CA",
+      "CRC"
+    ],
+    "explain": "[第94題的詳細分析待補充]"
+  },
+  "95": {
+    "q": "[第95題] One of a company's vendors sent an analyst a security bulletin that re...",
+    "opts": [
+      "Virtualization",
+      "Firmware",
+      "Application",
+      "Operating system"
+    ],
+    "explain": "[第95題的詳細分析待補充]"
+  },
+  "96": {
+    "q": "[第96題] Which of the following is used to quantitatively measure the criticali...",
+    "opts": [
+      "CVE",
+      "CVSS",
+      "CIA",
+      "CERT"
+    ],
+    "explain": "[第96題的詳細分析待補充]"
+  },
+  "97": {
+    "q": "[第97題] Which of the following actions could a security engineer take to ensur...",
+    "opts": [
+      "Congure all systems to log scheduled tasks.",
+      "Collect and monitor all traffic exiting the network.",
+      "Block traffic based on known malicious signatures.",
+      "Install endpoint management software on all systems"
+    ],
+    "explain": "[第97題的詳細分析待補充]"
+  },
+  "98": {
+    "q": "[第98題] An organization is leveraging a VPN between its headquarters and a bra...",
+    "opts": [
+      "Data in use",
+      "Data in transit",
+      "Geographic restrictions",
+      "Data sovereignty"
+    ],
+    "explain": "[第98題的詳細分析待補充]"
+  },
+  "99": {
+    "q": "[網路安全題] After reviewing the following vulnerability scanning report: A securit...",
+    "opts": [
+      "It is a false positive.",
+      "A rescan is required.",
+      "It is considered noise.",
+      "Compensating controls exist."
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "100": {
+    "q": "[網路安全題] An organization disabled unneeded services and placed a firewall in fr...",
+    "opts": [
+      "Exception",
+      "Segmentation",
+      "Risk transfer",
+      "Compensating controls"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "101": {
+    "q": "[第101題] A security consultant needs secure, remote access to a client environm...",
+    "opts": [
+      "EAP",
+      "DHCP",
+      "IPSec",
+      "NAT"
+    ],
+    "explain": "[第101題的詳細分析待補充]"
+  },
+  "102": {
+    "q": "[第102題] Which of the following should a systems administrator use to ensure an...",
+    "opts": [
+      "Software as a service",
+      "Infrastructure as code",
+      "Internet of Things",
+      "Software-defined networking"
+    ],
+    "explain": "[第102題的詳細分析待補充]"
+  },
+  "103": {
+    "q": "[網路安全題] After a security awareness training session, a user called the IT help...",
+    "opts": [
+      "Insider threat",
+      "Email phishing",
+      "Social engineering",
+      "Executive whaling"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "104": {
+    "q": "[第104題] A security administrator is deploying a DLP solution to prevent the ex...",
+    "opts": [
+      "Block access to cloud storage websites.",
+      "Create a rule to block outgoing email attachments.",
+      "Apply classications to the data.",
+      "Remove all user permissions from shares on the le server."
+    ],
+    "explain": "[第104題的詳細分析待補充]"
+  },
+  "105": {
+    "q": "[第105題] An administrator assists the legal and compliance team with ensuring i...",
+    "opts": [
+      "Compromise",
+      "Retention",
+      "Analysis",
+      "Transfer",
+      "Inventory"
+    ],
+    "explain": "[第105題的詳細分析待補充]"
+  },
+  "106": {
+    "q": "[第106題] A company is working with a vendor to perform a penetration test. Whic...",
+    "opts": [
+      "SOW",
+      "BPA",
+      "SLA",
+      "NDA"
+    ],
+    "explain": "[第106題的詳細分析待補充]"
+  },
+  "107": {
+    "q": "[威脅題] A Chief Information Security O cer (CISO) wants to explicitly raise aw...",
+    "opts": [
+      "Insider threat",
+      "Hacktivist",
+      "Nation-state",
+      "Organized crime"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "108": {
+    "q": "[第108題] Which of the following practices would be best to prevent an insider f...",
+    "opts": [
+      "Code scanning for vulnerabilities",
+      "Open-source component usage",
+      "Quality assurance testing",
+      "Peer review and approval"
+    ],
+    "explain": "[第108題的詳細分析待補充]"
+  },
+  "109": {
+    "q": "[第109題] Which of the following can best protect against an employee inadverten...",
+    "opts": [
+      "Host-based firewall",
+      "System isolation",
+      "Least privilege",
+      "Application allow list"
+    ],
+    "explain": "[第109題的詳細分析待補充]"
+  },
+  "110": {
+    "q": "[第110題] A company is adding a clause to its AUP that states employees are not ...",
+    "opts": [
+      "Cross-site scripting",
+      "Buffer overow",
+      "Jailbreaking",
+      "Side loading"
+    ],
+    "explain": "[第110題的詳細分析待補充]"
+  },
+  "111": {
+    "q": "[第111題] Which of the following would be the best ways to ensure only authorize...",
+    "opts": [
+      "Fencing",
+      "Video surveillance",
+      "Badge access",
+      "Access control vestibule",
+      "Sign-in sheet",
+      "Sensor"
+    ],
+    "explain": "[第111題的詳細分析待補充]"
+  },
+  "112": {
+    "q": "[網路安全題] An organization would like to store customer data on a separate part o...",
+    "opts": [
+      "Segmentation",
+      "Isolation",
+      "Patching",
+      "Encryption"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "113": {
+    "q": "[網路安全題] Which of the following is the most common data loss path for an air-ga...",
+    "opts": [
+      "Bastion host",
+      "Unsecured Bluetooth",
+      "Unpatched OS",
+      "Removable devices"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "114": {
+    "q": "[威脅題] Malware spread across a company's network after an employee visited a ...",
+    "opts": [
+      "Impersonation",
+      "Disinformation",
+      "Watering-hole",
+      "Smishing"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "115": {
+    "q": "[加密題] An organization is struggling with scaling issues on its VPN concentra...",
+    "opts": [
+      "Deploying a SASE solution to remote employees",
+      "Building a load-balanced VPN solution with redundant internet",
+      "Purchasing a low-cost SD-WAN solution for VPN traffic",
+      "Using a cloud provider to create additional VPN concentrators"
+    ],
+    "explain": "[關於加密演算法和安全機制的分析]"
+  },
+  "116": {
+    "q": "[第116題] Which of the following is the best reason to complete an audit in a ba...",
+    "opts": [
+      "Regulatory requirement",
+      "Organizational change",
+      "Self-assessment requirement",
+      "Service-level requirement"
+    ],
+    "explain": "[第116題的詳細分析待補充]"
+  },
+  "117": {
+    "q": "[第117題] Which of the following security concepts is the best reason for permis...",
+    "opts": [
+      "Integrity",
+      "Availability",
+      "Condentiality",
+      "Non-repudiation"
+    ],
+    "explain": "[第117題的詳細分析待補充]"
+  },
+  "118": {
+    "q": "[網路安全題] Which of the following are cases in which an engineer should recommend...",
+    "opts": [
+      "The device has been moved from a production environment to a test environment.",
+      "The device is congured to use cleartext passwords.",
+      "The device is moved to an isolated segment on the enterprise network.",
+      "The device is moved to a different location in the enterprise.",
+      "The device's encryption level cannot meet organizational standards.",
+      "The device is unable to receive authorized updates."
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "119": {
+    "q": "[第119題] A company is required to perform a risk assessment on an annual basis....",
+    "opts": [
+      "Continuous",
+      "Ad hoc",
+      "Recurring",
+      "One time"
+    ],
+    "explain": "[第119題的詳細分析待補充]"
+  },
+  "120": {
+    "q": "[威脅題] After a recent ransomware attack on a company's system, an administrat...",
+    "opts": [
+      "Compensating",
+      "Detective",
+      "Preventive",
+      "Corrective"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "121": {
+    "q": "[第121題] Which of the following exercises should an organization use to improve...",
+    "opts": [
+      "Tabletop",
+      "Replication",
+      "Failover",
+      "Recovery"
+    ],
+    "explain": "[第121題的詳細分析待補充]"
+  },
+  "122": {
+    "q": "[第122題] Which of the following best ensures minimal downtime and data loss for...",
+    "opts": [
+      "Generators and UPS",
+      "Off-site replication",
+      "Redundant cold sites",
+      "High availability networking"
+    ],
+    "explain": "[第122題的詳細分析待補充]"
+  },
+  "123": {
+    "q": "[網路安全題] A newly identified network access vulnerability has been found in the ...",
+    "opts": [
+      "Insurance",
+      "Patching",
+      "Segmentation",
+      "Replacement"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "124": {
+    "q": "[第124題] After an audit, an administrator discovers all users have access to co...",
+    "opts": [
+      "Group Policy",
+      "Content ltering",
+      "Data loss prevention",
+      "Access control lists"
+    ],
+    "explain": "[第124題的詳細分析待補充]"
+  },
+  "125": {
+    "q": "[第125題] A client demands at least 99.99% uptime from a service provider's host...",
+    "opts": [
+      "MOA",
+      "SOW",
+      "MOU",
+      "SLA"
+    ],
+    "explain": "[第125題的詳細分析待補充]"
+  },
+  "126": {
+    "q": "[第126題] A company is discarding a classied storage array and hires an outside ...",
+    "opts": [
+      "Certication",
+      "Inventory list",
+      "Classication",
+      "Proof of ownership"
+    ],
+    "explain": "[第126題的詳細分析待補充]"
+  },
+  "127": {
+    "q": "[第127題] A company is planning a disaster recovery site and needs to ensure tha...",
+    "opts": [
+      "Geographic dispersion",
+      "Platform diversity",
+      "Hot site",
+      "Load balancing"
+    ],
+    "explain": "[第127題的詳細分析待補充]"
+  },
+  "128": {
+    "q": "[第128題] A security analyst locates a potentially malicious video le on a serve...",
+    "opts": [
+      "Obtain the le's SHA-256 hash.",
+      "Use hexdump on the le's contents.",
+      "Check endpoint logs.",
+      "Query the le's metadata."
+    ],
+    "explain": "[第128題的詳細分析待補充]"
+  },
+  "129": {
+    "q": "[第129題] Which of the following teams combines both offensive and defensive tes...",
+    "opts": [
+      "Red",
+      "Blue",
+      "Purple",
+      "Yellow"
+    ],
+    "explain": "[第129題的詳細分析待補充]"
+  },
+  "130": {
+    "q": "[第130題] A small business uses kiosks on the sales oor to display product infor...",
+    "opts": [
+      "Patch availability",
+      "Product software compatibility",
+      "Ease of recovery",
+      "Cost of replacement"
+    ],
+    "explain": "[第130題的詳細分析待補充]"
+  },
+  "131": {
+    "q": "[第131題] Which of the following would help ensure a security analyst is able to...",
+    "opts": [
+      "A full inventory of all hardware and software",
+      "Documentation of system classications",
+      "A list of system owners and their departments",
+      "Third-party risk assessment documentation"
+    ],
+    "explain": "[第131題的詳細分析待補充]"
+  },
+  "132": {
+    "q": "[第132題] Which of the following best practices gives administrators a set perio...",
+    "opts": [
+      "Impact analysis",
+      "Scheduled downtime",
+      "Backout plan",
+      "Change management boards"
+    ],
+    "explain": "[第132題的詳細分析待補充]"
+  },
+  "133": {
+    "q": "[第133題] A company must ensure sensitive data at rest is rendered unreadable. W...",
+    "opts": [
+      "Hashing",
+      "Tokenization",
+      "Encryption",
+      "Segmentation"
+    ],
+    "explain": "[第133題的詳細分析待補充]"
+  },
+  "134": {
+    "q": "[第134題] A legacy device is being decommissioned and is no longer receiving upd...",
+    "opts": [
+      "End of business",
+      "End of testing",
+      "End of support",
+      "End of life"
+    ],
+    "explain": "[第134題的詳細分析待補充]"
+  },
+  "135": {
+    "q": "[第135題] A bank insists all of its vendors must prevent data loss on stolen lap...",
+    "opts": [
+      "Encryption at rest",
+      "Masking",
+      "Data classication",
+      "Permission restrictions"
+    ],
+    "explain": "[第135題的詳細分析待補充]"
+  },
+  "136": {
+    "q": "[網路安全題] A company's end users are reporting that they are unable to reach exte...",
+    "opts": [
+      "Concurrent session usage",
+      "Secure DNS cryptographic downgrade",
+      "On-path resource consumption",
+      "Reected denial of service"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "137": {
+    "q": "[第137題] A systems administrator wants to prevent users from being able to acce...",
+    "opts": [
+      "RBAC",
+      "ACL",
+      "SAML",
+      "GPO"
+    ],
+    "explain": "[第137題的詳細分析待補充]"
+  },
+  "138": {
+    "q": "[身份驗證題] During the onboarding process, an employee needs to create a password ...",
+    "opts": [
+      "Federation",
+      "Identity proong",
+      "Password complexity",
+      "Default password changes",
+      "Password manager",
+      "Open authentication"
+    ],
+    "explain": "[關於多因素驗證、密碼管理和身份驗證的分析]"
+  },
+  "139": {
+    "q": "[網路安全題] Which of the following describes a security alerting and monitoring to...",
+    "opts": [
+      "SIEM",
+      "DLP",
+      "IDS",
+      "SNMP"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "140": {
+    "q": "[身份驗證題] A network manager wants to protect the company's VPN by implementing m...",
+    "opts": [
+      "Domain name, PKI, GeoIP lookup",
+      "VPN IP address, company ID, facial structure",
+      "Password, authentication token, thumbprint",
+      "Company URL, TLS certicate, home address"
+    ],
+    "explain": "[關於多因素驗證、密碼管理和身份驗證的分析]"
+  },
+  "141": {
+    "q": "[第141題] Which of the following would be the best way to handle a critical busi...",
+    "opts": [
+      "Segmentation",
+      "Isolation",
+      "Hardening",
+      "Decommissioning"
+    ],
+    "explain": "[第141題的詳細分析待補充]"
+  },
+  "142": {
+    "q": "[威脅題] Which of the following vulnerabilities is exploited when an attacker o...",
+    "opts": [
+      "VM escape",
+      "SQL injection",
+      "Buffer overow",
+      "Race condition"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "143": {
+    "q": "[第143題] After a company was compromised, customers initiated a lawsuit. The co...",
+    "opts": [
+      "Retain the emails between the security team and affected customers for 30 days.",
+      "Retain any communications related to the security breach until further notice.",
+      "Retain any communications between security members during the breach response.",
+      "Retain all emails from the company to affected customers for an inde nite period of time."
+    ],
+    "explain": "[第143題的詳細分析待補充]"
+  },
+  "144": {
+    "q": "[第144題] Which of the following describes the process of concealing code or tex...",
+    "opts": [
+      "Symmetric encryption",
+      "Hashing",
+      "Data masking",
+      "Steganography"
+    ],
+    "explain": "[第144題的詳細分析待補充]"
+  },
+  "145": {
+    "q": "[威脅題] An employee receives a text message from an unknown number claiming to...",
+    "opts": [
+      "Vishing",
+      "Smishing",
+      "Pretexting",
+      "Phishing"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "146": {
+    "q": "[第146題] Which of the following risk management strategies should an enterprise...",
+    "opts": [
+      "Mitigate",
+      "Accept",
+      "Transfer",
+      "Avoid"
+    ],
+    "explain": "[第146題的詳細分析待補充]"
+  },
+  "147": {
+    "q": "[第147題] Visitors to a secured facility are required to check in with a photo I...",
+    "opts": [
+      "Physical",
+      "Managerial",
+      "Technical",
+      "Operational"
+    ],
+    "explain": "[第147題的詳細分析待補充]"
+  },
+  "148": {
+    "q": "[第148題] The local administrator account for a company's VPN appliance was unex...",
+    "opts": [
+      "Using least privilege",
+      "Changing the default password",
+      "Assigning individual user IDs",
+      "Reviewing logs more frequently"
+    ],
+    "explain": "[第148題的詳細分析待補充]"
+  },
+  "149": {
+    "q": "[第149題] Which of the following is the best way to secure an on-site data cente...",
+    "opts": [
+      "Bollards",
+      "Access badge",
+      "Motion sensor",
+      "Video surveillance"
+    ],
+    "explain": "[第149題的詳細分析待補充]"
+  },
+  "150": {
+    "q": "[第150題] An engineer moved to another team and is unable to access the new team...",
+    "opts": [
+      "Role-based",
+      "Discretionary",
+      "Time of day",
+      "Least privilege"
+    ],
+    "explain": "[第150題的詳細分析待補充]"
+  },
+  "151": {
+    "q": "[網路安全題] A network administrator is working on a project to deploy a load balan...",
+    "opts": [
+      "Privacy",
+      "Integrity",
+      "Condentiality",
+      "Availability"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "152": {
+    "q": "[身份驗證題] A systems administrator is changing the password policy within an ente...",
+    "opts": [
+      "Deploying PowerShell scripts",
+      "Pushing GPO update",
+      "Enabling PAP",
+      "Updating EDR proles"
+    ],
+    "explain": "[關於多因素驗證、密碼管理和身份驗證的分析]"
+  },
+  "153": {
+    "q": "[第153題] Which of the following would be most useful in determining whether the...",
+    "opts": [
+      "ARO",
+      "RTO",
+      "RPO",
+      "ALE",
+      "SLE"
+    ],
+    "explain": "[第153題的詳細分析待補充]"
+  },
+  "154": {
+    "q": "[身份驗證題] In order to strengthen a password and prevent a hacker from cracking i...",
+    "opts": [
+      "Key stretching",
+      "Tokenization",
+      "Data masking",
+      "Salting"
+    ],
+    "explain": "[關於多因素驗證、密碼管理和身份驗證的分析]"
+  },
+  "155": {
+    "q": "[第155題] A technician is deploying a new security camera. Which of the followin...",
+    "opts": [
+      "Congure the correct VLAN.",
+      "Perform a vulnerability scan.",
+      "Disable unnecessary ports.",
+      "Conduct a site survey."
+    ],
+    "explain": "[第155題的詳細分析待補充]"
+  },
+  "156": {
+    "q": "[威脅題] A company is experiencing a web services outage on the public network....",
+    "opts": [
+      "ARP poisoning",
+      "Brute force",
+      "Buffer overow",
+      "DDoS"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "157": {
+    "q": "[威脅題] Which of the following threat actors is the most likely to be motivate...",
+    "opts": [
+      "Hacktivist",
+      "Insider threat",
+      "Organized crime",
+      "Shadow IT"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "158": {
+    "q": "[第158題] An organization experiences a cybersecurity incident involving a comma...",
+    "opts": [
+      "Application",
+      "Authentication",
+      "DHCP",
+      "Network",
+      "Firewall",
+      "Database"
+    ],
+    "explain": "[第158題的詳細分析待補充]"
+  },
+  "159": {
+    "q": "[第159題] During a penetration test, a vendor attempts to enter an unauthorized ...",
+    "opts": [
+      "Defensive",
+      "Passive",
+      "Offensive",
+      "Physical"
+    ],
+    "explain": "[第159題的詳細分析待補充]"
+  },
+  "160": {
+    "q": "[加密題] A systems administrator uses a key to encrypt a message being sent to ...",
+    "opts": [
+      "Symmetric",
+      "Asymmetric",
+      "Hashing",
+      "Salting"
+    ],
+    "explain": "[關於加密演算法和安全機制的分析]"
+  },
+  "161": {
+    "q": "[網路安全題] A visitor plugs a laptop into a network jack in the lobby and is able ...",
+    "opts": [
+      "Port security",
+      "Web application firewall",
+      "Transport layer security",
+      "Virtual private network"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "162": {
+    "q": "[第162題] A security administrator is reissuing a former employee's laptop. Whic...",
+    "opts": [
+      "Data retention",
+      "Certication",
+      "Destruction",
+      "Classication",
+      "Sanitization",
+      "Enumeration"
+    ],
+    "explain": "[第162題的詳細分析待補充]"
+  },
+  "163": {
+    "q": "[第163題] A systems administrator would like to deploy a change to a production ...",
+    "opts": [
+      "Backout plan",
+      "Impact analysis",
+      "Test procedure",
+      "Approval procedure"
+    ],
+    "explain": "[第163題的詳細分析待補充]"
+  },
+  "164": {
+    "q": "[第164題] A company is redesigning its infrastructure and wants to reduce the nu...",
+    "opts": [
+      "Serverless",
+      "Segmentation",
+      "Virtualization",
+      "Microservices"
+    ],
+    "explain": "[第164題的詳細分析待補充]"
+  },
+  "165": {
+    "q": "[第165題] A bank set up a new server that contains customers' PII. Which of the ...",
+    "opts": [
+      "Full disk encryption",
+      "Network access control",
+      "File integrity monitoring",
+      "User behavior analytics"
+    ],
+    "explain": "[第165題的詳細分析待補充]"
+  },
+  "166": {
+    "q": "[網路安全題] Users at a company are reporting they are unable to access the URL for...",
+    "opts": [
+      "Creating a firewall rule to allow HTTPS traffic",
+      "Conguring the IPS to allow shopping",
+      "Tuning the DLP rule that detects credit card data",
+      "Updating the categorization in the content lter"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "167": {
+    "q": "[第167題] Which of the following most impacts an administrator's ability to addr...",
+    "opts": [
+      "Rescanning requirements",
+      "Patch availability",
+      "Organizational impact",
+      "Risk tolerance"
+    ],
+    "explain": "[第167題的詳細分析待補充]"
+  },
+  "168": {
+    "q": "[第168題] Which of the following describes effective change management procedure...",
+    "opts": [
+      "Approving the change after a successful deployment",
+      "Having a backout plan when a patch fails",
+      "Using a spreadsheet for tracking changes",
+      "Using an automatic change control bypass for security updates"
+    ],
+    "explain": "[第168題的詳細分析待補充]"
+  },
+  "169": {
+    "q": "[網路安全題] The CIRT is reviewing an incident that involved a human resources recr...",
+    "opts": [
+      "WAF utilizing SSL decryption",
+      "NGFW utilizing application inspection",
+      "UTM utilizing a threat feed",
+      "SD-WAN utilizing IPSec"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "170": {
+    "q": "[加密題] An enterprise is working with a third party and needs to allow access ...",
+    "opts": [
+      "EAP",
+      "IPSec",
+      "SD-WAN",
+      "TLS"
+    ],
+    "explain": "[關於加密演算法和安全機制的分析]"
+  },
+  "171": {
+    "q": "[第171題] An administrator has identified and ngerprinted specic les that will g...",
+    "opts": [
+      "DLP",
+      "SNMP traps",
+      "SCAP",
+      "IPS"
+    ],
+    "explain": "[第171題的詳細分析待補充]"
+  },
+  "172": {
+    "q": "[第172題] A software developer released a new application and is distributing ap...",
+    "opts": [
+      "Hashes",
+      "Certicates",
+      "Algorithms",
+      "Salting"
+    ],
+    "explain": "[第172題的詳細分析待補充]"
+  },
+  "173": {
+    "q": "[第173題] An organization wants to limit potential impact to its log-in database...",
+    "opts": [
+      "Tokenization",
+      "Hashing",
+      "Obfuscation",
+      "Segmentation"
+    ],
+    "explain": "[第173題的詳細分析待補充]"
+  },
+  "174": {
+    "q": "[第174題] An administrator nds that all user workstations and servers are displa...",
+    "opts": [
+      "Virus",
+      "Trojan",
+      "Spyware",
+      "Ransomware"
+    ],
+    "explain": "[第174題的詳細分析待補充]"
+  },
+  "175": {
+    "q": "[威脅題] A systems administrator is advised that an external web server is not ...",
+    "opts": [
+      "DDoS",
+      "Directory traversal",
+      "Brute-force",
+      "HTTPS downgrade"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "176": {
+    "q": "[第176題] An organization would like to calculate the time needed to resolve a h...",
+    "opts": [
+      "Recovery point objective",
+      "Mean time between failures",
+      "Recovery time objective",
+      "Mean time to repair"
+    ],
+    "explain": "[第176題的詳細分析待補充]"
+  },
+  "177": {
+    "q": "[威脅題] A security engineer is installing an IPS to block signature-based atta...",
+    "opts": [
+      "Monitor",
+      "Sensor",
+      "Audit",
+      "Active"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "178": {
+    "q": "[第178題] An IT manager is increasing the security capabilities of an organizati...",
+    "opts": [
+      "XDR",
+      "SPF",
+      "DLP",
+      "DMARC"
+    ],
+    "explain": "[第178題的詳細分析待補充]"
+  },
+  "179": {
+    "q": "[網路安全題] Which of the following is used to protect a computer from viruses, mal...",
+    "opts": [
+      "IDS",
+      "ACL",
+      "EDR",
+      "NAC"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "180": {
+    "q": "[第180題] Client les can only be accessed by employees who need to know the info...",
+    "opts": [
+      "Availability",
+      "Condentiality",
+      "Integrity",
+      "Non-repudiation"
+    ],
+    "explain": "[第180題的詳細分析待補充]"
+  },
+  "181": {
+    "q": "[第181題] Which of the following describes the category of data that is most imp...",
+    "opts": [
+      "Condential",
+      "Public",
+      "Private",
+      "Critical"
+    ],
+    "explain": "[第181題的詳細分析待補充]"
+  },
+  "182": {
+    "q": "[威脅題] A new employee logs in to the email system for the rst time and notice...",
+    "opts": [
+      "Business email",
+      "Social engineering",
+      "Unsecured network",
+      "Default credentials"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "183": {
+    "q": "[第183題] Which of the following describes the understanding between a company a...",
+    "opts": [
+      "SLA",
+      "MOU",
+      "MOA",
+      "BPA"
+    ],
+    "explain": "[第183題的詳細分析待補充]"
+  },
+  "184": {
+    "q": "[第184題] A company that is located in an area prone to hurricanes is developing...",
+    "opts": [
+      "Cold",
+      "Tertiary",
+      "Warm",
+      "Hot"
+    ],
+    "explain": "[第184題的詳細分析待補充]"
+  },
+  "185": {
+    "q": "[網路安全題] Which of the following security controls is most likely being used whe...",
+    "opts": [
+      "Deterrent",
+      "Corrective",
+      "Compensating",
+      "Preventive"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "186": {
+    "q": "[第186題] Which of the following best describes the practice of researching laws...",
+    "opts": [
+      "Compliance reporting",
+      "GDPR",
+      "Due diligence",
+      "Attestation"
+    ],
+    "explain": "[第186題的詳細分析待補充]"
+  },
+  "187": {
+    "q": "[網路安全題] Which of the following considerations is the most important for an org...",
+    "opts": [
+      "Reporting structure for the data privacy o cer",
+      "Request process for data subject access",
+      "Role as controller or processor",
+      "Physical location of the company"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "188": {
+    "q": "[第188題] A security analyst is investigating a workstation that is suspected of...",
+    "opts": [
+      "IPS",
+      "Firewall",
+      "AСL",
+      "Windows security"
+    ],
+    "explain": "[第188題的詳細分析待補充]"
+  },
+  "189": {
+    "q": "[第189題] An IT manager is putting together a documented plan describing how the...",
+    "opts": [
+      "Business continuity",
+      "Physical security",
+      "Change management",
+      "Disaster recovery"
+    ],
+    "explain": "[第189題的詳細分析待補充]"
+  },
+  "190": {
+    "q": "[第190題] A business needs a recovery site but does not require immediate failov...",
+    "opts": [
+      "Hot",
+      "Cold",
+      "Warm",
+      "Geographically dispersed"
+    ],
+    "explain": "[第190題的詳細分析待補充]"
+  },
+  "191": {
+    "q": "[第191題] A security team is setting up a new environment for hosting the organi...",
+    "opts": [
+      "Virtualization and isolation of resources",
+      "Network segmentation",
+      "Data encryption",
+      "Strong authentication policies"
+    ],
+    "explain": "[第191題的詳細分析待補充]"
+  },
+  "192": {
+    "q": "[威脅題] A manager receives an email that contains a link to receive a refund. ...",
+    "opts": [
+      "End user training",
+      "Policy review",
+      "URL scanning",
+      "Plain text email"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "193": {
+    "q": "[第193題] A company wants to verify that the software the company is deploying c...",
+    "opts": [
+      "Validate the code signature.",
+      "Execute the code in a sandbox.",
+      "Search the executable for ASCII strings.",
+      "Generate a hash of the les."
+    ],
+    "explain": "[第193題的詳細分析待補充]"
+  },
+  "194": {
+    "q": "[第194題] A systems administrator notices that one of the systems critical for p...",
+    "opts": [
+      "Installing HIDS on the system",
+      "Placing the system in an isolated VLAN",
+      "Decommissioning the system",
+      "Encrypting the system's hard drive"
+    ],
+    "explain": "[第194題的詳細分析待補充]"
+  },
+  "195": {
+    "q": "[第195題] The Chief Information Security O cer (CISO) at a large company would l...",
+    "opts": [
+      "Penetration test",
+      "Internal audit",
+      "Attestation",
+      "External examination"
+    ],
+    "explain": "[第195題的詳細分析待補充]"
+  },
+  "196": {
+    "q": "[第196題] A systems administrator notices that the research and development depa...",
+    "opts": [
+      "Espionage",
+      "Data exltration",
+      "Nation-state attack",
+      "Shadow IT"
+    ],
+    "explain": "[第196題的詳細分析待補充]"
+  },
+  "197": {
+    "q": "[第197題] The marketing department set up its own project management software wi...",
+    "opts": [
+      "Shadow IT",
+      "Insider threat",
+      "Data exltration",
+      "Service disruption"
+    ],
+    "explain": "[第197題的詳細分析待補充]"
+  },
+  "198": {
+    "q": "[第198題] Which of the following would best explain why a security analyst is ru...",
+    "opts": [
+      "To track the status of patching installations",
+      "To nd shadow IT cloud deployments",
+      "To continuously the monitor hardware inventory",
+      "To hunt for active attackers in the network"
+    ],
+    "explain": "[第198題的詳細分析待補充]"
+  },
+  "199": {
+    "q": "[第199題] Which of the following is classified as high availability in a cloud e...",
+    "opts": [
+      "Access broker",
+      "Cloud HSM",
+      "WAF",
+      "Load balancer"
+    ],
+    "explain": "[第199題的詳細分析待補充]"
+  },
+  "200": {
+    "q": "[第200題] Which of the following security measures is required when using a clou...",
+    "opts": [
+      "Encrypted connection",
+      "Federated identity",
+      "Firewall",
+      "Single sign-on"
+    ],
+    "explain": "[第200題的詳細分析待補充]"
+  },
+  "201": {
+    "q": "[威脅題] Which of the following threat vectors is most commonly utilized by ins...",
+    "opts": [
+      "Unidentied removable devices",
+      "Default network device credentials",
+      "Spear phishing emails",
+      "Impersonation of business units through typosquatting"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "202": {
+    "q": "[第202題] Which of the following methods to secure credit card data is best to u...",
+    "opts": [
+      "Encryption",
+      "Hashing",
+      "Masking",
+      "Tokenization"
+    ],
+    "explain": "[第202題的詳細分析待補充]"
+  },
+  "203": {
+    "q": "[第203題] The Chief Information Security O cer (CISO) has determined the company...",
+    "opts": [
+      "Fines",
+      "Reputational damage",
+      "Sanctions",
+      "Contractual implications"
+    ],
+    "explain": "[第203題的詳細分析待補充]"
+  },
+  "204": {
+    "q": "[第204題] Which of the following alert types is the most likely to be ignored ov...",
+    "opts": [
+      "True positive",
+      "True negative",
+      "False positive",
+      "False negative"
+    ],
+    "explain": "[第204題的詳細分析待補充]"
+  },
+  "205": {
+    "q": "[網路安全題] A security analyst is investigating an application server and discover...",
+    "opts": [
+      "Memory injection",
+      "Race condition",
+      "Side loading",
+      "SQL injection"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "206": {
+    "q": "[網路安全題] An important patch for a critical application has just been released, ...",
+    "opts": [
+      "Asset inventory",
+      "Network enumeration",
+      "Data certication",
+      "Procurement process"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "207": {
+    "q": "[第207題] Which of the following should a security operations center use to impr...",
+    "opts": [
+      "Playbooks",
+      "Frameworks",
+      "Baselines",
+      "Benchmarks"
+    ],
+    "explain": "[第207題的詳細分析待補充]"
+  },
+  "208": {
+    "q": "[第208題] Which of the following describes an executive team that is meeting in ...",
+    "opts": [
+      "Continuity of operations",
+      "Capacity planning",
+      "Tabletop exercise",
+      "Parallel processing"
+    ],
+    "explain": "[第208題的詳細分析待補充]"
+  },
+  "209": {
+    "q": "[網路安全題] A healthcare organization wants to provide a web application that allo...",
+    "opts": [
+      "Scalability",
+      "Availability",
+      "Cost",
+      "Ease of deployment"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "210": {
+    "q": "[第210題] Which of the following agreement types de nes the time frame in which ...",
+    "opts": [
+      "SOW",
+      "SLA",
+      "MOA",
+      "MOU"
+    ],
+    "explain": "[第210題的詳細分析待補充]"
+  },
+  "211": {
+    "q": "[第211題] Which of the following is a feature of a next-generation SIEM system?...",
+    "opts": [
+      "Virus signatures",
+      "Automated response actions",
+      "Security agent deployment",
+      "Vulnerability scanning"
+    ],
+    "explain": "[第211題的詳細分析待補充]"
+  },
+  "212": {
+    "q": "[第212題] To improve the security at a data center, a security administrator imp...",
+    "opts": [
+      "Preventive",
+      "Deterrent",
+      "Corrective",
+      "Directive",
+      "Compensating",
+      "Detective"
+    ],
+    "explain": "[第212題的詳細分析待補充]"
+  },
+  "213": {
+    "q": "[威脅題] An attacker posing as the Chief Executive O cer calls an employee and ...",
+    "opts": [
+      "Smishing",
+      "Disinformation",
+      "Impersonating",
+      "Whaling"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "214": {
+    "q": "[第214題] After conducting a vulnerability scan, a systems administrator notices...",
+    "opts": [
+      "False positive",
+      "False negative",
+      "True positive",
+      "True negative"
+    ],
+    "explain": "[第214題的詳細分析待補充]"
+  },
+  "215": {
+    "q": "[威脅題] A recent penetration test identified that an attacker could ood the MA...",
+    "opts": [
+      "Load balancer",
+      "Port security",
+      "IPS",
+      "NGFW"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "216": {
+    "q": "[第216題] A user would like to install software and features that are not availa...",
+    "opts": [
+      "SQLi",
+      "Cross-site scripting",
+      "Jailbreaking",
+      "Side loading"
+    ],
+    "explain": "[第216題的詳細分析待補充]"
+  },
+  "217": {
+    "q": "[網路安全題] Which of the following phases of an incident response involves generat...",
+    "opts": [
+      "Recovery",
+      "Preparation",
+      "Lessons learned",
+      "Containment"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "218": {
+    "q": "[第218題] Which of the following methods would most likely be used to identify l...",
+    "opts": [
+      "Bug bounty program",
+      "Vulnerability scan",
+      "Package monitoring",
+      "Dynamic analysis"
+    ],
+    "explain": "[第218題的詳細分析待補充]"
+  },
+  "219": {
+    "q": "[第219題] Employees located off-site must have access to company resources in or...",
+    "opts": [
+      "Proxy server",
+      "NGFW",
+      "VPN",
+      "Security zone"
+    ],
+    "explain": "[第219題的詳細分析待補充]"
+  },
+  "220": {
+    "q": "[第220題] A company allows customers to upload PDF documents to its public e-com...",
+    "opts": [
+      "Utilizing attack signatures in an IDS",
+      "Enabling malware detection through a UTM",
+      "Limiting the affected servers with a load balancer",
+      "Blocking command injections via a WAF"
+    ],
+    "explain": "[第220題的詳細分析待補充]"
+  },
+  "221": {
+    "q": "[第221題] A security analyst developed a script to automate a trivial and repeat...",
+    "opts": [
+      "To reduce implementation cost",
+      "To identify complexity",
+      "To remediate technical debt",
+      "To prevent a single point of failure"
+    ],
+    "explain": "[第221題的詳細分析待補充]"
+  },
+  "222": {
+    "q": "[第222題] A company is decommissioning its physical servers and replacing them w...",
+    "opts": [
+      "Microservices",
+      "Containerization",
+      "Virtualization",
+      "Infrastructure as code"
+    ],
+    "explain": "[第222題的詳細分析待補充]"
+  },
+  "223": {
+    "q": "[第223題] An administrator needs to perform server hardening before deployment. ...",
+    "opts": [
+      "Disable default accounts.",
+      "Add the server to the asset inventory.",
+      "Remove unnecessary services.",
+      "Document default passwords.",
+      "Send server logs to the SIEM.",
+      "Join the server to the corporate domain."
+    ],
+    "explain": "[第223題的詳細分析待補充]"
+  },
+  "224": {
+    "q": "[第224題] A Chief Information Security O cer would like to conduct frequent, det...",
+    "opts": [
+      "Third-party attestation",
+      "Penetration testing",
+      "Internal auditing",
+      "Vulnerability scans"
+    ],
+    "explain": "[第224題的詳細分析待補充]"
+  },
+  "225": {
+    "q": "[第225題] Which of the following security concepts is accomplished with the inst...",
+    "opts": [
+      "CIA",
+      "AAA",
+      "ACL",
+      "PEM"
+    ],
+    "explain": "[第225題的詳細分析待補充]"
+  },
+  "226": {
+    "q": "[第226題] After creating a contract for IT contractors, the human resources depa...",
+    "opts": [
+      "Version validation",
+      "Version changes",
+      "Version updates",
+      "Version control"
+    ],
+    "explain": "[第226題的詳細分析待補充]"
+  },
+  "227": {
+    "q": "[第227題] The executive management team is mandating the company develop a disas...",
+    "opts": [
+      "Hot site",
+      "Cold site",
+      "Failover site",
+      "Warm site"
+    ],
+    "explain": "[第227題的詳細分析待補充]"
+  },
+  "228": {
+    "q": "[網路安全題] An administrator at a small business notices an increase in support ca...",
+    "opts": [
+      "Deploy multifactor authentication.",
+      "Decrease the level of the web lter settings.",
+      "Implement security awareness training.",
+      "Update the acceptable use policy."
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "229": {
+    "q": "[第229題] Which of the following teams is best suited to determine whether a com...",
+    "opts": [
+      "Purple team",
+      "Blue team",
+      "Red team",
+      "White team"
+    ],
+    "explain": "[第229題的詳細分析待補充]"
+  },
+  "230": {
+    "q": "[第230題] A company is reviewing options to enforce user logins after several ac...",
+    "opts": [
+      "Trusted devices",
+      "Geotagging",
+      "Smart cards",
+      "Time-based logins"
+    ],
+    "explain": "[第230題的詳細分析待補充]"
+  },
+  "231": {
+    "q": "[威脅題] Which of the following methods can be used to detect attackers who hav...",
+    "opts": [
+      "Tokenization",
+      "CI/CD",
+      "Honeypots",
+      "Threat modeling",
+      "DNS sinkhole",
+      "Data obfuscation"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "232": {
+    "q": "[第232題] A company wants to ensure that the software it develops will not be ta...",
+    "opts": [
+      "Hashing",
+      "Encryption",
+      "Baselines",
+      "Tokenization"
+    ],
+    "explain": "[第232題的詳細分析待補充]"
+  },
+  "233": {
+    "q": "[第233題] An organization completed a project to deploy SSO across all business ...",
+    "opts": [
+      "RADIUS",
+      "SAML",
+      "EAP",
+      "OpenID"
+    ],
+    "explain": "[第233題的詳細分析待補充]"
+  },
+  "234": {
+    "q": "[威脅題] A user, who is waiting for a ight at an airport, logs in to the airlin...",
+    "opts": [
+      "Replay attack",
+      "Memory leak",
+      "Buffer overow attack",
+      "On-path attack"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "235": {
+    "q": "[網路安全題] A network engineer deployed a redundant switch stack to increase syste...",
+    "opts": [
+      "The equipment MTBF is unknown.",
+      "The ISP has no SLA.",
+      "An RPO has not been determined.",
+      "There is a single point of failure."
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "236": {
+    "q": "[網路安全題] A network team segmented a critical, end-of-life server to a VLAN that...",
+    "opts": [
+      "Managerial",
+      "Physical",
+      "Corrective",
+      "Detective",
+      "Compensating",
+      "Technical G. Deterrent"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "237": {
+    "q": "[身份驗證題] A threat actor was able to use a username and password to log in to a ...",
+    "opts": [
+      "Application management",
+      "Full disk encryption",
+      "Remote wipe",
+      "Containerization"
+    ],
+    "explain": "[關於多因素驗證、密碼管理和身份驗證的分析]"
+  },
+  "238": {
+    "q": "[第238題] Which of the following best describes the risk present after controls ...",
+    "opts": [
+      "Residual",
+      "Avoided",
+      "Inherent",
+      "Operational"
+    ],
+    "explain": "[第238題的詳細分析待補充]"
+  },
+  "239": {
+    "q": "[第239題] A software development team asked a security administrator to recommen...",
+    "opts": [
+      "Digitally signing the software",
+      "Performing code obfuscation",
+      "Limiting the use of third-party libraries",
+      "Using compile ags"
+    ],
+    "explain": "[第239題的詳細分析待補充]"
+  },
+  "240": {
+    "q": "[身份驗證題] Which of the following is a possible factor for MFA?...",
+    "opts": [
+      "Something you exhibit",
+      "Something you have",
+      "Somewhere you are",
+      "Someone you know"
+    ],
+    "explain": "[關於多因素驗證、密碼管理和身份驗證的分析]"
+  },
+  "241": {
+    "q": "[身份驗證題] Easy-to-guess passwords led to an account compromise. The current pass...",
+    "opts": [
+      "Increasing the minimum password length to 14 characters.",
+      "Upgrading the password hashing algorithm from MD5 to SHA-512.",
+      "Increasing the maximum password age to 120 days.",
+      "Reducing the minimum password length to ten characters.",
+      "Reducing the minimum password age to zero days.",
+      "Including a requirement for at least one special character."
+    ],
+    "explain": "[關於多因素驗證、密碼管理和身份驗證的分析]"
+  },
+  "242": {
+    "q": "[網路安全題] A user downloaded software from an online forum. After the user instal...",
+    "opts": [
+      "The software had a hidden keylogger.",
+      "The software was ransomware.",
+      "The user's computer had a leless virus.",
+      "The software contained a backdoor."
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "243": {
+    "q": "[第243題] A utility company is designing a new platform that will host all the v...",
+    "opts": [
+      "Connecting dual PDUs to redundant power supplies",
+      "Transitioning the platform to an IaaS provider",
+      "Conguring network load balancing for multiple paths",
+      "Deploying multiple large NAS devices for each host"
+    ],
+    "explain": "[第243題的詳細分析待補充]"
+  },
+  "244": {
+    "q": "[網路安全題] Which of the following best describes a use case for a DNS sinkhole?...",
+    "opts": [
+      "Attackers can see a DNS sinkhole as a highly valuable resource to identify a company's domain structure.",
+      "A DNS sinkhole can be used to draw employees away from known-good websites to malicious ones owned by the attacker.",
+      "A DNS sinkhole can be used to capture traffic to known-malicious domains used by attackers.",
+      "A DNS sinkhole can be set up to attract potential attackers away from a company's network resources."
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "245": {
+    "q": "[第245題] An incident analyst nds several image les on a hard disk. The image le...",
+    "opts": [
+      "Log data",
+      "Metadata",
+      "Encrypted data",
+      "Sensitive data"
+    ],
+    "explain": "[第245題的詳細分析待補充]"
+  },
+  "246": {
+    "q": "[第246題] Which of the following most likely describes why a security engineer w...",
+    "opts": [
+      "To meet compliance standards",
+      "To increase delivery rates",
+      "To block phishing attacks",
+      "To ensure non-repudiation"
+    ],
+    "explain": "[第246題的詳細分析待補充]"
+  },
+  "247": {
+    "q": "[威脅題] During a recent company safety stand-down, the cyber-awareness team ga...",
+    "opts": [
+      "Whaling",
+      "Credential harvesting",
+      "Prepending",
+      "Dumpster diving"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "248": {
+    "q": "[加密題] Which of the following considerations is the most important regarding ...",
+    "opts": [
+      "Resource constraints",
+      "Available bandwidth",
+      "The use of block ciphers",
+      "The compatibility of the TLS version"
+    ],
+    "explain": "[關於加密演算法和安全機制的分析]"
+  },
+  "249": {
+    "q": "[第249題] A coffee shop owner wants to restrict internet access to only paying c...",
+    "opts": [
+      "WPA3",
+      "Captive portal",
+      "PSK",
+      "IEEE 802.1X"
+    ],
+    "explain": "[第249題的詳細分析待補充]"
+  },
+  "250": {
+    "q": "[第250題] While performing digital forensics, which of the following is consider...",
+    "opts": [
+      "Hard drive",
+      "RAM",
+      "SSD",
+      "Temporary les"
+    ],
+    "explain": "[第250題的詳細分析待補充]"
+  },
+  "251": {
+    "q": "[第251題] A hosting provider needs to prove that its security controls have been...",
+    "opts": [
+      "NIST CSF",
+      "SOC 2 Type 2 report",
+      "CIS Top 20 compliance reports",
+      "Vulnerability report"
+    ],
+    "explain": "[第251題的詳細分析待補充]"
+  },
+  "252": {
+    "q": "[第252題] A city municipality lost its primary data center when a tornado hit th...",
+    "opts": [
+      "BCP",
+      "Communication plan",
+      "DRP",
+      "IRP"
+    ],
+    "explain": "[第252題的詳細分析待補充]"
+  },
+  "253": {
+    "q": "[第253題] Which of the following is considered a preventive control?...",
+    "opts": [
+      "Conguration auditing",
+      "Log correlation",
+      "Incident alerts",
+      "Segregation of duties"
+    ],
+    "explain": "[第253題的詳細分析待補充]"
+  },
+  "254": {
+    "q": "[網路安全題] A systems administrator notices that a testing system is down. While i...",
+    "opts": [
+      "Denial of service",
+      "ARP poisoning",
+      "Jamming",
+      "Kerberoasting"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "255": {
+    "q": "[第255題] A security team has been alerted to a ood of incoming emails that have...",
+    "opts": [
+      "Create a blocklist for all subject lines.",
+      "Send the dead domain to a DNS sinkhole.",
+      "Quarantine all emails received and notify all employees.",
+      "Block the URL shortener domain in the web proxy."
+    ],
+    "explain": "[第255題的詳細分析待補充]"
+  },
+  "256": {
+    "q": "[第256題] A security administrator is working to secure company data on corporat...",
+    "opts": [
+      "Disk encryption",
+      "Data loss prevention",
+      "Operating system hardening",
+      "Boot security"
+    ],
+    "explain": "[第256題的詳細分析待補充]"
+  },
+  "257": {
+    "q": "[第257題] A company needs to keep the fewest records possible, meet compliance n...",
+    "opts": [
+      "Security policy",
+      "Classication policy",
+      "Retention policy",
+      "Access control policy"
+    ],
+    "explain": "[第257題的詳細分析待補充]"
+  },
+  "258": {
+    "q": "[第258題] Which of the following is a common source of unintentional corporate c...",
+    "opts": [
+      "Code repositories",
+      "Dark web",
+      "Threat feeds",
+      "State actors",
+      "Vulnerability databases"
+    ],
+    "explain": "[第258題的詳細分析待補充]"
+  },
+  "259": {
+    "q": "[第259題] Which of the following is the best reason an organization should enfor...",
+    "opts": [
+      "End users will be required to consider the classication of data that can be used in documents.",
+      "The policy will result in the creation of access levels for each level of classication.",
+      "The organization will have the ability to create security requirements based on classication levels.",
+      "Security analysts will be able to see the classication of data within a document before opening it."
+    ],
+    "explain": "[第259題的詳細分析待補充]"
+  },
+  "260": {
+    "q": "[第260題] An analyst is performing a vulnerability scan against the web servers ...",
+    "opts": [
+      "Non-credentialed scan",
+      "Packet capture",
+      "Privilege escalation",
+      "System enumeration",
+      "Passive scan"
+    ],
+    "explain": "[第260題的詳細分析待補充]"
+  },
+  "261": {
+    "q": "[第261題] A security administrator is hardening corporate systems and applying a...",
+    "opts": [
+      "MITRE ATT&CK",
+      "CSIRT",
+      "CVSS",
+      "SOAR"
+    ],
+    "explain": "[第261題的詳細分析待補充]"
+  },
+  "262": {
+    "q": "[第262題] An architect has a request to increase the speed of data transfer usin...",
+    "opts": [
+      "A website-hosted solution",
+      "Cloud shared storage",
+      "A secure email solution",
+      "Microservices using API"
+    ],
+    "explain": "[第262題的詳細分析待補充]"
+  },
+  "263": {
+    "q": "[第263題] Which of the following addresses individual rights such as the right t...",
+    "opts": [
+      "GDPR",
+      "PCI DSS",
+      "NIST",
+      "ISO"
+    ],
+    "explain": "[第263題的詳細分析待補充]"
+  },
+  "264": {
+    "q": "[第264題] An administrator is installing an LDAP browser tool in order to view o...",
+    "opts": [
+      "The administrator should allow SAN certicates in the browser conguration.",
+      "The administrator needs to install the server certicate into the local truststore.",
+      "The administrator should request that the secure LDAP port be opened to the server.",
+      "The administrator needs to increase the TLS version on the organization's RA."
+    ],
+    "explain": "[第264題的詳細分析待補充]"
+  },
+  "265": {
+    "q": "[網路安全題] Which of the following is the most important security concern when usi...",
+    "opts": [
+      "Instability",
+      "Lack of vendor support",
+      "Loss of availability",
+      "Use of insecure protocols"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "266": {
+    "q": "[第266題] A security investigation revealed that malicious software was installe...",
+    "opts": [
+      "A spraying attack was used to determine which credentials to use.",
+      "A packet capture tool was used to steal the password.",
+      "A remote-access Trojan was used to install the malware.",
+      "A dictionary attack was used to log in as the server administrator."
+    ],
+    "explain": "[第266題的詳細分析待補充]"
+  },
+  "267": {
+    "q": "[第267題] A user is requesting Telnet access to manage a remote development web ...",
+    "opts": [
+      "HTTPS",
+      "SNMPv3",
+      "SSH",
+      "RDP",
+      "SMTP"
+    ],
+    "explain": "[第267題的詳細分析待補充]"
+  },
+  "268": {
+    "q": "[第268題] A security administrator is working to nd a cost-effective solution to...",
+    "opts": [
+      "Wildcard",
+      "Client certicate",
+      "Self-signed",
+      "Code signing"
+    ],
+    "explain": "[第268題的詳細分析待補充]"
+  },
+  "269": {
+    "q": "[網路安全題] An auditor discovered multiple insecure ports on some servers. Other s...",
+    "opts": [
+      "Nessus",
+      "curl",
+      "Wireshark",
+      "netcat"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "270": {
+    "q": "[第270題] A security analyst received a tip that sensitive proprietary informati...",
+    "opts": [
+      "Encapsulation",
+      "MAC address spoong",
+      "Steganography",
+      "Broken encryption",
+      "Sning via on-path position"
+    ],
+    "explain": "[第270題的詳細分析待補充]"
+  },
+  "271": {
+    "q": "[第271題] A company wants to reduce the time and expense associated with code de...",
+    "opts": [
+      "Serverless architecture",
+      "Thin clients",
+      "Private cloud",
+      "Virtual machines"
+    ],
+    "explain": "[第271題的詳細分析待補充]"
+  },
+  "272": {
+    "q": "[第272題] A security administrator is performing an audit on a stand-alone UNIX ...",
+    "opts": [
+      "Pass-the-hash monitor",
+      "File integrity monitor",
+      "Forensic analysis",
+      "Password cracker"
+    ],
+    "explain": "[第272題的詳細分析待補充]"
+  },
+  "273": {
+    "q": "[網路安全題] A security administrator needs to create firewall rules for the follow...",
+    "opts": [
+      "RTOS",
+      "VoIP",
+      "SoC",
+      "HVAC"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "274": {
+    "q": "[威脅題] Which of the following best describes a social engineering attack that...",
+    "opts": [
+      "Whaling",
+      "Spear phishing",
+      "Impersonation",
+      "Identity fraud"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "275": {
+    "q": "[第275題] During a penetration test, a aw in the internal PKI was exploited to g...",
+    "opts": [
+      "Updating the CRL",
+      "Patching the CA",
+      "Changing passwords",
+      "Implementing SOAR"
+    ],
+    "explain": "[第275題的詳細分析待補充]"
+  },
+  "276": {
+    "q": "[身份驗證題] A company wants to implement MFA. Which of the following enables the a...",
+    "opts": [
+      "PIN",
+      "Hardware token",
+      "User ID",
+      "SMS"
+    ],
+    "explain": "[關於多因素驗證、密碼管理和身份驗證的分析]"
+  },
+  "277": {
+    "q": "[身份驗證題] A company hired an external consultant to assist with required system ...",
+    "opts": [
+      "TACACS+",
+      "SAML",
+      "An SSO platform",
+      "Role-based access control",
+      "PAM software"
+    ],
+    "explain": "[關於多因素驗證、密碼管理和身份驗證的分析]"
+  },
+  "278": {
+    "q": "[網路安全題] A newly implemented wireless network is designed so that visitors can ...",
+    "opts": [
+      "Congure a RADIUS server to manage device authentication.",
+      "Use 802.1X on all devices connecting to wireless.",
+      "Add a guest captive portal requiring visitors to accept terms and conditions.",
+      "Allow for new devices to be connected via WPS."
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "279": {
+    "q": "[第279題] Which of the following data roles is responsible for identifying risks...",
+    "opts": [
+      "Owner",
+      "Custodian",
+      "Steward",
+      "Controller"
+    ],
+    "explain": "[第279題的詳細分析待補充]"
+  },
+  "280": {
+    "q": "[第280題] Which of the following physical controls can be used to both detect an...",
+    "opts": [
+      "Lighting",
+      "Fencing",
+      "Signage",
+      "Sensor",
+      "Bollard",
+      "Lock"
+    ],
+    "explain": "[第280題的詳細分析待補充]"
+  },
+  "281": {
+    "q": "[第281題] A multinational bank hosts several servers in its data center. These s...",
+    "opts": [
+      "Load balancer",
+      "Cloud backups",
+      "Geographic dispersal",
+      "Disk multipathing"
+    ],
+    "explain": "[第281題的詳細分析待補充]"
+  },
+  "282": {
+    "q": "[第282題] The author of a software package is concerned about bad actors repacka...",
+    "opts": [
+      "Input validation",
+      "Code signing",
+      "Secure cookies",
+      "Fuzzing"
+    ],
+    "explain": "[第282題的詳細分析待補充]"
+  },
+  "283": {
+    "q": "[第283題] A third-party vendor is moving a particular application to the end-of-...",
+    "opts": [
+      "Lack of security updates",
+      "Lack of new features",
+      "Lack of support",
+      "Lack of source code access"
+    ],
+    "explain": "[第283題的詳細分析待補充]"
+  },
+  "284": {
+    "q": "[加密題] A security analyst recently read a report about a aw in several of the...",
+    "opts": [
+      "Wireshark",
+      "netcat",
+      "Nessus",
+      "Nmap"
+    ],
+    "explain": "[關於加密演算法和安全機制的分析]"
+  },
+  "285": {
+    "q": "[威脅題] A development team is launching a new public-facing web product. The C...",
+    "opts": [
+      "Fuzzing",
+      "Continuous deployment",
+      "Static code analysis",
+      "Manual peer review"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "286": {
+    "q": "[第286題] During an annual review of the system design, an engineer identified a...",
+    "opts": [
+      "Risk management process",
+      "Product design process",
+      "Design review process",
+      "Change control process"
+    ],
+    "explain": "[第286題的詳細分析待補充]"
+  },
+  "287": {
+    "q": "[第287題] Which of the following is best to use when determining the severity of...",
+    "opts": [
+      "CVE",
+      "OSINT",
+      "SOAR",
+      "CVSS"
+    ],
+    "explain": "[第287題的詳細分析待補充]"
+  },
+  "288": {
+    "q": "[威脅題] An organization experienced a security breach that allowed an attacker...",
+    "opts": [
+      "The attacker created leless malware that was hosted by the banking platform.",
+      "The attacker performed a pass-the-hash attack using a shared support account.",
+      "The attacker utilized living-off-the-land binaries to evade endpoint detection and response software.",
+      "The attacker socially engineered the accountant into performing bad transfers."
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "289": {
+    "q": "[第289題] Which of the following is the best resource to consult for information...",
+    "opts": [
+      "OWASP",
+      "STIX",
+      "OVAL",
+      "Threat intelligence feed",
+      "Common Vulnerabilities and Exposures"
+    ],
+    "explain": "[第289題的詳細分析待補充]"
+  },
+  "290": {
+    "q": "[威脅題] A security analyst is reviewing the logs on an organization's DNS serv...",
+    "opts": [
+      "Determining the organization's ISP-assigned address space",
+      "Bypassing the organization's DNS sinkholing",
+      "Footprinting the internal network",
+      "Attempting to achieve initial access to the DNS server",
+      "Exltrating data from fshare.int.complia.org"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "291": {
+    "q": "[威脅題] A security analyst at an organization observed several user logins fro...",
+    "opts": [
+      "Disciplinary actions for users",
+      "Conditional access policies",
+      "More regular account audits",
+      "Implementation of additional authentication factors",
+      "Enforcement of content ltering policies",
+      "A review of user account permissions"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "292": {
+    "q": "[威脅題] A security team is addressing a risk associated with the attack surfac...",
+    "opts": [
+      "NIDS",
+      "Honeypot",
+      "Certicate revocation list",
+      "HIPS",
+      "WAF",
+      "SIEM"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "293": {
+    "q": "[網路安全題] A security administrator notices numerous unused, non-compliant deskto...",
+    "opts": [
+      "Monitoring",
+      "Decommissioning",
+      "Patching",
+      "Isolating"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "294": {
+    "q": "[第294題] Which of the following is a common data removal option for companies t...",
+    "opts": [
+      "Sanitization",
+      "Formatting",
+      "Degaussing",
+      "Defragmentation"
+    ],
+    "explain": "[第294題的詳細分析待補充]"
+  },
+  "295": {
+    "q": "[身份驗證題] An organization wants to improve the company's security authentication...",
+    "opts": [
+      "Username and password",
+      "Biometrics",
+      "SMS verication",
+      "Time-based tokens"
+    ],
+    "explain": "[關於多因素驗證、密碼管理和身份驗證的分析]"
+  },
+  "296": {
+    "q": "[第296題] A security o cer is implementing a security awareness program and has ...",
+    "opts": [
+      "Password policy",
+      "Access badges",
+      "Phishing campaign",
+      "Risk assessment"
+    ],
+    "explain": "[第296題的詳細分析待補充]"
+  },
+  "297": {
+    "q": "[第297題] A malicious update was distributed to a common software platform and d...",
+    "opts": [
+      "DDoS attack",
+      "Rogue employee",
+      "Insider threat",
+      "Supply chain"
+    ],
+    "explain": "[第297題的詳細分析待補充]"
+  },
+  "298": {
+    "q": "[第298題] A company web server is initiating outbound traffic to a low-reputatio...",
+    "opts": [
+      "A web shell has been deployed to the server through the page.",
+      "A vulnerability has been exploited to deploy a worm to the server.",
+      "Malicious insiders are using the server to mine cryptocurrency.",
+      "Attackers have deployed a rootkit Trojan to the server over an exposed RDP port."
+    ],
+    "explain": "[第298題的詳細分析待補充]"
+  },
+  "299": {
+    "q": "[第299題] An organization requests a third-party full-spectrum analysis of its s...",
+    "opts": [
+      "Vulnerability scanner",
+      "Penetration test",
+      "SCAP",
+      "Illumination tool"
+    ],
+    "explain": "[第299題的詳細分析待補充]"
+  },
+  "300": {
+    "q": "[第300題] A systems administrator deployed a monitoring solution that does not r...",
+    "opts": [
+      "Agentless solution",
+      "Client-based soon",
+      "Open port",
+      "File-based solution"
+    ],
+    "explain": "[第300題的詳細分析待補充]"
+  },
+  "301": {
+    "q": "[第301題] A security analyst is reviewing the source code of an application in o...",
+    "opts": [
+      "Dynamic",
+      "Static",
+      "Gap",
+      "Impact"
+    ],
+    "explain": "[第301題的詳細分析待補充]"
+  },
+  "302": {
+    "q": "[第302題] Which of the following agreement types is used to limit external discu...",
+    "opts": [
+      "BPA",
+      "NDA",
+      "SLA",
+      "MSA"
+    ],
+    "explain": "[第302題的詳細分析待補充]"
+  },
+  "303": {
+    "q": "[網路安全題] A security analyst is evaluating a SaaS application that the human res...",
+    "opts": [
+      "Internal audit",
+      "Penetration testing",
+      "Attestation",
+      "Due diligence"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "304": {
+    "q": "[第304題] Which of the following is used to conceal credit card information in a...",
+    "opts": [
+      "Tokenization",
+      "Masking",
+      "Hashing",
+      "Obfuscation"
+    ],
+    "explain": "[第304題的詳細分析待補充]"
+  },
+  "305": {
+    "q": "[網路安全題] An organization recently started hosting a new service that customers ...",
+    "opts": [
+      "Layer 4 firewall",
+      "NGFW",
+      "WAF",
+      "UTM"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "306": {
+    "q": "[第306題] Which of the following topics would most likely be included within an ...",
+    "opts": [
+      "Service-level agreements",
+      "Information security policy",
+      "Penetration testing methodology",
+      "Branch protection requirements"
+    ],
+    "explain": "[第306題的詳細分析待補充]"
+  },
+  "307": {
+    "q": "[第307題] Which of the following control types is AUP an example of?...",
+    "opts": [
+      "Physical",
+      "Managerial",
+      "Technical",
+      "Operational"
+    ],
+    "explain": "[第307題的詳細分析待補充]"
+  },
+  "308": {
+    "q": "[第308題] An organization is adopting cloud services at a rapid pace and now has...",
+    "opts": [
+      "Enable SAML.",
+      "Create OAuth tokens.",
+      "Use password vaulting.",
+      "Select an IdP."
+    ],
+    "explain": "[第308題的詳細分析待補充]"
+  },
+  "309": {
+    "q": "[第309題] A company's online shopping website became unusable shortly after midn...",
+    "opts": [
+      "Check for recently terminated DBAs.",
+      "Review WAF logs for evidence of command injection.",
+      "Scan the database server for malware.",
+      "Search the web server for ransomware notes."
+    ],
+    "explain": "[第309題的詳細分析待補充]"
+  },
+  "310": {
+    "q": "[第310題] Which of the following would be the most appropriate way to protect da...",
+    "opts": [
+      "SHA-256",
+      "SSL3.0",
+      "TLS 1.3",
+      "AES-256"
+    ],
+    "explain": "[第310題的詳細分析待補充]"
+  },
+  "311": {
+    "q": "[第311題] Which of the following is a common, passive reconnaissance technique e...",
+    "opts": [
+      "Open-source intelligence",
+      "Port scanning",
+      "Pivoting",
+      "Exploit validation"
+    ],
+    "explain": "[第311題的詳細分析待補充]"
+  },
+  "312": {
+    "q": "[威脅題] Which of the following threat actors is the most likely to seek nancia...",
+    "opts": [
+      "Organized crime",
+      "Insider threat",
+      "Nation-state",
+      "Hacktivists"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "313": {
+    "q": "[第313題] Which of the following would a systems administrator follow when upgra...",
+    "opts": [
+      "Software development life cycle",
+      "Risk tolerance",
+      "Certicate signing request",
+      "Maintenance window"
+    ],
+    "explain": "[第313題的詳細分析待補充]"
+  },
+  "314": {
+    "q": "[第314題] A systems administrator needs to ensure the secure communication of se...",
+    "opts": [
+      "IPSec",
+      "SHA-1",
+      "RSA",
+      "TGT"
+    ],
+    "explain": "[第314題的詳細分析待補充]"
+  },
+  "315": {
+    "q": "[第315題] Which of the following should an internal auditor check for rst when c...",
+    "opts": [
+      "Policies and procedures",
+      "Asset management",
+      "Vulnerability assessment",
+      "Business impact analysis"
+    ],
+    "explain": "[第315題的詳細分析待補充]"
+  },
+  "316": {
+    "q": "[第316題] Which of the following activities are associated with vulnerability ma...",
+    "opts": [
+      "Reporting",
+      "Prioritization",
+      "Exploiting",
+      "Correlation",
+      "Containment",
+      "Tabletop exercise"
+    ],
+    "explain": "[第316題的詳細分析待補充]"
+  },
+  "317": {
+    "q": "[第317題] An administrator wants to perform a risk assessment without using prop...",
+    "opts": [
+      "Network scanning",
+      "Penetration testing",
+      "Open-source intelligence",
+      "Conguration auditing"
+    ],
+    "explain": "[第317題的詳細分析待補充]"
+  },
+  "318": {
+    "q": "[網路安全題] A systems administrator is concerned about vulnerabilities within clou...",
+    "opts": [
+      "SQL injection",
+      "TOC/TOU",
+      "VM escape",
+      "Tokenization",
+      "Password spraying"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "319": {
+    "q": "[第319題] A database administrator is updating the company’s SQL database, which...",
+    "opts": [
+      "Hashing",
+      "Obfuscation",
+      "Tokenization",
+      "Masking"
+    ],
+    "explain": "[第319題的詳細分析待補充]"
+  },
+  "320": {
+    "q": "[第320題] Which of the following is a bene t of vendor diversity?...",
+    "opts": [
+      "Patch availability",
+      "Zero-day resiliency",
+      "Secure conguration guide applicability",
+      "Load balancing"
+    ],
+    "explain": "[第320題的詳細分析待補充]"
+  },
+  "321": {
+    "q": "[第321題] An employee used a company’s billing system to issue fraudulent checks...",
+    "opts": [
+      "Application logs",
+      "Vulnerability scanner logs",
+      "IDS/IPS logs",
+      "Firewall logs"
+    ],
+    "explain": "[第321題的詳細分析待補充]"
+  },
+  "322": {
+    "q": "[第322題] An organization is looking to optimize its environment and reduce the ...",
+    "opts": [
+      "Microservices",
+      "Virtualization",
+      "Real-time operating system",
+      "Containers"
+    ],
+    "explain": "[第322題的詳細分析待補充]"
+  },
+  "323": {
+    "q": "[第323題] Which of the following tasks is typically included in the BIA process?...",
+    "opts": [
+      "Estimating the recovery time of systems",
+      "Identifying the communication strategy",
+      "Evaluating the risk management plan",
+      "Establishing the backup and recovery procedures",
+      "Developing the incident response plan"
+    ],
+    "explain": "[第323題的詳細分析待補充]"
+  },
+  "324": {
+    "q": "[第324題] Which of the following is a risk of conducting a vulnerability assessm...",
+    "opts": [
+      "A disruption of business operations",
+      "Unauthorized access to the system",
+      "Reports of false positives",
+      "Finding security gaps in the system"
+    ],
+    "explain": "[第324題的詳細分析待補充]"
+  },
+  "325": {
+    "q": "[威脅題] Which of the following techniques would attract the attention of a mal...",
+    "opts": [
+      "Creating a false text le in /docs/salaries",
+      "Setting weak passwords in /etc/shadow",
+      "Scheduling vulnerable jobs in /etc/crontab",
+      "Adding a fake account to /etc/passwd"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "326": {
+    "q": "[第326題] An organization maintains intellectual property that it wants to prote...",
+    "opts": [
+      "Insider threat detection",
+      "Simulated threats",
+      "Phishing awareness",
+      "Business continuity planning"
+    ],
+    "explain": "[第326題的詳細分析待補充]"
+  },
+  "327": {
+    "q": "[第327題] An organization plans to expand its operations internationally and nee...",
+    "opts": [
+      "Cloud-based",
+      "Peer-to-peer",
+      "On-premises",
+      "Hybrid"
+    ],
+    "explain": "[第327題的詳細分析待補充]"
+  },
+  "328": {
+    "q": "[第328題] Which of the following is the most relevant reason a DPO would develop...",
+    "opts": [
+      "To manage data storage requirements better",
+      "To determine the impact in the event of a breach",
+      "To extend the length of time data can be retained",
+      "To automate the reduction of duplicated data"
+    ],
+    "explain": "[第328題的詳細分析待補充]"
+  },
+  "329": {
+    "q": "[加密題] Which of the following cryptographic solutions protects data at rest?...",
+    "opts": [
+      "Digital signatures",
+      "Full disk encryption",
+      "Private key",
+      "Steganography"
+    ],
+    "explain": "[關於加密演算法和安全機制的分析]"
+  },
+  "330": {
+    "q": "[威脅題] Which of the following should an organization use to protect its envir...",
+    "opts": [
+      "ACL",
+      "IDS",
+      "HIDS",
+      "NIPS"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "331": {
+    "q": "[第331題] Which of the following would enable a data center to remain operationa...",
+    "opts": [
+      "Generator",
+      "Uninterruptible power supply",
+      "Replication",
+      "Parallel processing"
+    ],
+    "explain": "[第331題的詳細分析待補充]"
+  },
+  "332": {
+    "q": "[第332題] A company installed cameras and added signs to alert visitors that the...",
+    "opts": [
+      "Directive",
+      "Deterrent",
+      "Preventive",
+      "Detective",
+      "Corrective",
+      "Technical"
+    ],
+    "explain": "[第332題的詳細分析待補充]"
+  },
+  "333": {
+    "q": "[加密題] Which of the following is the best way to securely store an encryption...",
+    "opts": [
+      "Public key infrastructure",
+      "Open public ledger",
+      "Public key encryption",
+      "Key escrow"
+    ],
+    "explain": "[關於加密演算法和安全機制的分析]"
+  },
+  "334": {
+    "q": "[加密題] For which of the following reasons would a systems administrator lever...",
+    "opts": [
+      "To test the integrity of the le",
+      "To validate the authenticity of the le",
+      "To activate the license for the le",
+      "To calculate the checksum of the le"
+    ],
+    "explain": "[關於加密演算法和安全機制的分析]"
+  },
+  "335": {
+    "q": "[第335題] A company is redesigning its infrastructure and wants to reduce the nu...",
+    "opts": [
+      "Isolation",
+      "Segmentation",
+      "Virtualization",
+      "Redundancy"
+    ],
+    "explain": "[第335題的詳細分析待補充]"
+  },
+  "336": {
+    "q": "[威脅題] Which of the following security concepts is being followed when implem...",
+    "opts": [
+      "Availability",
+      "Non-repudiation",
+      "Integrity",
+      "Condentiality"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "337": {
+    "q": "[第337題] A security manager created new documentation to use in response to var...",
+    "opts": [
+      "Set the maximum data retention policy.",
+      "Securely store the documents on an air-gapped network.",
+      "Review the documents’ data classication policy.",
+      "Conduct a tabletop exercise with the team."
+    ],
+    "explain": "[第337題的詳細分析待補充]"
+  },
+  "338": {
+    "q": "[第338題] After failing an audit twice, an organization has been ordered by a go...",
+    "opts": [
+      "Non-compliance",
+      "Contract violations",
+      "Government sanctions",
+      "Rules of engagement"
+    ],
+    "explain": "[第338題的詳細分析待補充]"
+  },
+  "339": {
+    "q": "[第339題] A company is developing a critical system for the government and stori...",
+    "opts": [
+      "Private",
+      "Condential",
+      "Public",
+      "Operational",
+      "Urgent",
+      "Restricted"
+    ],
+    "explain": "[第339題的詳細分析待補充]"
+  },
+  "340": {
+    "q": "[第340題] Which of the following activities is included in the post-incident rev...",
+    "opts": [
+      "Determining the root cause of the incident",
+      "Developing steps to mitigate the risks of the incident",
+      "Validating the accuracy of the evidence collected during the investigation",
+      "Reestablishing the compromised system’s configuration and settings"
+    ],
+    "explain": "[第340題的詳細分析待補充]"
+  },
+  "341": {
+    "q": "[加密題] Which of the following attacks exploits a potential vulnerability as a...",
+    "opts": [
+      "Password cracking",
+      "On-path",
+      "Digital signing",
+      "Side-channel"
+    ],
+    "explain": "[關於加密演算法和安全機制的分析]"
+  },
+  "342": {
+    "q": "[第342題] Which of the following is a preventive physical security control?...",
+    "opts": [
+      "Video surveillance system",
+      "Bollards",
+      "Alarm system",
+      "Motion sensors"
+    ],
+    "explain": "[第342題的詳細分析待補充]"
+  },
+  "343": {
+    "q": "[第343題] Which of the following is most likely to be used as a just-in-time ref...",
+    "opts": [
+      "Change management policy",
+      "Risk prole",
+      "Playbook",
+      "SIEM profile"
+    ],
+    "explain": "[第343題的詳細分析待補充]"
+  },
+  "344": {
+    "q": "[加密題] A security engineer configured a remote access VPN. The remote access ...",
+    "opts": [
+      "GRE",
+      "IPSec",
+      "SD-WAN",
+      "EAP"
+    ],
+    "explain": "[關於加密演算法和安全機制的分析]"
+  },
+  "345": {
+    "q": "[第345題] Executives at a company are concerned about employees accessing system...",
+    "opts": [
+      "UBA",
+      "EDR",
+      "NAC",
+      "DLP"
+    ],
+    "explain": "[第345題的詳細分析待補充]"
+  },
+  "346": {
+    "q": "[第346題] Several customers want an organization to verify its security controls...",
+    "opts": [
+      "Hire a vendor to perform a penetration test",
+      "Perform an annual self-assessment.",
+      "Allow each client the right to audit",
+      "Provide a third-party attestation report"
+    ],
+    "explain": "[第346題的詳細分析待補充]"
+  },
+  "347": {
+    "q": "[第347題] A university employee logged on to the academic server and attempted t...",
+    "opts": [
+      "Two-factor authentication",
+      "Firewall",
+      "Intrusion prevention system",
+      "User activity logs"
+    ],
+    "explain": "[第347題的詳細分析待補充]"
+  },
+  "348": {
+    "q": "[第348題] Which of the following consequences would a retail chain most likely f...",
+    "opts": [
+      "Contractual impacts",
+      "Sanctions",
+      "Fines",
+      "Reputational damage"
+    ],
+    "explain": "[第348題的詳細分析待補充]"
+  },
+  "349": {
+    "q": "[威脅題] A security analyst is reviewing logs and discovers the following: Whic...",
+    "opts": [
+      "Input sanitization",
+      "Secure cookies",
+      "Static code analysis",
+      "Sandboxing"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "350": {
+    "q": "[第350題] An administrator is installing an SSL certicate on a new system. Durin...",
+    "opts": [
+      "If the wildcard certicate is congured",
+      "If the certicate signing request is valid",
+      "If the root certicate is installed",
+      "If the public key is congured"
+    ],
+    "explain": "[第350題的詳細分析待補充]"
+  },
+  "351": {
+    "q": "[身份驗證題] An employee emailed a new systems administrator a malicious web link a...",
+    "opts": [
+      "Recognizing phishing",
+      "Providing situational awareness training",
+      "Using password management",
+      "Reviewing email policies"
+    ],
+    "explain": "[關於多因素驗證、密碼管理和身份驗證的分析]"
+  },
+  "352": {
+    "q": "[第352題] Which of the following strategies should an organization use to effici...",
+    "opts": [
+      "Deploy a SIEM solution",
+      "Create custom scripts to aggregate and analyze logs.",
+      "Implement EDR technology.",
+      "Install a unied threat management appliance."
+    ],
+    "explain": "[第352題的詳細分析待補充]"
+  },
+  "353": {
+    "q": "[第353題] A new security regulation was announced that will take effect in the c...",
+    "opts": [
+      "Gap analysis",
+      "Policy review",
+      "Security procedure evaluation",
+      "Threat scope reduction"
+    ],
+    "explain": "[第353題的詳細分析待補充]"
+  },
+  "354": {
+    "q": "[第354題] An accountant is transferring information to a bank over FTP. Which of...",
+    "opts": [
+      "Tokenization",
+      "Data masking",
+      "Encryption",
+      "Obfuscation"
+    ],
+    "explain": "[第354題的詳細分析待補充]"
+  },
+  "355": {
+    "q": "[身份驗證題] An organization has recently decided to implement SSO. The requirement...",
+    "opts": [
+      "LDAP",
+      "Federation",
+      "SAML",
+      "OAuth"
+    ],
+    "explain": "[關於多因素驗證、密碼管理和身份驗證的分析]"
+  },
+  "356": {
+    "q": "[威脅題] Which of the following would most likely be used by attackers to perfo...",
+    "opts": [
+      "Social engineering",
+      "Supply chain compromise",
+      "Third-party software",
+      "Rainbow table"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "357": {
+    "q": "[第357題] A security engineer would like to enhance the use of automation and or...",
+    "opts": [
+      "It increases complexity.",
+      "It removes technical debt.",
+      "It adds additional guard rails.",
+      "It acts as a workforce multiplier."
+    ],
+    "explain": "[第357題的詳細分析待補充]"
+  },
+  "358": {
+    "q": "[第358題] A systems administrator receives an alert that a company’s internal le...",
+    "opts": [
+      "Concurrent session usage",
+      "Network saturation",
+      "Account lockout",
+      "Resource consumption"
+    ],
+    "explain": "[第358題的詳細分析待補充]"
+  },
+  "359": {
+    "q": "[第359題] Which of the following data states applies to data that is being activ...",
+    "opts": [
+      "In use",
+      "At rest",
+      "In transit",
+      "Being hashed"
+    ],
+    "explain": "[第359題的詳細分析待補充]"
+  },
+  "360": {
+    "q": "[第360題] Which of the following architectures is most suitable to provide redun...",
+    "opts": [
+      "Network-enabled",
+      "Server-side",
+      "Cloud-native",
+      "Multitenant"
+    ],
+    "explain": "[第360題的詳細分析待補充]"
+  },
+  "361": {
+    "q": "[威脅題] After a security incident, a systems administrator asks the company to...",
+    "opts": [
+      "Bluetooth",
+      "Wired",
+      "NFC",
+      "SCADA"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "362": {
+    "q": "[第362題] While reviewing logs, a security administrator identies the following ...",
+    "opts": [
+      "XSS",
+      "SQLi",
+      "DDoS",
+      "CSRF"
+    ],
+    "explain": "[第362題的詳細分析待補充]"
+  },
+  "363": {
+    "q": "[網路安全題] An organization issued new laptops to all employees and wants to provi...",
+    "opts": [
+      "Agent-based",
+      "Centralized proxy",
+      "URL scanning",
+      "Content categorization"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "364": {
+    "q": "[第364題] Which of the following should be used to aggregate log data in order t...",
+    "opts": [
+      "SIEM",
+      "WAF",
+      "Network taps",
+      "IDS"
+    ],
+    "explain": "[第364題的詳細分析待補充]"
+  },
+  "365": {
+    "q": "[第365題] Which of the following provides the best protection against unwanted o...",
+    "opts": [
+      "System hardening",
+      "Host-based firewall",
+      "Intrusion detection system",
+      "Anti-malware software"
+    ],
+    "explain": "[第365題的詳細分析待補充]"
+  },
+  "366": {
+    "q": "[第366題] Which of the following is the primary purpose of a service that tracks...",
+    "opts": [
+      "Availability",
+      "Accounting",
+      "Authentication",
+      "Authorization"
+    ],
+    "explain": "[第366題的詳細分析待補充]"
+  },
+  "367": {
+    "q": "[第367題] An employee who was working remotely lost a mobile device containing c...",
+    "opts": [
+      "MDM",
+      "DLP",
+      "FDE",
+      "EDR"
+    ],
+    "explain": "[第367題的詳細分析待補充]"
+  },
+  "368": {
+    "q": "[第368題] An IT administrator needs to ensure data retention standards are imple...",
+    "opts": [
+      "Processor",
+      "Custodian",
+      "Privacy o cer",
+      "Owner"
+    ],
+    "explain": "[第368題的詳細分析待補充]"
+  },
+  "369": {
+    "q": "[第369題] A company plans to secure its systems by: • Preventing users from send...",
+    "opts": [
+      "DLP software",
+      "DNS ltering",
+      "File integrity monitoring",
+      "Stateful firewall",
+      "Guardrails",
+      "Antivirus signatures"
+    ],
+    "explain": "[第369題的詳細分析待補充]"
+  },
+  "370": {
+    "q": "[第370題] A company processes and stores sensitive data on its own systems. Whic...",
+    "opts": [
+      "Implement access controls and encryption.",
+      "Develop and provide training on data protection policies.",
+      "Create incident response and disaster recovery plans.",
+      "Purchase and install security software."
+    ],
+    "explain": "[第370題的詳細分析待補充]"
+  },
+  "371": {
+    "q": "[加密題] Which of the following cryptographic methods is preferred for securing...",
+    "opts": [
+      "Hashing algorithm",
+      "Public key infrastructure",
+      "Symmetric encryption",
+      "Elliptic curve cryptography"
+    ],
+    "explain": "[關於加密演算法和安全機制的分析]"
+  },
+  "372": {
+    "q": "[網路安全題] A network administrator wants to ensure that network traffic is highly...",
+    "opts": [
+      "Ensure that NAC is enforced on all network segments, and confirm that firewalls have updated policies to block unauthorized traffic.",
+      "Ensure only TLS and other encrypted protocols are selected for use on the network, and only permit authorized traffic via secure protocols.",
+      "Congure the perimeter IPS to block inbound HTTPS directory traversal traffic, and verify that signatures are updated on a daily basis.",
+      "Ensure the EDR software monitors for unauthorized applications that could be used by threat actors, and congure alerts for the security team."
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "373": {
+    "q": "[第373題] Which of the following de nitions best describes the concept of log co...",
+    "opts": [
+      "Combining relevant logs from multiple sources into one location",
+      "Searching and processing data to identify patterns of malicious activity",
+      "Making a record of the events that occur in the system",
+      "Analyzing the log les of the system components"
+    ],
+    "explain": "[第373題的詳細分析待補充]"
+  },
+  "374": {
+    "q": "[威脅題] An enterprise security team is researching a new security architecture...",
+    "opts": [
+      "IPS",
+      "SIEM",
+      "SASE",
+      "CASB"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "375": {
+    "q": "[第375題] Which of the following is the best way to validate the integrity and a...",
+    "opts": [
+      "Lead a simulated failover.",
+      "Conduct a tabletop exercise.",
+      "Periodically test the generators.",
+      "Develop requirements for database encryption."
+    ],
+    "explain": "[第375題的詳細分析待補充]"
+  },
+  "376": {
+    "q": "[第376題] Which of the following allows an exploit to go undetected by the opera...",
+    "opts": [
+      "Firmware vulnerabilities",
+      "Side loading",
+      "Memory injection",
+      "Encrypted payloads"
+    ],
+    "explain": "[第376題的詳細分析待補充]"
+  },
+  "377": {
+    "q": "[第377題] A malicious insider from the marketing team alters records and transfe...",
+    "opts": [
+      "Permission restrictions",
+      "Hashing",
+      "Input validation",
+      "Access control list"
+    ],
+    "explain": "[第377題的詳細分析待補充]"
+  },
+  "378": {
+    "q": "[網路安全題] An organization is required to provide assurance that its controls are...",
+    "opts": [
+      "Red teaming",
+      "Penetration testing",
+      "Independent audit",
+      "Vulnerability assessment"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "379": {
+    "q": "[第379題] A systems administrator successfully congures VPN access to a cloud en...",
+    "opts": [
+      "A jump host in the shared services security zone",
+      "An SSH server within the corporate LAN",
+      "A reverse proxy on the firewall",
+      "An MDM solution with conditional access"
+    ],
+    "explain": "[第379題的詳細分析待補充]"
+  },
+  "380": {
+    "q": "[第380題] Which of the following best describes the concept of information being...",
+    "opts": [
+      "Data sovereignty",
+      "Geolocation",
+      "Intellectual property",
+      "Geographic restrictions"
+    ],
+    "explain": "[第380題的詳細分析待補充]"
+  },
+  "381": {
+    "q": "[第381題] An audit reveals that cardholder database logs are exposing account nu...",
+    "opts": [
+      "Segmentation",
+      "Hashing",
+      "Journaling",
+      "Masking"
+    ],
+    "explain": "[第381題的詳細分析待補充]"
+  },
+  "382": {
+    "q": "[身份驗證題] A security analyst attempts to start a company's database server. When...",
+    "opts": [
+      "Browser extension",
+      "Process injection",
+      "Valid accounts",
+      "Escape to host"
+    ],
+    "explain": "[關於多因素驗證、密碼管理和身份驗證的分析]"
+  },
+  "383": {
+    "q": "[威脅題] A penetration tester enters an o ce building at the same time as a gro...",
+    "opts": [
+      "Tailgating",
+      "Shoulder surng",
+      "RFID cloning",
+      "Forgery"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "384": {
+    "q": "[網路安全題] Which of the following enables the ability to receive a consolidated r...",
+    "opts": [
+      "IPS",
+      "DLP",
+      "SIEM",
+      "Firewall"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "385": {
+    "q": "[第385題] Which of the following should an organization focus on the most when m...",
+    "opts": [
+      "Exposure factor",
+      "CVSS",
+      "CVE",
+      "Industry impact"
+    ],
+    "explain": "[第385題的詳細分析待補充]"
+  },
+  "386": {
+    "q": "[威脅題] An organization needs to monitor its users’ activities in order to pre...",
+    "opts": [
+      "Behavioral analytics",
+      "Access control lists",
+      "Identity and access management",
+      "Network intrusion detection system"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "387": {
+    "q": "[威脅題] A customer of a large company receives a phone call from someone claim...",
+    "opts": [
+      "Phishing",
+      "Whaling",
+      "Smishing",
+      "Vishing"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "388": {
+    "q": "[網路安全題] A security analyst is reviewing logs to identify the destination of co...",
+    "opts": [
+      "IDS",
+      "Antivirus",
+      "Firewall",
+      "Application"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "389": {
+    "q": "[網路安全題] When trying to access an internal website, an employee reports that a ...",
+    "opts": [
+      "Wildcard",
+      "Root of trust",
+      "Third-party",
+      "Self-signed"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "390": {
+    "q": "[威脅題] Which of the following would most likely be deployed to obtain and ana...",
+    "opts": [
+      "Firewall",
+      "IDS",
+      "Honeypot",
+      "Layer 3 switch"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "391": {
+    "q": "[第391題] Which of the following objectives is best achieved by a tabletop exerc...",
+    "opts": [
+      "Familiarizing participants with the incident response process",
+      "Deciding red and blue team rules of engagement",
+      "Quickly determining the impact of an actual security breach",
+      "Conducting multiple security investigations in parallel"
+    ],
+    "explain": "[第391題的詳細分析待補充]"
+  },
+  "392": {
+    "q": "[第392題] The private key for a website was stolen, and a new certi cate has bee...",
+    "opts": [
+      "SCEP",
+      "CRL",
+      "OCSP",
+      "CSR"
+    ],
+    "explain": "[第392題的詳細分析待補充]"
+  },
+  "393": {
+    "q": "[第393題] Which of the following organizational documents is most often used to ...",
+    "opts": [
+      "AUP",
+      "SLA",
+      "EULA",
+      "MOA"
+    ],
+    "explain": "[第393題的詳細分析待補充]"
+  },
+  "394": {
+    "q": "[第394題] Which of the following explains how to determine the global regulation...",
+    "opts": [
+      "Geographic dispersion",
+      "Data sovereignty",
+      "Geographic restrictions",
+      "Data segmentation"
+    ],
+    "explain": "[第394題的詳細分析待補充]"
+  },
+  "395": {
+    "q": "[威脅題] An organization's web servers host an online ordering system. The orga...",
+    "opts": [
+      "Regularly updating server software and patches",
+      "Implementing strong password policies",
+      "Encrypting sensitive data at rest and in transit",
+      "Utilizing a web-application firewall",
+      "Performing regular vulnerability scans",
+      "Removing payment information from the servers"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "396": {
+    "q": "[第396題] Which of the following tools is best for logging and monitoring in a c...",
+    "opts": [
+      "IPS",
+      "FIM",
+      "NAC",
+      "SIEM"
+    ],
+    "explain": "[第396題的詳細分析待補充]"
+  },
+  "397": {
+    "q": "[威脅題] During a SQL update of a database, a temporary eld that was created wa...",
+    "opts": [
+      "Race condition",
+      "Memory injection",
+      "Malicious update",
+      "Side loading"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "398": {
+    "q": "[第398題] A group of developers has a shared backup account to access the source...",
+    "opts": [
+      "RAS",
+      "EAP",
+      "SAML",
+      "PAM"
+    ],
+    "explain": "[第398題的詳細分析待補充]"
+  },
+  "399": {
+    "q": "[第399題] Which of the following elements of digital forensics should a company ...",
+    "opts": [
+      "Preservation",
+      "E-discovery",
+      "Acquisition",
+      "Containment"
+    ],
+    "explain": "[第399題的詳細分析待補充]"
+  },
+  "400": {
+    "q": "[威脅題] A company suffered a critical incident where 30GB of data was exltrate...",
+    "opts": [
+      "Analyze firewall and network logs for large amounts of outbound traffic to external IP addresses or domains.",
+      "Analyze IPS and IDS logs to nd the IP addresses used by the attacker for reconnaissance scans.",
+      "Analyze endpoint and application logs to see whether le-sharing programs were running on the company systems.",
+      "Analyze external vulnerability scans and automated reports to identify the systems the attacker could have exploited a remote code vulnerability."
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "401": {
+    "q": "[第401題] Which of the following describes the procedures a penetration tester m...",
+    "opts": [
+      "Rules of engagement",
+      "Rules of acceptance",
+      "Rules of understanding",
+      "Rules of execution"
+    ],
+    "explain": "[第401題的詳細分析待補充]"
+  },
+  "402": {
+    "q": "[第402題] A security analyst wants to better understand the behavior of users an...",
+    "opts": [
+      "Intrusion prevention system",
+      "Sandbox",
+      "Endpoint detection and response",
+      "Antivirus"
+    ],
+    "explain": "[第402題的詳細分析待補充]"
+  },
+  "403": {
+    "q": "[第403題] A legal department must maintain a backup from all devices that have b...",
+    "opts": [
+      "Data retention",
+      "Certication",
+      "Sanitization",
+      "Destruction"
+    ],
+    "explain": "[第403題的詳細分析待補充]"
+  },
+  "404": {
+    "q": "[第404題] Which of the following can be used to compromise a system that is runn...",
+    "opts": [
+      "Cross-site scripting",
+      "Memory injection",
+      "Replay attack",
+      "Ransomware"
+    ],
+    "explain": "[第404題的詳細分析待補充]"
+  },
+  "405": {
+    "q": "[威脅題] Which of the following threat actors would most likely deface the webs...",
+    "opts": [
+      "Unskilled attacker",
+      "Organized crime",
+      "Nation-state",
+      "Insider threat"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "406": {
+    "q": "[第406題] A security architect wants to prevent employees from receiving malicio...",
+    "opts": [
+      "Apply IP address reputation data.",
+      "Tap and monitor the email feed.",
+      "Scan email traffic inline.",
+      "Check SPF records."
+    ],
+    "explain": "[第406題的詳細分析待補充]"
+  },
+  "407": {
+    "q": "[第407題] Which of the following activities is the rst stage in the incident res...",
+    "opts": [
+      "Detection",
+      "Declaration",
+      "Containment",
+      "Verication"
+    ],
+    "explain": "[第407題的詳細分析待補充]"
+  },
+  "408": {
+    "q": "[第408題] Which of the following is the main consideration when a legacy system ...",
+    "opts": [
+      "Resource provisioning",
+      "Cost",
+      "Single point of failure",
+      "Complexity"
+    ],
+    "explain": "[第408題的詳細分析待補充]"
+  },
+  "409": {
+    "q": "[第409題] Which of the following is a compensating control for providing user ac...",
+    "opts": [
+      "Enabling threat prevention features on the firewall",
+      "Conguring a SIEM tool to capture all web traffic",
+      "Setting firewall rules to allow traffic from any port to that destination",
+      "Blocking that website on the endpoint protection software"
+    ],
+    "explain": "[第409題的詳細分析待補充]"
+  },
+  "410": {
+    "q": "[第410題] An organization is implementing a COPE mobile device management policy...",
+    "opts": [
+      "Remote wiping of the device",
+      "Data encryption",
+      "Requiring passwords with eight characters",
+      "Data usage caps",
+      "Employee data ownership",
+      "Personal application store access"
+    ],
+    "explain": "[第410題的詳細分析待補充]"
+  },
+  "411": {
+    "q": "[威脅題] A security administrator observed the following in a web server log wh...",
+    "opts": [
+      "Privilege escalation",
+      "Credential replay",
+      "Brute force",
+      "Directory traversal"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "412": {
+    "q": "[第412題] An organization wants a third-party vendor to do a penetration test th...",
+    "opts": [
+      "Partially known environment",
+      "Unknown environment",
+      "Integrated",
+      "Known environment"
+    ],
+    "explain": "[第412題的詳細分析待補充]"
+  },
+  "413": {
+    "q": "[第413題] Which of the following should a security team do rst before a new web ...",
+    "opts": [
+      "Harden the virtual host.",
+      "Create WAF rules.",
+      "Enable network intrusion detection.",
+      "Apply patch management."
+    ],
+    "explain": "[第413題的詳細分析待補充]"
+  },
+  "414": {
+    "q": "[第414題] Which of the following techniques can be used to sanitize the data con...",
+    "opts": [
+      "Degaussing",
+      "Drive shredder",
+      "Retention platform",
+      "Wipe tool"
+    ],
+    "explain": "[第414題的詳細分析待補充]"
+  },
+  "415": {
+    "q": "[威脅題] An attacker submits a request containing unexpected characters in an a...",
+    "opts": [
+      "Side loading",
+      "Target of evaluation",
+      "Resource reuse",
+      "SQL injection"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "416": {
+    "q": "[第416題] A security analyst has determined that a security breach would have a ...",
+    "opts": [
+      "$7,500",
+      "$10,000",
+      "$15,000",
+      "$30,000"
+    ],
+    "explain": "[第416題的詳細分析待補充]"
+  },
+  "417": {
+    "q": "[網路安全題] A systems administrator discovers a system that is no longer receiving...",
+    "opts": [
+      "Reject",
+      "Accept",
+      "Transfer",
+      "Avoid"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "418": {
+    "q": "[第418題] A company discovered its data was advertised for sale on the dark web....",
+    "opts": [
+      "Identify the attacker’s entry methods.",
+      "Report the breach to the local authorities.",
+      "Notify the applicable parties of the breach.",
+      "Implement vulnerability scanning of the company's systems."
+    ],
+    "explain": "[第418題的詳細分析待補充]"
+  },
+  "419": {
+    "q": "[第419題] Which of the following would be the best solution to deploy a low-cost...",
+    "opts": [
+      "Recovery site",
+      "Cold site",
+      "Hot site",
+      "Warm site"
+    ],
+    "explain": "[第419題的詳細分析待補充]"
+  },
+  "420": {
+    "q": "[第420題] An organization needs to determine how many employees are accessing th...",
+    "opts": [
+      "Detective",
+      "Preventive",
+      "Corrective",
+      "Directive"
+    ],
+    "explain": "[第420題的詳細分析待補充]"
+  },
+  "421": {
+    "q": "[第421題] An organization wants to implement a secure solution for remote users....",
+    "opts": [
+      "Local administrative password",
+      "Perimeter network",
+      "Jump server",
+      "WAF",
+      "MFA",
+      "VPN"
+    ],
+    "explain": "[第421題的詳細分析待補充]"
+  },
+  "422": {
+    "q": "[第422題] A security o cer is implementing a security awareness program and is p...",
+    "opts": [
+      "Password policy",
+      "Access badges",
+      "Phishing campaign",
+      "Risk assessment"
+    ],
+    "explain": "[第422題的詳細分析待補充]"
+  },
+  "423": {
+    "q": "[第423題] A security consultant is working with a client that wants to physicall...",
+    "opts": [
+      "SDN",
+      "Air gapped",
+      "Containerized",
+      "Highly available"
+    ],
+    "explain": "[第423題的詳細分析待補充]"
+  },
+  "424": {
+    "q": "[網路安全題] A company is in the process of migrating to cloud-based services. The ...",
+    "opts": [
+      "IPS",
+      "WAF",
+      "SASE",
+      "IAM"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "425": {
+    "q": "[加密題] An employee clicks a malicious link in an email that appears to be fro...",
+    "opts": [
+      "Security awareness training",
+      "Database encryption",
+      "Segmentation",
+      "Reporting suspicious emails"
+    ],
+    "explain": "[關於加密演算法和安全機制的分析]"
+  },
+  "426": {
+    "q": "[加密題] Which of the following types of vulnerabilities is primarily caused by...",
+    "opts": [
+      "Misconguration",
+      "Resource reuse",
+      "Insecure key storage",
+      "Weak cipher suites"
+    ],
+    "explain": "[關於加密演算法和安全機制的分析]"
+  },
+  "427": {
+    "q": "[第427題] Which of the following best describe the bene ts of a microservices ar...",
+    "opts": [
+      "Easier debugging of the system",
+      "Reduced cost of ownership of the system",
+      "Improved scalability of the system",
+      "Increased compartmentalization of the system",
+      "Stronger authentication of the system",
+      "Reduced complexity of the system"
+    ],
+    "explain": "[第427題的詳細分析待補充]"
+  },
+  "428": {
+    "q": "[威脅題] A user's workstation becomes unresponsive and displays a ransom note d...",
+    "opts": [
+      "Spear-phishing attachment",
+      "Watering hole",
+      "Infected website",
+      "Typosquatting"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "429": {
+    "q": "[網路安全題] A penetration tester nds an unused Ethernet port during an on-site pen...",
+    "opts": [
+      "Port security",
+      "Transport Layer Security",
+      "Proxy server",
+      "Security zones"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "430": {
+    "q": "[威脅題] Which of the following should be used to ensure an attacker is unable ...",
+    "opts": [
+      "TPM",
+      "ECC",
+      "FDE",
+      "HSM"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "431": {
+    "q": "[網路安全題] A security administrator documented the following records during an as...",
+    "opts": [
+      "DDoS attack",
+      "DNS poisoning",
+      "Ransomware compromise",
+      "Spyware infection"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "432": {
+    "q": "[第432題] Which of the following is the primary reason why false negatives on a ...",
+    "opts": [
+      "The system has vulnerabilities that are not being detected.",
+      "The time to remediate vulnerabilities that do not exist is excessive.",
+      "Vulnerabilities with a lower severity will be prioritized over critical vulnerabilities.",
+      "The system has vulnerabilities, and a patch has not yet been released."
+    ],
+    "explain": "[第432題的詳細分析待補充]"
+  },
+  "433": {
+    "q": "[第433題] A company is concerned about theft of client data from decommissioned ...",
+    "opts": [
+      "Wiping",
+      "Recycling",
+      "Shredding",
+      "Deletion"
+    ],
+    "explain": "[第433題的詳細分析待補充]"
+  },
+  "434": {
+    "q": "[第434題] A company that has a large IT operation is looking to better control, ...",
+    "opts": [
+      "IoT",
+      "IaC",
+      "IaaS",
+      "ICS"
+    ],
+    "explain": "[第434題的詳細分析待補充]"
+  },
+  "435": {
+    "q": "[威脅題] A government o cial receives a blank envelope containing photos and a ...",
+    "opts": [
+      "Organized crime",
+      "Philosophical beliefs",
+      "Espionage",
+      "Blackmail"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "436": {
+    "q": "[網路安全題] Which of the following is the best security reason for closing service...",
+    "opts": [
+      "To mitigate risks associated with unencrypted traffic",
+      "To eliminate false positives from a vulnerability scan",
+      "To reduce a system's attack surface",
+      "To improve a system's resource utilization"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "437": {
+    "q": "[第437題] Which of the following would a security administrator use to comply wi...",
+    "opts": [
+      "Information security policy",
+      "Service-level expectations",
+      "Standard operating procedure",
+      "Test result report"
+    ],
+    "explain": "[第437題的詳細分析待補充]"
+  },
+  "438": {
+    "q": "[威脅題] A malicious actor conducted a brute-force attack on a company's web se...",
+    "opts": [
+      "Regular patching of servers",
+      "Web application firewalls",
+      "Multifactor authentication",
+      "Enabling encryption of customer data"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "439": {
+    "q": "[第439題] Which of the following options will provide the lowest RTO and RPO for...",
+    "opts": [
+      "Snapshots",
+      "On-site backups",
+      "Journaling",
+      "Hot site"
+    ],
+    "explain": "[第439題的詳細分析待補充]"
+  },
+  "440": {
+    "q": "[第440題] Which of the following is a possible consequence of a VM escape?...",
+    "opts": [
+      "Malicious instructions can be inserted into memory and give the attacker elevated permissions.",
+      "An attacker can access the hypervisor and compromise other VMs.",
+      "Unencrypted data can be read by a user who is in a separate environment.",
+      "Users can install software that is not on the manufacturer’s approved list."
+    ],
+    "explain": "[第440題的詳細分析待補充]"
+  },
+  "441": {
+    "q": "[第441題] A security team at a large, global company needs to reduce the cost of...",
+    "opts": [
+      "Packet capture",
+      "Endpoint logs",
+      "OS security logs",
+      "Vulnerability scan"
+    ],
+    "explain": "[第441題的詳細分析待補充]"
+  },
+  "442": {
+    "q": "[第442題] Which of the following is a type of vulnerability that involves insert...",
+    "opts": [
+      "SQL injection",
+      "Cross-site scripting",
+      "Zero-day exploit",
+      "On-path attack"
+    ],
+    "explain": "[第442題的詳細分析待補充]"
+  },
+  "443": {
+    "q": "[第443題] While investigating a possible incident, a security analyst discovers ...",
+    "opts": [
+      "Implement a WAF.",
+      "Disable the query.php script.",
+      "Block brute-force attempts on temporary users.",
+      "Check the users table for new accounts."
+    ],
+    "explain": "[第443題的詳細分析待補充]"
+  },
+  "444": {
+    "q": "[威脅題] Due to a cyberattack, a company's IT systems were not operational for ...",
+    "opts": [
+      "Recovery point objective",
+      "Risk appetite",
+      "Risk tolerance",
+      "Recovery time objective",
+      "Mean time between failure"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "445": {
+    "q": "[威脅題] Which of the following actors attacking an organization is the most li...",
+    "opts": [
+      "Nation-state",
+      "Organized crime",
+      "Hacktivist",
+      "Insider threat"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "446": {
+    "q": "[第446題] Which of the following should a security team use to document persiste...",
+    "opts": [
+      "Audit report",
+      "Risk register",
+      "Compliance report",
+      "Penetration test"
+    ],
+    "explain": "[第446題的詳細分析待補充]"
+  },
+  "447": {
+    "q": "[威脅題] An organization purchased a critical business application containing s...",
+    "opts": [
+      "URL scanning",
+      "WAF",
+      "Reverse proxy",
+      "NAC"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "448": {
+    "q": "[第448題] A company wants to improve the availability of its application with a ...",
+    "opts": [
+      "Load balancing",
+      "Fault tolerance",
+      "Proxy servers",
+      "Replication"
+    ],
+    "explain": "[第448題的詳細分析待補充]"
+  },
+  "449": {
+    "q": "[第449題] A company is performing a risk assessment on new software the company ...",
+    "opts": [
+      "Software vulnerabilities",
+      "Cost-bene t analysis",
+      "Ongoing monitoring strategies",
+      "Network infrastructure compatibility"
+    ],
+    "explain": "[第449題的詳細分析待補充]"
+  },
+  "450": {
+    "q": "[威脅題] A malicious actor is trying to access sensitive nancial information fr...",
+    "opts": [
+      "SQL injection",
+      "On-path",
+      "Brute-force",
+      "Password spraying"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "451": {
+    "q": "[第451題] A new employee accessed an unauthorized website. An investigation foun...",
+    "opts": [
+      "MOU",
+      "AUP",
+      "NDA",
+      "MOA"
+    ],
+    "explain": "[第451題的詳細分析待補充]"
+  },
+  "452": {
+    "q": "[威脅題] A systems administrator is reviewing the VPN logs and notices that dur...",
+    "opts": [
+      "Typosquatting",
+      "Root or trust",
+      "Data exltration",
+      "Blackmail"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "453": {
+    "q": "[第453題] A company discovers suspicious transactions that were entered into the...",
+    "opts": [
+      "Honeytoken",
+      "Honeynet",
+      "Honeypot",
+      "Honeyle"
+    ],
+    "explain": "[第453題的詳細分析待補充]"
+  },
+  "454": {
+    "q": "[網路安全題] A network engineer is increasing the overall security of network devic...",
+    "opts": [
+      "Conguring centralized logging",
+      "Generating local administrator accounts",
+      "Replacing Telnet with SSH",
+      "Enabling HTTP administration"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "455": {
+    "q": "[威脅題] A company's accounting department receives an urgent payment message f...",
+    "opts": [
+      "Business email compromise",
+      "Vishing",
+      "Spear phishing",
+      "Impersonation"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "456": {
+    "q": "[第456題] A company led a complaint with its IT service provider after the compa...",
+    "opts": [
+      "The MOU had basic clauses from a template.",
+      "A SOW had not been agreed to by the client.",
+      "A WO had not been mutually approved.",
+      "A required NDA had not been signed."
+    ],
+    "explain": "[第456題的詳細分析待補充]"
+  },
+  "457": {
+    "q": "[第457題] Which of the following aspects of the data management life cycle is mo...",
+    "opts": [
+      "Destruction",
+      "Certication",
+      "Retention",
+      "Sanitization"
+    ],
+    "explain": "[第457題的詳細分析待補充]"
+  },
+  "458": {
+    "q": "[第458題] An analyst is reviewing job postings to ensure sensitive company infor...",
+    "opts": [
+      "Oce addresses",
+      "Software versions",
+      "List of board members",
+      "Government identication numbers"
+    ],
+    "explain": "[第458題的詳細分析待補充]"
+  },
+  "459": {
+    "q": "[第459題] An engineer has ensured that the switches are using the latest OS, the...",
+    "opts": [
+      "Zero-day attacks",
+      "Insider threats",
+      "End-of-life support",
+      "Known exploits"
+    ],
+    "explain": "[第459題的詳細分析待補充]"
+  },
+  "460": {
+    "q": "[第460題] Which of the following is most likely a security concern when installi...",
+    "opts": [
+      "Country of origin",
+      "Device responsiveness",
+      "Ease of deployment",
+      "Storage of data"
+    ],
+    "explain": "[第460題的詳細分析待補充]"
+  },
+  "461": {
+    "q": "[第461題] A company captures log-in details and reviews them each week to identi...",
+    "opts": [
+      "Including the date and person who reviewed the information in a report",
+      "Adding automated alerting when anomalies occur",
+      "Requiring a statement each week that no exceptions were noted",
+      "Masking the username in a report to protect privacy"
+    ],
+    "explain": "[第461題的詳細分析待補充]"
+  },
+  "462": {
+    "q": "[網路安全題] A security team is in the process of hardening the network against ext...",
+    "opts": [
+      "Anti-malware solutions",
+      "Host-based firewalls",
+      "Intrusion prevention systems",
+      "Network access control",
+      "Network allow list"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "463": {
+    "q": "[網路安全題] Which of the following is the best way to prevent an unauthorized user...",
+    "opts": [
+      "MAC ltering",
+      "Segmentation",
+      "Certication",
+      "Isolation"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "464": {
+    "q": "[威脅題] Which of the following should a systems administrator use to decrease ...",
+    "opts": [
+      "Replication",
+      "Isolation",
+      "Centralization",
+      "Virtualization"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "465": {
+    "q": "[身份驗證題] A company wants to add an MFA solution for all employees who access th...",
+    "opts": [
+      "Smart card with PIN and password",
+      "Security questions and a one-time passcode sent via email",
+      "Voice and ngerprint verication with an SMS one-time passcode",
+      "Mobile application-generated, one-time passcode with facial recognition"
+    ],
+    "explain": "[關於多因素驗證、密碼管理和身份驗證的分析]"
+  },
+  "466": {
+    "q": "[網路安全題] A company is using a legacy FTP server to transfer nancial data to a t...",
+    "opts": [
+      "Telnet connection",
+      "SSH tunneling",
+      "Patch installation",
+      "Full disk encryption"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "467": {
+    "q": "[威脅題] A security manager wants to reduce the number of steps required to ide...",
+    "opts": [
+      "SOAR",
+      "SIEM",
+      "DMARC",
+      "NIDS"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "468": {
+    "q": "[網路安全題] The Chief Information O cer (CIO) asked a vendor to provide documentat...",
+    "opts": [
+      "Penetration test results",
+      "Self-assessment ndings",
+      "Attestation of compliance",
+      "Third-party audit report"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "469": {
+    "q": "[第469題] Which of the following describes the most effective way to address OS ...",
+    "opts": [
+      "Endpoint protection",
+      "Removal of unnecessary software",
+      "Conguration enforcement",
+      "Patching"
+    ],
+    "explain": "[第469題的詳細分析待補充]"
+  },
+  "470": {
+    "q": "[網路安全題] The management team reports that employees are missing features on com...",
+    "opts": [
+      "EDR",
+      "COPE",
+      "MDM",
+      "FDE"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "471": {
+    "q": "[第471題] A company is implementing a policy to allow employees to use their per...",
+    "opts": [
+      "MDM",
+      "Containerization",
+      "DLP",
+      "FIM"
+    ],
+    "explain": "[第471題的詳細分析待補充]"
+  },
+  "472": {
+    "q": "[威脅題] An alert references attacks associated with a zero-day exploit. An ana...",
+    "opts": [
+      "Compensating",
+      "Detective",
+      "Operational",
+      "Physical"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "473": {
+    "q": "[加密題] A penetration test has demonstrated that domain administrator accounts...",
+    "opts": [
+      "Audit each domain administrator account weekly for password compliance.",
+      "Implement a privileged access management solution.",
+      "Create IDS policies to monitor domain controller access.",
+      "Use Group Policy to enforce password expiration."
+    ],
+    "explain": "[關於加密演算法和安全機制的分析]"
+  },
+  "474": {
+    "q": "[第474題] Which of the following is an example of memory injection?...",
+    "opts": [
+      "Two processes access the same variable, allowing one to cause a privilege escalation.",
+      "A process receives an unexpected amount of data, which causes malicious code to be executed.",
+      "Malicious code is copied to the allocated space of an already running process.",
+      "An executable is overwritten on the disk, and malicious code runs the next time it is executed."
+    ],
+    "explain": "[第474題的詳細分析待補充]"
+  },
+  "475": {
+    "q": "[加密題] A security administrator is implementing encryption on all hard drives...",
+    "opts": [
+      "Integrity",
+      "Authentication",
+      "Zero Trust",
+      "Condentiality"
+    ],
+    "explain": "[關於加密演算法和安全機制的分析]"
+  },
+  "476": {
+    "q": "[網路安全題] An administrator has congured a quarantine subnet for all guest device...",
+    "opts": [
+      "Device ngerprinting",
+      "Compliance attestation",
+      "Penetration test",
+      "Application vulnerability test"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "477": {
+    "q": "[第477題] A customer has a contract with a CSP and wants to identify which contr...",
+    "opts": [
+      "Statement of work",
+      "Responsibility matrix",
+      "Service-level agreement",
+      "Master service agreement"
+    ],
+    "explain": "[第477題的詳細分析待補充]"
+  },
+  "478": {
+    "q": "[威脅題] A Chief Information Security O cer is developing procedures to guide d...",
+    "opts": [
+      "SDLC",
+      "IRP",
+      "BCP",
+      "AUP"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "479": {
+    "q": "[第479題] Which of the following testing techniques uses both defensive and offe...",
+    "opts": [
+      "Blue",
+      "Yellow",
+      "Red",
+      "Green"
+    ],
+    "explain": "[第479題的詳細分析待補充]"
+  },
+  "480": {
+    "q": "[第480題] An administrator wants to automate an account permissions update for a...",
+    "opts": [
+      "Security groups",
+      "Federation",
+      "User provisioning",
+      "Vertical scaling"
+    ],
+    "explain": "[第480題的詳細分析待補充]"
+  },
+  "481": {
+    "q": "[第481題] Which of the following is the fastest and most cost-effective way to c...",
+    "opts": [
+      "Attestation report",
+      "Third-party audit",
+      "Vulnerability assessment",
+      "Penetration testing"
+    ],
+    "explain": "[第481題的詳細分析待補充]"
+  },
+  "482": {
+    "q": "[第482題] Various company stakeholders meet to discuss roles and responsibilitie...",
+    "opts": [
+      "Tabletop exercise",
+      "Penetration test",
+      "Geographic dispersion",
+      "Incident response"
+    ],
+    "explain": "[第482題的詳細分析待補充]"
+  },
+  "483": {
+    "q": "[第483題] Which of the following is an example of a data protection strategy tha...",
+    "opts": [
+      "Encrypting databases containing sensitive data",
+      "Replacing sensitive data with surrogate values",
+      "Removing sensitive data from production systems",
+      "Hashing sensitive data in critical systems"
+    ],
+    "explain": "[第483題的詳細分析待補充]"
+  },
+  "484": {
+    "q": "[第484題] Which of the following is a type of vulnerability that refers to the u...",
+    "opts": [
+      "Cross-site scripting",
+      "Buffer overow",
+      "Jailbreaking",
+      "Side loading"
+    ],
+    "explain": "[第484題的詳細分析待補充]"
+  },
+  "485": {
+    "q": "[第485題] Which of the following types of identication methods can be performed ...",
+    "opts": [
+      "Dynamic analysis",
+      "Code review",
+      "Package monitoring",
+      "Bug bounty"
+    ],
+    "explain": "[第485題的詳細分析待補充]"
+  },
+  "486": {
+    "q": "[加密題] Which of the following cryptographic solutions is used to hide the fac...",
+    "opts": [
+      "Steganography",
+      "Data masking",
+      "Tokenization",
+      "Private key"
+    ],
+    "explain": "[關於加密演算法和安全機制的分析]"
+  },
+  "487": {
+    "q": "[第487題] Which of the following steps should be taken before mitigating a vulne...",
+    "opts": [
+      "Escalate the issue to the SDLC team.",
+      "Use the IR plan to evaluate the changes.",
+      "Perform a risk assessment to classify the vulnerability.",
+      "Refer to the change management policy."
+    ],
+    "explain": "[第487題的詳細分析待補充]"
+  },
+  "488": {
+    "q": "[第488題] A security engineer needs to quickly identify a signature from a known...",
+    "opts": [
+      "Static",
+      "Sandbox",
+      "Network traffic",
+      "Package monitoring"
+    ],
+    "explain": "[第488題的詳細分析待補充]"
+  },
+  "489": {
+    "q": "[網路安全題] Which of the following should a company use to provide proof of extern...",
+    "opts": [
+      "Business impact analysis",
+      "Supply chain analysis",
+      "Vulnerability assessment",
+      "Third-party attestation"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "490": {
+    "q": "[加密題] A security administrator is addressing an issue with a legacy system t...",
+    "opts": [
+      "Tokenization",
+      "Cryptographic downgrade",
+      "SSH tunneling",
+      "Segmentation",
+      "Patch installation",
+      "Data masking"
+    ],
+    "explain": "[關於加密演算法和安全機制的分析]"
+  },
+  "491": {
+    "q": "[第491題] Which of the following steps in the risk management process involves e...",
+    "opts": [
+      "Risk assessment",
+      "Risk identi cation",
+      "Risk treatment",
+      "Risk monitoring and review"
+    ],
+    "explain": "[第491題的詳細分析待補充]"
+  },
+  "492": {
+    "q": "[威脅題] A company's website is www.company.com. Attackers purchased the domain...",
+    "opts": [
+      "Typosquatting",
+      "Brand impersonation",
+      "On-path",
+      "Watering-hole"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "493": {
+    "q": "[第493題] Which of the following allows a systems administrator to tune permissi...",
+    "opts": [
+      "Patching",
+      "Access control list",
+      "Conguration enforcement",
+      "Least privilege"
+    ],
+    "explain": "[第493題的詳細分析待補充]"
+  },
+  "494": {
+    "q": "[第494題] Which of the following would be the greatest concern for a company tha...",
+    "opts": [
+      "Right to be forgotten",
+      "Sanctions",
+      "External compliance reporting",
+      "Attestation"
+    ],
+    "explain": "[第494題的詳細分析待補充]"
+  },
+  "495": {
+    "q": "[網路安全題] Which of the following security concepts is accomplished when granting...",
+    "opts": [
+      "Authorization",
+      "Identication",
+      "Non-repudiation",
+      "Authentication"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "496": {
+    "q": "[第496題] A growing organization, which hosts an externally accessible applicati...",
+    "opts": [
+      "Load balancer",
+      "Jump server",
+      "Proxy server",
+      "SD-WAN"
+    ],
+    "explain": "[第496題的詳細分析待補充]"
+  },
+  "497": {
+    "q": "[第497題] A systems administrator is concerned users are accessing emails throug...",
+    "opts": [
+      "Impersonation",
+      "Replication",
+      "Phishing",
+      "Smishing"
+    ],
+    "explain": "[第497題的詳細分析待補充]"
+  },
+  "498": {
+    "q": "[第498題] A security engineer at a large company needs to enhance IAM in order t...",
+    "opts": [
+      "Role-based",
+      "Time-of-day restrictions",
+      "Least privilege",
+      "Biometric authentication"
+    ],
+    "explain": "[第498題的詳細分析待補充]"
+  },
+  "499": {
+    "q": "[第499題] A company wants to ensure employees are allowed to copy les from a vir...",
+    "opts": [
+      "Digital rights management",
+      "Role-based access control",
+      "Time-based access control",
+      "Network access control"
+    ],
+    "explain": "[第499題的詳細分析待補充]"
+  },
+  "500": {
+    "q": "[第500題] Employees sign an agreement that restricts specic activities when leav...",
+    "opts": [
+      "SLA",
+      "BPA",
+      "NDA",
+      "MOA"
+    ],
+    "explain": "[第500題的詳細分析待補充]"
+  },
+  "501": {
+    "q": "[威脅題] A systems administrator just purchased multiple network devices. Which...",
+    "opts": [
+      "Install endpoint protection.",
+      "Disable ports/protocols.",
+      "Change default passwords.",
+      "Remove unnecessary software."
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "502": {
+    "q": "[第502題] A CVE in a key back-end component of an application has been disclosed...",
+    "opts": [
+      "Packet capture",
+      "Vulnerability scan",
+      "Metadata analysis",
+      "Automated reporting"
+    ],
+    "explain": "[第502題的詳細分析待補充]"
+  },
+  "503": {
+    "q": "[第503題] Which of the following activities uses OSINT?...",
+    "opts": [
+      "Social engineering testing",
+      "Data analysis of logs",
+      "Collecting evidence of malicious activity",
+      "Producing IOC for malicious artifacts"
+    ],
+    "explain": "[第503題的詳細分析待補充]"
+  },
+  "504": {
+    "q": "[第504題] Which of the following are the best security controls for controlling ...",
+    "opts": [
+      "Swipe card",
+      "Picture ID",
+      "Phone authentication application",
+      "Biometric scanner",
+      "Camera",
+      "Memorable question"
+    ],
+    "explain": "[第504題的詳細分析待補充]"
+  },
+  "505": {
+    "q": "[第505題] A company is considering an expansion of access controls for an applic...",
+    "opts": [
+      "Threshold",
+      "Appetite",
+      "Avoidance",
+      "Register"
+    ],
+    "explain": "[第505題的詳細分析待補充]"
+  },
+  "506": {
+    "q": "[第506題] Which of the following is the act of proving to a customer that softwa...",
+    "opts": [
+      "Assurance",
+      "Contract",
+      "Due diligence",
+      "Attestation"
+    ],
+    "explain": "[第506題的詳細分析待補充]"
+  },
+  "507": {
+    "q": "[第507題] An administrator is creating a secure method for a contractor to acces...",
+    "opts": [
+      "Application server",
+      "Jump server",
+      "RDP server",
+      "Proxy server"
+    ],
+    "explain": "[第507題的詳細分析待補充]"
+  },
+  "508": {
+    "q": "[威脅題] A security analyst notices unusual behavior on the network. The IDS on...",
+    "opts": [
+      "Signatures",
+      "Trends",
+      "Honeypot",
+      "Reputation"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "509": {
+    "q": "[第509題] To which of the following security categories does an EDR solution bel...",
+    "opts": [
+      "Physical",
+      "Operational",
+      "Managerial",
+      "Technical"
+    ],
+    "explain": "[第509題的詳細分析待補充]"
+  },
+  "510": {
+    "q": "[第510題] A company relies on open-source software libraries to build the softwa...",
+    "opts": [
+      "Buffer overow",
+      "SQL injection",
+      "Cross-site scripting",
+      "Zero-day"
+    ],
+    "explain": "[第510題的詳細分析待補充]"
+  },
+  "511": {
+    "q": "[第511題] An organization has a new regulatory requirement to implement correcti...",
+    "opts": [
+      "To defend against insider threats altering banking details",
+      "To ensure that errors are not passed to other systems",
+      "To allow for business insurance to be purchased",
+      "To prevent unauthorized changes to nancial data"
+    ],
+    "explain": "[第511題的詳細分析待補充]"
+  },
+  "512": {
+    "q": "[第512題] Which of the following is the stage in an investigating when forensic ...",
+    "opts": [
+      "Acquisition",
+      "Preservation",
+      "Reporting",
+      "E-discovery"
+    ],
+    "explain": "[第512題的詳細分析待補充]"
+  },
+  "513": {
+    "q": "[加密題] Which of the following describes the difference between encryption and...",
+    "opts": [
+      "Encryption protects data in transit, while hashing protects data at rest.",
+      "Encryption replaces cleartext with ciphertext, while hashing calculates a checksum.",
+      "Encryption ensures data integrity, while hashing ensures data condentiality.",
+      "Encryption uses a public-key exchange, while hashing uses a private key."
+    ],
+    "explain": "[關於加密演算法和安全機制的分析]"
+  },
+  "514": {
+    "q": "[身份驗證題] A security report shows that during a two-week test period, 80% of emp...",
+    "opts": [
+      "Block all outbound traffic from the intranet.",
+      "Introduce a campaign to recognize phishing attempts.",
+      "Restrict internet access for the employees who disclosed credentials.",
+      "Implement a deny list of websites."
+    ],
+    "explain": "[關於多因素驗證、密碼管理和身份驗證的分析]"
+  },
+  "515": {
+    "q": "[第515題] A Chief Information Security O cer (CISO) has developed information se...",
+    "opts": [
+      "Peer review requirements",
+      "Multifactor authentication",
+      "Branch protection tests",
+      "Secrets management congurations"
+    ],
+    "explain": "[第515題的詳細分析待補充]"
+  },
+  "516": {
+    "q": "[第516題] An organization is developing a security program that conveys the resp...",
+    "opts": [
+      "Business continuity plan",
+      "Change management procedure",
+      "Acceptable use policy",
+      "Software development life cycle policy"
+    ],
+    "explain": "[第516題的詳細分析待補充]"
+  },
+  "517": {
+    "q": "[身份驗證題] A security analyst created a fake account and saved the password in a ...",
+    "opts": [
+      "Honeypot",
+      "Honeyle",
+      "Honeytoken",
+      "Honeynet"
+    ],
+    "explain": "[關於多因素驗證、密碼管理和身份驗證的分析]"
+  },
+  "518": {
+    "q": "[網路安全題] Which of the following is the best way to provide secure, remote acces...",
+    "opts": [
+      "VPN",
+      "LDAP",
+      "FTP",
+      "RADIUS"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "519": {
+    "q": "[第519題] A company wants to track modications to the code that is used to build...",
+    "opts": [
+      "Change management ticketing system",
+      "Behavioral analyzer",
+      "Collaboration platform",
+      "Version control tool"
+    ],
+    "explain": "[第519題的詳細分析待補充]"
+  },
+  "520": {
+    "q": "[第520題] Which of the following documents details how to accomplish a technical...",
+    "opts": [
+      "Standard",
+      "Policy",
+      "Guideline",
+      "Procedure"
+    ],
+    "explain": "[第520題的詳細分析待補充]"
+  },
+  "521": {
+    "q": "[第521題] While conducting a business continuity tabletop exercise, the security...",
+    "opts": [
+      "RPO",
+      "ARO",
+      "BIA",
+      "MTTR"
+    ],
+    "explain": "[第521題的詳細分析待補充]"
+  },
+  "522": {
+    "q": "[第522題] Which of the following is prevented by proper data sanitization?...",
+    "opts": [
+      "Hackers’ ability to obtain data from used hard drives",
+      "Devices reaching end-of-life and losing support",
+      "Disclosure of sensitive data through incorrect classication",
+      "Incorrect inventory data leading to a laptop shortage"
+    ],
+    "explain": "[第522題的詳細分析待補充]"
+  },
+  "523": {
+    "q": "[第523題] A certicate authority needs to post information about expired certicat...",
+    "opts": [
+      "TPM",
+      "CRL",
+      "PKI",
+      "CSR"
+    ],
+    "explain": "[第523題的詳細分析待補充]"
+  },
+  "524": {
+    "q": "[第524題] Which of the following can best contribute to prioritizing patch appli...",
+    "opts": [
+      "CVSS",
+      "SCAP",
+      "OSINT",
+      "CVE"
+    ],
+    "explain": "[第524題的詳細分析待補充]"
+  },
+  "525": {
+    "q": "[第525題] A systems administrator creates a script that validates OS version, pa...",
+    "opts": [
+      "Resource scaling",
+      "Policy enumeration",
+      "Baseline enforcement",
+      "Guard rails implementation"
+    ],
+    "explain": "[第525題的詳細分析待補充]"
+  },
+  "526": {
+    "q": "[威脅題] A security analyst learns that an attack vector, which was used as a p...",
+    "opts": [
+      "Endpoint",
+      "Application",
+      "Firewall",
+      "NAC"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "527": {
+    "q": "[第527題] A company’s gate access logs show multiple entries from an employee’s ...",
+    "opts": [
+      "RFID cloning",
+      "Side-channel attack",
+      "Shoulder surng",
+      "Tailgating"
+    ],
+    "explain": "[第527題的詳細分析待補充]"
+  },
+  "528": {
+    "q": "[第528題] Which of the following most accurately describes the order in which a ...",
+    "opts": [
+      "Deploy, maintain, establish",
+      "Establish, maintain, deploy",
+      "Establish, deploy, maintain",
+      "Deploy, establish, maintain"
+    ],
+    "explain": "[第528題的詳細分析待補充]"
+  },
+  "529": {
+    "q": "[第529題] A SOC analyst establishes a remote control session on an end user’s ma...",
+    "opts": [
+      "Advise the user to change passwords.",
+      "Reimage the end user’s machine.",
+      "Check the policy on personal email at work.",
+      "Check host firewall logs."
+    ],
+    "explain": "[第529題的詳細分析待補充]"
+  },
+  "530": {
+    "q": "[第530題] Which of the following is a reason environmental variables are a conce...",
+    "opts": [
+      "The contents of environmental variables could affect the scope and impact of an exploited vulnerability.",
+      "In-memory environmental variable values can be overwritten and used by attackers to insert malicious code.",
+      "Environmental variables define cryptographic standards for the system and could create vulnerabilities if deprecated algorithms are used.",
+      "Environmental variables will determine when updates are run and could mitigate the likelihood of vulnerability exploitation."
+    ],
+    "explain": "[第530題的詳細分析待補充]"
+  },
+  "531": {
+    "q": "[網路安全題] A company evaluates several options that would allow employees to have...",
+    "opts": [
+      "IPSec with RADIUS",
+      "RDP connection with LDAPS",
+      "Web proxy for all remote traffic",
+      "Jump server with 802.1X"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "532": {
+    "q": "[第532題] An administrator must replace an expired SSL certicate. Which of the f...",
+    "opts": [
+      "CSR",
+      "OCSP",
+      "Key",
+      "CRL"
+    ],
+    "explain": "[第532題的詳細分析待補充]"
+  },
+  "533": {
+    "q": "[身份驗證題] A systems administrator receives a text message from an unknown number...",
+    "opts": [
+      "Typosquatting",
+      "Smishing",
+      "Pretexting",
+      "Impersonation"
+    ],
+    "explain": "[關於多因素驗證、密碼管理和身份驗證的分析]"
+  },
+  "534": {
+    "q": "[第534題] A Chief Information Security O cer (CISO) wants to: • Prevent employee...",
+    "opts": [
+      "Web application firewall",
+      "Secure DNS server",
+      "Jump server",
+      "Next-generation firewall"
+    ],
+    "explain": "[第534題的詳細分析待補充]"
+  },
+  "535": {
+    "q": "[第535題] A company is aware of a given security risk related to a specic market...",
+    "opts": [
+      "Exemption",
+      "Exception",
+      "Avoid",
+      "Transfer"
+    ],
+    "explain": "[第535題的詳細分析待補充]"
+  },
+  "536": {
+    "q": "[身份驗證題] A security analyst needs to improve the company’s authentication polic...",
+    "opts": [
+      "Length",
+      "Complexity",
+      "Least privilege",
+      "Something you have",
+      "Security keys",
+      "Biometrics"
+    ],
+    "explain": "[關於多因素驗證、密碼管理和身份驗證的分析]"
+  },
+  "537": {
+    "q": "[第537題] Which of the following is an example of a treatment strategy for a con...",
+    "opts": [
+      "Email gateway to block phishing attempts",
+      "Background checks for new employees",
+      "Dual control requirements for wire transfers",
+      "Branch protection as part of the CI/CD pipeline"
+    ],
+    "explain": "[第537題的詳細分析待補充]"
+  },
+  "538": {
+    "q": "[第538題] An organization wants to deploy software in a container environment to...",
+    "opts": [
+      "Regulatory compliance",
+      "Patch availability",
+      "Kernel version",
+      "Monolithic code"
+    ],
+    "explain": "[第538題的詳細分析待補充]"
+  },
+  "539": {
+    "q": "[第539題] Prior to implementing a design change, the change must go through mult...",
+    "opts": [
+      "Board review",
+      "Service restart",
+      "Backout planning",
+      "Maintenance"
+    ],
+    "explain": "[第539題的詳細分析待補充]"
+  },
+  "540": {
+    "q": "[網路安全題] The internal audit team determines a software application is no longer...",
+    "opts": [
+      "Data inventory and retention",
+      "Right to be forgotten",
+      "Due care and due diligence",
+      "Acknowledgement and attestation"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "541": {
+    "q": "[第541題] Which of the following are the rst steps an analyst should perform whe...",
+    "opts": [
+      "Methodically walk around the o ce noting Wi-Fi signal strength.",
+      "Log in to each access point and check the settings.",
+      "Create or obtain a layout of the o ce.",
+      "Measure cable lengths between access points.",
+      "Review access logs to determine the most active devices.",
+      "Remove possible impediments to radio transmissions."
+    ],
+    "explain": "[第541題的詳細分析待補充]"
+  },
+  "542": {
+    "q": "[第542題] Which of the following is used to improve security and overall functio...",
+    "opts": [
+      "Reformatting",
+      "Decommissioning",
+      "Patching",
+      "Encryption"
+    ],
+    "explain": "[第542題的詳細分析待補充]"
+  },
+  "543": {
+    "q": "[網路安全題] An organization is preparing to export proprietary software to a custo...",
+    "opts": [
+      "Code signing",
+      "Obfuscation",
+      "Tokenization",
+      "Blockchain"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "544": {
+    "q": "[第544題] After a series of account compromises and credential misuse, a company...",
+    "opts": [
+      "Evaluate tools that identify risky behavior and distribute reports on the ndings.",
+      "Send quarterly newsletters that explain the importance of password management.",
+      "D evelop phishing campaigns and notify the management team of any successes.",
+      "Update policies and handbooks to ensure all employees are informed of the new procedures."
+    ],
+    "explain": "[第544題的詳細分析待補充]"
+  },
+  "545": {
+    "q": "[網路安全題] Which of the following should be used to ensure a device is inaccessib...",
+    "opts": [
+      "Disablement of unused services",
+      "Web application firewall",
+      "Host isolation",
+      "N etwork-based IDS"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "546": {
+    "q": "[加密題] In which of the following will unencrypted network traffic most likely...",
+    "opts": [
+      "SDN",
+      "IoT",
+      "VPN",
+      "SCADA"
+    ],
+    "explain": "[關於加密演算法和安全機制的分析]"
+  },
+  "547": {
+    "q": "[第547題] Which of the following is the best reason to perform a tabletop exerci...",
+    "opts": [
+      "To address audit ndings",
+      "To collect remediation response times",
+      "To update the IRP",
+      "To calculate the ROI"
+    ],
+    "explain": "[第547題的詳細分析待補充]"
+  },
+  "548": {
+    "q": "[第548題] Which of the following is a use of CVSS?...",
+    "opts": [
+      "To determine the cost associated with patching systems",
+      "To identify unused ports and services that should be closed",
+      "To analyze code for defects that could be exploited",
+      "To prioritize the remediation of vulnerabilities"
+    ],
+    "explain": "[第548題的詳細分析待補充]"
+  },
+  "549": {
+    "q": "[第549題] For an upcoming product launch, a company hires a marketing agency who...",
+    "opts": [
+      "Independent assessments",
+      "Supply chain analysis",
+      "Right-to-audit clause",
+      "Conict of interest policy"
+    ],
+    "explain": "[第549題的詳細分析待補充]"
+  },
+  "550": {
+    "q": "[網路安全題] An organization designs an inbound firewall with a fail-open congurati...",
+    "opts": [
+      "Condentiality",
+      "Non-repudiation",
+      "Availability",
+      "Integrity"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "551": {
+    "q": "[第551題] An engineer needs to ensure that a script has not been modied before i...",
+    "opts": [
+      "Masking",
+      "Obfuscation",
+      "Hashing",
+      "Encryption"
+    ],
+    "explain": "[第551題的詳細分析待補充]"
+  },
+  "552": {
+    "q": "[網路安全題] Which of the following is the most important element when de ning effe...",
+    "opts": [
+      "Discovering and documenting external considerations",
+      "Developing procedures for employee onboarding and offboarding",
+      "Assigning roles and responsibilities for owners, controllers, and custodians",
+      "Dening and monitoring change management procedures"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "553": {
+    "q": "[第553題] A contractor is required to visually inspect the motherboards of all n...",
+    "opts": [
+      "Embedded rootkit",
+      "Supply chain",
+      "Firmware failure",
+      "RFID keylogger"
+    ],
+    "explain": "[第553題的詳細分析待補充]"
+  },
+  "554": {
+    "q": "[第554題] Which of the following could potentially be introduced at the time of ...",
+    "opts": [
+      "User impersonation",
+      "Rootkit",
+      "On-path attack",
+      "Buffer overow"
+    ],
+    "explain": "[第554題的詳細分析待補充]"
+  },
+  "555": {
+    "q": "[網路安全題] While a school district is performing state testing, a security analys...",
+    "opts": [
+      "Unskilled attacker",
+      "Shadow IT",
+      "Insider threat",
+      "Nation-state"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "556": {
+    "q": "[第556題] A user needs to complete training at https://comptiatraining.com. Afte...",
+    "opts": [
+      "Cross-site scripting",
+      "Pretexting",
+      "Typosquatting",
+      "Vishing"
+    ],
+    "explain": "[第556題的詳細分析待補充]"
+  },
+  "557": {
+    "q": "[第557題] A company has yearly engagements with a service provider. The general ...",
+    "opts": [
+      "MSA",
+      "NDA",
+      "MOU",
+      "SLA"
+    ],
+    "explain": "[第557題的詳細分析待補充]"
+  },
+  "558": {
+    "q": "[第558題] While updating the security awareness training, a security analyst wan...",
+    "opts": [
+      "Refrain from clicking on images included in emails from new vendors",
+      "Delete emails from unknown service provider partners.",
+      "Require that invoices be sent as attachments",
+      "Be alert to unexpected requests from familiar email addresses"
+    ],
+    "explain": "[第558題的詳細分析待補充]"
+  },
+  "559": {
+    "q": "[身份驗證題] A new corporate policy requires all staff to use multifactor authentic...",
+    "opts": [
+      "Authentication tokens",
+      "Least privilege",
+      "Biometrics",
+      "LDAP",
+      "Password vaulting",
+      "SAML"
+    ],
+    "explain": "[關於多因素驗證、密碼管理和身份驗證的分析]"
+  },
+  "560": {
+    "q": "[身份驗證題] A help desk employee receives a call from someone impersonating the Ch...",
+    "opts": [
+      "Vishing",
+      "Hacktivism",
+      "Blackmail",
+      "Misinformation"
+    ],
+    "explain": "[關於多因素驗證、密碼管理和身份驗證的分析]"
+  },
+  "561": {
+    "q": "[第561題] An organization that handles sensitive information wants to protect th...",
+    "opts": [
+      "Hardware security module",
+      "Hashing algorithm",
+      "Tokenization",
+      "Steganography"
+    ],
+    "explain": "[第561題的詳細分析待補充]"
+  },
+  "562": {
+    "q": "[加密題] A systems administrator needs to encrypt all data on employee laptops....",
+    "opts": [
+      "Volume",
+      "Partition",
+      "Full disk",
+      "File"
+    ],
+    "explain": "[關於加密演算法和安全機制的分析]"
+  },
+  "563": {
+    "q": "[第563題] Which of the following actions best addresses a vulnerability found on...",
+    "opts": [
+      "Patching",
+      "Segmentation",
+      "Decommissioning",
+      "Monitoring"
+    ],
+    "explain": "[第563題的詳細分析待補充]"
+  },
+  "564": {
+    "q": "[第564題] A company is changing its mobile device policy. The company has the fo...",
+    "opts": [
+      "BYOD",
+      "CYOD",
+      "COPE",
+      "COBO"
+    ],
+    "explain": "[第564題的詳細分析待補充]"
+  },
+  "565": {
+    "q": "[網路安全題] A company is concerned about employees unintentionally introducing mal...",
+    "opts": [
+      "Social engineering training",
+      "SPF conguration",
+      "Simulated phishing campaign",
+      "Insider threat awareness"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "566": {
+    "q": "[第566題] A penetration test identies that an SMBv1 is enabled on multiple serve...",
+    "opts": [
+      "GPO",
+      "ACL",
+      "SFTP",
+      "DLP"
+    ],
+    "explain": "[第566題的詳細分析待補充]"
+  },
+  "567": {
+    "q": "[第567題] Which of the following best protects sensitive data in transit across ...",
+    "opts": [
+      "Encryption",
+      "Masking",
+      "Tokenization",
+      "Obfuscation"
+    ],
+    "explain": "[第567題的詳細分析待補充]"
+  },
+  "568": {
+    "q": "[網路安全題] As part of new compliance audit requirements, multiple servers need to...",
+    "opts": [
+      "Congure firewall rules to block external access to Internal resources.",
+      "Set up a WAP to allow internal access from public networks.",
+      "Implement a new IPSec tunnel from internal resources.",
+      "Deploy an internal jump server to access resources."
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "569": {
+    "q": "[第569題] Which of the following activities should be performed rst to compile a...",
+    "opts": [
+      "Automated scanning",
+      "Penetration testing",
+      "Threat hunting",
+      "Log aggregation",
+      "Adversarial emulation"
+    ],
+    "explain": "[第569題的詳細分析待補充]"
+  },
+  "570": {
+    "q": "[威脅題] Which of the following can be used to mitigate attacks from high-risk ...",
+    "opts": [
+      "Obfuscation",
+      "Data sovereignty",
+      "IP geolocation",
+      "Encryption"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "571": {
+    "q": "[第571題] A program manager wants to ensure contract employees can only access t...",
+    "opts": [
+      "Creating a GPO for all contract employees and setting time-of-day log-in restrictions",
+      "Creating a discretionary access policy and setting rule-based access for contract employees",
+      "Implementing an OAuth server and then setting least privilege for contract employees",
+      "Implementing SAML with federation to the contract employees’ authentication server"
+    ],
+    "explain": "[第571題的詳細分析待補充]"
+  },
+  "572": {
+    "q": "[第572題] A recent power outage halted operations at a company's only data cente...",
+    "opts": [
+      "Platform diversity",
+      "Generator",
+      "Snapshots",
+      "Load balancing"
+    ],
+    "explain": "[第572題的詳細分析待補充]"
+  },
+  "573": {
+    "q": "[第573題] Which of the following analysis methods allows an organization to meas...",
+    "opts": [
+      "Heuristic",
+      "Quantitative",
+      "User-driven",
+      "Trend-based"
+    ],
+    "explain": "[第573題的詳細分析待補充]"
+  },
+  "574": {
+    "q": "[威脅題] A security analyst notices an increase in port scans on the edge of th...",
+    "opts": [
+      "OS security",
+      "Firewall",
+      "Application",
+      "Endpoint"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "575": {
+    "q": "[網路安全題] A security team receives reports about high latency and complete netwo...",
+    "opts": [
+      "Buffer overow",
+      "NTP amplication attack",
+      "Worm",
+      "DoS attack"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "576": {
+    "q": "[身份驗證題] A security analyst is examining a penetration test report and notices ...",
+    "opts": [
+      "Implement centralized authentication with proper password policies",
+      "Add password complexity rules and increase password history limits",
+      "Connect the systems to an external authentication server",
+      "Limit the ability of user accounts to change passwords"
+    ],
+    "explain": "[關於多因素驗證、密碼管理和身份驗證的分析]"
+  },
+  "577": {
+    "q": "[第577題] When used with an access control vestibule which of the following woul...",
+    "opts": [
+      "PIN",
+      "Access card",
+      "Security guard",
+      "CCTV"
+    ],
+    "explain": "[第577題的詳細分析待補充]"
+  },
+  "578": {
+    "q": "[第578題] A security professional discovers a folder that contains an employee's...",
+    "opts": [
+      "Legal",
+      "Financial",
+      "Privacy",
+      "Intellectual property"
+    ],
+    "explain": "[第578題的詳細分析待補充]"
+  },
+  "579": {
+    "q": "[第579題] A site reliability engineer is designing a recovery strategy that requ...",
+    "opts": [
+      "Recovery site",
+      "Hot site",
+      "Cold site",
+      "Warm site"
+    ],
+    "explain": "[第579題的詳細分析待補充]"
+  },
+  "580": {
+    "q": "[第580題] Which of the following would an organization most likely use to minimi...",
+    "opts": [
+      "Snapshots",
+      "Journaling",
+      "Obfuscation",
+      "Tokenization"
+    ],
+    "explain": "[第580題的詳細分析待補充]"
+  },
+  "581": {
+    "q": "[第581題] Which of the following solutions would most likely be used in the nanc...",
+    "opts": [
+      "Tokenization",
+      "Hashing",
+      "Salting",
+      "Steganography"
+    ],
+    "explain": "[第581題的詳細分析待補充]"
+  },
+  "582": {
+    "q": "[第582題] Which of the following is a type of vulnerability that may result from...",
+    "opts": [
+      "Hash collision",
+      "Cryptographic",
+      "Buffer over ow",
+      "Input validation"
+    ],
+    "explain": "[第582題的詳細分析待補充]"
+  },
+  "583": {
+    "q": "[第583題] A company wants to prevent proprietary and con dential company informa...",
+    "opts": [
+      "MOA",
+      "SLA",
+      "MSA",
+      "NDA"
+    ],
+    "explain": "[第583題的詳細分析待補充]"
+  },
+  "584": {
+    "q": "[威脅題] A security administrator needs to reduce the attack surface in the com...",
+    "opts": [
+      "Implement a honeynet.",
+      "Dene Group Policy on the servers.",
+      "Congure the servers for high availability.",
+      "Upgrade end-of-support operating systems."
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "585": {
+    "q": "[第585題] Which of the following is a prerequisite for a DLP solution?...",
+    "opts": [
+      "Data destruction",
+      "Data sanitization",
+      "Data classication",
+      "Data masking"
+    ],
+    "explain": "[第585題的詳細分析待補充]"
+  },
+  "586": {
+    "q": "[網路安全題] A business provides long-term cold storage services to banks that are ...",
+    "opts": [
+      "Encryption",
+      "Classication",
+      "Certication",
+      "Procurement"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "587": {
+    "q": "[網路安全題] The physical security team at a company receives reports that employee...",
+    "opts": [
+      "Social engineering",
+      "Situational awareness",
+      "Phishing",
+      "Acceptable use policy"
+    ],
+    "explain": "[關於防火牆、ACL和網路安全的分析]"
+  },
+  "588": {
+    "q": "[第588題] Which of the following would most likely be a hacktivist's motive?...",
+    "opts": [
+      "Financial gain",
+      "Espionage",
+      "Philosophical beliefs",
+      "Revenge"
+    ],
+    "explain": "[第588題的詳細分析待補充]"
+  },
+  "589": {
+    "q": "[威脅題] During a recent log review, an analyst discovers evidence of successfu...",
+    "opts": [
+      "Authentication",
+      "Secure cookies",
+      "Static code analysis",
+      "Input validation"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "590": {
+    "q": "[第590題] Which of the following is the rst step to secure a newly deployed serv...",
+    "opts": [
+      "Close unnecessary service ports.",
+      "Update the current version of the software.",
+      "Add the device to the ACL.",
+      "Upgrade the OS version."
+    ],
+    "explain": "[第590題的詳細分析待補充]"
+  },
+  "591": {
+    "q": "[第591題] A security analyst receives an alert that there was an attempt to down...",
+    "opts": [
+      "Review the IPS logs and determine which command-and-control IPs were blocked.",
+      "Analyze application logs to see how the malware attempted to maintain persistence.",
+      "Run vulnerability scans to check for systems and applications that are vulnerable to the malware",
+      "Obtain and execute the malware in a sandbox environment and perform packet captures."
+    ],
+    "explain": "[第591題的詳細分析待補充]"
+  },
+  "592": {
+    "q": "[第592題] Which of the following should be used to ensure a user has the permiss...",
+    "opts": [
+      "Changing default passwords",
+      "Implementing least privilege",
+      "Enforcing baseline congurations",
+      "Applying network segmentation"
+    ],
+    "explain": "[第592題的詳細分析待補充]"
+  },
+  "593": {
+    "q": "[威脅題] An employee receives a text message from an unrecognized number claimi...",
+    "opts": [
+      "Watering-hole",
+      "Disinformation",
+      "Phishing",
+      "Impersonation"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "594": {
+    "q": "[威脅題] An unexpected and out-of-character email message from a Chief Executiv...",
+    "opts": [
+      "Business email compromise",
+      "Phishing",
+      "Brand impersonation",
+      "Pretexting"
+    ],
+    "explain": "[關於威脅行為者和社交工程攻擊的分析]"
+  },
+  "595": {
+    "q": "[第595題] Which of the following should an organization use to ensure that it ca...",
+    "opts": [
+      "Service-level agreement",
+      "Memorandum of agreement",
+      "Right-to-audit clause",
+      "Supply chain analysis"
+    ],
+    "explain": "[第595題的詳細分析待補充]"
+  },
+  "596": {
+    "q": "[第596題] Which of the following is used to calculate the impact to an organizat...",
+    "opts": [
+      "SLE",
+      "ALE",
+      "ARO",
+      "SLA"
+    ],
+    "explain": "[第596題的詳細分析待補充]"
+  },
+  "597": {
+    "q": "[第597題] A retail company receives a request to remove a customer's data. Which...",
+    "opts": [
+      "Data processor",
+      "Data controller",
+      "Data subject",
+      "Data custodian"
+    ],
+    "explain": "[第597題的詳細分析待補充]"
+  },
+  "598": {
+    "q": "[第598題] An administrator implements web-ltering products but still sees that u...",
+    "opts": [
+      "Intrusion prevention system",
+      "Content categorization",
+      "Encryption",
+      "DNS service"
+    ],
+    "explain": "[第598題的詳細分析待補充]"
+  },
+  "599": {
+    "q": "[第599題] A security analyst is reviewing the following logs about a suspicious ...",
+    "opts": [
+      "Impossible travel",
+      "Account lockout",
+      "Blocked content",
+      "Concurrent session usage"
+    ],
+    "explain": "[第599題的詳細分析待補充]"
+  },
+  "600": {
+    "q": "[第600題] Which of the following phases of the incident response process attempt...",
+    "opts": [
+      "Recovery",
+      "Containment",
+      "Preparation",
+      "Analysis"
+    ],
+    "explain": "[第600題的詳細分析待補充]"
+  }
+}

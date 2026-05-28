@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>題目翻譯助手</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-100 p-6">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl font-bold text-gray-800 mb-8">📚 CompTIA 題目翻譯助手</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+            <div class="bg-white p-6 rounded-lg shadow">
+                <p class="text-gray-600">總題數</p>
+                <p class="text-3xl font-bold text-indigo-600">600</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow">
+                <p class="text-gray-600">已翻譯</p>
+                <p class="text-3xl font-bold text-green-600">30</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow">
+                <p class="text-gray-600">待翻譯</p>
+                <p class="text-3xl font-bold text-orange-600">570</p>
+            </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg shadow mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">📝 翻譯工作流程</h2>
+
+            <div class="space-y-4">
+                <div class="border-l-4 border-indigo-500 pl-4">
+                    <h3 class="font-bold text-lg text-gray-800">第1步：找到未翻譯的題目</h3>
+                    <p class="text-gray-600">在 index.html 中查找沒有 <code class="bg-gray-200 px-2 py-1 rounded">zh:</code> 字段的題目</p>
+                </div>
+
+                <div class="border-l-4 border-indigo-500 pl-4">
+                    <h3 class="font-bold text-lg text-gray-800">第2步：複製題目資訊</h3>
+                    <p class="text-gray-600">複製英文題目、選項和正確答案</p>
+                </div>
+
+                <div class="border-l-4 border-indigo-500 pl-4">
+                    <h3 class="font-bold text-lg text-gray-800">第3步：翻譯和分析</h3>
+                    <p class="text-gray-600">翻譯題目和選項，撰寫詳細的觀念解析</p>
+                </div>
+
+                <div class="border-l-4 border-indigo-500 pl-4">
+                    <h3 class="font-bold text-lg text-gray-800">第4步：格式化並插入</h3>
+                    <p class="text-gray-600">按照規定格式加入 <code class="bg-gray-200 px-2 py-1 rounded">zh</code> 字段到 index.html</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-blue-50 p-8 rounded-lg border-2 border-blue-200">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">💡 翻譯格式範例</h2>
+            <pre class="bg-gray-800 text-green-400 p-4 rounded overflow-x-auto text-sm"><code>zh: {
+  "q": "中文題目翻譯",
+  "opts": [
+    "選項A中文翻譯",
+    "選項B中文翻譯",
+    "選項C中文翻譯",
+    "選項D中文翻譯"
+  ],
+  "explain": "詳細的觀念解析："
+}</code></pre>
+        </div>
+
+        <div class="mt-8 bg-yellow-50 p-6 rounded-lg border-l-4 border-yellow-500">
+            <h3 class="font-bold text-lg text-gray-800 mb-2">⚠️ 重要提示</h3>
+            <ul class="text-gray-700 space-y-2">
+                <li>✓ 每個選項翻譯應簡潔清晰</li>
+                <li>✓ 解析應解釋正確答案的原因和其他選項為何錯誤</li>
+                <li>✓ 使用繁體中文</li>
+                <li>✓ 保持與已翻譯題目的風格一致</li>
+                <li>✓ 逐次提交 git commit，不要一次性提交所有改動</li>
+            </ul>
+        </div>
+
+        <div class="mt-8 bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
+            <h3 class="font-bold text-lg text-gray-800 mb-4">🎯 建議做法</h3>
+            <ol class="text-gray-700 space-y-2 list-decimal list-inside">
+                <li>每天翻譯 10-20 道題目</li>
+                <li>每次翻譯完成後立即 commit</li>
+                <li>先翻譯前 100 道題目（最常見和最重要的）</li>
+                <li>建立良好的翻譯和解析品質標準</li>
+                <li>考慮使用 AI 輔助初稿，然後手工審核和改進</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>
