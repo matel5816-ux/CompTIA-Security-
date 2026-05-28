@@ -41,7 +41,7 @@
   },
   "3": {
     "num": 3,
-    "q": "An employee clicked a link in an email from a payment website that asked the employee to update contact information. The employee entered the log-in information but received a “page not found” error message. Which of the following types of social engineering attacks occurred?",
+    "q": "An employee clicked a link in an email from a payment website that asked the employee to update contact information. The employee entered the log-in information but received a \"page not found\" error message. Which of the following types of social engineering attacks occurred?",
     "options": [
       "Brand impersonation",
       "Pretexting",
@@ -61,7 +61,7 @@
   },
   "4": {
     "num": 4,
-    "q": "An enterprise is trying to limit outbound DNS tra\u0000 c originating from its internal network. Outbound DNS requests will only be allowed from one device with the IP address 10.50.10.25. Which of the following \u0000rewall ACLs will accomplish this goal?",
+    "q": "An enterprise is trying to limit outbound DNS tra c originating from its internal network. Outbound DNS requests will only be allowed from one device with the IP address 10.50.10.25. Which of the following rewall ACLs will accomplish this goal?",
     "options": [
       "Access list outbound permit 0.0.0.0/0 0.0.0.0/0 port 53 Access list outbound deny 10.50.10.25/32 0.0.0.0/0 port 53",
       "Access list outbound permit 0.0.0.0/0 10.50.10.25/32 port 53 Access list outbound deny 0.0.0.0/0 0.0.0.0/0 port 53",
@@ -81,7 +81,7 @@
   },
   "5": {
     "num": 5,
-    "q": "A data administrator is con\u0000guring authentication for a SaaS application and would like to reduce the number of credentials employees need to maintain. The company prefers to use domain credentials to access new SaaS applications. Which of the following methods would allow this functionality?",
+    "q": "A data administrator is conguring authentication for a SaaS application and would like to reduce the number of credentials employees need to maintain. The company prefers to use domain credentials to access new SaaS applications. Which of the following methods would allow this functionality?",
     "options": [
       "SSO",
       "LEAP",
@@ -103,10 +103,10 @@
     "num": 6,
     "q": "Which of the following scenarios describes a possible business email compromise attack?",
     "options": [
-      "An employee receives a gift card request in an email that has an executive’s name in the display \u0000eld of the email.",
-      "Employees who open an email attachment receive messages demanding payment in order to access \u0000les.",
+      "An employee receives a gift card request in an email that has an executive's name in the display eld of the email.",
+      "Employees who open an email attachment receive messages demanding payment in order to access les.",
       "A service desk employee receives an email from the HR director asking for log-in credentials to a cloud administrator account.",
-      "An employee receives an email with a link to a phishing site that is designed to look like the company’s email portal."
+      "An employee receives an email with a link to a phishing site that is designed to look like the company's email portal."
     ],
     "letters": [
       "A",
@@ -121,7 +121,7 @@
   },
   "7": {
     "num": 7,
-    "q": "A company prevented direct access from the database administrators’ workstations to the network segment that contains database servers. Which of the following should a database administrator use to access the database servers?",
+    "q": "A company prevented direct access from the database administrators' workstations to the network segment that contains database servers. Which of the following should a database administrator use to access the database servers?",
     "options": [
       "Jump server",
       "RADIUS",
@@ -141,7 +141,7 @@
   },
   "8": {
     "num": 8,
-    "q": "An organization’s internet-facing website was compromised when an attacker exploited a buffer over\u0000ow. Which of the following should the organization deploy to best protect against similar attacks in the future?",
+    "q": "An organization's internet-facing website was compromised when an attacker exploited a buffer overow. Which of the following should the organization deploy to best protect against similar attacks in the future?",
     "options": [
       "NGFW",
       "WAF",
@@ -161,7 +161,7 @@
   },
   "9": {
     "num": 9,
-    "q": "An administrator notices that several users are logging in from suspicious IP addresses. After speaking with the users, the administrator determines that the employees were not logging in from those IP addresses and resets the affected users’ passwords. Which of the following should the administrator implement to prevent this type of attack from succeeding in the future?",
+    "q": "An administrator notices that several users are logging in from suspicious IP addresses. After speaking with the users, the administrator determines that the employees were not logging in from those IP addresses and resets the affected users' passwords. Which of the following should the administrator implement to prevent this type of attack from succeeding in the future?",
     "options": [
       "Multifactor authentication",
       "Permissions assignment",
@@ -181,7 +181,7 @@
   },
   "10": {
     "num": 10,
-    "q": "An employee receives a text message that appears to have been sent by the payroll department and is asking for credential veri\u0000cation. Which of the following social engineering techniques are being attempted? (Choose two.)",
+    "q": "An employee receives a text message that appears to have been sent by the payroll department and is asking for credential verication. Which of the following social engineering techniques are being attempted? (Choose two.)",
     "options": [
       "Typosquatting",
       "Phishing",
@@ -206,13 +206,13 @@
   },
   "11": {
     "num": 11,
-    "q": "Several employees received a fraudulent text message from someone claiming to be the Chief Executive O\u0000 cer (CEO). The message stated: “I’m in an airport right now with no access to email. I need you to buy gift cards for employee recognition awards. Please send the gift cards to following email address.” Which of the following are the best responses to this situation? (Choose two).",
+    "q": "Several employees received a fraudulent text message from someone claiming to be the Chief Executive O cer (CEO). The message stated: \"I'm in an airport right now with no access to email. I need you to buy gift cards for employee recognition awards. Please send the gift cards to following email address.\" Which of the following are the best responses to this situation? (Choose two).",
     "options": [
       "Cancel current employee recognition gift cards.",
       "Add a smishing exercise to the annual company training.",
       "Issue a general email warning to the company.",
       "Have the CEO change phone numbers.",
-      "Conduct a forensic investigation on the CEO’s phone.",
+      "Conduct a forensic investigation on the CEO's phone.",
       "Implement mobile device management."
     ],
     "letters": [
@@ -231,7 +231,7 @@
   },
   "12": {
     "num": 12,
-    "q": "A company is required to use certi\u0000ed hardware when building networks. Which of the following best addresses the risks associated with procuring counterfeit hardware?",
+    "q": "A company is required to use certied hardware when building networks. Which of the following best addresses the risks associated with procuring counterfeit hardware?",
     "options": [
       "A thorough analysis of the supply chain",
       "A legally enforceable corporate acquisition policy",
@@ -311,7 +311,7 @@
   },
   "16": {
     "num": 16,
-    "q": "Which of the following vulnerabilities is associated with installing software outside of a manufacturer’s approved software repository?",
+    "q": "Which of the following vulnerabilities is associated with installing software outside of a manufacturer's approved software repository?",
     "options": [
       "Jailbreaking",
       "Memory injection",
@@ -371,7 +371,7 @@
   },
   "19": {
     "num": 19,
-    "q": "An engineer needs to \u0000nd a solution that creates an added layer of security by preventing unauthorized access to internal company resources. Which of the following would be the best solution?",
+    "q": "An engineer needs to nd a solution that creates an added layer of security by preventing unauthorized access to internal company resources. Which of the following would be the best solution?",
     "options": [
       "RDP server",
       "Jump server",
@@ -391,7 +391,7 @@
   },
   "20": {
     "num": 20,
-    "q": "A company’s web \u0000lter is con\u0000gured to scan the URL for strings and deny access when matches are found. Which of the following search strings should an analyst employ to prohibit access to non-encrypted websites?",
+    "q": "A company's web lter is congured to scan the URL for strings and deny access when matches are found. Which of the following search strings should an analyst employ to prohibit access to non-encrypted websites?",
     "options": [
       "encryption=off",
       "http://",
@@ -411,7 +411,7 @@
   },
   "21": {
     "num": 21,
-    "q": "During a security incident, the security operations team identi\u0000ed sustained network tra\u0000 c from a malicious IP address: 10.1.4.9. A security analyst is creating an inbound \u0000rewall rule to block the IP address from accessing the organization’s network. Which of the following ful\u0000lls this request?",
+    "q": "During a security incident, the security operations team identied sustained network tra c from a malicious IP address: 10.1.4.9. A security analyst is creating an inbound rewall rule to block the IP address from accessing the organization's network. Which of the following fullls this request?",
     "options": [
       "access-list inbound deny ip source 0.0.0.0/0 destination 10.1.4.9/32",
       "access-list inbound deny ip source 10.1.4.9/32 destination 0.0.0.0/0",
@@ -431,7 +431,7 @@
   },
   "22": {
     "num": 22,
-    "q": "A company needs to provide administrative access to internal resources while minimizing the tra\u0000 c allowed through the security boundary. Which of the following methods is most secure?",
+    "q": "A company needs to provide administrative access to internal resources while minimizing the tra c allowed through the security boundary. Which of the following methods is most secure?",
     "options": [
       "Implementing a bastion host",
       "Deploying a perimeter network",
@@ -451,7 +451,7 @@
   },
   "23": {
     "num": 23,
-    "q": "A security analyst is reviewing alerts in the SIEM related to potential malicious network tra\u0000 c coming from an employee’s corporate laptop. The security analyst has determined that additional data about the executable running on the machine is necessary to continue the investigation. Which of the following logs should the analyst use as a data source?",
+    "q": "A security analyst is reviewing alerts in the SIEM related to potential malicious network tra c coming from an employee's corporate laptop. The security analyst has determined that additional data about the executable running on the machine is necessary to continue the investigation. Which of the following logs should the analyst use as a data source?",
     "options": [
       "Application",
       "IPS/IDS",
@@ -471,7 +471,7 @@
   },
   "24": {
     "num": 24,
-    "q": "A cyber operations team informs a security analyst about a new tactic malicious actors are using to compromise networks. SIEM alerts have not yet been con\u0000gured. Which of the following best describes what the security analyst should do to identify this behavior?",
+    "q": "A cyber operations team informs a security analyst about a new tactic malicious actors are using to compromise networks. SIEM alerts have not yet been congured. Which of the following best describes what the security analyst should do to identify this behavior?",
     "options": [
       "Digital forensics",
       "E-discovery",
@@ -511,7 +511,7 @@
   },
   "26": {
     "num": 26,
-    "q": "A security administrator would like to protect data on employees’ laptops. Which of the following encryption techniques should the security administrator use?",
+    "q": "A security administrator would like to protect data on employees' laptops. Which of the following encryption techniques should the security administrator use?",
     "options": [
       "Partition",
       "Asymmetric",
@@ -555,7 +555,7 @@
     "options": [
       "Hardening",
       "Employee monitoring",
-      "Con\u0000guration enforcement",
+      "Conguration enforcement",
       "Least privilege"
     ],
     "letters": [
@@ -591,7 +591,7 @@
   },
   "30": {
     "num": 30,
-    "q": "Which of the following should a security administrator adhere to when setting up a new set of \u0000rewall rules?",
+    "q": "Which of the following should a security administrator adhere to when setting up a new set of rewall rules?",
     "options": [
       "Disaster recovery plan",
       "Incident response procedure",
@@ -611,7 +611,7 @@
   },
   "31": {
     "num": 31,
-    "q": "A company is expanding its threat surface program and allowing individuals to security test the company’s internet-facing application. The company will compensate researchers based on the vulnerabilities discovered. Which of the following best describes the program the company is setting up?",
+    "q": "A company is expanding its threat surface program and allowing individuals to security test the company's internet-facing application. The company will compensate researchers based on the vulnerabilities discovered. Which of the following best describes the program the company is setting up?",
     "options": [
       "Open-source intelligence",
       "Bug bounty",
@@ -631,7 +631,7 @@
   },
   "32": {
     "num": 32,
-    "q": "Which of the following threat actors is the most likely to use large \u0000nancial resources to attack critical systems located in other countries?",
+    "q": "Which of the following threat actors is the most likely to use large nancial resources to attack critical systems located in other countries?",
     "options": [
       "Insider",
       "Unskilled attacker",
@@ -651,11 +651,11 @@
   },
   "33": {
     "num": 33,
-    "q": "Which of the following enables the use of an input \u0000eld to run commands that can view or manipulate data?",
+    "q": "Which of the following enables the use of an input eld to run commands that can view or manipulate data?",
     "options": [
       "Cross-site scripting",
       "Side loading",
-      "Buffer over\u0000ow",
+      "Buffer overow",
       "SQL injection"
     ],
     "letters": [
@@ -691,12 +691,12 @@
   },
   "35": {
     "num": 35,
-    "q": "A company has begun labeling all laptops with asset inventory stickers and associating them with employee IDs. Which of the following security bene\u0000ts do these actions provide? (Choose two.)",
+    "q": "A company has begun labeling all laptops with asset inventory stickers and associating them with employee IDs. Which of the following security benets do these actions provide? (Choose two.)",
     "options": [
-      "If a security incident occurs on the device, the correct employee can be noti\u0000ed.",
+      "If a security incident occurs on the device, the correct employee can be notied.",
       "The security team will be able to send user awareness training to the appropriate device.",
-      "Users can be mapped to their devices when con\u0000guring software MFA tokens.",
-      "User-based \u0000rewall policies can be correctly targeted to the appropriate laptops.",
+      "Users can be mapped to their devices when conguring software MFA tokens.",
+      "User-based rewall policies can be correctly targeted to the appropriate laptops.",
       "When conducting penetration testing, the security team will be able to target the desired laptops.",
       "Company data can be accounted for when the employee leaves the organization."
     ],
@@ -716,7 +716,7 @@
   },
   "36": {
     "num": 36,
-    "q": "A technician wants to improve the situational and environmental awareness of existing users as they transition from remote to in-o\u0000 ce work. Which of the following is the best option?",
+    "q": "A technician wants to improve the situational and environmental awareness of existing users as they transition from remote to in-o ce work. Which of the following is the best option?",
     "options": [
       "Send out periodic security reminders.",
       "Update the content of new hire documentation.",
@@ -756,11 +756,11 @@
   },
   "38": {
     "num": 38,
-    "q": "A systems administrator receives the following alert from a \u0000le integrity monitoring tool: The hash of the cmd.exe \u0000le has changed. The systems administrator checks the OS logs and notices that no patches were applied in the last two months. Which of the following most likely occurred?",
+    "q": "A systems administrator receives the following alert from a le integrity monitoring tool: The hash of the cmd.exe le has changed. The systems administrator checks the OS logs and notices that no patches were applied in the last two months. Which of the following most likely occurred?",
     "options": [
-      "The end user changed the \u0000le permissions.",
+      "The end user changed the le permissions.",
       "A cryptographic collision was detected.",
-      "A snapshot of the \u0000le system was taken.",
+      "A snapshot of the le system was taken.",
       "A rootkit was deployed."
     ],
     "letters": [
@@ -776,7 +776,7 @@
   },
   "39": {
     "num": 39,
-    "q": "Which of the following roles, according to the shared responsibility model, is responsible for securing the company’s database in an IaaS model for a cloud environment?",
+    "q": "Which of the following roles, according to the shared responsibility model, is responsible for securing the company's database in an IaaS model for a cloud environment?",
     "options": [
       "Client",
       "Third-party vendor",
@@ -816,7 +816,7 @@
   },
   "41": {
     "num": 41,
-    "q": "A security team is reviewing the \u0000ndings in a report that was delivered after a third party performed a penetration test. One of the \u0000ndings indicated that a web application form \u0000eld is vulnerable to cross-site scripting. Which of the following application security techniques should the security analyst recommend the developer implement to prevent this vulnerability?",
+    "q": "A security team is reviewing the ndings in a report that was delivered after a third party performed a penetration test. One of the ndings indicated that a web application form eld is vulnerable to cross-site scripting. Which of the following application security techniques should the security analyst recommend the developer implement to prevent this vulnerability?",
     "options": [
       "Secure cookies",
       "Version control",
@@ -861,7 +861,7 @@
   },
   "43": {
     "num": 43,
-    "q": "A technician needs to apply a high-priority patch to a production system. Which of the following steps should be taken \u0000rst?",
+    "q": "A technician needs to apply a high-priority patch to a production system. Which of the following steps should be taken rst?",
     "options": [
       "Air gap the system.",
       "Move the system to a different network segment.",
@@ -904,7 +904,7 @@
     "q": "Which of the following is the most likely outcome if a large bank fails an internal PCI DSS compliance assessment?",
     "options": [
       "Fines",
-      "Audit \u0000ndings",
+      "Audit ndings",
       "Sanctions",
       "Reputation damage"
     ],
@@ -941,7 +941,7 @@
   },
   "47": {
     "num": 47,
-    "q": "A company’s legal department drafted sensitive documents in a SaaS application and wants to ensure the documents cannot be accessed by individuals in high-risk countries. Which of the following is the most effective way to limit this access?",
+    "q": "A company's legal department drafted sensitive documents in a SaaS application and wants to ensure the documents cannot be accessed by individuals in high-risk countries. Which of the following is the most effective way to limit this access?",
     "options": [
       "Data masking",
       "Encryption",
@@ -961,10 +961,10 @@
   },
   "48": {
     "num": 48,
-    "q": "Which of the following is a hardware-speci\u0000c vulnerability?",
+    "q": "Which of the following is a hardware-specic vulnerability?",
     "options": [
       "Firmware version",
-      "Buffer over\u0000ow",
+      "Buffer overow",
       "SQL injection",
       "Cross-site scripting"
     ],
@@ -981,16 +981,14 @@
   },
   "49": {
     "num": 49,
-    "q": "While troubleshooting a \u0000rewall con \u0000guration, a technician determines that a “deny any” policy should be added to the bottom of the ACL. The technician updates the policy, but the new policy causes several company servers to become unreachable. Which of the following actions would prevent this issue?",
+    "q": "While troubleshooting a rewall con guration, a technician determines that a \"deny any\" policy should be added to the bottom of the ACL. The technician updates the policy, but the new policy causes several company servers to become unreachable. Which of the following actions would prevent this issue?",
     "options": [
-      "The technician updates the policy, but the new policy causes several company servers to become unreachable. Which of the following actions would prevent this issue?",
       "Documenting the new policy in a change request and submitting the request to change management",
       "Testing the policy in a non-production environment before enabling the policy in the production network",
-      "Disabling any intrusion prevention signatures on the “deny any” policy prior to enabling the new policy",
-      "Including an “allow any” policy above the “deny any” policy"
+      "Disabling any intrusion prevention signatures on the \"deny any\" policy prior to enabling the new policy",
+      "Including an \"allow any\" policy above the \"deny any\" policy"
     ],
     "letters": [
-      "L",
       "A",
       "B",
       "C",
@@ -1003,7 +1001,7 @@
   },
   "50": {
     "num": 50,
-    "q": "An organization is building a new backup data center with cost-bene \u0000t as the primary requirement and RTO and RPO values around two days. Which of the following types of sites is the best for this scenario?",
+    "q": "An organization is building a new backup data center with cost-bene t as the primary requirement and RTO and RPO values around two days. Which of the following types of sites is the best for this scenario?",
     "options": [
       "Real-time recovery",
       "Hot",
@@ -1043,7 +1041,7 @@
   },
   "52": {
     "num": 52,
-    "q": "A systems administrator works for a local hospital and needs to ensure patient data is protected and secure. Which of the following data classi\u0000cations should be used to secure patient data?",
+    "q": "A systems administrator works for a local hospital and needs to ensure patient data is protected and secure. Which of the following data classications should be used to secure patient data?",
     "options": [
       "Private",
       "Critical",
@@ -1063,16 +1061,14 @@
   },
   "53": {
     "num": 53,
-    "q": "A U.S.-based cloud-hosting provider wants to expand its data centers to new international locations. Which of the following should the hosting provider consider \u0000rst?",
+    "q": "A U.S.-based cloud-hosting provider wants to expand its data centers to new international locations. Which of the following should the hosting provider consider rst?",
     "options": [
-      "S.-based cloud-hosting provider wants to expand its data centers to new international locations. Which of the following should the hosting provider consider \u0000rst?",
       "Local data protection regulations",
       "Risks from hackers residing in other countries",
       "Impacts to existing contractual obligations",
       "Time zone differences in log correlation"
     ],
     "letters": [
-      "U",
       "A",
       "B",
       "C",
@@ -1089,7 +1085,7 @@
     "options": [
       "Access control list",
       "Application allow list",
-      "Host-based \u0000rewall",
+      "Host-based rewall",
       "DLP solution"
     ],
     "letters": [
@@ -1127,7 +1123,7 @@
     "num": 56,
     "q": "A software development manager wants to ensure the authenticity of the code created by the company. Which of the following options is the most appropriate?",
     "options": [
-      "Testing input validation on the user input \u0000elds",
+      "Testing input validation on the user input elds",
       "Performing code signing on company-developed software",
       "Performing static code analysis on the software",
       "Ensuring secure cookies are use"
@@ -1185,7 +1181,7 @@
   },
   "59": {
     "num": 59,
-    "q": "A security practitioner completes a vulnerability assessment on a company’s network and \u0000nds several vulnerabilities, which the operations team remediates. Which of the following should be done next?",
+    "q": "A security practitioner completes a vulnerability assessment on a company's network and nds several vulnerabilities, which the operations team remediates. Which of the following should be done next?",
     "options": [
       "Conduct an audit.",
       "Initiate a penetration test.",
@@ -1205,7 +1201,7 @@
   },
   "60": {
     "num": 60,
-    "q": "An administrator was noti\u0000ed that a user logged in remotely after hours and copied large amounts of data to a personal device. Which of the following best describes the user’s activity?",
+    "q": "An administrator was notied that a user logged in remotely after hours and copied large amounts of data to a personal device. Which of the following best describes the user's activity?",
     "options": [
       "Penetration testing",
       "Phishing campaign",
@@ -1245,7 +1241,7 @@
   },
   "62": {
     "num": 62,
-    "q": "Which of the following is the best way to consistently determine on a daily basis whether security settings on servers have been modi\u0000ed?",
+    "q": "Which of the following is the best way to consistently determine on a daily basis whether security settings on servers have been modied?",
     "options": [
       "Automation",
       "Compliance checklist",
@@ -1265,7 +1261,7 @@
   },
   "63": {
     "num": 63,
-    "q": "Which of the following tools can assist with detecting an employee who has accidentally emailed a \u0000le containing a customer’s PII?",
+    "q": "Which of the following tools can assist with detecting an employee who has accidentally emailed a le containing a customer's PII?",
     "options": [
       "SCAP",
       "NetFlow",
@@ -1307,8 +1303,8 @@
     "num": 65,
     "q": "A security analyst and the management team are reviewing the organizational performance of a recent phishing campaign. The user click-through rate exceeded the acceptable risk threshold, and the management team wants to reduce the impact when a user clicks on a link in a phishing message. Which of the following should the analyst do?",
     "options": [
-      "Place posters around the o\u0000 ce to raise awareness of common phishing activities.",
-      "Implement email security \u0000lters to prevent phishing emails from being delivered.",
+      "Place posters around the o ce to raise awareness of common phishing activities.",
+      "Implement email security lters to prevent phishing emails from being delivered.",
       "Update the EDR policies to block automatic execution of downloaded programs.",
       "Create additional training for users to recognize the signs of phishing attempts."
     ],
@@ -1325,7 +1321,7 @@
   },
   "66": {
     "num": 66,
-    "q": "Which of the following has been implemented when a host-based \u0000rewall on a legacy Linux system allows connections from only speci\u0000c internal IP addresses?",
+    "q": "Which of the following has been implemented when a host-based rewall on a legacy Linux system allows connections from only specic internal IP addresses?",
     "options": [
       "Compensating control",
       "Network segmentation",
@@ -1348,7 +1344,7 @@
     "q": "The management team notices that new accounts that are set up manually do not always have correct access or permissions. Which of the following automation techniques should a systems administrator use to streamline account creation?",
     "options": [
       "Guard rail script",
-      "Ticketing work \u0000ow",
+      "Ticketing work ow",
       "Escalation script",
       "User provisioning script"
     ],
@@ -1427,9 +1423,9 @@
     "num": 71,
     "q": "A security analyst reviews domain activity logs and notices the following: Which of the following is the best explanation for what the security analyst has discovered?",
     "options": [
-      "The user jsmith’s account has been locked out.",
-      "A keylogger is installed on jsmith’s workstation.",
-      "An attacker is attempting to brute force jsmith’s account.",
+      "The user jsmith's account has been locked out.",
+      "A keylogger is installed on jsmith's workstation.",
+      "An attacker is attempting to brute force jsmith's account.",
       "Ransomware has been deployed in the domain."
     ],
     "letters": [
@@ -1468,7 +1464,7 @@
     "q": "Which of the following is a primary security concern for a company setting up a BYOD program?",
     "options": [
       "End of life",
-      "Buffer over\u0000ow",
+      "Buffer overow",
       "VM escape",
       "Jailbreaking"
     ],
@@ -1585,7 +1581,7 @@
   },
   "81": {
     "num": 81,
-    "q": "An administrator is reviewing a single server's security logs and discovers the following: Which of the following best describes the action captured in this log \u0000le?",
+    "q": "An administrator is reviewing a single server's security logs and discovers the following: Which of the following best describes the action captured in this log le?",
     "options": [
       "Brute-force attack",
       "Privilege escalation",
@@ -1612,7 +1608,7 @@
       "Digital signatures",
       "Data tokenization",
       "Public key management",
-      "Certi\u0000cate authority linking"
+      "Certicate authority linking"
     ],
     "letters": [
       "A",
@@ -1633,7 +1629,7 @@
     "q": "A security analyst scans a company's public network and discovers a host is running a remote desktop that can be used to access the production network. Which of the following changes should the security analyst recommend?",
     "options": [
       "Changing the remote desktop port to a non-standard number",
-      "Setting up a VPN and placing the jump server inside the \u0000rewall",
+      "Setting up a VPN and placing the jump server inside the rewall",
       "Using a proxy for web connections from the remote desktop server",
       "Connecting the remote server to the domain and increasing the password length"
     ],
@@ -1650,7 +1646,7 @@
   },
   "84": {
     "num": 84,
-    "q": "An enterprise has been experiencing attacks focused on exploiting vulnerabilities in older browser versions with well-known exploits. Which of the following security solutions should be con\u0000gured to best provide the ability to monitor and block these known signature-based attacks?",
+    "q": "An enterprise has been experiencing attacks focused on exploiting vulnerabilities in older browser versions with well-known exploits. Which of the following security solutions should be congured to best provide the ability to monitor and block these known signature-based attacks?",
     "options": [
       "ACL",
       "DLP",
@@ -1770,7 +1766,7 @@
   },
   "90": {
     "num": 90,
-    "q": "A company's marketing department collects, modi\u0000es, and stores sensitive customer data. The infrastructure team is responsible for securing the data while in transit and at rest. Which of the following data roles describes the customer?",
+    "q": "A company's marketing department collects, modies, and stores sensitive customer data. The infrastructure team is responsible for securing the data while in transit and at rest. Which of the following data roles describes the customer?",
     "options": [
       "Processor",
       "Custodian",
@@ -1813,9 +1809,9 @@
     "q": "A security analyst receives alerts about an internal system sending a large amount of unusual DNS queries to systems on the internet over short periods of time during non-business hours. Which of the following is most likely occurring?",
     "options": [
       "A worm is propagating across the network.",
-      "Data is being ex\u0000ltrated.",
+      "Data is being exltrated.",
       "A logic bomb is deleting data.",
-      "Ransomware is encrypting \u0000les."
+      "Ransomware is encrypting les."
     ],
     "letters": [
       "A",
@@ -1830,7 +1826,7 @@
   },
   "93": {
     "num": 93,
-    "q": "A technician is opening ports on a \u0000rewall for a new system being deployed and supported by a SaaS provider. Which of the following is a risk in the new system?",
+    "q": "A technician is opening ports on a rewall for a new system being deployed and supported by a SaaS provider. Which of the following is a risk in the new system?",
     "options": [
       "Default credentials",
       "Non-segmented network",
@@ -1870,9 +1866,9 @@
   },
   "95": {
     "num": 95,
-    "q": "Which of the following involves an attempt to take advantage of database miscon\u0000gurations?",
+    "q": "Which of the following involves an attempt to take advantage of database miscongurations?",
     "options": [
-      "Buffer over\u0000ow",
+      "Buffer overow",
       "SQL injection",
       "VM escape",
       "Memory injection"
@@ -1890,7 +1886,7 @@
   },
   "96": {
     "num": 96,
-    "q": "Which of the following is used to validate a certi\u0000cate when it is presented to a user?",
+    "q": "Which of the following is used to validate a certicate when it is presented to a user?",
     "options": [
       "OCSP",
       "CSR",
@@ -1952,9 +1948,9 @@
     "num": 99,
     "q": "Which of the following actions could a security engineer take to ensure workstations and servers are properly monitored for unauthorized changes and software?",
     "options": [
-      "Con\u0000gure all systems to log scheduled tasks.",
-      "Collect and monitor all tra\u0000 c exiting the network.",
-      "Block tra\u0000 c based on known malicious signatures.",
+      "Congure all systems to log scheduled tasks.",
+      "Collect and monitor all tra c exiting the network.",
+      "Block tra c based on known malicious signatures.",
       "Install endpoint management software on all systems"
     ],
     "letters": [
@@ -2010,7 +2006,7 @@
   },
   "102": {
     "num": 102,
-    "q": "An organization disabled unneeded services and placed a \u0000rewall in front of a business-critical legacy system. Which of the following best describes the actions taken by the organization?",
+    "q": "An organization disabled unneeded services and placed a rewall in front of a business-critical legacy system. Which of the following best describes the actions taken by the organization?",
     "options": [
       "Exception",
       "Segmentation",
@@ -2055,7 +2051,7 @@
       "Software as a service",
       "Infrastructure as code",
       "Internet of Things",
-      "Software-de \u0000ned networking"
+      "Software-de ned networking"
     ],
     "letters": [
       "A",
@@ -2070,7 +2066,7 @@
   },
   "105": {
     "num": 105,
-    "q": "After a security awareness training session, a user called the IT help desk and reported a suspicious call. The suspicious caller stated that the Chief Financial O\u0000 cer wanted credit card information in order to close an invoice. Which of the following topics did the user recognize from the training?",
+    "q": "After a security awareness training session, a user called the IT help desk and reported a suspicious call. The suspicious caller stated that the Chief Financial O cer wanted credit card information in order to close an invoice. Which of the following topics did the user recognize from the training?",
     "options": [
       "Insider threat",
       "Email phishing",
@@ -2090,12 +2086,12 @@
   },
   "106": {
     "num": 106,
-    "q": "A security administrator is deploying a DLP solution to prevent the ex\u0000ltration of sensitive customer data. Which of the following should the administrator do \u0000rst?",
+    "q": "A security administrator is deploying a DLP solution to prevent the exltration of sensitive customer data. Which of the following should the administrator do rst?",
     "options": [
       "Block access to cloud storage websites.",
       "Create a rule to block outgoing email attachments.",
-      "Apply classi\u0000cations to the data.",
-      "Remove all user permissions from shares on the \u0000le server."
+      "Apply classications to the data.",
+      "Remove all user permissions from shares on the le server."
     ],
     "letters": [
       "A",
@@ -2152,7 +2148,7 @@
   },
   "109": {
     "num": 109,
-    "q": "A Chief Information Security O\u0000 cer (CISO) wants to explicitly raise awareness about the increase of ransomware-as-a-service in a report to the management team. Which of the following best describes the threat actor in the CISO’s report?",
+    "q": "A Chief Information Security O cer (CISO) wants to explicitly raise awareness about the increase of ransomware-as-a-service in a report to the management team. Which of the following best describes the threat actor in the CISO's report?",
     "options": [
       "Insider threat",
       "Hacktivist",
@@ -2194,7 +2190,7 @@
     "num": 111,
     "q": "Which of the following can best protect against an employee inadvertently installing malware on a company system?",
     "options": [
-      "Host-based \u0000rewall",
+      "Host-based rewall",
       "System isolation",
       "Least privilege",
       "Application allow list"
@@ -2215,7 +2211,7 @@
     "q": "A company is adding a clause to its AUP that states employees are not allowed to modify the operating system on mobile devices. Which of the following vulnerabilities is the organization addressing?",
     "options": [
       "Cross-site scripting",
-      "Buffer over\u0000ow",
+      "Buffer overow",
       "Jailbreaking",
       "Side loading"
     ],
@@ -2317,11 +2313,11 @@
   },
   "117": {
     "num": 117,
-    "q": "An organization is struggling with scaling issues on its VPN concentrator and internet circuit due to remote work. The organization is looking for a software solution that will allow it to reduce tra\u0000 c on the VPN and internet circuit, while still providing encrypted tunnel access to the data center and monitoring of remote employee internet tra\u0000 c. Which of the following will help achieve these objectives?",
+    "q": "An organization is struggling with scaling issues on its VPN concentrator and internet circuit due to remote work. The organization is looking for a software solution that will allow it to reduce tra c on the VPN and internet circuit, while still providing encrypted tunnel access to the data center and monitoring of remote employee internet tra c. Which of the following will help achieve these objectives?",
     "options": [
       "Deploying a SASE solution to remote employees",
       "Building a load-balanced VPN solution with redundant internet",
-      "Purchasing a low-cost SD-WAN solution for VPN tra\u0000 c",
+      "Purchasing a low-cost SD-WAN solution for VPN tra c",
       "Using a cloud provider to create additional VPN concentrators"
     ],
     "letters": [
@@ -2357,11 +2353,11 @@
   },
   "119": {
     "num": 119,
-    "q": "Which of the following security concepts is the best reason for permissions on a human resources \u0000leshare to follow the principle of least privilege?",
+    "q": "Which of the following security concepts is the best reason for permissions on a human resources leshare to follow the principle of least privilege?",
     "options": [
       "Integrity",
       "Availability",
-      "Con\u0000dentiality",
+      "Condentiality",
       "Non-repudiation"
     ],
     "letters": [
@@ -2380,7 +2376,7 @@
     "q": "Which of the following are cases in which an engineer should recommend the decommissioning of a network device? (Choose two.)",
     "options": [
       "The device has been moved from a production environment to a test environment.",
-      "The device is con\u0000gured to use cleartext passwords.",
+      "The device is congured to use cleartext passwords.",
       "The device is moved to an isolated segment on the enterprise network.",
       "The device is moved to a different location in the enterprise.",
       "The device's encryption level cannot meet organizational standards.",
@@ -2422,7 +2418,7 @@
   },
   "122": {
     "num": 122,
-    "q": "After a recent ransomware attack on a company's system, an administrator reviewed the log \u0000les. Which of the following control types did the administrator use?",
+    "q": "After a recent ransomware attack on a company's system, an administrator reviewed the log les. Which of the following control types did the administrator use?",
     "options": [
       "Compensating",
       "Detective",
@@ -2482,7 +2478,7 @@
   },
   "125": {
     "num": 125,
-    "q": "A newly identi\u0000ed network access vulnerability has been found in the OS of legacy IoT devices. Which of the following would best mitigate this vulnerability quickly?",
+    "q": "A newly identied network access vulnerability has been found in the OS of legacy IoT devices. Which of the following would best mitigate this vulnerability quickly?",
     "options": [
       "Insurance",
       "Patching",
@@ -2502,10 +2498,10 @@
   },
   "126": {
     "num": 126,
-    "q": "After an audit, an administrator discovers all users have access to con\u0000dential data on a \u0000le server. Which of the following should the administrator use to restrict access to the data quickly?",
+    "q": "After an audit, an administrator discovers all users have access to condential data on a le server. Which of the following should the administrator use to restrict access to the data quickly?",
     "options": [
       "Group Policy",
-      "Content \u0000ltering",
+      "Content ltering",
       "Data loss prevention",
       "Access control lists"
     ],
@@ -2542,11 +2538,11 @@
   },
   "128": {
     "num": 128,
-    "q": "A company is discarding a classi\u0000ed storage array and hires an outside vendor to complete the disposal. Which of the following should the company request from the vendor?",
+    "q": "A company is discarding a classied storage array and hires an outside vendor to complete the disposal. Which of the following should the company request from the vendor?",
     "options": [
-      "Certi\u0000cation",
+      "Certication",
       "Inventory list",
-      "Classi\u0000cation",
+      "Classication",
       "Proof of ownership"
     ],
     "letters": [
@@ -2582,12 +2578,12 @@
   },
   "130": {
     "num": 130,
-    "q": "A security analyst locates a potentially malicious video \u0000le on a server and needs to identify both the creation date and the \u0000le's creator. Which of the following actions would most likely give the security analyst the information required?",
+    "q": "A security analyst locates a potentially malicious video le on a server and needs to identify both the creation date and the le's creator. Which of the following actions would most likely give the security analyst the information required?",
     "options": [
-      "Obtain the \u0000le's SHA-256 hash.",
-      "Use hexdump on the \u0000le's contents.",
+      "Obtain the le's SHA-256 hash.",
+      "Use hexdump on the le's contents.",
       "Check endpoint logs.",
-      "Query the \u0000le's metadata."
+      "Query the le's metadata."
     ],
     "letters": [
       "A",
@@ -2622,7 +2618,7 @@
   },
   "132": {
     "num": 132,
-    "q": "A small business uses kiosks on the sales \u0000oor to display product information for customers. A security team discovers the kiosks use end-of-life operating systems. Which of the following is the security team most likely to document as a security implication of the current architecture?",
+    "q": "A small business uses kiosks on the sales oor to display product information for customers. A security team discovers the kiosks use end-of-life operating systems. Which of the following is the security team most likely to document as a security implication of the current architecture?",
     "options": [
       "Patch availability",
       "Product software compatibility",
@@ -2645,7 +2641,7 @@
     "q": "Which of the following would help ensure a security analyst is able to accurately measure the overall risk to an organization when a new vulnerability is disclosed?",
     "options": [
       "A full inventory of all hardware and software",
-      "Documentation of system classi\u0000cations",
+      "Documentation of system classications",
       "A list of system owners and their departments",
       "Third-party risk assessment documentation"
     ],
@@ -2726,7 +2722,7 @@
     "options": [
       "Encryption at rest",
       "Masking",
-      "Data classi\u0000cation",
+      "Data classication",
       "Permission restrictions"
     ],
     "letters": [
@@ -2742,12 +2738,12 @@
   },
   "138": {
     "num": 138,
-    "q": "A company's end users are reporting that they are unable to reach external websites. After reviewing the performance data for the DNS severs, the analyst discovers that the CPU, disk, and memory usage are minimal, but the network interface is \u0000ooded with inbound tra\u0000 c. Network logs show only a small number of DNS queries sent to this server. Which of the following best describes what the security analyst is seeing?",
+    "q": "A company's end users are reporting that they are unable to reach external websites. After reviewing the performance data for the DNS severs, the analyst discovers that the CPU, disk, and memory usage are minimal, but the network interface is ooded with inbound tra c. Network logs show only a small number of DNS queries sent to this server. Which of the following best describes what the security analyst is seeing?",
     "options": [
       "Concurrent session usage",
       "Secure DNS cryptographic downgrade",
       "On-path resource consumption",
-      "Re\u0000ected denial of service"
+      "Reected denial of service"
     ],
     "letters": [
       "A",
@@ -2762,7 +2758,7 @@
   },
   "139": {
     "num": 139,
-    "q": "A systems administrator wants to prevent users from being able to access data based on their responsibilities. The administrator also wants to apply the required access structure via a simpli\u0000ed format. Which of the following should the administrator apply to the site recovery resource group?",
+    "q": "A systems administrator wants to prevent users from being able to access data based on their responsibilities. The administrator also wants to apply the required access structure via a simplied format. Which of the following should the administrator apply to the site recovery resource group?",
     "options": [
       "RBAC",
       "ACL",
@@ -2782,10 +2778,10 @@
   },
   "140": {
     "num": 140,
-    "q": "During the onboarding process, an employee needs to create a password for an intranet account. The password must include ten characters, numbers, and letters, and two special characters. Once the password is created, the company will grant the employee access to other company- owned websites based on the intranet pro\u0000le. Which of the following access management concepts is the company most likely using to safeguard intranet accounts and grant access to multiple sites based on a user's intranet account? (Choose two.)",
+    "q": "During the onboarding process, an employee needs to create a password for an intranet account. The password must include ten characters, numbers, and letters, and two special characters. Once the password is created, the company will grant the employee access to other company- owned websites based on the intranet prole. Which of the following access management concepts is the company most likely using to safeguard intranet accounts and grant access to multiple sites based on a user's intranet account? (Choose two.)",
     "options": [
       "Federation",
-      "Identity proo\u0000ng",
+      "Identity proong",
       "Password complexity",
       "Default password changes",
       "Password manager",
@@ -2832,7 +2828,7 @@
       "Domain name, PKI, GeoIP lookup",
       "VPN IP address, company ID, facial structure",
       "Password, authentication token, thumbprint",
-      "Company URL, TLS certi\u0000cate, home address"
+      "Company URL, TLS certicate, home address"
     ],
     "letters": [
       "A",
@@ -2871,7 +2867,7 @@
     "options": [
       "VM escape",
       "SQL injection",
-      "Buffer over\u0000ow",
+      "Buffer overow",
       "Race condition"
     ],
     "letters": [
@@ -2892,7 +2888,7 @@
       "Retain the emails between the security team and affected customers for 30 days.",
       "Retain any communications related to the security breach until further notice.",
       "Retain any communications between security members during the breach response.",
-      "Retain all emails from the company to affected customers for an inde \u0000nite period of time."
+      "Retain all emails from the company to affected customers for an inde nite period of time."
     ],
     "letters": [
       "A",
@@ -2927,7 +2923,7 @@
   },
   "147": {
     "num": 147,
-    "q": "An employee receives a text message from an unknown number claiming to be the company’s Chief Executive O\u0000 cer and asking the employee to purchase several gift cards. Which of the following types of attacks does this describe?",
+    "q": "An employee receives a text message from an unknown number claiming to be the company's Chief Executive O cer and asking the employee to purchase several gift cards. Which of the following types of attacks does this describe?",
     "options": [
       "Vishing",
       "Smishing",
@@ -2947,7 +2943,7 @@
   },
   "148": {
     "num": 148,
-    "q": "Which of the following risk management strategies should an enterprise adopt \u0000rst if a legacy application is critical to business operations and there are preventative controls that are not yet implemented?",
+    "q": "Which of the following risk management strategies should an enterprise adopt rst if a legacy application is critical to business operations and there are preventative controls that are not yet implemented?",
     "options": [
       "Mitigate",
       "Accept",
@@ -3072,11 +3068,11 @@
   },
   "154": {
     "num": 154,
-    "q": "A network administrator is working on a project to deploy a load balancer in the company's cloud environment. Which of the following fundamental security requirements does this project ful\u0000l?",
+    "q": "A network administrator is working on a project to deploy a load balancer in the company's cloud environment. Which of the following fundamental security requirements does this project full?",
     "options": [
       "Privacy",
       "Integrity",
-      "Con\u0000dentiality",
+      "Condentiality",
       "Availability"
     ],
     "letters": [
@@ -3097,7 +3093,7 @@
       "Deploying PowerShell scripts",
       "Pushing GPO update",
       "Enabling PAP",
-      "Updating EDR pro\u0000les"
+      "Updating EDR proles"
     ],
     "letters": [
       "A",
@@ -3156,7 +3152,7 @@
     "num": 158,
     "q": "A technician is deploying a new security camera. Which of the following should the technician do?",
     "options": [
-      "Con\u0000gure the correct VLAN.",
+      "Congure the correct VLAN.",
       "Perform a vulnerability scan.",
       "Disable unnecessary ports.",
       "Conduct a site survey."
@@ -3174,11 +3170,11 @@
   },
   "159": {
     "num": 159,
-    "q": "A company is experiencing a web services outage on the public network. The services are up and available but inaccessible. The network logs show a sudden increase in network tra\u0000 c that is causing the outage. Which of the following attacks is the organization experiencing?",
+    "q": "A company is experiencing a web services outage on the public network. The services are up and available but inaccessible. The network logs show a sudden increase in network tra c that is causing the outage. Which of the following attacks is the organization experiencing?",
     "options": [
       "ARP poisoning",
       "Brute force",
-      "Buffer over\u0000ow",
+      "Buffer overow",
       "DDoS"
     ],
     "letters": [
@@ -3194,7 +3190,7 @@
   },
   "160": {
     "num": 160,
-    "q": "Which of the following threat actors is the most likely to be motivated by pro\u0000t?",
+    "q": "Which of the following threat actors is the most likely to be motivated by prot?",
     "options": [
       "Hacktivist",
       "Insider threat",
@@ -3259,7 +3255,7 @@
   },
   "163": {
     "num": 163,
-    "q": "A systems administrator uses a key to encrypt a message being sent to a peer in a different branch o\u0000 ce. The peer then uses the same key to decrypt the message. Which of the following describes this example?",
+    "q": "A systems administrator uses a key to encrypt a message being sent to a peer in a different branch o ce. The peer then uses the same key to decrypt the message. Which of the following describes this example?",
     "options": [
       "Symmetric",
       "Asymmetric",
@@ -3279,10 +3275,10 @@
   },
   "164": {
     "num": 164,
-    "q": "A visitor plugs a laptop into a network jack in the lobby and is able to connect to the company's network. Which of the following should be con\u0000gured on the existing network infrastructure to best prevent this activity?",
+    "q": "A visitor plugs a laptop into a network jack in the lobby and is able to connect to the company's network. Which of the following should be congured on the existing network infrastructure to best prevent this activity?",
     "options": [
       "Port security",
-      "Web application \u0000rewall",
+      "Web application rewall",
       "Transport layer security",
       "Virtual private network"
     ],
@@ -3302,9 +3298,9 @@
     "q": "A security administrator is reissuing a former employee's laptop. Which of the following is the best combination of data handling activities for the administrator to perform? (Choose two.)",
     "options": [
       "Data retention",
-      "Certi\u0000cation",
+      "Certication",
       "Destruction",
-      "Classi\u0000cation",
+      "Classication",
       "Sanitization",
       "Enumeration"
     ],
@@ -3364,16 +3360,14 @@
   },
   "168": {
     "num": 168,
-    "q": "A bank set up a new server that contains customers' PII. Which of the following should the bank use to make sure the sensitive data is not modi\u0000ed?",
+    "q": "A bank set up a new server that contains customers' PII. Which of the following should the bank use to make sure the sensitive data is not modied?",
     "options": [
-      "Which of the following should the bank use to make sure the sensitive data is not modi\u0000ed?",
       "Full disk encryption",
       "Network access control",
       "File integrity monitoring",
       "User behavior analytics"
     ],
     "letters": [
-      "I",
       "A",
       "B",
       "C",
@@ -3386,12 +3380,12 @@
   },
   "169": {
     "num": 169,
-    "q": "Users at a company are reporting they are unable to access the URL for a new retail website because it is \u0000agged as gambling and is being blocked. Which of the following changes would allow users to access the site?",
+    "q": "Users at a company are reporting they are unable to access the URL for a new retail website because it is agged as gambling and is being blocked. Which of the following changes would allow users to access the site?",
     "options": [
-      "Creating a \u0000rewall rule to allow HTTPS tra\u0000 c",
-      "Con\u0000guring the IPS to allow shopping",
+      "Creating a rewall rule to allow HTTPS tra c",
+      "Conguring the IPS to allow shopping",
       "Tuning the DLP rule that detects credit card data",
-      "Updating the categorization in the content \u0000lter"
+      "Updating the categorization in the content lter"
     ],
     "letters": [
       "A",
@@ -3446,7 +3440,7 @@
   },
   "172": {
     "num": 172,
-    "q": "The CIRT is reviewing an incident that involved a human resources recruiter ex\u0000ltrating sensitive company data. The CIRT found that the recruiter was able to use HTTP over port 53 to upload documents to a web server. Which of the following security infrastructure devices could have identi\u0000ed and blocked this activity?",
+    "q": "The CIRT is reviewing an incident that involved a human resources recruiter exltrating sensitive company data. The CIRT found that the recruiter was able to use HTTP over port 53 to upload documents to a web server. Which of the following security infrastructure devices could have identied and blocked this activity?",
     "options": [
       "WAF utilizing SSL decryption",
       "NGFW utilizing application inspection",
@@ -3466,7 +3460,7 @@
   },
   "173": {
     "num": 173,
-    "q": "An enterprise is working with a third party and needs to allow access between the internal networks of both parties for a secure \u0000le migration. The solution needs to ensure encryption is applied to all tra\u0000 c that is traversing the networks. Which of the following solutions should most likely be implemented?",
+    "q": "An enterprise is working with a third party and needs to allow access between the internal networks of both parties for a secure le migration. The solution needs to ensure encryption is applied to all tra c that is traversing the networks. Which of the following solutions should most likely be implemented?",
     "options": [
       "EAP",
       "IPSec",
@@ -3486,7 +3480,7 @@
   },
   "174": {
     "num": 174,
-    "q": "An administrator has identi\u0000ed and \u0000ngerprinted speci\u0000c \u0000les that will generate an alert if an attempt is made to email these \u0000les outside of the organization. Which of the following best describes the tool the administrator is using?",
+    "q": "An administrator has identied and ngerprinted specic les that will generate an alert if an attempt is made to email these les outside of the organization. Which of the following best describes the tool the administrator is using?",
     "options": [
       "DLP",
       "SNMP traps",
@@ -3506,10 +3500,10 @@
   },
   "175": {
     "num": 175,
-    "q": "A software developer released a new application and is distributing application \u0000les via the developer's website. Which of the following should the developer post on the website to allow users to verify the integrity of the downloaded \u0000les?",
+    "q": "A software developer released a new application and is distributing application les via the developer's website. Which of the following should the developer post on the website to allow users to verify the integrity of the downloaded les?",
     "options": [
       "Hashes",
-      "Certi\u0000cates",
+      "Certicates",
       "Algorithms",
       "Salting"
     ],
@@ -3546,7 +3540,7 @@
   },
   "177": {
     "num": 177,
-    "q": "An administrator \u0000nds that all user workstations and servers are displaying a message that is associated with \u0000les containing an extension of .ryk. Which of the following types of infections is present on the systems?",
+    "q": "An administrator nds that all user workstations and servers are displaying a message that is associated with les containing an extension of .ryk. Which of the following types of infections is present on the systems?",
     "options": [
       "Virus",
       "Trojan",
@@ -3566,7 +3560,7 @@
   },
   "178": {
     "num": 178,
-    "q": "A systems administrator is advised that an external web server is not functioning property. The administrator reviews the following \u0000rewall logs containing tra\u0000 c going to the web server: Which of the following attacks is likely occurring?",
+    "q": "A systems administrator is advised that an external web server is not functioning property. The administrator reviews the following rewall logs containing tra c going to the web server: Which of the following attacks is likely occurring?",
     "options": [
       "DDoS",
       "Directory traversal",
@@ -3626,7 +3620,7 @@
   },
   "181": {
     "num": 181,
-    "q": "An IT manager is increasing the security capabilities of an organization after a data classi\u0000cation initiative determined that sensitive data could be ex\u0000ltrated from the environment. Which of the following solutions would mitigate the risk?",
+    "q": "An IT manager is increasing the security capabilities of an organization after a data classication initiative determined that sensitive data could be exltrated from the environment. Which of the following solutions would mitigate the risk?",
     "options": [
       "XDR",
       "SPF",
@@ -3666,10 +3660,10 @@
   },
   "183": {
     "num": 183,
-    "q": "Client \u0000les can only be accessed by employees who need to know the information and have speci\u0000ed roles in the company. Which of the following best describes this security concept?",
+    "q": "Client les can only be accessed by employees who need to know the information and have specied roles in the company. Which of the following best describes this security concept?",
     "options": [
       "Availability",
-      "Con\u0000dentiality",
+      "Condentiality",
       "Integrity",
       "Non-repudiation"
     ],
@@ -3688,7 +3682,7 @@
     "num": 184,
     "q": "Which of the following describes the category of data that is most impacted when it is lost?",
     "options": [
-      "Con\u0000dential",
+      "Condential",
       "Public",
       "Private",
       "Critical"
@@ -3706,7 +3700,7 @@
   },
   "185": {
     "num": 185,
-    "q": "A new employee logs in to the email system for the \u0000rst time and notices a message from human resources about onboarding. The employee hovers over a few of the links within the email and discovers that the links do not correspond to links associated with the company. Which of the following attack vectors is most likely being used?",
+    "q": "A new employee logs in to the email system for the rst time and notices a message from human resources about onboarding. The employee hovers over a few of the links within the email and discovers that the links do not correspond to links associated with the company. Which of the following attack vectors is most likely being used?",
     "options": [
       "Business email",
       "Social engineering",
@@ -3786,7 +3780,7 @@
   },
   "189": {
     "num": 189,
-    "q": "Which of the following best describes the practice of researching laws and regulations related to information security operations within a speci\u0000c industry?",
+    "q": "Which of the following best describes the practice of researching laws and regulations related to information security operations within a specic industry?",
     "options": [
       "Compliance reporting",
       "GDPR",
@@ -3808,7 +3802,7 @@
     "num": 190,
     "q": "Which of the following considerations is the most important for an organization to evaluate as it establishes and maintains a data privacy program?",
     "options": [
-      "Reporting structure for the data privacy o\u0000 cer",
+      "Reporting structure for the data privacy o cer",
       "Request process for data subject access",
       "Role as controller or processor",
       "Physical location of the company"
@@ -3926,12 +3920,12 @@
   },
   "196": {
     "num": 196,
-    "q": "A company wants to verify that the software the company is deploying came from the vendor the company purchased the software from. Which of the following is the best way for the company to con\u0000rm this information?",
+    "q": "A company wants to verify that the software the company is deploying came from the vendor the company purchased the software from. Which of the following is the best way for the company to conrm this information?",
     "options": [
       "Validate the code signature.",
       "Execute the code in a sandbox.",
       "Search the executable for ASCII strings.",
-      "Generate a hash of the \u0000les."
+      "Generate a hash of the les."
     ],
     "letters": [
       "A",
@@ -3966,7 +3960,7 @@
   },
   "198": {
     "num": 198,
-    "q": "The Chief Information Security O\u0000 cer (CISO) at a large company would like to gain an understanding of how the company's security policies compare to the requirements imposed by external regulators. Which of the following should the CISO use?",
+    "q": "The Chief Information Security O cer (CISO) at a large company would like to gain an understanding of how the company's security policies compare to the requirements imposed by external regulators. Which of the following should the CISO use?",
     "options": [
       "Penetration test",
       "Internal audit",
@@ -3989,7 +3983,7 @@
     "q": "A systems administrator notices that the research and development department is not using the company VPN when accessing various company- related services and systems. Which of the following scenarios describes this activity?",
     "options": [
       "Espionage",
-      "Data ex\u0000ltration",
+      "Data exltration",
       "Nation-state attack",
       "Shadow IT"
     ],
@@ -4010,7 +4004,7 @@
     "options": [
       "Shadow IT",
       "Insider threat",
-      "Data ex\u0000ltration",
+      "Data exltration",
       "Service disruption"
     ],
     "letters": [
@@ -4029,7 +4023,7 @@
     "q": "Which of the following would best explain why a security analyst is running daily vulnerability scans on all corporate endpoints?",
     "options": [
       "To track the status of patching installations",
-      "To \u0000nd shadow IT cloud deployments",
+      "To nd shadow IT cloud deployments",
       "To continuously the monitor hardware inventory",
       "To hunt for active attackers in the network"
     ],
@@ -4046,7 +4040,7 @@
   },
   "202": {
     "num": 202,
-    "q": "Which of the following is classi \u0000ed as high availability in a cloud environment?",
+    "q": "Which of the following is classi ed as high availability in a cloud environment?",
     "options": [
       "Access broker",
       "Cloud HSM",
@@ -4086,9 +4080,9 @@
   },
   "204": {
     "num": 204,
-    "q": "Which of the following threat vectors is most commonly utilized by insider threat actors attempting data ex\u0000ltration?",
+    "q": "Which of the following threat vectors is most commonly utilized by insider threat actors attempting data exltration?",
     "options": [
-      "Unidenti\u0000ed removable devices",
+      "Unidentied removable devices",
       "Default network device credentials",
       "Spear phishing emails",
       "Impersonation of business units through typosquatting"
@@ -4126,7 +4120,7 @@
   },
   "206": {
     "num": 206,
-    "q": "The Chief Information Security O\u0000 cer (CISO) has determined the company is non-compliant with local data privacy regulations. The CISO needs to justify the budget request for more resources. Which of the following should the CISO present to the board as the direct consequence of non- compliance?",
+    "q": "The Chief Information Security O cer (CISO) has determined the company is non-compliant with local data privacy regulations. The CISO needs to justify the budget request for more resources. Which of the following should the CISO present to the board as the direct consequence of non- compliance?",
     "options": [
       "Fines",
       "Reputational damage",
@@ -4166,7 +4160,7 @@
   },
   "208": {
     "num": 208,
-    "q": "A security analyst is investigating an application server and discovers that software on the server is behaving abnormally. The software normally runs batch jobs locally and does not generate tra\u0000 c, but the process is now generating outbound tra\u0000 c over random high ports. Which of the following vulnerabilities has likely been exploited in this software?",
+    "q": "A security analyst is investigating an application server and discovers that software on the server is behaving abnormally. The software normally runs batch jobs locally and does not generate tra c, but the process is now generating outbound tra c over random high ports. Which of the following vulnerabilities has likely been exploited in this software?",
     "options": [
       "Memory injection",
       "Race condition",
@@ -4190,7 +4184,7 @@
     "options": [
       "Asset inventory",
       "Network enumeration",
-      "Data certi\u0000cation",
+      "Data certication",
       "Procurement process"
     ],
     "letters": [
@@ -4266,7 +4260,7 @@
   },
   "213": {
     "num": 213,
-    "q": "Which of the following agreement types de \u0000nes the time frame in which a vendor needs to respond?",
+    "q": "Which of the following agreement types de nes the time frame in which a vendor needs to respond?",
     "options": [
       "SOW",
       "SLA",
@@ -4306,7 +4300,7 @@
   },
   "215": {
     "num": 215,
-    "q": "To improve the security at a data center, a security administrator implements a CCTV system and posts several signs about the possibility of being \u0000lmed. Which of the following best describe these types of controls? (Choose two.)",
+    "q": "To improve the security at a data center, a security administrator implements a CCTV system and posts several signs about the possibility of being lmed. Which of the following best describe these types of controls? (Choose two.)",
     "options": [
       "Preventive",
       "Deterrent",
@@ -4351,7 +4345,7 @@
   },
   "217": {
     "num": 217,
-    "q": "An attacker posing as the Chief Executive O\u0000 cer calls an employee and instructs the employee to buy gift cards. Which of the following techniques is the attacker using?",
+    "q": "An attacker posing as the Chief Executive O cer calls an employee and instructs the employee to buy gift cards. Which of the following techniques is the attacker using?",
     "options": [
       "Smishing",
       "Disinformation",
@@ -4371,7 +4365,7 @@
   },
   "218": {
     "num": 218,
-    "q": "After conducting a vulnerability scan, a systems administrator notices that one of the identi\u0000ed vulnerabilities is not present on the systems that were scanned. Which of the following describes this example?",
+    "q": "After conducting a vulnerability scan, a systems administrator notices that one of the identied vulnerabilities is not present on the systems that were scanned. Which of the following describes this example?",
     "options": [
       "False positive",
       "False negative",
@@ -4391,7 +4385,7 @@
   },
   "219": {
     "num": 219,
-    "q": "A recent penetration test identi\u0000ed that an attacker could \u0000ood the MAC address table of network switches. Which of the following would best mitigate this type of attack?",
+    "q": "A recent penetration test identied that an attacker could ood the MAC address table of network switches. Which of the following would best mitigate this type of attack?",
     "options": [
       "Load balancer",
       "Port security",
@@ -4511,7 +4505,7 @@
   },
   "225": {
     "num": 225,
-    "q": "A security analyst developed a script to automate a trivial and repeatable task. Which of the following best describes the bene \u0000ts of ensuring other team members understand how the script works?",
+    "q": "A security analyst developed a script to automate a trivial and repeatable task. Which of the following best describes the bene ts of ensuring other team members understand how the script works?",
     "options": [
       "To reduce implementation cost",
       "To identify complexity",
@@ -4576,7 +4570,7 @@
   },
   "228": {
     "num": 228,
-    "q": "A Chief Information Security O\u0000 cer would like to conduct frequent, detailed reviews of systems and procedures to track compliance objectives. Which of the following will be the best method to achieve this objective?",
+    "q": "A Chief Information Security O cer would like to conduct frequent, detailed reviews of systems and procedures to track compliance objectives. Which of the following will be the best method to achieve this objective?",
     "options": [
       "Third-party attestation",
       "Penetration testing",
@@ -4659,7 +4653,7 @@
     "q": "An administrator at a small business notices an increase in support calls from employees who receive a blocked page message after trying to navigate to a spoofed website. Which of the following should the administrator do?",
     "options": [
       "Deploy multifactor authentication.",
-      "Decrease the level of the web \u0000lter settings.",
+      "Decrease the level of the web lter settings.",
       "Implement security awareness training.",
       "Update the acceptable use policy."
     ],
@@ -4676,7 +4670,7 @@
   },
   "233": {
     "num": 233,
-    "q": "Which of the following teams is best suited to determine whether a company has systems that can be exploited by a potential, identi\u0000ed vulnerability?",
+    "q": "Which of the following teams is best suited to determine whether a company has systems that can be exploited by a potential, identied vulnerability?",
     "options": [
       "Purple team",
       "Blue team",
@@ -4696,7 +4690,7 @@
   },
   "234": {
     "num": 234,
-    "q": "A company is reviewing options to enforce user logins after several account takeovers. The following conditions must be met as part of the solution: • Allow employees to work remotely or from assigned o\u0000 ces around the world. • Provide a seamless login experience. • Limit the amount of equipment required. Which of the following best meets these conditions?",
+    "q": "A company is reviewing options to enforce user logins after several account takeovers. The following conditions must be met as part of the solution: • Allow employees to work remotely or from assigned o ces around the world. • Provide a seamless login experience. • Limit the amount of equipment required. Which of the following best meets these conditions?",
     "options": [
       "Trusted devices",
       "Geotagging",
@@ -4716,7 +4710,7 @@
   },
   "235": {
     "num": 235,
-    "q": "Which of the following methods can be used to detect attackers who have successfully in\u0000ltrated a network? (Choose two.)",
+    "q": "Which of the following methods can be used to detect attackers who have successfully inltrated a network? (Choose two.)",
     "options": [
       "Tokenization",
       "CI/CD",
@@ -4741,7 +4735,7 @@
   },
   "236": {
     "num": 236,
-    "q": "A company wants to ensure that the software it develops will not be tampered with after the \u0000nal version is completed. Which of the following should the company most likely use?",
+    "q": "A company wants to ensure that the software it develops will not be tampered with after the nal version is completed. Which of the following should the company most likely use?",
     "options": [
       "Hashing",
       "Encryption",
@@ -4761,7 +4755,7 @@
   },
   "237": {
     "num": 237,
-    "q": "An organization completed a project to deploy SSO across all business applications last year. Recently, the \u0000nance department selected a new cloud-based accounting software vendor. Which of the following should most likely be con\u0000gured during the new software deployment?",
+    "q": "An organization completed a project to deploy SSO across all business applications last year. Recently, the nance department selected a new cloud-based accounting software vendor. Which of the following should most likely be congured during the new software deployment?",
     "options": [
       "RADIUS",
       "SAML",
@@ -4781,11 +4775,11 @@
   },
   "238": {
     "num": 238,
-    "q": "A user, who is waiting for a \u0000ight at an airport, logs in to the airline website using the public Wi-Fi, ignores a security warning and purchases an upgraded seat. When the \u0000ight lands, the user \u0000nds unauthorized credit card charges. Which of the following attacks most likely occurred?",
+    "q": "A user, who is waiting for a ight at an airport, logs in to the airline website using the public Wi-Fi, ignores a security warning and purchases an upgraded seat. When the ight lands, the user nds unauthorized credit card charges. Which of the following attacks most likely occurred?",
     "options": [
       "Replay attack",
       "Memory leak",
-      "Buffer over\u0000ow attack",
+      "Buffer overow attack",
       "On-path attack"
     ],
     "letters": [
@@ -4821,7 +4815,7 @@
   },
   "240": {
     "num": 240,
-    "q": "A network team segmented a critical, end-of-life server to a VLAN that can only be reached by speci\u0000c devices but cannot be reached by the perimeter network. Which of the following best describe the controls the team implemented? (Choose two.)",
+    "q": "A network team segmented a critical, end-of-life server to a VLAN that can only be reached by specic devices but cannot be reached by the perimeter network. Which of the following best describe the controls the team implemented? (Choose two.)",
     "options": [
       "Managerial",
       "Physical",
@@ -4893,7 +4887,7 @@
       "Digitally signing the software",
       "Performing code obfuscation",
       "Limiting the use of third-party libraries",
-      "Using compile \u0000ags"
+      "Using compile ags"
     ],
     "letters": [
       "A",
@@ -4953,11 +4947,11 @@
   },
   "246": {
     "num": 246,
-    "q": "A user downloaded software from an online forum. After the user installed the software, the security team observed external network tra\u0000 c connecting to the user's computer on an uncommon port. Which of the following is the most likely explanation of this unauthorized connection?",
+    "q": "A user downloaded software from an online forum. After the user installed the software, the security team observed external network tra c connecting to the user's computer on an uncommon port. Which of the following is the most likely explanation of this unauthorized connection?",
     "options": [
       "The software had a hidden keylogger.",
       "The software was ransomware.",
-      "The user's computer had a \u0000leless virus.",
+      "The user's computer had a leless virus.",
       "The software contained a backdoor."
     ],
     "letters": [
@@ -4977,7 +4971,7 @@
     "options": [
       "Connecting dual PDUs to redundant power supplies",
       "Transitioning the platform to an IaaS provider",
-      "Con\u0000guring network load balancing for multiple paths",
+      "Conguring network load balancing for multiple paths",
       "Deploying multiple large NAS devices for each host"
     ],
     "letters": [
@@ -4997,7 +4991,7 @@
     "options": [
       "Attackers can see a DNS sinkhole as a highly valuable resource to identify a company's domain structure.",
       "A DNS sinkhole can be used to draw employees away from known-good websites to malicious ones owned by the attacker.",
-      "A DNS sinkhole can be used to capture tra\u0000 c to known-malicious domains used by attackers.",
+      "A DNS sinkhole can be used to capture tra c to known-malicious domains used by attackers.",
       "A DNS sinkhole can be set up to attract potential attackers away from a company's network resources."
     ],
     "letters": [
@@ -5013,7 +5007,7 @@
   },
   "249": {
     "num": 249,
-    "q": "An incident analyst \u0000nds several image \u0000les on a hard disk. The image \u0000les may contain geolocation coordinates. Which of the following best describes the type of information the analyst is trying to extract from the image \u0000les?",
+    "q": "An incident analyst nds several image les on a hard disk. The image les may contain geolocation coordinates. Which of the following best describes the type of information the analyst is trying to extract from the image les?",
     "options": [
       "Log data",
       "Metadata",
@@ -5033,7 +5027,7 @@
   },
   "250": {
     "num": 250,
-    "q": "Which of the following most likely describes why a security engineer would con \u0000gure all outbound emails to use S/MIME digital signatures?",
+    "q": "Which of the following most likely describes why a security engineer would con gure all outbound emails to use S/MIME digital signatures?",
     "options": [
       "To meet compliance standards",
       "To increase delivery rates",
@@ -5113,12 +5107,12 @@
   },
   "254": {
     "num": 254,
-    "q": "While performing digital forensics, which of the following is considered the most volatile and should have the contents collected \u0000rst?",
+    "q": "While performing digital forensics, which of the following is considered the most volatile and should have the contents collected rst?",
     "options": [
       "Hard drive",
       "RAM",
       "SSD",
-      "Temporary \u0000les"
+      "Temporary les"
     ],
     "letters": [
       "A",
@@ -5133,7 +5127,7 @@
   },
   "255": {
     "num": 255,
-    "q": "A hosting provider needs to prove that its security controls have been in place over the last six months and have su\u0000 ciently protected customer data. Which of the following would provide the best proof that the hosting provider has met the requirements?",
+    "q": "A hosting provider needs to prove that its security controls have been in place over the last six months and have su ciently protected customer data. Which of the following would provide the best proof that the hosting provider has met the requirements?",
     "options": [
       "NIST CSF",
       "SOC 2 Type 2 report",
@@ -5175,7 +5169,7 @@
     "num": 257,
     "q": "Which of the following is considered a preventive control?",
     "options": [
-      "Con\u0000guration auditing",
+      "Conguration auditing",
       "Log correlation",
       "Incident alerts",
       "Segregation of duties"
@@ -5193,7 +5187,7 @@
   },
   "258": {
     "num": 258,
-    "q": "A systems administrator notices that a testing system is down. While investigating, the systems administrator \u0000nds that the servers are online and accessible from any device on the server network. The administrator reviews the following information from the monitoring system: Which of the following is the most likely cause of the outage?",
+    "q": "A systems administrator notices that a testing system is down. While investigating, the systems administrator nds that the servers are online and accessible from any device on the server network. The administrator reviews the following information from the monitoring system: Which of the following is the most likely cause of the outage?",
     "options": [
       "Denial of service",
       "ARP poisoning",
@@ -5213,7 +5207,7 @@
   },
   "259": {
     "num": 259,
-    "q": "A security team has been alerted to a \u0000ood of incoming emails that have various subject lines and are addressed to multiple email inboxes. Each email contains a URL shortener link that is redirecting to a dead domain. Which of the following is the best step for the security team to take?",
+    "q": "A security team has been alerted to a ood of incoming emails that have various subject lines and are addressed to multiple email inboxes. Each email contains a URL shortener link that is redirecting to a dead domain. Which of the following is the best step for the security team to take?",
     "options": [
       "Create a blocklist for all subject lines.",
       "Send the dead domain to a DNS sinkhole.",
@@ -5256,7 +5250,7 @@
     "q": "A company needs to keep the fewest records possible, meet compliance needs, and ensure destruction of records that are no longer needed. Which of the following best describes the policy that meets these requirements?",
     "options": [
       "Security policy",
-      "Classi\u0000cation policy",
+      "Classication policy",
       "Retention policy",
       "Access control policy"
     ],
@@ -5295,12 +5289,12 @@
   },
   "263": {
     "num": 263,
-    "q": "Which of the following is the best reason an organization should enforce a data classi\u0000cation policy to help protect its most sensitive information?",
+    "q": "Which of the following is the best reason an organization should enforce a data classication policy to help protect its most sensitive information?",
     "options": [
-      "End users will be required to consider the classi\u0000cation of data that can be used in documents.",
-      "The policy will result in the creation of access levels for each level of classi\u0000cation.",
-      "The organization will have the ability to create security requirements based on classi\u0000cation levels.",
-      "Security analysts will be able to see the classi\u0000cation of data within a document before opening it."
+      "End users will be required to consider the classication of data that can be used in documents.",
+      "The policy will result in the creation of access levels for each level of classication.",
+      "The organization will have the ability to create security requirements based on classication levels.",
+      "Security analysts will be able to see the classication of data within a document before opening it."
     ],
     "letters": [
       "A",
@@ -5357,7 +5351,7 @@
   },
   "266": {
     "num": 266,
-    "q": "An architect has a request to increase the speed of data transfer using JSON requests externally. Currently, the organization uses SFTP to transfer data \u0000les. Which of the following will most likely meet the requirements?",
+    "q": "An architect has a request to increase the speed of data transfer using JSON requests externally. Currently, the organization uses SFTP to transfer data les. Which of the following will most likely meet the requirements?",
     "options": [
       "A website-hosted solution",
       "Cloud shared storage",
@@ -5397,10 +5391,10 @@
   },
   "268": {
     "num": 268,
-    "q": "An administrator is installing an LDAP browser tool in order to view objects in the corporate LDAP directory. Secure connections to the LDAP server are required. When the browser connects to the server, certi\u0000cate errors are being displayed, and then the connection is terminated. Which of the following is the most likely solution?",
+    "q": "An administrator is installing an LDAP browser tool in order to view objects in the corporate LDAP directory. Secure connections to the LDAP server are required. When the browser connects to the server, certicate errors are being displayed, and then the connection is terminated. Which of the following is the most likely solution?",
     "options": [
-      "The administrator should allow SAN certi\u0000cates in the browser con\u0000guration.",
-      "The administrator needs to install the server certi\u0000cate into the local truststore.",
+      "The administrator should allow SAN certicates in the browser conguration.",
+      "The administrator needs to install the server certicate into the local truststore.",
       "The administrator should request that the secure LDAP port be opened to the server.",
       "The administrator needs to increase the TLS version on the organization's RA."
     ],
@@ -5457,7 +5451,7 @@
   },
   "271": {
     "num": 271,
-    "q": "A user is requesting Telnet access to manage a remote development web server. Insecure protocols are not allowed for use within any environment. Which of the following should be con\u0000gured to allow remote access to this server?",
+    "q": "A user is requesting Telnet access to manage a remote development web server. Insecure protocols are not allowed for use within any environment. Which of the following should be congured to allow remote access to this server?",
     "options": [
       "HTTPS",
       "SNMPv3",
@@ -5479,10 +5473,10 @@
   },
   "272": {
     "num": 272,
-    "q": "A security administrator is working to \u0000nd a cost-effective solution to implement certi\u0000cates for a large number of domains and subdomains owned by the company. Which of the following types of certi\u0000cates should the administrator implement?",
+    "q": "A security administrator is working to nd a cost-effective solution to implement certicates for a large number of domains and subdomains owned by the company. Which of the following types of certicates should the administrator implement?",
     "options": [
       "Wildcard",
-      "Client certi\u0000cate",
+      "Client certicate",
       "Self-signed",
       "Code signing"
     ],
@@ -5519,17 +5513,15 @@
   },
   "274": {
     "num": 274,
-    "q": "A security analyst received a tip that sensitive proprietary information was leaked to the public. The analyst is reviewing the PCAP and notices tra\u0000c between an internal server and an external host that includes the following: ... 12:47:22.327233 PPPoE [ses 0x8122] IP (tos 0x0, ttl 64, id 0, offset 0, \u0000ags [DF], proto IPv6 (41), length 331) 10.5.1.1 > 52.165.16.154: IP6 (hlim E3, next-header TCP (6) paylcad length: 271) 2001:67c:2158:a019::ace.53104 > 2001:0:5ef5:79fd:380c:dddd:a601:24fa.13788: Flags [P.], cksum 0xd7ee (correct), seq 97:348, ack 102, win 16444, length 251 ... Which of the following was most likely used to ex\u0000ltrate the data?",
+    "q": "A security analyst received a tip that sensitive proprietary information was leaked to the public. The analyst is reviewing the PCAP and notices trac between an internal server and an external host that includes the following: ... 12:47:22.327233 PPPoE [ses 0x8122] IP (tos 0x0, ttl 64, id 0, offset 0, ags [DF], proto IPv6 (41), length 331) 10.5.1.1 > 52.165.16.154: IP6 (hlim E3, next-header TCP (6) paylcad length: 271) 2001:67c:2158:a019::ace.53104 > 2001:0:5ef5:79fd:380c:dddd:a601:24fa.13788: Flags [P.], cksum 0xd7ee (correct), seq 97:348, ack 102, win 16444, length 251 ... Which of the following was most likely used to exltrate the data?",
     "options": [
-      "], cksum 0xd7ee (correct), seq 97:348, ack 102, win 16444, length 251 ... Which of the following was most likely used to ex\u0000ltrate the data?",
       "Encapsulation",
-      "MAC address spoo\u0000ng",
+      "MAC address spoong",
       "Steganography",
       "Broken encryption",
-      "Sni\u0000ng via on-path position"
+      "Sning via on-path position"
     ],
     "letters": [
-      "P",
       "A",
       "B",
       "C",
@@ -5583,16 +5575,14 @@
   },
   "277": {
     "num": 277,
-    "q": "A security administrator needs to create \u0000rewall rules for the following protocols: RTP, SIP, H.323. and SRTP. Which of the following does this rule set support?",
+    "q": "A security administrator needs to create rewall rules for the following protocols: RTP, SIP, H.323. and SRTP. Which of the following does this rule set support?",
     "options": [
-      "323. and SRTP. Which of the following does this rule set support?",
       "RTOS",
       "VoIP",
       "SoC",
       "HVAC"
     ],
     "letters": [
-      "H",
       "A",
       "B",
       "C",
@@ -5605,7 +5595,7 @@
   },
   "278": {
     "num": 278,
-    "q": "Which of the following best describes a social engineering attack that uses a targeted electronic messaging campaign aimed at a Chief Executive O\u0000cer?",
+    "q": "Which of the following best describes a social engineering attack that uses a targeted electronic messaging campaign aimed at a Chief Executive Ocer?",
     "options": [
       "Whaling",
       "Spear phishing",
@@ -5625,7 +5615,7 @@
   },
   "279": {
     "num": 279,
-    "q": "During a penetration test, a \u0000aw in the internal PKI was exploited to gain domain administrator rights using specially crafted certi\u0000cates. Which of the following remediation tasks should be completed as part of the cleanup phase?",
+    "q": "During a penetration test, a aw in the internal PKI was exploited to gain domain administrator rights using specially crafted certicates. Which of the following remediation tasks should be completed as part of the cleanup phase?",
     "options": [
       "Updating the CRL",
       "Patching the CA",
@@ -5647,14 +5637,12 @@
     "num": 280,
     "q": "A company wants to implement MFA. Which of the following enables the additional factor while using a smart card?",
     "options": [
-      "Which of the following enables the additional factor while using a smart card?",
       "PIN",
       "Hardware token",
       "User ID",
       "SMS"
     ],
     "letters": [
-      "A",
       "A",
       "B",
       "C",
@@ -5691,7 +5679,7 @@
     "num": 282,
     "q": "A newly implemented wireless network is designed so that visitors can connect to the wireless network for business activities. The legal department is concerned that visitors might connect to the network and perform illicit activities. Which of me following should the security team implement to address this concern?",
     "options": [
-      "Con\u0000gure a RADIUS server to manage device authentication.",
+      "Congure a RADIUS server to manage device authentication.",
       "Use 802.1X on all devices connecting to wireless.",
       "Add a guest captive portal requiring visitors to accept terms and conditions.",
       "Allow for new devices to be connected via WPS."
@@ -5814,7 +5802,7 @@
   },
   "288": {
     "num": 288,
-    "q": "A security analyst recently read a report about a \u0000aw in several of the organization's printer models that causes credentials to be sent over the network in cleartext, regardless of the encryption settings. Which of the following would be best to use to validate this \u0000nding?",
+    "q": "A security analyst recently read a report about a aw in several of the organization's printer models that causes credentials to be sent over the network in cleartext, regardless of the encryption settings. Which of the following would be best to use to validate this nding?",
     "options": [
       "Wireshark",
       "netcat",
@@ -5834,7 +5822,7 @@
   },
   "289": {
     "num": 289,
-    "q": "A development team is launching a new public-facing web product. The Chief Information Security O\u0000 cer has asked that the product be protected from attackers who use malformed or invalid inputs to destabilize the system. Which of the following practices should the development team implement?",
+    "q": "A development team is launching a new public-facing web product. The Chief Information Security O cer has asked that the product be protected from attackers who use malformed or invalid inputs to destabilize the system. Which of the following practices should the development team implement?",
     "options": [
       "Fuzzing",
       "Continuous deployment",
@@ -5854,7 +5842,7 @@
   },
   "290": {
     "num": 290,
-    "q": "During an annual review of the system design, an engineer identi\u0000ed a few issues with the currently released design. Which of the following should be performed next according to best practices?",
+    "q": "During an annual review of the system design, an engineer identied a few issues with the currently released design. Which of the following should be performed next according to best practices?",
     "options": [
       "Risk management process",
       "Product design process",
@@ -5894,9 +5882,9 @@
   },
   "292": {
     "num": 292,
-    "q": "An organization experienced a security breach that allowed an attacker to send fraudulent wire transfers from a hardened PC exclusively to the attacker's bank through remote connections. A security analyst is creating a timeline of events and has found a different PC on the network containing malware. Upon reviewing the command history, the analyst \u0000nds the following: PS>.\\mimikatz.exe \"sekurlsa::pth /user:localadmin /domain:corp-domain.com /ntlm:B4B9B02E1F29A3CF193EAB28C8D617D3F327 Which of the following best describes how the attacker gained access to the hardened PC?",
+    "q": "An organization experienced a security breach that allowed an attacker to send fraudulent wire transfers from a hardened PC exclusively to the attacker's bank through remote connections. A security analyst is creating a timeline of events and has found a different PC on the network containing malware. Upon reviewing the command history, the analyst nds the following: PS>.\\mimikatz.exe \"sekurlsa::pth /user:localadmin /domain:corp-domain.com /ntlm:B4B9B02E1F29A3CF193EAB28C8D617D3F327 Which of the following best describes how the attacker gained access to the hardened PC?",
     "options": [
-      "The attacker created \u0000leless malware that was hosted by the banking platform.",
+      "The attacker created leless malware that was hosted by the banking platform.",
       "The attacker performed a pass-the-hash attack using a shared support account.",
       "The attacker utilized living-off-the-land binaries to evade endpoint detection and response software.",
       "The attacker socially engineered the accountant into performing bad transfers."
@@ -5942,7 +5930,7 @@
       "Bypassing the organization's DNS sinkholing",
       "Footprinting the internal network",
       "Attempting to achieve initial access to the DNS server",
-      "Ex\u0000ltrating data from fshare.int.complia.org"
+      "Exltrating data from fshare.int.complia.org"
     ],
     "letters": [
       "A",
@@ -5964,7 +5952,7 @@
       "Conditional access policies",
       "More regular account audits",
       "Implementation of additional authentication factors",
-      "Enforcement of content \u0000ltering policies",
+      "Enforcement of content ltering policies",
       "A review of user account permissions"
     ],
     "letters": [
@@ -5987,7 +5975,7 @@
     "options": [
       "NIDS",
       "Honeypot",
-      "Certi\u0000cate revocation list",
+      "Certicate revocation list",
       "HIPS",
       "WAF",
       "SIEM"
@@ -6068,11 +6056,11 @@
   },
   "300": {
     "num": 300,
-    "q": "An organization wants to improve the company's security authentication method for remote employees. Given the following requirements: • Must work across SaaS and internal network applications • Must be device manufacturer agnostic • Must have o \u0000ine capabilities Which of the following would be the most appropriate authentication method?",
+    "q": "An organization wants to improve the company's security authentication method for remote employees. Given the following requirements: • Must work across SaaS and internal network applications • Must be device manufacturer agnostic • Must have o ine capabilities Which of the following would be the most appropriate authentication method?",
     "options": [
       "Username and password",
       "Biometrics",
-      "SMS veri\u0000cation",
+      "SMS verication",
       "Time-based tokens"
     ],
     "letters": [
@@ -6088,7 +6076,7 @@
   },
   "301": {
     "num": 301,
-    "q": "A security o \u0000cer is implementing a security awareness program and has placed security-themed posters around the building and assigned online user training. Which of the following will the security o \u0000cer most likely implement?",
+    "q": "A security o cer is implementing a security awareness program and has placed security-themed posters around the building and assigned online user training. Which of the following will the security o cer most likely implement?",
     "options": [
       "Password policy",
       "Access badges",
@@ -6128,7 +6116,7 @@
   },
   "303": {
     "num": 303,
-    "q": "A company web server is initiating outbound tra \u0000c to a low-reputation, public IP on non-standard pat. The web server is used to present an unauthenticated page to clients who upload images the company. An analyst notices a suspicious process running on the server hat was not created by the company development team. Which of the following is the most likely explanation for his security incident?",
+    "q": "A company web server is initiating outbound tra c to a low-reputation, public IP on non-standard pat. The web server is used to present an unauthenticated page to clients who upload images the company. An analyst notices a suspicious process running on the server hat was not created by the company development team. Which of the following is the most likely explanation for his security incident?",
     "options": [
       "A web shell has been deployed to the server through the page.",
       "A vulnerability has been exploited to deploy a worm to the server.",
@@ -6188,7 +6176,7 @@
   },
   "306": {
     "num": 306,
-    "q": "A security analyst is reviewing the source code of an application in order to identify miscon\u0000gurations and vulnerabilities. Which of the following kinds of analysis best describes this review?",
+    "q": "A security analyst is reviewing the source code of an application in order to identify miscongurations and vulnerabilities. Which of the following kinds of analysis best describes this review?",
     "options": [
       "Dynamic",
       "Static",
@@ -6248,7 +6236,7 @@
   },
   "309": {
     "num": 309,
-    "q": "Which of the following is used to conceal credit card information in a database log \u0000le?",
+    "q": "Which of the following is used to conceal credit card information in a database log le?",
     "options": [
       "Tokenization",
       "Masking",
@@ -6270,7 +6258,7 @@
     "num": 311,
     "q": "An organization recently started hosting a new service that customers access through a web portal. A security engineer needs to add to the existing security devices a new solution to protect this new service. Which of the following is the engineer most likely to deploy?",
     "options": [
-      "Layer 4 \u0000rewall",
+      "Layer 4 rewall",
       "NGFW",
       "WAF",
       "UTM"
@@ -6328,7 +6316,7 @@
   },
   "314": {
     "num": 314,
-    "q": "An organization is adopting cloud services at a rapid pace and now has multiple SaaS applications in use. Each application has a separate log-in, so the security team wants to reduce the number of credentials each employee must maintain. Which of the following is the \u0000rst step the security team should take?",
+    "q": "An organization is adopting cloud services at a rapid pace and now has multiple SaaS applications in use. Each application has a separate log-in, so the security team wants to reduce the number of credentials each employee must maintain. Which of the following is the rst step the security team should take?",
     "options": [
       "Enable SAML.",
       "Create OAuth tokens.",
@@ -6428,7 +6416,7 @@
   },
   "319": {
     "num": 319,
-    "q": "Which of the following threat actors is the most likely to seek \u0000nancial gain through the use of ransomware attacks?",
+    "q": "Which of the following threat actors is the most likely to seek nancial gain through the use of ransomware attacks?",
     "options": [
       "Organized crime",
       "Insider threat",
@@ -6448,11 +6436,11 @@
   },
   "320": {
     "num": 320,
-    "q": "Which of the following would a systems administrator follow when upgrading the \u0000rmware of an organization’s router?",
+    "q": "Which of the following would a systems administrator follow when upgrading the rmware of an organization's router?",
     "options": [
       "Software development life cycle",
       "Risk tolerance",
-      "Certi\u0000cate signing request",
+      "Certicate signing request",
       "Maintenance window"
     ],
     "letters": [
@@ -6468,25 +6456,19 @@
   },
   "321": {
     "num": 321,
-    "q": "The security team has been asked to only enable host A (10.2.2.7) and host B (10.3.9.9) to the new isolated network segment (10.9.8.14) that provides access to legacy devices. Access from all other hosts should be blocked. Which of the following entries would need to be added on the \u0000rewall?",
+    "q": "The security team has been asked to only enable host A (10.2.2.7) and host B (10.3.9.9) to the new isolated network segment (10.9.8.14) that provides access to legacy devices. Access from all other hosts should be blocked. Which of the following entries would need to be added on the rewall?",
     "options": [
-      "B.",
-      "",
-      ""
+      "B."
     ],
     "letters": [
-      "A",
-      "C",
-      "D"
+      "A"
     ],
-    "answer": [
-      2
-    ],
+    "answer": [],
     "answer_str": "C"
   },
   "323": {
     "num": 323,
-    "q": "A systems administrator needs to ensure the secure communication of sensitive data within the organization’s private cloud. Which of the following is the best choice for the administrator to implement?",
+    "q": "A systems administrator needs to ensure the secure communication of sensitive data within the organization's private cloud. Which of the following is the best choice for the administrator to implement?",
     "options": [
       "IPSec",
       "SHA-1",
@@ -6506,7 +6488,7 @@
   },
   "324": {
     "num": 324,
-    "q": "Which of the following should an internal auditor check for \u0000rst when conducting an audit of the organization’s risk management program?",
+    "q": "Which of the following should an internal auditor check for rst when conducting an audit of the organization's risk management program?",
     "options": [
       "Policies and procedures",
       "Asset management",
@@ -6556,7 +6538,7 @@
       "Network scanning",
       "Penetration testing",
       "Open-source intelligence",
-      "Con\u0000guration auditing"
+      "Conguration auditing"
     ],
     "letters": [
       "A",
@@ -6593,7 +6575,7 @@
   },
   "328": {
     "num": 328,
-    "q": "A database administrator is updating the company’s SQL database, which stores credit card information for pending purchases. Which of the following is the best method to secure the data against a potential breach?",
+    "q": "A database administrator is updating the company's SQL database, which stores credit card information for pending purchases. Which of the following is the best method to secure the data against a potential breach?",
     "options": [
       "Hashing",
       "Obfuscation",
@@ -6613,11 +6595,11 @@
   },
   "329": {
     "num": 329,
-    "q": "Which of the following is a bene \u0000t of vendor diversity?",
+    "q": "Which of the following is a bene t of vendor diversity?",
     "options": [
       "Patch availability",
       "Zero-day resiliency",
-      "Secure con\u0000guration guide applicability",
+      "Secure conguration guide applicability",
       "Load balancing"
     ],
     "letters": [
@@ -6633,7 +6615,7 @@
   },
   "330": {
     "num": 330,
-    "q": "An employee used a company’s billing system to issue fraudulent checks. The administrator is looking for evidence of other occurrences of this activity. Which of the following should the administrator examine?",
+    "q": "An employee used a company's billing system to issue fraudulent checks. The administrator is looking for evidence of other occurrences of this activity. Which of the following should the administrator examine?",
     "options": [
       "Application logs",
       "Vulnerability scanner logs",
@@ -6717,7 +6699,7 @@
     "num": 334,
     "q": "Which of the following techniques would attract the attention of a malicious attacker in an insider threat scenario?",
     "options": [
-      "Creating a false text \u0000le in /docs/salaries",
+      "Creating a false text le in /docs/salaries",
       "Setting weak passwords in /etc/shadow",
       "Scheduling vulnerable jobs in /etc/crontab",
       "Adding a fake account to /etc/passwd"
@@ -6735,7 +6717,7 @@
   },
   "335": {
     "num": 335,
-    "q": "An organization maintains intellectual property that it wants to protect. Which of the following concepts would be most bene \u0000cial to add to the company’s security awareness training program?",
+    "q": "An organization maintains intellectual property that it wants to protect. Which of the following concepts would be most bene cial to add to the company's security awareness training program?",
     "options": [
       "Insider threat detection",
       "Simulated threats",
@@ -6900,12 +6882,12 @@
   },
   "343": {
     "num": 343,
-    "q": "For which of the following reasons would a systems administrator leverage a 3DES hash from an installer \u0000le that is posted on a vendor’s website?",
+    "q": "For which of the following reasons would a systems administrator leverage a 3DES hash from an installer le that is posted on a vendor's website?",
     "options": [
-      "To test the integrity of the \u0000le",
-      "To validate the authenticity of the \u0000le",
-      "To activate the license for the \u0000le",
-      "To calculate the checksum of the \u0000le"
+      "To test the integrity of the le",
+      "To validate the authenticity of the le",
+      "To activate the license for the le",
+      "To calculate the checksum of the le"
     ],
     "letters": [
       "A",
@@ -6945,7 +6927,7 @@
       "Availability",
       "Non-repudiation",
       "Integrity",
-      "Con\u0000dentiality"
+      "Condentiality"
     ],
     "letters": [
       "A",
@@ -6964,7 +6946,7 @@
     "options": [
       "Set the maximum data retention policy.",
       "Securely store the documents on an air-gapped network.",
-      "Review the documents’ data classi\u0000cation policy.",
+      "Review the documents' data classication policy.",
       "Conduct a tabletop exercise with the team."
     ],
     "letters": [
@@ -6980,7 +6962,7 @@
   },
   "347": {
     "num": 347,
-    "q": "After failing an audit twice, an organization has been ordered by a government regulatory agency to pay \u0000nes. Which of the following causes this action?",
+    "q": "After failing an audit twice, an organization has been ordered by a government regulatory agency to pay nes. Which of the following causes this action?",
     "options": [
       "Non-compliance",
       "Contract violations",
@@ -7000,10 +6982,10 @@
   },
   "348": {
     "num": 348,
-    "q": "A company is developing a critical system for the government and storing project information on a \u0000leshare. Which of the following describes how this data will most likely be classi \u0000ed? (Choose two.)",
+    "q": "A company is developing a critical system for the government and storing project information on a leshare. Which of the following describes how this data will most likely be classi ed? (Choose two.)",
     "options": [
       "Private",
-      "Con\u0000dential",
+      "Condential",
       "Public",
       "Operational",
       "Urgent",
@@ -7030,7 +7012,7 @@
       "Determining the root cause of the incident",
       "Developing steps to mitigate the risks of the incident",
       "Validating the accuracy of the evidence collected during the investigation",
-      "Reestablishing the compromised system’s con \u0000guration and settings"
+      "Reestablishing the compromised system's con guration and settings"
     ],
     "letters": [
       "A",
@@ -7088,9 +7070,9 @@
     "q": "Which of the following is most likely to be used as a just-in-time reference document within a security operations center?",
     "options": [
       "Change management policy",
-      "Risk pro\u0000le",
+      "Risk prole",
       "Playbook",
-      "SIEM pro \u0000le"
+      "SIEM pro le"
     ],
     "letters": [
       "A",
@@ -7105,16 +7087,14 @@
   },
   "353": {
     "num": 353,
-    "q": "A security engineer con \u0000gured a remote access VPN. The remote access VPN allows end users to connect to the network by using an agent that is installed on the endpoint, which establishes an encrypted tunnel. Which of the following protocols did the engineer most likely implement?",
+    "q": "A security engineer con gured a remote access VPN. The remote access VPN allows end users to connect to the network by using an agent that is installed on the endpoint, which establishes an encrypted tunnel. Which of the following protocols did the engineer most likely implement?",
     "options": [
-      "The remote access VPN allows end users to connect to the network by using an agent that is installed on the endpoint, which establishes an encrypted tunnel. Which of the following protocols did the engineer most likely implement?",
       "GRE",
       "IPSec",
       "SD-WAN",
       "EAP"
     ],
     "letters": [
-      "N",
       "A",
       "B",
       "C",
@@ -7127,7 +7107,7 @@
   },
   "354": {
     "num": 354,
-    "q": "Executives at a company are concerned about employees accessing systems and information about sensitive company projects unrelated to the employees’ normal job duties. Which of the following enterprise security capabilities will the security team most likely deploy to detect that activity?",
+    "q": "Executives at a company are concerned about employees accessing systems and information about sensitive company projects unrelated to the employees' normal job duties. Which of the following enterprise security capabilities will the security team most likely deploy to detect that activity?",
     "options": [
       "UBA",
       "EDR",
@@ -7147,7 +7127,7 @@
   },
   "355": {
     "num": 355,
-    "q": "Several customers want an organization to verify its security controls are operating effectively and have requested an independent opinion. Which of the following is the most e \u0000cient way to address these requests?",
+    "q": "Several customers want an organization to verify its security controls are operating effectively and have requested an independent opinion. Which of the following is the most e cient way to address these requests?",
     "options": [
       "Hire a vendor to perform a penetration test",
       "Perform an annual self-assessment.",
@@ -7167,7 +7147,7 @@
   },
   "356": {
     "num": 356,
-    "q": "A university employee logged on to the academic server and attempted to guess the system administrators’ log-in credentials. Which of the following security measures should the university have implemented to detect the employee’s attempts to gain access to the administrators’ accounts?",
+    "q": "A university employee logged on to the academic server and attempted to guess the system administrators' log-in credentials. Which of the following security measures should the university have implemented to detect the employee's attempts to gain access to the administrators' accounts?",
     "options": [
       "Two-factor authentication",
       "Firewall",
@@ -7227,12 +7207,12 @@
   },
   "359": {
     "num": 359,
-    "q": "An administrator is installing an SSL certi\u0000cate on a new system. During testing, errors indicate that the certi\u0000cate is not trusted. The administrator has veri\u0000ed with the issuing CA and has validated the private key. Which of the following should the administrator check for next?",
+    "q": "An administrator is installing an SSL certicate on a new system. During testing, errors indicate that the certicate is not trusted. The administrator has veried with the issuing CA and has validated the private key. Which of the following should the administrator check for next?",
     "options": [
-      "If the wildcard certi\u0000cate is con\u0000gured",
-      "If the certi\u0000cate signing request is valid",
-      "If the root certi\u0000cate is installed",
-      "If the public key is con\u0000gured"
+      "If the wildcard certicate is congured",
+      "If the certicate signing request is valid",
+      "If the root certicate is installed",
+      "If the public key is congured"
     ],
     "letters": [
       "A",
@@ -7245,32 +7225,14 @@
     ],
     "answer_str": "C"
   },
-  "360": {
-    "num": 360,
-    "q": "An employee emailed a new systems administrator a malicious web link and convinced the administrator to change the email server’s password. The employee used this access to remove the mailboxes of key personnel. Which of the following security awareness concepts would help prevent this threat in the future?",
-    "options": [
-      "Recognizing phishing",
-      "Providing situational awareness training",
-      "Using password management",
-      "Reviewing email policies"
-    ],
-    "letters": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "answer": [],
-    "answer_str": ""
-  },
   "361": {
     "num": 361,
-    "q": "Which of the following strategies should an organization use to e \u0000ciently manage and analyze multiple types of logs?",
+    "q": "Which of the following strategies should an organization use to e ciently manage and analyze multiple types of logs?",
     "options": [
       "Deploy a SIEM solution",
       "Create custom scripts to aggregate and analyze logs.",
       "Implement EDR technology.",
-      "Install a uni\u0000ed threat management appliance."
+      "Install a unied threat management appliance."
     ],
     "letters": [
       "A",
@@ -7305,16 +7267,14 @@
   },
   "363": {
     "num": 363,
-    "q": "An accountant is transferring information to a bank over FTP. Which of the following mitigations should the accountant use to protect the con\u0000dentiality of the data?",
+    "q": "An accountant is transferring information to a bank over FTP. Which of the following mitigations should the accountant use to protect the condentiality of the data?",
     "options": [
-      "Which of the following mitigations should the accountant use to protect the con\u0000dentiality of the data?",
       "Tokenization",
       "Data masking",
       "Encryption",
       "Obfuscation"
     ],
     "letters": [
-      "P",
       "A",
       "B",
       "C",
@@ -7327,16 +7287,14 @@
   },
   "364": {
     "num": 364,
-    "q": "An organization has recently decided to implement SSO. The requirements are to leverage access tokens and focus on application authorization rather than user authentication. Which of the following solutions would the engineering team most likely con\u0000gure?",
+    "q": "An organization has recently decided to implement SSO. The requirements are to leverage access tokens and focus on application authorization rather than user authentication. Which of the following solutions would the engineering team most likely congure?",
     "options": [
-      "The requirements are to leverage access tokens and focus on application authorization rather than user authentication. Which of the following solutions would the engineering team most likely con\u0000gure?",
       "LDAP",
       "Federation",
       "SAML",
       "OAuth"
     ],
     "letters": [
-      "O",
       "A",
       "B",
       "C",
@@ -7369,16 +7327,14 @@
   },
   "366": {
     "num": 366,
-    "q": "A security engineer would like to enhance the use of automation and orchestration within the SIEM. Which of the following would be the primary bene\u0000t of this enhancement?",
+    "q": "A security engineer would like to enhance the use of automation and orchestration within the SIEM. Which of the following would be the primary benet of this enhancement?",
     "options": [
-      "Which of the following would be the primary bene\u0000t of this enhancement?",
       "It increases complexity.",
       "It removes technical debt.",
       "It adds additional guard rails.",
       "It acts as a workforce multiplier."
     ],
     "letters": [
-      "M",
       "A",
       "B",
       "C",
@@ -7391,7 +7347,7 @@
   },
   "367": {
     "num": 367,
-    "q": "A systems administrator receives an alert that a company’s internal \u0000le server is very slow and is only working intermittently. The systems administrator reviews the server management software and \u0000nds the following information about the server: Which of the following indicators most likely triggered this alert?",
+    "q": "A systems administrator receives an alert that a company's internal le server is very slow and is only working intermittently. The systems administrator reviews the server management software and nds the following information about the server: Which of the following indicators most likely triggered this alert?",
     "options": [
       "Concurrent session usage",
       "Network saturation",
@@ -7471,7 +7427,7 @@
   },
   "371": {
     "num": 371,
-    "q": "While reviewing logs, a security administrator identi\u0000es the following code: Which of the following best describes the vulnerability being exploited?",
+    "q": "While reviewing logs, a security administrator identies the following code: Which of the following best describes the vulnerability being exploited?",
     "options": [
       "XSS",
       "SQLi",
@@ -7491,7 +7447,7 @@
   },
   "372": {
     "num": 372,
-    "q": "An organization issued new laptops to all employees and wants to provide web \u0000ltering both in and out of the o\u0000 ce without con\u0000guring additional access to the network. Which of the following types of web \u0000ltering should a systems administrator con\u0000gure?",
+    "q": "An organization issued new laptops to all employees and wants to provide web ltering both in and out of the o ce without conguring additional access to the network. Which of the following types of web ltering should a systems administrator congure?",
     "options": [
       "Agent-based",
       "Centralized proxy",
@@ -7534,7 +7490,7 @@
     "q": "Which of the following provides the best protection against unwanted or insecure communications to and from a device?",
     "options": [
       "System hardening",
-      "Host-based \u0000rewall",
+      "Host-based rewall",
       "Intrusion detection system",
       "Anti-malware software"
     ],
@@ -7591,11 +7547,11 @@
   },
   "377": {
     "num": 377,
-    "q": "An IT administrator needs to ensure data retention standards are implemented on an enterprise application. Which of the following describes the administrator’s role?",
+    "q": "An IT administrator needs to ensure data retention standards are implemented on an enterprise application. Which of the following describes the administrator's role?",
     "options": [
       "Processor",
       "Custodian",
-      "Privacy o\u0000 cer",
+      "Privacy o cer",
       "Owner"
     ],
     "letters": [
@@ -7614,9 +7570,9 @@
     "q": "A company plans to secure its systems by: • Preventing users from sending sensitive data over corporate email • Restricting access to potentially harmful websites Which of the following features should the company set up? (Choose two.)",
     "options": [
       "DLP software",
-      "DNS \u0000ltering",
+      "DNS ltering",
       "File integrity monitoring",
-      "Stateful \u0000rewall",
+      "Stateful rewall",
       "Guardrails",
       "Antivirus signatures"
     ],
@@ -7636,7 +7592,7 @@
   },
   "379": {
     "num": 379,
-    "q": "A company processes and stores sensitive data on its own systems. Which of the following steps should the company take \u0000rst to ensure compliance with privacy regulations?",
+    "q": "A company processes and stores sensitive data on its own systems. Which of the following steps should the company take rst to ensure compliance with privacy regulations?",
     "options": [
       "Implement access controls and encryption.",
       "Develop and provide training on data protection policies.",
@@ -7676,12 +7632,12 @@
   },
   "381": {
     "num": 381,
-    "q": "A network administrator wants to ensure that network tra\u0000 c is highly secure while in transit. Which of the following actions best describes the actions the network administrator should take?",
+    "q": "A network administrator wants to ensure that network tra c is highly secure while in transit. Which of the following actions best describes the actions the network administrator should take?",
     "options": [
-      "Ensure that NAC is enforced on all network segments, and con\u0000rm that \u0000rewalls have updated policies to block unauthorized tra\u0000 c.",
-      "Ensure only TLS and other encrypted protocols are selected for use on the network, and only permit authorized tra\u0000 c via secure protocols.",
-      "Con\u0000gure the perimeter IPS to block inbound HTTPS directory traversal tra\u0000 c, and verify that signatures are updated on a daily basis.",
-      "Ensure the EDR software monitors for unauthorized applications that could be used by threat actors, and con\u0000gure alerts for the security team."
+      "Ensure that NAC is enforced on all network segments, and conrm that rewalls have updated policies to block unauthorized tra c.",
+      "Ensure only TLS and other encrypted protocols are selected for use on the network, and only permit authorized tra c via secure protocols.",
+      "Congure the perimeter IPS to block inbound HTTPS directory traversal tra c, and verify that signatures are updated on a daily basis.",
+      "Ensure the EDR software monitors for unauthorized applications that could be used by threat actors, and congure alerts for the security team."
     ],
     "letters": [
       "A",
@@ -7696,12 +7652,12 @@
   },
   "382": {
     "num": 382,
-    "q": "Which of the following de \u0000nitions best describes the concept of log correlation?",
+    "q": "Which of the following de nitions best describes the concept of log correlation?",
     "options": [
       "Combining relevant logs from multiple sources into one location",
       "Searching and processing data to identify patterns of malicious activity",
       "Making a record of the events that occur in the system",
-      "Analyzing the log \u0000les of the system components"
+      "Analyzing the log les of the system components"
     ],
     "letters": [
       "A",
@@ -7716,7 +7672,7 @@
   },
   "383": {
     "num": 383,
-    "q": "An enterprise security team is researching a new security architecture to better protect the company’s networks and applications against the latest cyberthreats. The company has a fully remote workforce. The solution should be highly redundant and enable users to connect to a VPN with an integrated, software-based \u0000rewall. Which of the following solutions meets these requirements?",
+    "q": "An enterprise security team is researching a new security architecture to better protect the company's networks and applications against the latest cyberthreats. The company has a fully remote workforce. The solution should be highly redundant and enable users to connect to a VPN with an integrated, software-based rewall. Which of the following solutions meets these requirements?",
     "options": [
       "IPS",
       "SIEM",
@@ -7816,11 +7772,11 @@
   },
   "388": {
     "num": 388,
-    "q": "A systems administrator successfully con\u0000gures VPN access to a cloud environment. Which of the following capabilities should the administrator use to best facilitate remote administration?",
+    "q": "A systems administrator successfully congures VPN access to a cloud environment. Which of the following capabilities should the administrator use to best facilitate remote administration?",
     "options": [
       "A jump host in the shared services security zone",
       "An SSH server within the corporate LAN",
-      "A reverse proxy on the \u0000rewall",
+      "A reverse proxy on the rewall",
       "An MDM solution with conditional access"
     ],
     "letters": [
@@ -7876,7 +7832,7 @@
   },
   "391": {
     "num": 391,
-    "q": "A security analyst attempts to start a company's database server. When the server starts, the analyst receives an error message indicating the database server did not pass authentication. After reviewing and testing the system, the analyst receives con\u0000rmation that the server has been compromised and that attackers have redirected all outgoing database tra\u0000 c to a server under their control. Which of the following MITRE ATT&CK techniques did the attacker most likely use to redirect database tra\u0000 c?",
+    "q": "A security analyst attempts to start a company's database server. When the server starts, the analyst receives an error message indicating the database server did not pass authentication. After reviewing and testing the system, the analyst receives conrmation that the server has been compromised and that attackers have redirected all outgoing database tra c to a server under their control. Which of the following MITRE ATT&CK techniques did the attacker most likely use to redirect database tra c?",
     "options": [
       "Browser extension",
       "Process injection",
@@ -7896,10 +7852,10 @@
   },
   "392": {
     "num": 392,
-    "q": "A penetration tester enters an o\u0000 ce building at the same time as a group of employees despite not having an access badge. Which of the following attack types is the penetration tester performing?",
+    "q": "A penetration tester enters an o ce building at the same time as a group of employees despite not having an access badge. Which of the following attack types is the penetration tester performing?",
     "options": [
       "Tailgating",
-      "Shoulder sur\u0000ng",
+      "Shoulder surng",
       "RFID cloning",
       "Forgery"
     ],
@@ -7956,7 +7912,7 @@
   },
   "395": {
     "num": 395,
-    "q": "An organization needs to monitor its users’ activities in order to prevent insider threats. Which of the following solutions would help the organization achieve this goal?",
+    "q": "An organization needs to monitor its users' activities in order to prevent insider threats. Which of the following solutions would help the organization achieve this goal?",
     "options": [
       "Behavioral analytics",
       "Access control lists",
@@ -7976,7 +7932,7 @@
   },
   "396": {
     "num": 396,
-    "q": "A customer of a large company receives a phone call from someone claiming to work for the company and asking for the customer’s credit card information. The customer sees the caller ID is the same as the company's main phone number. Which of the following attacks is the customer most likely a target of?",
+    "q": "A customer of a large company receives a phone call from someone claiming to work for the company and asking for the customer's credit card information. The customer sees the caller ID is the same as the company's main phone number. Which of the following attacks is the customer most likely a target of?",
     "options": [
       "Phishing",
       "Whaling",
@@ -7996,7 +7952,7 @@
   },
   "397": {
     "num": 397,
-    "q": "A security analyst is reviewing logs to identify the destination of command-and-control tra\u0000 c originating from a compromised device within the on-premises network. Which of the following is the best log to review?",
+    "q": "A security analyst is reviewing logs to identify the destination of command-and-control tra c originating from a compromised device within the on-premises network. Which of the following is the best log to review?",
     "options": [
       "IDS",
       "Antivirus",
@@ -8016,7 +7972,7 @@
   },
   "398": {
     "num": 398,
-    "q": "When trying to access an internal website, an employee reports that a prompt displays, stating that the site is insecure. Which of the following certi\u0000cate types is the site most likely using?",
+    "q": "When trying to access an internal website, an employee reports that a prompt displays, stating that the site is insecure. Which of the following certicate types is the site most likely using?",
     "options": [
       "Wildcard",
       "Root of trust",
@@ -8076,7 +8032,7 @@
   },
   "401": {
     "num": 401,
-    "q": "The private key for a website was stolen, and a new certi \u0000cate has been issued. Which of the following needs to be updated next?",
+    "q": "The private key for a website was stolen, and a new certi cate has been issued. Which of the following needs to be updated next?",
     "options": [
       "SCEP",
       "CRL",
@@ -8141,7 +8097,7 @@
       "Regularly updating server software and patches",
       "Implementing strong password policies",
       "Encrypting sensitive data at rest and in transit",
-      "Utilizing a web-application \u0000rewall",
+      "Utilizing a web-application rewall",
       "Performing regular vulnerability scans",
       "Removing payment information from the servers"
     ],
@@ -8181,7 +8137,7 @@
   },
   "406": {
     "num": 406,
-    "q": "During a SQL update of a database, a temporary \u0000eld that was created was replaced by an attacker in order to allow access to the system. Which of the following best describes this type of vulnerability?",
+    "q": "During a SQL update of a database, a temporary eld that was created was replaced by an attacker in order to allow access to the system. Which of the following best describes this type of vulnerability?",
     "options": [
       "Race condition",
       "Memory injection",
@@ -8241,11 +8197,11 @@
   },
   "409": {
     "num": 409,
-    "q": "A company suffered a critical incident where 30GB of data was ex\u0000ltrated from the corporate network. Which of the following actions is the most e\u0000cient way to identify where the system data was ex\u0000ltrated from and what location the attacker sent the data to?",
+    "q": "A company suffered a critical incident where 30GB of data was exltrated from the corporate network. Which of the following actions is the most ecient way to identify where the system data was exltrated from and what location the attacker sent the data to?",
     "options": [
-      "Analyze \u0000rewall and network logs for large amounts of outbound tra\u0000 c to external IP addresses or domains.",
-      "Analyze IPS and IDS logs to \u0000nd the IP addresses used by the attacker for reconnaissance scans.",
-      "Analyze endpoint and application logs to see whether \u0000le-sharing programs were running on the company systems.",
+      "Analyze rewall and network logs for large amounts of outbound tra c to external IP addresses or domains.",
+      "Analyze IPS and IDS logs to nd the IP addresses used by the attacker for reconnaissance scans.",
+      "Analyze endpoint and application logs to see whether le-sharing programs were running on the company systems.",
       "Analyze external vulnerability scans and automated reports to identify the systems the attacker could have exploited a remote code vulnerability."
     ],
     "letters": [
@@ -8304,7 +8260,7 @@
     "q": "A legal department must maintain a backup from all devices that have been shredded and recycled by a third party. Which of the following best describes this requirement?",
     "options": [
       "Data retention",
-      "Certi\u0000cation",
+      "Certication",
       "Sanitization",
       "Destruction"
     ],
@@ -8341,7 +8297,7 @@
   },
   "414": {
     "num": 414,
-    "q": "Which of the following threat actors would most likely deface the website of a high-pro\u0000le music group?",
+    "q": "Which of the following threat actors would most likely deface the website of a high-prole music group?",
     "options": [
       "Unskilled attacker",
       "Organized crime",
@@ -8365,7 +8321,7 @@
     "options": [
       "Apply IP address reputation data.",
       "Tap and monitor the email feed.",
-      "Scan email tra\u0000 c inline.",
+      "Scan email tra c inline.",
       "Check SPF records."
     ],
     "letters": [
@@ -8381,12 +8337,12 @@
   },
   "416": {
     "num": 416,
-    "q": "Which of the following activities is the \u0000rst stage in the incident response process?",
+    "q": "Which of the following activities is the rst stage in the incident response process?",
     "options": [
       "Detection",
       "Declaration",
       "Containment",
-      "Veri\u0000cation"
+      "Verication"
     ],
     "letters": [
       "A",
@@ -8423,9 +8379,9 @@
     "num": 418,
     "q": "Which of the following is a compensating control for providing user access to a high-risk website?",
     "options": [
-      "Enabling threat prevention features on the \u0000rewall",
-      "Con\u0000guring a SIEM tool to capture all web tra\u0000 c",
-      "Setting \u0000rewall rules to allow tra\u0000 c from any port to that destination",
+      "Enabling threat prevention features on the rewall",
+      "Conguring a SIEM tool to capture all web tra c",
+      "Setting rewall rules to allow tra c from any port to that destination",
       "Blocking that website on the endpoint protection software"
     ],
     "letters": [
@@ -8486,7 +8442,7 @@
   },
   "421": {
     "num": 421,
-    "q": "An organization wants a third-party vendor to do a penetration test that targets a speci\u0000c device. The organization has provided basic information about the device. Which of the following best describes this kind of penetration test?",
+    "q": "An organization wants a third-party vendor to do a penetration test that targets a specic device. The organization has provided basic information about the device. Which of the following best describes this kind of penetration test?",
     "options": [
       "Partially known environment",
       "Unknown environment",
@@ -8506,7 +8462,7 @@
   },
   "422": {
     "num": 422,
-    "q": "Which of the following should a security team do \u0000rst before a new web server goes live?",
+    "q": "Which of the following should a security team do rst before a new web server goes live?",
     "options": [
       "Harden the virtual host.",
       "Create WAF rules.",
@@ -8566,7 +8522,7 @@
   },
   "425": {
     "num": 425,
-    "q": "A security analyst has determined that a security breach would have a \u0000nancial impact of $15,000 and is expected to occur twice within a three- year period. Which of the following is the ALE for this risk?",
+    "q": "A security analyst has determined that a security breach would have a nancial impact of $15,000 and is expected to occur twice within a three- year period. Which of the following is the ALE for this risk?",
     "options": [
       "$7,500",
       "$10,000",
@@ -8586,7 +8542,7 @@
   },
   "426": {
     "num": 426,
-    "q": "A systems administrator discovers a system that is no longer receiving support from the vendor. However, this system and its environment are critical to running the business, cannot be modi\u0000ed, and must stay online. Which of the following risk treatments is the most appropriate in this situation?",
+    "q": "A systems administrator discovers a system that is no longer receiving support from the vendor. However, this system and its environment are critical to running the business, cannot be modied, and must stay online. Which of the following risk treatments is the most appropriate in this situation?",
     "options": [
       "Reject",
       "Accept",
@@ -8608,7 +8564,7 @@
     "num": 427,
     "q": "A company discovered its data was advertised for sale on the dark web. During the initial investigation, the company determined the data was proprietary data. Which of the following is the next step the company should take?",
     "options": [
-      "Identify the attacker’s entry methods.",
+      "Identify the attacker's entry methods.",
       "Report the breach to the local authorities.",
       "Notify the applicable parties of the breach.",
       "Implement vulnerability scanning of the company's systems."
@@ -8646,7 +8602,7 @@
   },
   "429": {
     "num": 429,
-    "q": "An organization needs to determine how many employees are accessing the building each day in order to con\u0000gure the proper access controls. Which of the following control types best meets this requirement?",
+    "q": "An organization needs to determine how many employees are accessing the building each day in order to congure the proper access controls. Which of the following control types best meets this requirement?",
     "options": [
       "Detective",
       "Preventive",
@@ -8691,7 +8647,7 @@
   },
   "431": {
     "num": 431,
-    "q": "A security o\u0000 cer is implementing a security awareness program and is placing security-themed posters around the building and is assigning online user training. Which of the following would the security o\u0000 cer most likely implement?",
+    "q": "A security o cer is implementing a security awareness program and is placing security-themed posters around the building and is assigning online user training. Which of the following would the security o cer most likely implement?",
     "options": [
       "Password policy",
       "Access badges",
@@ -8731,7 +8687,7 @@
   },
   "433": {
     "num": 433,
-    "q": "A company is in the process of migrating to cloud-based services. The company’s IT department has limited resources for migration and ongoing support. Which of the following best meets the company’s needs?",
+    "q": "A company is in the process of migrating to cloud-based services. The company's IT department has limited resources for migration and ongoing support. Which of the following best meets the company's needs?",
     "options": [
       "IPS",
       "WAF",
@@ -8751,7 +8707,7 @@
   },
   "434": {
     "num": 434,
-    "q": "An employee clicks a malicious link in an email that appears to be from the company's Chief Executive O\u0000 cer. The employee's computer is infected with ransomware that encrypts the company's \u0000les. Which of the following is the most effective way for the company to prevent similar incidents in the future?",
+    "q": "An employee clicks a malicious link in an email that appears to be from the company's Chief Executive O cer. The employee's computer is infected with ransomware that encrypts the company's les. Which of the following is the most effective way for the company to prevent similar incidents in the future?",
     "options": [
       "Security awareness training",
       "Database encryption",
@@ -8771,9 +8727,9 @@
   },
   "435": {
     "num": 435,
-    "q": "Which of the following types of vulnerabilities is primarily caused by improper use and management of cryptographic certi\u0000cates?",
+    "q": "Which of the following types of vulnerabilities is primarily caused by improper use and management of cryptographic certicates?",
     "options": [
-      "Miscon\u0000guration",
+      "Misconguration",
       "Resource reuse",
       "Insecure key storage",
       "Weak cipher suites"
@@ -8791,7 +8747,7 @@
   },
   "436": {
     "num": 436,
-    "q": "Which of the following best describe the bene \u0000ts of a microservices architecture when compared to a monolithic architecture? (Choose two.)",
+    "q": "Which of the following best describe the bene ts of a microservices architecture when compared to a monolithic architecture? (Choose two.)",
     "options": [
       "Easier debugging of the system",
       "Reduced cost of ownership of the system",
@@ -8816,7 +8772,7 @@
   },
   "437": {
     "num": 437,
-    "q": "A user's workstation becomes unresponsive and displays a ransom note demanding payment to decrypt \u0000les. Before the attack, the user opened a resume they received in a message, browsed the company's website, and installed OS updates. Which of the following is the most likely vector of this attack?",
+    "q": "A user's workstation becomes unresponsive and displays a ransom note demanding payment to decrypt les. Before the attack, the user opened a resume they received in a message, browsed the company's website, and installed OS updates. Which of the following is the most likely vector of this attack?",
     "options": [
       "Spear-phishing attachment",
       "Watering hole",
@@ -8836,7 +8792,7 @@
   },
   "438": {
     "num": 438,
-    "q": "A penetration tester \u0000nds an unused Ethernet port during an on-site penetration test. Upon plugging a device into the unused port, the penetration tester notices that the machine is assigned an IP address, allowing the tester to enumerate the local network. Which of the following should an administrator implement in order to prevent this situation from happening in the future?",
+    "q": "A penetration tester nds an unused Ethernet port during an on-site penetration test. Upon plugging a device into the unused port, the penetration tester notices that the machine is assigned an IP address, allowing the tester to enumerate the local network. Which of the following should an administrator implement in order to prevent this situation from happening in the future?",
     "options": [
       "Port security",
       "Transport Layer Security",
@@ -8936,7 +8892,7 @@
   },
   "443": {
     "num": 443,
-    "q": "A company that has a large IT operation is looking to better control, standardize, and lower the time required to build new servers. Which of the following architectures will best achieve the company’s objectives?",
+    "q": "A company that has a large IT operation is looking to better control, standardize, and lower the time required to build new servers. Which of the following architectures will best achieve the company's objectives?",
     "options": [
       "IoT",
       "IaC",
@@ -8956,7 +8912,7 @@
   },
   "444": {
     "num": 444,
-    "q": "A government o\u0000 cial receives a blank envelope containing photos and a note instructing the o\u0000 cial to wire a large sum of money by midnight to prevent the photos from being leaked on the internet. Which of the following best describes the threat actor's intent?",
+    "q": "A government o cial receives a blank envelope containing photos and a note instructing the o cial to wire a large sum of money by midnight to prevent the photos from being leaked on the internet. Which of the following best describes the threat actor's intent?",
     "options": [
       "Organized crime",
       "Philosophical beliefs",
@@ -8978,7 +8934,7 @@
     "num": 445,
     "q": "Which of the following is the best security reason for closing service ports that are not needed?",
     "options": [
-      "To mitigate risks associated with unencrypted tra\u0000 c",
+      "To mitigate risks associated with unencrypted tra c",
       "To eliminate false positives from a vulnerability scan",
       "To reduce a system's attack surface",
       "To improve a system's resource utilization"
@@ -9019,7 +8975,7 @@
     "q": "A malicious actor conducted a brute-force attack on a company's web servers and eventually gained access to the company's customer information database. Which of the following is the most effective way to prevent similar attacks?",
     "options": [
       "Regular patching of servers",
-      "Web application \u0000rewalls",
+      "Web application rewalls",
       "Multifactor authentication",
       "Enabling encryption of customer data"
     ],
@@ -9061,7 +9017,7 @@
       "Malicious instructions can be inserted into memory and give the attacker elevated permissions.",
       "An attacker can access the hypervisor and compromise other VMs.",
       "Unencrypted data can be read by a user who is in a separate environment.",
-      "Users can install software that is not on the manufacturer’s approved list."
+      "Users can install software that is not on the manufacturer's approved list."
     ],
     "letters": [
       "A",
@@ -9116,7 +9072,7 @@
   },
   "452": {
     "num": 452,
-    "q": "While investigating a possible incident, a security analyst discovers the following: Which of the following should the analyst do \u0000rst?",
+    "q": "While investigating a possible incident, a security analyst discovers the following: Which of the following should the analyst do rst?",
     "options": [
       "Implement a WAF.",
       "Disable the query.php script.",
@@ -9198,7 +9154,7 @@
   },
   "456": {
     "num": 456,
-    "q": "An organization purchased a critical business application containing sensitive data. The organization would like to ensure that the application is not exploited by common data ex\u0000ltration attacks. Which of the following approaches would best help to ful\u0000ll this requirement?",
+    "q": "An organization purchased a critical business application containing sensitive data. The organization would like to ensure that the application is not exploited by common data exltration attacks. Which of the following approaches would best help to fulll this requirement?",
     "options": [
       "URL scanning",
       "WAF",
@@ -9241,7 +9197,7 @@
     "q": "A company is performing a risk assessment on new software the company plans to use. Which of the following should the company assess during this process?",
     "options": [
       "Software vulnerabilities",
-      "Cost-bene \u0000t analysis",
+      "Cost-bene t analysis",
       "Ongoing monitoring strategies",
       "Network infrastructure compatibility"
     ],
@@ -9258,7 +9214,7 @@
   },
   "459": {
     "num": 459,
-    "q": "A malicious actor is trying to access sensitive \u0000nancial information from a company's database by intercepting and reusing log-in credentials. Which of the following attacks is the malicious actor attempting?",
+    "q": "A malicious actor is trying to access sensitive nancial information from a company's database by intercepting and reusing log-in credentials. Which of the following attacks is the malicious actor attempting?",
     "options": [
       "SQL injection",
       "On-path",
@@ -9298,11 +9254,11 @@
   },
   "461": {
     "num": 461,
-    "q": "A systems administrator is reviewing the VPN logs and notices that during non-working hours a user is accessing the company \u0000le server and information is being transferred to a suspicious IP address. Which of the following threats is most likely occurring?",
+    "q": "A systems administrator is reviewing the VPN logs and notices that during non-working hours a user is accessing the company le server and information is being transferred to a suspicious IP address. Which of the following threats is most likely occurring?",
     "options": [
       "Typosquatting",
       "Root or trust",
-      "Data ex\u0000ltration",
+      "Data exltration",
       "Blackmail"
     ],
     "letters": [
@@ -9323,7 +9279,7 @@
       "Honeytoken",
       "Honeynet",
       "Honeypot",
-      "Honey\u0000le"
+      "Honeyle"
     ],
     "letters": [
       "A",
@@ -9340,7 +9296,7 @@
     "num": 464,
     "q": "A network engineer is increasing the overall security of network devices and needs to harden the devices. Which of the following will best accomplish this task?",
     "options": [
-      "Con\u0000guring centralized logging",
+      "Conguring centralized logging",
       "Generating local administrator accounts",
       "Replacing Telnet with SSH",
       "Enabling HTTP administration"
@@ -9378,7 +9334,7 @@
   },
   "466": {
     "num": 466,
-    "q": "A company \u0000led a complaint with its IT service provider after the company discovered the service provider's external audit team had access to some of the company's con\u0000dential information. Which of the following is the most likely reason the company \u0000led the complaint?",
+    "q": "A company led a complaint with its IT service provider after the company discovered the service provider's external audit team had access to some of the company's condential information. Which of the following is the most likely reason the company led the complaint?",
     "options": [
       "The MOU had basic clauses from a template.",
       "A SOW had not been agreed to by the client.",
@@ -9401,7 +9357,7 @@
     "q": "Which of the following aspects of the data management life cycle is most directly impacted by local and international regulations?",
     "options": [
       "Destruction",
-      "Certi\u0000cation",
+      "Certication",
       "Retention",
       "Sanitization"
     ],
@@ -9420,10 +9376,10 @@
     "num": 468,
     "q": "An analyst is reviewing job postings to ensure sensitive company information is not being shared with the general public. Which of the following is the analyst most likely looking for?",
     "options": [
-      "O\u0000ce addresses",
+      "Oce addresses",
       "Software versions",
       "List of board members",
-      "Government identi\u0000cation numbers"
+      "Government identication numbers"
     ],
     "letters": [
       "A",
@@ -9438,7 +9394,7 @@
   },
   "469": {
     "num": 469,
-    "q": "An engineer has ensured that the switches are using the latest OS, the servers have the latest patches, and the endpoints' de \u0000nitions are up to date. Which of the following will these actions most effectively prevent?",
+    "q": "An engineer has ensured that the switches are using the latest OS, the servers have the latest patches, and the endpoints' de nitions are up to date. Which of the following will these actions most effectively prevent?",
     "options": [
       "Zero-day attacks",
       "Insider threats",
@@ -9501,7 +9457,7 @@
     "q": "A security team is in the process of hardening the network against externally crafted malicious packets. Which of the following is the most secure method to protect the internal network?",
     "options": [
       "Anti-malware solutions",
-      "Host-based \u0000rewalls",
+      "Host-based rewalls",
       "Intrusion prevention systems",
       "Network access control",
       "Network allow list"
@@ -9522,9 +9478,9 @@
     "num": 473,
     "q": "Which of the following is the best way to prevent an unauthorized user from plugging a laptop into an employee's phone network port and then using tools to scan for database servers?",
     "options": [
-      "MAC \u0000ltering",
+      "MAC ltering",
       "Segmentation",
-      "Certi\u0000cation",
+      "Certication",
       "Isolation"
     ],
     "letters": [
@@ -9564,7 +9520,7 @@
     "options": [
       "Smart card with PIN and password",
       "Security questions and a one-time passcode sent via email",
-      "Voice and \u0000ngerprint veri\u0000cation with an SMS one-time passcode",
+      "Voice and ngerprint verication with an SMS one-time passcode",
       "Mobile application-generated, one-time passcode with facial recognition"
     ],
     "letters": [
@@ -9580,7 +9536,7 @@
   },
   "476": {
     "num": 476,
-    "q": "A company is using a legacy FTP server to transfer \u0000nancial data to a third party. The legacy system does not support SFTP, so a compensating control is needed to protect the sensitive, \u0000nancial data in transit. Which of the following would be the most appropriate for the company to use?",
+    "q": "A company is using a legacy FTP server to transfer nancial data to a third party. The legacy system does not support SFTP, so a compensating control is needed to protect the sensitive, nancial data in transit. Which of the following would be the most appropriate for the company to use?",
     "options": [
       "Telnet connection",
       "SSH tunneling",
@@ -9620,10 +9576,10 @@
   },
   "478": {
     "num": 478,
-    "q": "The Chief Information O\u0000 cer (CIO) asked a vendor to provide documentation detailing the speci\u0000c objectives within the compliance framework that the vendor's services meet. The vendor provided a report and a signed letter stating that the services meet 17 of the 21 objectives. Which of the following did the vendor provide to the CIO?",
+    "q": "The Chief Information O cer (CIO) asked a vendor to provide documentation detailing the specic objectives within the compliance framework that the vendor's services meet. The vendor provided a report and a signed letter stating that the services meet 17 of the 21 objectives. Which of the following did the vendor provide to the CIO?",
     "options": [
       "Penetration test results",
-      "Self-assessment \u0000ndings",
+      "Self-assessment ndings",
       "Attestation of compliance",
       "Third-party audit report"
     ],
@@ -9640,11 +9596,11 @@
   },
   "479": {
     "num": 479,
-    "q": "Which of the following describes the most effective way to address OS vulnerabilities after they are identi\u0000ed?",
+    "q": "Which of the following describes the most effective way to address OS vulnerabilities after they are identied?",
     "options": [
       "Endpoint protection",
       "Removal of unnecessary software",
-      "Con\u0000guration enforcement",
+      "Conguration enforcement",
       "Patching"
     ],
     "letters": [
@@ -9765,7 +9721,7 @@
       "Integrity",
       "Authentication",
       "Zero Trust",
-      "Con\u0000dentiality"
+      "Condentiality"
     ],
     "letters": [
       "A",
@@ -9780,9 +9736,9 @@
   },
   "486": {
     "num": 486,
-    "q": "An administrator has con\u0000gured a quarantine subnet for all guest devices that connect to the network. Which of the following would be best for the security team to perform before allowing access to corporate resources?",
+    "q": "An administrator has congured a quarantine subnet for all guest devices that connect to the network. Which of the following would be best for the security team to perform before allowing access to corporate resources?",
     "options": [
-      "Device \u0000ngerprinting",
+      "Device ngerprinting",
       "Compliance attestation",
       "Penetration test",
       "Application vulnerability test"
@@ -9820,7 +9776,7 @@
   },
   "488": {
     "num": 488,
-    "q": "A Chief Information Security O\u0000 cer is developing procedures to guide detective and corrective activities associated with common threats, including phishing, social engineering, and business email compromise. Which of the following documents would be most relevant to revise as part of this process?",
+    "q": "A Chief Information Security O cer is developing procedures to guide detective and corrective activities associated with common threats, including phishing, social engineering, and business email compromise. Which of the following documents would be most relevant to revise as part of this process?",
     "options": [
       "SDLC",
       "IRP",
@@ -9880,7 +9836,7 @@
   },
   "491": {
     "num": 491,
-    "q": "Which of the following is the fastest and most cost-effective way to con\u0000rm a third-party supplier's compliance with security obligations?",
+    "q": "Which of the following is the fastest and most cost-effective way to conrm a third-party supplier's compliance with security obligations?",
     "options": [
       "Attestation report",
       "Third-party audit",
@@ -9900,7 +9856,7 @@
   },
   "492": {
     "num": 492,
-    "q": "Various company stakeholders meet to discuss roles and responsibilities in the event of a security breach that would affect offshore o\u0000 ces. Which of the following is this an example of?",
+    "q": "Various company stakeholders meet to discuss roles and responsibilities in the event of a security breach that would affect offshore o ces. Which of the following is this an example of?",
     "options": [
       "Tabletop exercise",
       "Penetration test",
@@ -9940,10 +9896,10 @@
   },
   "494": {
     "num": 494,
-    "q": "Which of the following is a type of vulnerability that refers to the unauthorized installation of applications on a device through means other than the o\u0000cial application store?",
+    "q": "Which of the following is a type of vulnerability that refers to the unauthorized installation of applications on a device through means other than the ocial application store?",
     "options": [
       "Cross-site scripting",
-      "Buffer over\u0000ow",
+      "Buffer overow",
       "Jailbreaking",
       "Side loading"
     ],
@@ -9960,7 +9916,7 @@
   },
   "495": {
     "num": 495,
-    "q": "Which of the following types of identi\u0000cation methods can be performed on a deployed application during runtime?",
+    "q": "Which of the following types of identication methods can be performed on a deployed application during runtime?",
     "options": [
       "Dynamic analysis",
       "Code review",
@@ -10020,11 +9976,11 @@
   },
   "498": {
     "num": 498,
-    "q": "A security engineer needs to quickly identify a signature from a known malicious \u0000le. Which of the following analysis methods would the security engineer most likely use?",
+    "q": "A security engineer needs to quickly identify a signature from a known malicious le. Which of the following analysis methods would the security engineer most likely use?",
     "options": [
       "Static",
       "Sandbox",
-      "Network tra \u0000c",
+      "Network tra c",
       "Package monitoring"
     ],
     "letters": [
@@ -10088,7 +10044,7 @@
     "q": "Which of the following steps in the risk management process involves establishing the scope and potential risks involved with a project?",
     "options": [
       "Risk assessment",
-      "Risk identi \u0000cation",
+      "Risk identi cation",
       "Risk treatment",
       "Risk monitoring and review"
     ],
@@ -10125,11 +10081,11 @@
   },
   "503": {
     "num": 503,
-    "q": "Which of the following allows a systems administrator to tune permissions for a \u0000le?",
+    "q": "Which of the following allows a systems administrator to tune permissions for a le?",
     "options": [
       "Patching",
       "Access control list",
-      "Con\u0000guration enforcement",
+      "Conguration enforcement",
       "Least privilege"
     ],
     "letters": [
@@ -10168,7 +10124,7 @@
     "q": "Which of the following security concepts is accomplished when granting access after an individual has logged into a computer network?",
     "options": [
       "Authorization",
-      "Identi\u0000cation",
+      "Identication",
       "Non-repudiation",
       "Authentication"
     ],
@@ -10245,7 +10201,7 @@
   },
   "509": {
     "num": 509,
-    "q": "A company wants to ensure employees are allowed to copy \u0000les from a virtual desktop during the workday but are restricted during non-working hours. Which of the following security measures should the company set up?",
+    "q": "A company wants to ensure employees are allowed to copy les from a virtual desktop during the workday but are restricted during non-working hours. Which of the following security measures should the company set up?",
     "options": [
       "Digital rights management",
       "Role-based access control",
@@ -10265,7 +10221,7 @@
   },
   "510": {
     "num": 510,
-    "q": "Employees sign an agreement that restricts speci\u0000c activities when leaving the company. Violating the agreement can result in legal consequences. Which of the following agreements does this best describe?",
+    "q": "Employees sign an agreement that restricts specic activities when leaving the company. Violating the agreement can result in legal consequences. Which of the following agreements does this best describe?",
     "options": [
       "SLA",
       "BPA",
@@ -10470,9 +10426,9 @@
   },
   "520": {
     "num": 520,
-    "q": "A company relies on open-source software libraries to build the software used by its customers. Which of the following vulnerability types would be the most di\u0000 cult to remediate due to the company’s reliance on open-source libraries?",
+    "q": "A company relies on open-source software libraries to build the software used by its customers. Which of the following vulnerability types would be the most di cult to remediate due to the company's reliance on open-source libraries?",
     "options": [
-      "Buffer over\u0000ow",
+      "Buffer overow",
       "SQL injection",
       "Cross-site scripting",
       "Zero-day"
@@ -10490,12 +10446,12 @@
   },
   "521": {
     "num": 521,
-    "q": "An organization has a new regulatory requirement to implement corrective controls on a \u0000nancial system. Which of the following is the most likely reason for the new requirement?",
+    "q": "An organization has a new regulatory requirement to implement corrective controls on a nancial system. Which of the following is the most likely reason for the new requirement?",
     "options": [
       "To defend against insider threats altering banking details",
       "To ensure that errors are not passed to other systems",
       "To allow for business insurance to be purchased",
-      "To prevent unauthorized changes to \u0000nancial data"
+      "To prevent unauthorized changes to nancial data"
     ],
     "letters": [
       "A",
@@ -10534,7 +10490,7 @@
     "options": [
       "Encryption protects data in transit, while hashing protects data at rest.",
       "Encryption replaces cleartext with ciphertext, while hashing calculates a checksum.",
-      "Encryption ensures data integrity, while hashing ensures data con\u0000dentiality.",
+      "Encryption ensures data integrity, while hashing ensures data condentiality.",
       "Encryption uses a public-key exchange, while hashing uses a private key."
     ],
     "letters": [
@@ -10552,7 +10508,7 @@
     "num": 524,
     "q": "A security report shows that during a two-week test period, 80% of employees unwittingly disclosed their SSO credentials when accessing an external website. The organization purposely created the website to simulate a cost-free password complexity test. Which of the following would best help reduce the number of visits to similar websites in the future?",
     "options": [
-      "Block all outbound tra\u0000 c from the intranet.",
+      "Block all outbound tra c from the intranet.",
       "Introduce a campaign to recognize phishing attempts.",
       "Restrict internet access for the employees who disclosed credentials.",
       "Implement a deny list of websites."
@@ -10570,12 +10526,12 @@
   },
   "525": {
     "num": 525,
-    "q": "A Chief Information Security O\u0000 cer (CISO) has developed information security policies that relate to the software development methodology. Which of the following would the CISO most likely include in the organization’s documentation?",
+    "q": "A Chief Information Security O cer (CISO) has developed information security policies that relate to the software development methodology. Which of the following would the CISO most likely include in the organization's documentation?",
     "options": [
       "Peer review requirements",
       "Multifactor authentication",
       "Branch protection tests",
-      "Secrets management con\u0000gurations"
+      "Secrets management congurations"
     ],
     "letters": [
       "A",
@@ -10610,10 +10566,10 @@
   },
   "527": {
     "num": 527,
-    "q": "A security analyst created a fake account and saved the password in a non-readily accessible directory in a spreadsheet. An alert was also con\u0000gured to notify the security team if the spreadsheet is opened. Which of the following best describes the deception method being deployed?",
+    "q": "A security analyst created a fake account and saved the password in a non-readily accessible directory in a spreadsheet. An alert was also congured to notify the security team if the spreadsheet is opened. Which of the following best describes the deception method being deployed?",
     "options": [
       "Honeypot",
-      "Honey\u0000le",
+      "Honeyle",
       "Honeytoken",
       "Honeynet"
     ],
@@ -10630,7 +10586,7 @@
   },
   "528": {
     "num": 528,
-    "q": "Which of the following is the best way to provide secure, remote access for employees while minimizing the exposure of a company’s internal network?",
+    "q": "Which of the following is the best way to provide secure, remote access for employees while minimizing the exposure of a company's internal network?",
     "options": [
       "VPN",
       "LDAP",
@@ -10650,7 +10606,7 @@
   },
   "529": {
     "num": 529,
-    "q": "A company wants to track modi\u0000cations to the code that is used to build new virtual servers. Which of the following will the company most likely deploy?",
+    "q": "A company wants to track modications to the code that is used to build new virtual servers. Which of the following will the company most likely deploy?",
     "options": [
       "Change management ticketing system",
       "Behavioral analyzer",
@@ -10712,9 +10668,9 @@
     "num": 532,
     "q": "Which of the following is prevented by proper data sanitization?",
     "options": [
-      "Hackers’ ability to obtain data from used hard drives",
+      "Hackers' ability to obtain data from used hard drives",
       "Devices reaching end-of-life and losing support",
-      "Disclosure of sensitive data through incorrect classi\u0000cation",
+      "Disclosure of sensitive data through incorrect classication",
       "Incorrect inventory data leading to a laptop shortage"
     ],
     "letters": [
@@ -10730,7 +10686,7 @@
   },
   "533": {
     "num": 533,
-    "q": "A certi\u0000cate authority needs to post information about expired certi\u0000cates. Which of the following would accomplish this task?",
+    "q": "A certicate authority needs to post information about expired certicates. Which of the following would accomplish this task?",
     "options": [
       "TPM",
       "CRL",
@@ -10790,7 +10746,7 @@
   },
   "536": {
     "num": 536,
-    "q": "A security analyst learns that an attack vector, which was used as a part of a recent incident, was a well-known IoT device exploit. The analyst needs to review logs to identify the time of initial exploit. Which of the following logs should the analyst review \u0000rst?",
+    "q": "A security analyst learns that an attack vector, which was used as a part of a recent incident, was a well-known IoT device exploit. The analyst needs to review logs to identify the time of initial exploit. Which of the following logs should the analyst review rst?",
     "options": [
       "Endpoint",
       "Application",
@@ -10810,11 +10766,11 @@
   },
   "537": {
     "num": 537,
-    "q": "A company’s gate access logs show multiple entries from an employee’s ID badge within a two-minute period. Which of the following is this an example of?",
+    "q": "A company's gate access logs show multiple entries from an employee's ID badge within a two-minute period. Which of the following is this an example of?",
     "options": [
       "RFID cloning",
       "Side-channel attack",
-      "Shoulder sur\u0000ng",
+      "Shoulder surng",
       "Tailgating"
     ],
     "letters": [
@@ -10850,12 +10806,12 @@
   },
   "539": {
     "num": 539,
-    "q": "A SOC analyst establishes a remote control session on an end user’s machine and discovers the following in a \u0000le: gmail.com[ENT] my.name@gmail.com [ENT]NoOneCanGuessThis123! [ENT]Hello Susan, it was great to see you the other day! Let’s plan a followup[BACKSPACE]follow-up meeting soon. Here is the link to register. [RTN][CTRL]c [CTRL]v [RTN]after[BACKSPACE]After you register give me a call on my cellphone. Which of the following actions should the SOC analyst perform \u0000rst?",
+    "q": "A SOC analyst establishes a remote control session on an end user's machine and discovers the following in a le: gmail.com[ENT] my.name@gmail.com [ENT]NoOneCanGuessThis123! [ENT]Hello Susan, it was great to see you the other day! Let's plan a followup[BACKSPACE]follow-up meeting soon. Here is the link to register. [RTN][CTRL]c [CTRL]v [RTN]after[BACKSPACE]After you register give me a call on my cellphone. Which of the following actions should the SOC analyst perform rst?",
     "options": [
       "Advise the user to change passwords.",
-      "Reimage the end user’s machine.",
+      "Reimage the end user's machine.",
       "Check the policy on personal email at work.",
-      "Check host \u0000rewall logs."
+      "Check host rewall logs."
     ],
     "letters": [
       "A",
@@ -10874,7 +10830,7 @@
     "options": [
       "The contents of environmental variables could affect the scope and impact of an exploited vulnerability.",
       "In-memory environmental variable values can be overwritten and used by attackers to insert malicious code.",
-      "Environmental variables de \u0000ne cryptographic standards for the system and could create vulnerabilities if deprecated algorithms are used.",
+      "Environmental variables de ne cryptographic standards for the system and could create vulnerabilities if deprecated algorithms are used.",
       "Environmental variables will determine when updates are run and could mitigate the likelihood of vulnerability exploitation."
     ],
     "letters": [
@@ -10894,7 +10850,7 @@
     "options": [
       "IPSec with RADIUS",
       "RDP connection with LDAPS",
-      "Web proxy for all remote tra\u0000 c",
+      "Web proxy for all remote tra c",
       "Jump server with 802.1X"
     ],
     "letters": [
@@ -10910,7 +10866,7 @@
   },
   "542": {
     "num": 542,
-    "q": "An administrator must replace an expired SSL certi\u0000cate. Which of the following does the administrator need to create the new SSL certi\u0000cate?",
+    "q": "An administrator must replace an expired SSL certicate. Which of the following does the administrator need to create the new SSL certicate?",
     "options": [
       "CSR",
       "OCSP",
@@ -10930,7 +10886,7 @@
   },
   "543": {
     "num": 543,
-    "q": "A systems administrator receives a text message from an unknown number claiming to be the Chief Executive O\u0000 cer of the company. The message states an emergency situation requires a password reset. Which of the following threat vectors is being used?",
+    "q": "A systems administrator receives a text message from an unknown number claiming to be the Chief Executive O cer of the company. The message states an emergency situation requires a password reset. Which of the following threat vectors is being used?",
     "options": [
       "Typosquatting",
       "Smishing",
@@ -10950,12 +10906,12 @@
   },
   "544": {
     "num": 544,
-    "q": "A Chief Information Security O\u0000 cer (CISO) wants to: • Prevent employees from downloading malicious content. • Establish controls based on departments and users. • Map internet access for business applications to speci\u0000c service accounts. • Restrict content based on categorization. Which of the following should the CSO implement?",
+    "q": "A Chief Information Security O cer (CISO) wants to: • Prevent employees from downloading malicious content. • Establish controls based on departments and users. • Map internet access for business applications to specic service accounts. • Restrict content based on categorization. Which of the following should the CSO implement?",
     "options": [
-      "Web application \u0000rewall",
+      "Web application rewall",
       "Secure DNS server",
       "Jump server",
-      "Next-generation \u0000rewall"
+      "Next-generation rewall"
     ],
     "letters": [
       "A",
@@ -10970,7 +10926,7 @@
   },
   "545": {
     "num": 545,
-    "q": "A company is aware of a given security risk related to a speci\u0000c market segment. The business chooses not to accept responsibility and target their services to a different market segment. Which of the following describes this risk management strategy?",
+    "q": "A company is aware of a given security risk related to a specic market segment. The business chooses not to accept responsibility and target their services to a different market segment. Which of the following describes this risk management strategy?",
     "options": [
       "Exemption",
       "Exception",
@@ -10990,7 +10946,7 @@
   },
   "546": {
     "num": 546,
-    "q": "A security analyst needs to improve the company’s authentication policy following a password audit. Which of the following should be included in the policy? (Choose two.)",
+    "q": "A security analyst needs to improve the company's authentication policy following a password audit. Which of the following should be included in the policy? (Choose two.)",
     "options": [
       "Length",
       "Complexity",
@@ -11074,7 +11030,7 @@
   },
   "550": {
     "num": 550,
-    "q": "The internal audit team determines a software application is no longer in scope for external reporting requirements. Which of the following will con\u0000rm that the application is no longer applicable?",
+    "q": "The internal audit team determines a software application is no longer in scope for external reporting requirements. Which of the following will conrm that the application is no longer applicable?",
     "options": [
       "Data inventory and retention",
       "Right to be forgotten",
@@ -11094,11 +11050,11 @@
   },
   "551": {
     "num": 551,
-    "q": "Which of the following are the \u0000rst steps an analyst should perform when developing a heat map? (Choose two.)",
+    "q": "Which of the following are the rst steps an analyst should perform when developing a heat map? (Choose two.)",
     "options": [
-      "Methodically walk around the o\u0000 ce noting Wi-Fi signal strength.",
+      "Methodically walk around the o ce noting Wi-Fi signal strength.",
       "Log in to each access point and check the settings.",
-      "Create or obtain a layout of the o\u0000 ce.",
+      "Create or obtain a layout of the o ce.",
       "Measure cable lengths between access points.",
       "Review access logs to determine the most active devices.",
       "Remove possible impediments to radio transmissions."
@@ -11159,9 +11115,9 @@
   },
   "554": {
     "num": 554,
-    "q": "After a series of account compromises and credential misuse, a company hires a security manager to develop a security program. Which of the following steps should the security manager take \u0000rst to increase security awareness?",
+    "q": "After a series of account compromises and credential misuse, a company hires a security manager to develop a security program. Which of the following steps should the security manager take rst to increase security awareness?",
     "options": [
-      "Evaluate tools that identify risky behavior and distribute reports on the \u0000ndings.",
+      "Evaluate tools that identify risky behavior and distribute reports on the ndings.",
       "Send quarterly newsletters that explain the importance of password management.",
       "D evelop phishing campaigns and notify the management team of any successes.",
       "Update policies and handbooks to ensure all employees are informed of the new procedures."
@@ -11182,7 +11138,7 @@
     "q": "Which of the following should be used to ensure a device is inaccessible to a network-connected resource?",
     "options": [
       "Disablement of unused services",
-      "Web application \u0000rewall",
+      "Web application rewall",
       "Host isolation",
       "N etwork-based IDS"
     ],
@@ -11199,7 +11155,7 @@
   },
   "556": {
     "num": 556,
-    "q": "In which of the following will unencrypted network tra \u0000c most likely be found?",
+    "q": "In which of the following will unencrypted network tra c most likely be found?",
     "options": [
       "SDN",
       "IoT",
@@ -11221,7 +11177,7 @@
     "num": 557,
     "q": "Which of the following is the best reason to perform a tabletop exercise?",
     "options": [
-      "To address audit \u0000ndings",
+      "To address audit ndings",
       "To collect remediation response times",
       "To update the IRP",
       "To calculate the ROI"
@@ -11259,12 +11215,12 @@
   },
   "559": {
     "num": 559,
-    "q": "For an upcoming product launch, a company hires a marketing agency whose owner is a close relative of the Chief Executive O\u0000 cer. Which of the following did the company violate?",
+    "q": "For an upcoming product launch, a company hires a marketing agency whose owner is a close relative of the Chief Executive O cer. Which of the following did the company violate?",
     "options": [
       "Independent assessments",
       "Supply chain analysis",
       "Right-to-audit clause",
-      "Con\u0000ict of interest policy"
+      "Conict of interest policy"
     ],
     "letters": [
       "A",
@@ -11279,9 +11235,9 @@
   },
   "560": {
     "num": 560,
-    "q": "An organization designs an inbound \u0000rewall with a fail-open con\u0000guration while implementing a website. Which of the following would the organization consider to be the highest priority?",
+    "q": "An organization designs an inbound rewall with a fail-open conguration while implementing a website. Which of the following would the organization consider to be the highest priority?",
     "options": [
-      "Con\u0000dentiality",
+      "Condentiality",
       "Non-repudiation",
       "Availability",
       "Integrity"
@@ -11299,7 +11255,7 @@
   },
   "561": {
     "num": 561,
-    "q": "An engineer needs to ensure that a script has not been modi\u0000ed before it is launched. Which of the following best provides this functionality?",
+    "q": "An engineer needs to ensure that a script has not been modied before it is launched. Which of the following best provides this functionality?",
     "options": [
       "Masking",
       "Obfuscation",
@@ -11319,12 +11275,12 @@
   },
   "562": {
     "num": 562,
-    "q": "Which of the following is the most important element when de \u0000ning effective security governance?",
+    "q": "Which of the following is the most important element when de ning effective security governance?",
     "options": [
       "Discovering and documenting external considerations",
       "Developing procedures for employee onboarding and offboarding",
       "Assigning roles and responsibilities for owners, controllers, and custodians",
-      "De\u0000ning and monitoring change management procedures"
+      "Dening and monitoring change management procedures"
     ],
     "letters": [
       "A",
@@ -11364,7 +11320,7 @@
       "User impersonation",
       "Rootkit",
       "On-path attack",
-      "Buffer over\u0000ow"
+      "Buffer overow"
     ],
     "letters": [
       "A",
@@ -11484,7 +11440,7 @@
   },
   "570": {
     "num": 570,
-    "q": "A help desk employee receives a call from someone impersonating the Chief Executive O\u0000 cer. The caller asks for assistance with resetting a password. Which of the following best describes this event?",
+    "q": "A help desk employee receives a call from someone impersonating the Chief Executive O cer. The caller asks for assistance with resetting a password. Which of the following best describes this event?",
     "options": [
       "Vishing",
       "Hacktivism",
@@ -11524,7 +11480,7 @@
   },
   "572": {
     "num": 572,
-    "q": "An organization that handles sensitive information wants to protect the information by using a reversible technology. Which of the following best satis\u0000es this requirement?",
+    "q": "An organization that handles sensitive information wants to protect the information by using a reversible technology. Which of the following best satises this requirement?",
     "options": [
       "Hardware security module",
       "Hashing algorithm",
@@ -11604,10 +11560,10 @@
   },
   "576": {
     "num": 576,
-    "q": "A company is concerned about employees unintentionally introducing malware into the network. The company identi\u0000ed \u0000fty employees who clicked on a link embedded in an email sent by the internal IT department. Which of the following should the company implement to best improve its security posture?",
+    "q": "A company is concerned about employees unintentionally introducing malware into the network. The company identied fty employees who clicked on a link embedded in an email sent by the internal IT department. Which of the following should the company implement to best improve its security posture?",
     "options": [
       "Social engineering training",
-      "SPF con\u0000guration",
+      "SPF conguration",
       "Simulated phishing campaign",
       "Insider threat awareness"
     ],
@@ -11624,7 +11580,7 @@
   },
   "577": {
     "num": 577,
-    "q": "A penetration test identi\u0000es that an SMBv1 is enabled on multiple servers across an organization. The organization wants to remediate this vulnerability in the most e \u0000cient way possible. Which of the following should the organization use for this purpose?",
+    "q": "A penetration test identies that an SMBv1 is enabled on multiple servers across an organization. The organization wants to remediate this vulnerability in the most e cient way possible. Which of the following should the organization use for this purpose?",
     "options": [
       "GPO",
       "ACL",
@@ -11666,7 +11622,7 @@
     "num": 579,
     "q": "As part of new compliance audit requirements, multiple servers need to be segmented on different networks and should be reachable only from authorized internal systems. Which of the following would meet the requirements?",
     "options": [
-      "Con\u0000gure \u0000rewall rules to block external access to Internal resources.",
+      "Congure rewall rules to block external access to Internal resources.",
       "Set up a WAP to allow internal access from public networks.",
       "Implement a new IPSec tunnel from internal resources.",
       "Deploy an internal jump server to access resources."
@@ -11684,7 +11640,7 @@
   },
   "580": {
     "num": 580,
-    "q": "Which of the following activities should be performed \u0000rst to compile a list of vulnerabilities in an environment?",
+    "q": "Which of the following activities should be performed rst to compile a list of vulnerabilities in an environment?",
     "options": [
       "Automated scanning",
       "Penetration testing",
@@ -11731,7 +11687,7 @@
       "Creating a GPO for all contract employees and setting time-of-day log-in restrictions",
       "Creating a discretionary access policy and setting rule-based access for contract employees",
       "Implementing an OAuth server and then setting least privilege for contract employees",
-      "Implementing SAML with federation to the contract employees’ authentication server"
+      "Implementing SAML with federation to the contract employees' authentication server"
     ],
     "letters": [
       "A",
@@ -11786,7 +11742,7 @@
   },
   "585": {
     "num": 585,
-    "q": "A security analyst notices an increase in port scans on the edge of the corporate network. Which of the following logs should the analyst check to obtain the attacker’s source IP address?",
+    "q": "A security analyst notices an increase in port scans on the edge of the corporate network. Which of the following logs should the analyst check to obtain the attacker's source IP address?",
     "options": [
       "OS security",
       "Firewall",
@@ -11806,10 +11762,10 @@
   },
   "586": {
     "num": 586,
-    "q": "A security team receives reports about high latency and complete network unavailability throughout most of the o\u0000 ce building. Flow logs from the campus switches show high tra\u0000 c on TCP 445. Which of the following is most likely the root cause of this incident?",
+    "q": "A security team receives reports about high latency and complete network unavailability throughout most of the o ce building. Flow logs from the campus switches show high tra c on TCP 445. Which of the following is most likely the root cause of this incident?",
     "options": [
-      "Buffer over\u0000ow",
-      "NTP ampli\u0000cation attack",
+      "Buffer overow",
+      "NTP amplication attack",
       "Worm",
       "DoS attack"
     ],
@@ -11866,7 +11822,7 @@
   },
   "589": {
     "num": 589,
-    "q": "A security professional discovers a folder that contains an employee's personal information located on the enterprise’s shared drive. Which of the following best describes the data type the security professional should use to identify organizational policies and standards concerning the storage of employees' personal information?",
+    "q": "A security professional discovers a folder that contains an employee's personal information located on the enterprise's shared drive. Which of the following best describes the data type the security professional should use to identify organizational policies and standards concerning the storage of employees' personal information?",
     "options": [
       "Legal",
       "Financial",
@@ -11906,7 +11862,7 @@
   },
   "591": {
     "num": 591,
-    "q": "Which of the following would an organization most likely use to minimize the loss of data on a \u0000le server in the event data needs to be restored?",
+    "q": "Which of the following would an organization most likely use to minimize the loss of data on a le server in the event data needs to be restored?",
     "options": [
       "Snapshots",
       "Journaling",
@@ -11926,7 +11882,7 @@
   },
   "592": {
     "num": 592,
-    "q": "Which of the following solutions would most likely be used in the \u0000nancial industry to mask sensitive data?",
+    "q": "Which of the following solutions would most likely be used in the nancial industry to mask sensitive data?",
     "options": [
       "Tokenization",
       "Hashing",
@@ -11950,7 +11906,7 @@
     "options": [
       "Hash collision",
       "Cryptographic",
-      "Buffer over \u0000ow",
+      "Buffer over ow",
       "Input validation"
     ],
     "letters": [
@@ -11966,7 +11922,7 @@
   },
   "594": {
     "num": 594,
-    "q": "A company wants to prevent proprietary and con \u0000dential company information from being shared to outsiders. Which of the following would this best describe?",
+    "q": "A company wants to prevent proprietary and con dential company information from being shared to outsiders. Which of the following would this best describe?",
     "options": [
       "MOA",
       "SLA",
@@ -11989,8 +11945,8 @@
     "q": "A security administrator needs to reduce the attack surface in the company's data centers. Which of the following should the security administrator do to complete this task?",
     "options": [
       "Implement a honeynet.",
-      "De\u0000ne Group Policy on the servers.",
-      "Con\u0000gure the servers for high availability.",
+      "Dene Group Policy on the servers.",
+      "Congure the servers for high availability.",
       "Upgrade end-of-support operating systems."
     ],
     "letters": [
@@ -12010,7 +11966,7 @@
     "options": [
       "Data destruction",
       "Data sanitization",
-      "Data classi\u0000cation",
+      "Data classication",
       "Data masking"
     ],
     "letters": [
@@ -12026,11 +11982,11 @@
   },
   "597": {
     "num": 597,
-    "q": "A business provides long-term cold storage services to banks that are required to follow regulator-imposed data retention guidelines. Banks that use these services require that data is disposed of in a speci\u0000c manner at the conclusion of the regulatory threshold for data retention. Which of the following aspects of data management is the most important to the bank in the destruction of this data?",
+    "q": "A business provides long-term cold storage services to banks that are required to follow regulator-imposed data retention guidelines. Banks that use these services require that data is disposed of in a specic manner at the conclusion of the regulatory threshold for data retention. Which of the following aspects of data management is the most important to the bank in the destruction of this data?",
     "options": [
       "Encryption",
-      "Classi\u0000cation",
-      "Certi\u0000cation",
+      "Classication",
+      "Certication",
       "Procurement"
     ],
     "letters": [
@@ -12106,7 +12062,7 @@
   },
   "601": {
     "num": 601,
-    "q": "Which of the following is the \u0000rst step to secure a newly deployed server?",
+    "q": "Which of the following is the rst step to secure a newly deployed server?",
     "options": [
       "Close unnecessary service ports.",
       "Update the current version of the software.",
@@ -12150,7 +12106,7 @@
     "options": [
       "Changing default passwords",
       "Implementing least privilege",
-      "Enforcing baseline con\u0000gurations",
+      "Enforcing baseline congurations",
       "Applying network segmentation"
     ],
     "letters": [
@@ -12166,7 +12122,7 @@
   },
   "604": {
     "num": 604,
-    "q": "An employee receives a text message from an unrecognized number claiming to be the Chief Executive O\u0000 cer and asking the employee to purchase gift cards. Which of the following types of attacks describes this example?",
+    "q": "An employee receives a text message from an unrecognized number claiming to be the Chief Executive O cer and asking the employee to purchase gift cards. Which of the following types of attacks describes this example?",
     "options": [
       "Watering-hole",
       "Disinformation",
@@ -12186,7 +12142,7 @@
   },
   "605": {
     "num": 605,
-    "q": "An unexpected and out-of-character email message from a Chief Executive O\u0000 cer's corporate account asked an employee to provide \u0000nancial information and to change the recipient's contact number. Which of the following attack vectors is most likely being used?",
+    "q": "An unexpected and out-of-character email message from a Chief Executive O cer's corporate account asked an employee to provide nancial information and to change the recipient's contact number. Which of the following attack vectors is most likely being used?",
     "options": [
       "Business email compromise",
       "Phishing",
@@ -12266,7 +12222,7 @@
   },
   "609": {
     "num": 609,
-    "q": "An administrator implements web-\u0000ltering products but still sees that users are visiting malicious links. Which of the following con\u0000guration items does the security administrator need to review?",
+    "q": "An administrator implements web-ltering products but still sees that users are visiting malicious links. Which of the following conguration items does the security administrator need to review?",
     "options": [
       "Intrusion prevention system",
       "Content categorization",
