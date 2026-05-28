@@ -64,8 +64,8 @@
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="flex-grow overflow-auto p-4 sm:p-6 flex justify-center items-start">
+    <!-- Main Content (手機版面允許主視窗滾動) -->
+    <main class="flex-grow overflow-y-auto p-4 sm:p-6 flex justify-center items-start">
         
         <!-- Start Screen (首頁) -->
         <div id="start-screen" class="bg-white max-w-4xl w-full rounded-2xl shadow-xl p-8 mt-6 border border-gray-100 relative overflow-hidden">
@@ -112,23 +112,24 @@
             </div>
         </div>
 
-        <!-- Quiz Container -->
-        <div id="quiz-container" class="max-w-6xl w-full hidden flex-col lg:flex-row gap-6 h-full items-stretch">
+        <!-- Quiz Container (響應式高度調整：手機上高度自適應，桌機上維持獨立滾動) -->
+        <div id="quiz-container" class="max-w-6xl w-full hidden flex-col lg:flex-row gap-6 h-auto lg:h-[calc(100vh-140px)] items-stretch">
             
             <!-- Left: Question Area -->
-            <div id="quiz-screen" class="bg-white flex-grow rounded-2xl shadow-xl p-6 sm:p-8 flex flex-col overflow-y-auto relative border border-gray-100">
+            <div id="quiz-screen" class="bg-white flex-grow rounded-2xl shadow-xl p-6 sm:p-8 flex flex-col lg:overflow-y-auto relative border border-gray-100">
                 
-                <div class="mb-4 flex justify-between items-center border-b border-gray-100 pb-4">
-                    <div>
+                <!-- 響應式 Header：手機上直列排列以獲得最大空間 -->
+                <div class="mb-4 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 border-b border-gray-100 pb-4">
+                    <div class="flex items-center justify-between sm:justify-start gap-3 w-full sm:w-auto">
                         <h3 class="text-2xl font-black text-gray-800 flex items-center gap-3">
                             Question <span id="q-number" class="text-indigo-600"></span>
-                            <span id="q-type-badge" class="px-2 py-1 text-xs font-bold rounded bg-gray-200 text-gray-700 align-middle shadow-sm">單選題</span>
                         </h3>
+                        <span id="q-type-badge" class="px-2 py-1 text-xs font-bold rounded bg-gray-200 text-gray-700 shadow-sm">單選題</span>
                     </div>
                     
-                    <label class="flex items-center cursor-pointer space-x-2 bg-amber-50 hover:bg-amber-100 border border-amber-200 px-3 py-1.5 rounded-lg transition shadow-sm">
+                    <label class="flex items-center justify-center cursor-pointer space-x-2 bg-amber-50 hover:bg-amber-100 border border-amber-200 px-3 py-1.5 rounded-lg transition shadow-sm w-full sm:w-auto">
                         <input type="checkbox" id="flag-checkbox" class="w-4 h-4 text-amber-500 rounded border-amber-300 focus:ring-amber-500" onchange="toggleFlag()">
-                        <span class="text-sm font-bold text-amber-700">📌 標記稍後審閱</span>
+                        <span class="text-sm font-bold text-amber-700 whitespace-nowrap">📌 標記稍後審閱</span>
                     </label>
                 </div>
                 
@@ -160,8 +161,8 @@
                 </div>
             </div>
 
-            <!-- Right: Navigation Panel -->
-            <div id="nav-panel" class="bg-white lg:w-72 shrink-0 rounded-2xl shadow-xl p-6 flex flex-col overflow-y-auto border border-gray-100">
+            <!-- Right: Navigation Panel (手機版面上將自然推至下方，不佔用作答空間) -->
+            <div id="nav-panel" class="bg-white w-full lg:w-72 shrink-0 rounded-2xl shadow-xl p-6 flex flex-col lg:overflow-y-auto border border-gray-100">
                 <h3 class="font-extrabold text-gray-800 mb-4 border-b border-gray-100 pb-2">題目導覽</h3>
                 
                 <div class="grid grid-cols-2 gap-2 text-xs mb-5 text-gray-600 font-medium">
@@ -256,7 +257,7 @@
                     <!-- 警告訊息將在這裡生成 -->
                 </div>
                 <div class="flex justify-end gap-3">
-                    <button onclick="closeEndExamModal()" class="px-5 py-2.5 bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold rounded-xl transition">
+                    <button onclick="closeEndExamModal()" class="px-5 py-2.5 bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold rounded-xl transition">
                         繼續作答 (Cancel)
                     </button>
                     <button onclick="forceSubmitExam()" class="px-5 py-2.5 bg-red-600 hover:bg-red-700 text-white font-bold rounded-xl shadow-md transition">
@@ -333,7 +334,7 @@
             { q: "An administrator notices that several users are logging in from suspicious IP addresses. After speaking with the users, the administrator resets the affected users' passwords. Which of the following should the administrator implement to prevent this type of attack from succeeding in the future?", options: ["Multifactor authentication", "Permissions assignment", "Access management", "Password complexity"], answer: [0] },
             { q: "An employee receives a text message that appears to have been sent by the payroll department and is asking for credential verification. Which of the following social engineering techniques are being attempted? (Choose two.)", options: ["Typosquatting", "Phishing", "Impersonation", "Vishing", "Smishing", "Misinformation"], answer: [2, 4] },
             { q: "Several employees received a fraudulent text message from someone claiming to be the CEO requesting gift cards. Which of the following are the best responses to this situation? (Choose two.)", options: ["Cancel current employee recognition gift cards.", "Add a smishing exercise to the annual company training.", "Issue a general email warning to the company.", "Have the CEO change phone numbers.", "Conduct a forensic investigation on the CEO's phone.", "Implement mobile device management."], answer: [1, 2] },
-            { q: "A company has begun labeling all laptops with asset inventory stickers and associating them with employee IDs. Which of the following security benefits do these actions provide? (Choose two.)", options: ["If a security incident occurs on the device, the correct employee can be notified.", "The security team will be able to send user awareness training to the appropriate device.", "Users can be mapped to their devices when configuring software MFA tokens.", "User-based firewall policies can be correctly targeted to the appropriate laptops.", "When conducting penetration testing, the team will be able to target the desired laptops.", "Company data can be accounted for when the employee leaves the organization."], answer: [0, 5] },
+            { q: "A company has begun labeling all laptops with asset inventory stickers and associating them with employee IDs. Which of the following security benefits do these actions provide? (Choose two.)", options: ["If a security incident occurs on the device, the correct employee can be notified.", "The security team will be able to send user awareness training to the appropriate device.", "Users can be mapped to their devices when configuring software MFA tokens.", "User-based firewall policies can be correctly targeted to the appropriate laptops.", "When conducting penetration testing, the security team will be able to target the desired laptops.", "Company data can be accounted for when the employee leaves the organization."], answer: [0, 5] },
             { q: "Which of the following must be considered when designing a high-availability network? (Choose two.)", options: ["Ease of recovery", "Ability to patch", "Physical isolation", "Responsiveness", "Attack surface", "Extensible authentication"], answer: [0, 3] },
             { q: "A technician needs to apply a high-priority patch to a production system. Which of the following steps should be taken first?", options: ["Air gap the system.", "Move the system to a different network segment.", "Create a change control request.", "Apply the patch to the system."], answer: [2] },
             { q: "Which of the following describes the reason root cause analysis should be conducted as part of incident response?", options: ["To gather IoCs for the investigation", "To discover which systems have been affected", "To eradicate any trace of malware on the network", "To prevent future incidents of the same nature"], answer: [3] },
@@ -357,7 +358,7 @@
             { q: "Which of the following is the best way to consistently determine on a daily basis whether security settings on servers have been modified?", options: ["Automation", "Compliance checklist", "Attestation", "Manual audit"], answer: [0] },
             { q: "Which of the following tools can assist with detecting an employee who has accidentally emailed a file containing a customer's PII?", options: ["SCAP", "NetFlow", "Antivirus", "DLP"], answer: [3] },
             { q: "Regular expressions are included in source code to remove special characters from variables set by forms in a web application. Which of the following best explains the security technique?", options: ["Identify embedded keys", "Code debugging", "Input validation", "Static code analysis"], answer: [2] },
-            { q: "A security analyst is reviewing the organizational performance of a recent phishing campaign. The user click-through rate exceeded the acceptable risk threshold. To reduce the impact when a user clicks a link, which should the analyst do?", options: ["Place posters around the office", "Implement email security filters", "Update the EDR policies to block automatic execution of downloaded programs", "Create additional training for users"], answer: [2] },
+            { q: "A security analyst is reviewing the organizational performance of a recent phishing campaign. The user click-through rate exceeded the acceptable risk threshold. To reduce the impact when a user clicks a link, which should the analyst do?", options: ["Update the EDR policies to block automatic execution of downloaded programs", "Place posters around the office", "Implement email security filters", "Create additional training for users"], answer: [0] },
             { q: "Which of the following has been implemented when a host-based firewall on a legacy Linux system allows connections from only specific internal IP addresses?", options: ["Compensating control", "Network segmentation", "Transfer of risk", "SNMP traps"], answer: [0] },
             { q: "The management team notices that new accounts set up manually do not always have correct access or permissions. Which automation technique should be used to streamline account creation?", options: ["Guard rail script", "Ticketing workflow", "Escalation script", "User provisioning script"], answer: [3] },
             { q: "A company is planning to set up a SIEM system and assign an analyst to review the logs on a weekly basis. Which of the following types of controls is the company setting up?", options: ["Corrective", "Preventive", "Detective", "Deterrent"], answer: [2] },
