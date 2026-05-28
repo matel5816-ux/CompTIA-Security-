@@ -292,8 +292,15 @@
         </button>
 
         <!-- 返回頂部浮動按鈕 -->
-        <button id="scroll-to-top-btn" class="fixed bottom-20 right-4 w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:scale-110 z-40" onclick="scrollToTop()" title="返回頂部">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+        <button id="scroll-to-top-btn" class="fixed bottom-8 right-6 group flex flex-col items-center gap-2 opacity-0 invisible transition-all duration-300 z-40" onclick="scrollToTop()" title="返回頂部">
+            <div class="relative">
+                <div class="w-14 h-14 bg-gradient-to-br from-rose-500 to-orange-500 text-white rounded-full shadow-xl flex items-center justify-center hover:scale-110 transition-transform cursor-pointer animate-pulse">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+                </div>
+                <div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs font-semibold px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                    回到頂部
+                </div>
+            </div>
         </button>
 
         <!-- 手機抽屜：題目導覽 -->
@@ -1481,15 +1488,9 @@
         // 監聽結果頁面的滾動事件，顯示/隱藏回頂部按鈕
         function handleResultPageScroll() {
             const scrollBtn = document.getElementById('scroll-to-top-btn');
-            const scrollThreshold = 300; // 當滾動超過 300px 時顯示按鈕
-
-            if (window.scrollY > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
-                scrollBtn.classList.remove('opacity-0', 'invisible');
-                scrollBtn.classList.add('opacity-100', 'visible');
-            } else {
-                scrollBtn.classList.add('opacity-0', 'invisible');
-                scrollBtn.classList.remove('opacity-100', 'visible');
-            }
+            // 在結果頁面上始終顯示回頂部按鈕
+            scrollBtn.classList.remove('opacity-0', 'invisible');
+            scrollBtn.classList.add('opacity-100', 'visible');
         }
 
         // 在顯示結果頁面時添加滾動監聽
