@@ -6,37 +6,66 @@
     <title>CompTIA Security+ (SY0-701) 專業模擬考場</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f3f4f6; }
-        
-        /* 單選按鈕樣式 */
-        .radio-custom:checked + label { background-color: #ebf5ff; border-color: #3b82f6; }
-        .radio-custom:checked + label .radio-circle { border-color: #3b82f6; background-color: #3b82f6; }
-        .radio-custom:checked + label .radio-circle::after {
-            content: ''; display: block; width: 8px; height: 8px; background: white; border-radius: 50%; margin: 3px auto;
-        }
-        
-        /* 多選按鈕樣式 (Checkbox) */
-        .checkbox-custom:checked + label { background-color: #f0fdf4; border-color: #10b981; }
-        .checkbox-custom:checked + label .checkbox-square { border-color: #10b981; background-color: #10b981; }
-        .checkbox-custom:checked + label .checkbox-square::after {
-            content: '✓'; display: block; color: white; font-size: 12px; font-weight: bold; text-align: center; line-height: 16px;
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #000000;
+            color: #e5e5e5;
         }
 
-        /* 導覽網格樣式 */
+        /* 全局滾動條（深色）*/
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: #262626; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #404040; }
+
+        /* 單選按鈕樣式 (深色) */
+        .radio-custom:checked + label {
+            background-color: #171717;
+            border-color: #ffffff;
+        }
+        .radio-custom:checked + label .radio-circle {
+            border-color: #ffffff;
+            background-color: #ffffff;
+        }
+        .radio-custom:checked + label .radio-circle::after {
+            content: ''; display: block; width: 8px; height: 8px; background: #000000; border-radius: 50%; margin: 3px auto;
+        }
+
+        /* 多選按鈕樣式 (深色) */
+        .checkbox-custom:checked + label {
+            background-color: #171717;
+            border-color: #ffffff;
+        }
+        .checkbox-custom:checked + label .checkbox-square {
+            border-color: #ffffff;
+            background-color: #ffffff;
+        }
+        .checkbox-custom:checked + label .checkbox-square::after {
+            content: '✓'; display: block; color: #000000; font-size: 12px; font-weight: bold; text-align: center; line-height: 16px;
+        }
+
+        /* 導覽網格樣式 (深色) */
         .nav-btn { position: relative; }
-        .nav-btn.answered { background-color: #dbeafe; border-color: #3b82f6; color: #1e3a8a; }
-        .nav-btn.current { box-shadow: 0 0 0 2px #1d4ed8; font-weight: bold; }
-        .nav-btn .flag-icon { 
-            display: none; position: absolute; top: -4px; right: -4px; 
-            width: 12px; height: 12px; background-color: #eab308; 
-            border-radius: 50%; border: 2px solid white;
+        .nav-btn.answered {
+            background-color: #262626;
+            border-color: #ffffff;
+            color: #ffffff;
+        }
+        .nav-btn.current {
+            box-shadow: 0 0 0 2px #ffffff;
+            font-weight: bold;
+        }
+        .nav-btn .flag-icon {
+            display: none; position: absolute; top: -4px; right: -4px;
+            width: 12px; height: 12px; background-color: #fbbf24;
+            border-radius: 50%; border: 2px solid #0a0a0a;
         }
         .nav-btn.flagged .flag-icon { display: block; }
-        
-        /* AI 解析內容樣式 */
-        .ai-markdown strong { color: #3730a3; font-weight: 700; }
-        .ai-markdown em { color: #4338ca; font-style: normal; font-weight: 600; }
-        .ai-markdown { line-height: 1.6; }
+
+        /* AI 解析內容樣式 (深色) */
+        .ai-markdown strong { color: #ffffff; font-weight: 700; }
+        .ai-markdown em { color: #d4d4d4; font-style: normal; font-weight: 600; }
+        .ai-markdown { line-height: 1.6; color: #d4d4d4; }
         .ai-markdown br { margin-bottom: 0.5rem; }
 
         /* 手機優化：底部固定導航 */
@@ -44,16 +73,16 @@
             .mobile-sticky-nav {
                 position: sticky;
                 bottom: 0;
-                background: white;
+                background: #0a0a0a;
                 margin-left: -1.5rem;
                 margin-right: -1.5rem;
                 padding-left: 1.5rem;
                 padding-right: 1.5rem;
                 padding-bottom: 0.75rem;
-                box-shadow: 0 -4px 12px rgba(0,0,0,0.08);
+                box-shadow: 0 -4px 12px rgba(0,0,0,0.6);
+                border-top: 1px solid #262626;
                 z-index: 20;
             }
-            /* 手機上選項加大點擊範圍 */
             #options-container label {
                 padding: 1rem 1rem !important;
                 min-height: 56px;
@@ -63,14 +92,13 @@
                 width: 1.5rem !important;
                 height: 1.5rem !important;
             }
-            /* 手機上題目導覽格子加大 */
             .nav-btn {
                 min-height: 40px;
                 font-size: 0.9rem;
             }
         }
 
-        /* 浮動按鈕 (手機顯示題目導覽) - 只在考試中顯示 */
+        /* 浮動按鈕 (深色) */
         .fab-nav {
             position: fixed;
             bottom: 5rem;
@@ -78,29 +106,28 @@
             width: 3.5rem;
             height: 3.5rem;
             border-radius: 9999px;
-            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-            color: white;
+            background: #ffffff;
+            color: #000000;
             display: none;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 14px rgba(99,102,241,0.45);
+            box-shadow: 0 4px 20px rgba(255,255,255,0.15);
             z-index: 30;
             cursor: pointer;
-            border: none;
+            border: 1px solid #404040;
             font-size: 1.25rem;
             font-weight: bold;
         }
-        /* 預設隱藏，僅在考試中且為手機螢幕時透過 .fab-nav-active 顯示 */
         @media (max-width: 1023px) {
             .fab-nav.fab-nav-active { display: flex; }
         }
 
-        /* 抽屜式題目導覽 (手機) */
+        /* 抽屜式題目導覽 (深色) */
         .nav-drawer-backdrop {
             position: fixed;
             inset: 0;
-            background: rgba(15,23,42,0.6);
-            backdrop-filter: blur(4px);
+            background: rgba(0,0,0,0.85);
+            backdrop-filter: blur(6px);
             z-index: 40;
             display: none;
         }
@@ -110,7 +137,8 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: white;
+            background: #0a0a0a;
+            border-top: 1px solid #262626;
             border-radius: 1.5rem 1.5rem 0 0;
             padding: 1.5rem;
             max-height: 75vh;
@@ -118,12 +146,13 @@
             z-index: 41;
             transform: translateY(100%);
             transition: transform 0.3s ease-out;
+            color: #e5e5e5;
         }
         .nav-drawer.show { transform: translateY(0); }
 
-        /* 翻譯解析內容自適應 */
+        /* 翻譯解析內容 (深色) */
         .zh-explanation { font-size: 0.95rem; line-height: 1.65; }
-        .zh-explanation h4 { font-size: 1rem; font-weight: 800; margin-bottom: 0.5rem; }
+        .zh-explanation h4 { font-size: 1rem; font-weight: 800; margin-bottom: 0.5rem; color: #ffffff; }
         .zh-explanation .option-block {
             padding: 0.75rem;
             border-radius: 0.5rem;
@@ -131,167 +160,198 @@
             border-left: 4px solid;
         }
         .zh-explanation .opt-correct {
-            background: #ecfdf5;
+            background: #052e1a;
             border-color: #10b981;
-            color: #064e3b;
+            color: #6ee7b7;
         }
         .zh-explanation .opt-wrong {
-            background: #fef2f2;
+            background: #2a0e0e;
             border-color: #ef4444;
-            color: #7f1d1d;
+            color: #fca5a5;
         }
+
+        /* Input 深色 */
+        input[type="number"], input[type="text"], input[type="password"] {
+            color-scheme: dark;
+        }
+
+        /* BEATPORT-style 字距 */
+        .tracking-brand { letter-spacing: 0.35em; }
+        .tracking-label { letter-spacing: 0.25em; }
     </style>
 </head>
-<body class="text-gray-800 h-screen flex flex-col relative">
+<body class="text-neutral-200 h-screen flex flex-col relative bg-black">
 
     <!-- 全新設計的 Header (加入專屬漸層與徽章設計) -->
-    <header class="bg-slate-900 text-white p-5 shadow-xl flex justify-between items-center shrink-0 z-10 border-b-4 border-indigo-500">
+    <header class="bg-black text-white px-5 sm:px-8 py-4 sm:py-5 flex justify-between items-center shrink-0 z-10 border-b border-neutral-800">
         <div>
-            <h1 class="text-2xl font-extrabold tracking-tight flex items-baseline gap-2">
-                CompTIA Security+ <span class="text-indigo-400 font-semibold text-lg">SY0-701</span>
+            <h1 class="text-xl sm:text-2xl font-black tracking-tight flex items-baseline gap-2 text-white">
+                CompTIA Security+ <span class="text-neutral-500 font-semibold text-base sm:text-lg">SY0-701</span>
             </h1>
-            <div class="mt-1.5 flex items-center">
-                <span class="bg-indigo-600/50 text-indigo-100 text-[10px] px-2 py-0.5 rounded uppercase font-bold tracking-widest mr-2 border border-indigo-400/30">專業模擬考場</span>
-                <span class="text-xs text-slate-300">
-                    Designed by <span class="bg-gradient-to-r from-amber-300 via-yellow-400 to-orange-500 text-transparent bg-clip-text font-black text-sm italic tracking-widest ml-1 drop-shadow">EnChung</span>
+            <div class="mt-1.5 flex items-center gap-2.5">
+                <span class="bg-neutral-900 text-neutral-400 text-[9px] sm:text-[10px] px-2 py-0.5 uppercase font-bold tracking-label border border-neutral-700">模擬考場</span>
+                <span class="text-[10px] sm:text-xs text-neutral-500 tracking-label uppercase">
+                    Designed by <span class="text-white font-bold ml-1">EnChung</span>
                 </span>
             </div>
         </div>
-        <div id="header-stats" class="hidden text-right flex items-center space-x-6">
-            <div id="timer-container" class="hidden flex items-center bg-slate-800/80 border border-slate-700 px-3 py-1.5 rounded-lg shadow-inner">
-                <svg class="w-5 h-5 mr-2 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                <span id="timer-text" class="font-mono text-lg font-bold text-amber-400 tracking-wider">90:00</span>
+        <div id="header-stats" class="hidden text-right flex items-center space-x-4 sm:space-x-6">
+            <div id="timer-container" class="hidden flex items-center bg-neutral-900 border border-neutral-700 px-3 py-1.5">
+                <svg class="w-5 h-5 mr-2 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span id="timer-text" class="font-mono text-lg font-bold text-white tracking-wider tabular-nums">90:00</span>
             </div>
-            <p class="font-semibold text-lg hidden sm:block text-slate-200">進度: <span id="progress-text" class="text-white">1 / 10</span></p>
+            <p class="font-medium text-sm sm:text-base hidden sm:block text-neutral-400 tracking-wider">PROGRESS · <span id="progress-text" class="text-white font-bold tabular-nums">1 / 10</span></p>
         </div>
     </header>
 
     <!-- Main Content (手機版面允許主視窗滾動) -->
     <main class="flex-grow overflow-y-auto p-4 sm:p-6 flex justify-center items-start">
         
-        <!-- Start Screen (首頁) -->
-        <div id="start-screen" class="w-full max-w-5xl mt-4 sm:mt-6 bg-white rounded-3xl border border-neutral-200 shadow-sm overflow-hidden px-5 sm:px-10 lg:px-14">
+        <!-- Start Screen (首頁) - 全黑 BEATPORT 風 -->
+        <div id="start-screen" class="w-full max-w-5xl mt-4 sm:mt-6 bg-black border border-neutral-800 overflow-hidden px-6 sm:px-10 lg:px-16 relative">
+            <!-- 微弱光暈裝飾（極淡）-->
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
 
-            <!-- ============ HERO (壓縮、低調) ============ -->
-            <section class="py-7 sm:py-10">
-                <div class="flex items-center gap-2.5 mb-4 sm:mb-5">
-                    <span class="w-1.5 h-1.5 rounded-full bg-neutral-900"></span>
-                    <span class="text-[10px] sm:text-xs font-semibold text-neutral-500 tracking-[0.25em] uppercase">SY0-701 模擬考試系統</span>
+            <!-- ============ HERO (大氣、留白) ============ -->
+            <section class="pt-12 pb-10 sm:pt-20 sm:pb-16 relative">
+                <!-- 細小狀態列 -->
+                <div class="flex items-center gap-2.5 mb-8 sm:mb-12">
+                    <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+                    <span class="text-[10px] sm:text-xs font-light text-neutral-500 tracking-label uppercase">SY0-701 / Simulator</span>
                 </div>
 
-                <h1 class="font-black text-neutral-900 leading-[1.2] tracking-tight mb-3 sm:mb-4
-                           text-2xl sm:text-3xl lg:text-4xl">
-                    準備 Security+ 認證考試。
-                </h1>
+                <!-- BEATPORT 風大標題 -->
+                <div class="mb-6 sm:mb-8">
+                    <h1 class="font-black text-white text-center sm:text-left
+                               text-4xl sm:text-6xl lg:text-7xl
+                               tracking-brand
+                               leading-[1.05]">
+                        SECURITY+
+                    </h1>
+                    <p class="italic text-neutral-400 text-center sm:text-left mt-2 sm:mt-3
+                              text-base sm:text-lg
+                              font-light tracking-wider"
+                       style="font-family: 'Times New Roman', Georgia, serif;">
+                        Chinese Edition · SY0-701
+                    </p>
+                </div>
 
-                <p class="text-neutral-500 text-sm sm:text-[15px] leading-relaxed max-w-2xl mb-5 sm:mb-7">
+                <!-- 簡介 -->
+                <p class="text-neutral-500 text-sm sm:text-base leading-relaxed max-w-2xl text-center sm:text-left mx-auto sm:mx-0 mb-8 sm:mb-10">
                     605 道完整考古題、Google 等級中文翻譯，每題附觀念解析與重要單字。
                 </p>
 
-                <!-- Inline 統計（移除 FREE）-->
-                <div class="flex flex-wrap items-baseline gap-x-5 sm:gap-x-8 gap-y-2 text-sm">
-                    <div class="flex items-baseline gap-1.5">
-                        <span class="text-lg sm:text-xl font-black text-neutral-900 tabular-nums">605</span>
-                        <span class="text-xs sm:text-sm text-neutral-500">道題目</span>
+                <!-- 統計細線分隔 -->
+                <div class="flex flex-wrap items-baseline justify-center sm:justify-start gap-x-6 sm:gap-x-10 gap-y-3">
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-2xl sm:text-3xl font-black text-white tabular-nums">605</span>
+                        <span class="text-[10px] sm:text-xs text-neutral-500 tracking-label uppercase">Questions</span>
                     </div>
-                    <div class="w-px h-4 bg-neutral-200"></div>
-                    <div class="flex items-baseline gap-1.5">
-                        <span class="text-lg sm:text-xl font-black text-neutral-900 tabular-nums">100%</span>
-                        <span class="text-xs sm:text-sm text-neutral-500">中文翻譯</span>
+                    <div class="w-px h-5 bg-neutral-800"></div>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-2xl sm:text-3xl font-black text-white tabular-nums">100%</span>
+                        <span class="text-[10px] sm:text-xs text-neutral-500 tracking-label uppercase">中文化</span>
                     </div>
-                    <div class="w-px h-4 bg-neutral-200"></div>
-                    <div class="flex items-baseline gap-1.5">
-                        <span class="text-lg sm:text-xl font-black text-neutral-900 tabular-nums">250+</span>
-                        <span class="text-xs sm:text-sm text-neutral-500">重要單字</span>
+                    <div class="w-px h-5 bg-neutral-800"></div>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-2xl sm:text-3xl font-black text-white tabular-nums">250+</span>
+                        <span class="text-[10px] sm:text-xs text-neutral-500 tracking-label uppercase">Glossary</span>
                     </div>
                 </div>
             </section>
 
             <!-- ============ 測驗模式 (主角，大卡片) ============ -->
-            <section class="py-7 sm:py-10 border-t border-neutral-200">
-                <div class="flex items-end justify-between mb-6 sm:mb-8">
+            <section class="py-10 sm:py-14 border-t border-neutral-800">
+                <div class="flex items-end justify-between mb-8 sm:mb-10">
                     <div>
-                        <h2 class="text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight mb-1">選擇測驗模式</h2>
-                        <p class="text-xs sm:text-sm text-neutral-500">點擊任一卡片即可開始</p>
+                        <div class="text-[10px] sm:text-xs text-neutral-500 tracking-label uppercase mb-2">— Select Mode</div>
+                        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight">選擇測驗模式</h2>
                     </div>
-                    <span class="text-[10px] sm:text-xs text-neutral-400 font-medium tracking-[0.2em] uppercase hidden sm:inline">3 Modes</span>
+                    <span class="text-[10px] sm:text-xs text-neutral-600 font-light tracking-label uppercase hidden sm:inline">003 modes</span>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4">
-                    <!-- Mode 1: Full Exam (反白：黑底白字，強調推薦) -->
+                    <!-- Mode 1: Full Exam (反白：白底黑字，強調推薦) -->
                     <button onclick="promptAuth('full')"
-                            class="group relative text-left bg-neutral-900 hover:bg-neutral-800 text-white rounded-2xl p-6 sm:p-7 transition-all hover:shadow-2xl hover:shadow-neutral-900/20 hover:-translate-y-1 flex flex-col cursor-pointer min-h-[260px] sm:min-h-[300px]">
-                        <div class="flex items-start justify-between mb-5 sm:mb-6">
-                            <div class="text-3xl sm:text-4xl">🚀</div>
-                            <div class="flex items-center gap-1.5 text-[9px] sm:text-[10px] font-bold text-neutral-400 tracking-[0.2em] uppercase">
-                                <span class="w-1 h-1 rounded-full bg-white"></span>Recommended
+                            class="group relative text-left bg-white text-black rounded-none p-6 sm:p-7 transition-all hover:shadow-[0_0_40px_rgba(255,255,255,0.15)] flex flex-col cursor-pointer min-h-[280px] sm:min-h-[320px] overflow-hidden">
+                        <div class="flex items-start justify-between mb-6 sm:mb-8">
+                            <div class="text-[10px] font-light text-neutral-500 tracking-label uppercase">001</div>
+                            <div class="flex items-center gap-1.5 text-[9px] sm:text-[10px] font-medium text-neutral-500 tracking-label uppercase">
+                                <span class="w-1 h-1 rounded-full bg-black"></span>Recommended
                             </div>
                         </div>
-                        <h3 class="text-lg sm:text-xl font-black text-white mb-2 tracking-tight">正式考場模擬</h3>
-                        <p class="text-xs sm:text-sm text-neutral-400 flex-grow leading-relaxed mb-5 sm:mb-6">
+                        <div class="text-3xl sm:text-4xl mb-4 sm:mb-5">🚀</div>
+                        <h3 class="text-lg sm:text-xl font-black text-black mb-2 tracking-tight">正式考場模擬</h3>
+                        <p class="text-xs sm:text-sm text-neutral-600 flex-grow leading-relaxed mb-5 sm:mb-6">
                             90 分鐘倒數計時，依官方標準隨機抽取
-                            <span class="font-semibold text-white">75 – 90 題</span>。完全模擬正式考試環境。
+                            <span class="font-bold text-black">75 – 90 題</span>。完全模擬正式考試環境。
                         </p>
                         <div class="mt-auto flex items-center justify-between text-sm font-bold">
-                            <span>開始模擬</span>
-                            <svg class="w-5 h-5 transform group-hover:translate-x-1 transition" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            <span class="tracking-wider">開始模擬</span>
+                            <svg class="w-5 h-5 transform group-hover:translate-x-2 transition" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                         </div>
                     </button>
 
-                    <!-- Mode 2: Quick Test (白底) -->
+                    <!-- Mode 2: Quick Test (黑底白字) -->
                     <button onclick="promptAuth('quick')"
-                            class="group text-left bg-white border border-neutral-200 hover:border-neutral-900 rounded-2xl p-6 sm:p-7 transition-all hover:shadow-xl hover:-translate-y-1 flex flex-col cursor-pointer min-h-[260px] sm:min-h-[300px]">
-                        <div class="text-3xl sm:text-4xl mb-5 sm:mb-6">⏱️</div>
-                        <h3 class="text-lg sm:text-xl font-black text-neutral-900 mb-2 tracking-tight">快速測驗</h3>
+                            class="group text-left bg-black border border-neutral-800 hover:border-white rounded-none p-6 sm:p-7 transition-all hover:bg-neutral-950 flex flex-col cursor-pointer min-h-[280px] sm:min-h-[320px]">
+                        <div class="flex items-start justify-between mb-6 sm:mb-8">
+                            <div class="text-[10px] font-light text-neutral-600 tracking-label uppercase">002</div>
+                        </div>
+                        <div class="text-3xl sm:text-4xl mb-4 sm:mb-5">⏱️</div>
+                        <h3 class="text-lg sm:text-xl font-black text-white mb-2 tracking-tight">快速測驗</h3>
                         <p class="text-xs sm:text-sm text-neutral-500 flex-grow leading-relaxed mb-5 sm:mb-6">
                             無時間壓力，固定隨機抽取
-                            <span class="font-semibold text-neutral-900">10 題</span>。
+                            <span class="font-bold text-white">10 題</span>。
                             適合通勤或零碎時間觀念複習。
                         </p>
-                        <div class="mt-auto flex items-center justify-between text-sm font-bold text-neutral-900">
-                            <span>開始練習</span>
-                            <svg class="w-5 h-5 transform group-hover:translate-x-1 transition" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        <div class="mt-auto flex items-center justify-between text-sm font-bold text-white">
+                            <span class="tracking-wider">開始練習</span>
+                            <svg class="w-5 h-5 transform group-hover:translate-x-2 transition" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                         </div>
                     </button>
 
-                    <!-- Mode 3: Custom (白底) -->
+                    <!-- Mode 3: Custom (黑底白字) -->
                     <button onclick="promptAuth('custom')"
-                            class="group text-left bg-white border border-neutral-200 hover:border-neutral-900 rounded-2xl p-6 sm:p-7 transition-all hover:shadow-xl hover:-translate-y-1 flex flex-col cursor-pointer min-h-[260px] sm:min-h-[300px]">
-                        <div class="text-3xl sm:text-4xl mb-5 sm:mb-6">⚙️</div>
-                        <h3 class="text-lg sm:text-xl font-black text-neutral-900 mb-2 tracking-tight">自訂題數</h3>
-                        <p class="text-xs sm:text-sm text-neutral-500 leading-relaxed mb-3">自由決定題量，依您所需練習。</p>
-                        <div class="bg-neutral-50 border border-neutral-200 rounded-lg flex items-center gap-2 px-3 py-2 mb-5 sm:mb-6" onclick="event.stopPropagation()">
-                            <label for="custom-num" class="text-xs text-neutral-500 font-medium whitespace-nowrap">題數</label>
-                            <input type="number" id="custom-num" min="1" max="605" value="20"
-                                   class="w-full text-right border-0 px-1 py-0.5 text-base font-bold text-neutral-900 focus:outline-none bg-transparent tabular-nums">
-                            <span class="text-xs text-neutral-400 font-medium">題</span>
+                            class="group text-left bg-black border border-neutral-800 hover:border-white rounded-none p-6 sm:p-7 transition-all hover:bg-neutral-950 flex flex-col cursor-pointer min-h-[280px] sm:min-h-[320px]">
+                        <div class="flex items-start justify-between mb-6 sm:mb-8">
+                            <div class="text-[10px] font-light text-neutral-600 tracking-label uppercase">003</div>
                         </div>
-                        <div class="mt-auto flex items-center justify-between text-sm font-bold text-neutral-900">
-                            <span>開始練習</span>
-                            <svg class="w-5 h-5 transform group-hover:translate-x-1 transition" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        <div class="text-3xl sm:text-4xl mb-4 sm:mb-5">⚙️</div>
+                        <h3 class="text-lg sm:text-xl font-black text-white mb-2 tracking-tight">自訂題數</h3>
+                        <p class="text-xs sm:text-sm text-neutral-500 leading-relaxed mb-4">自由決定題量，依您所需練習。</p>
+                        <div class="bg-neutral-900 border border-neutral-800 flex items-center gap-2 px-3 py-2.5 mb-5 sm:mb-6" onclick="event.stopPropagation()">
+                            <label for="custom-num" class="text-[10px] text-neutral-500 font-medium tracking-label uppercase whitespace-nowrap">題數</label>
+                            <input type="number" id="custom-num" min="1" max="605" value="20"
+                                   class="w-full text-right border-0 px-1 py-0.5 text-base font-bold text-white focus:outline-none bg-transparent tabular-nums">
+                            <span class="text-[10px] text-neutral-600 font-medium">題</span>
+                        </div>
+                        <div class="mt-auto flex items-center justify-between text-sm font-bold text-white">
+                            <span class="tracking-wider">開始練習</span>
+                            <svg class="w-5 h-5 transform group-hover:translate-x-2 transition" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                         </div>
                     </button>
                 </div>
             </section>
 
             <!-- ============ 系統特色 (極簡兩欄，次要區塊) ============ -->
-            <section class="py-6 sm:py-8 border-t border-neutral-200">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-10">
+            <section class="py-8 sm:py-10 border-t border-neutral-800">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-12">
                     <div class="flex items-start gap-3">
-                        <div class="w-9 h-9 rounded-lg bg-neutral-100 border border-neutral-200 flex items-center justify-center flex-shrink-0">
-                            <svg class="w-4 h-4 text-neutral-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        <div class="w-9 h-9 border border-neutral-800 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-4 h-4 text-neutral-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                         </div>
                         <div class="min-w-0">
-                            <h4 class="text-sm font-bold text-neutral-900 mb-1">作答時即時解析</h4>
+                            <h4 class="text-sm font-bold text-white mb-1 tracking-wider">作答時即時解析</h4>
                             <p class="text-xs sm:text-[13px] text-neutral-500 leading-relaxed">點擊翻譯及題目解析按鈕，看中文翻譯、選項分析、重要單字。</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-3">
-                        <div class="w-9 h-9 rounded-lg bg-neutral-100 border border-neutral-200 flex items-center justify-center flex-shrink-0">
-                            <svg class="w-4 h-4 text-neutral-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+                        <div class="w-9 h-9 border border-neutral-800 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-4 h-4 text-neutral-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
                         </div>
                         <div class="min-w-0">
-                            <h4 class="text-sm font-bold text-neutral-900 mb-1">交卷後完整詳解</h4>
+                            <h4 class="text-sm font-bold text-white mb-1 tracking-wider">交卷後完整詳解</h4>
                             <p class="text-xs sm:text-[13px] text-neutral-500 leading-relaxed">結果頁面點展開完整詳解，看每題的觀念分析與正解原因。</p>
                         </div>
                     </div>
@@ -299,85 +359,85 @@
             </section>
 
             <!-- ============ Footer ============ -->
-            <footer class="py-5 sm:py-6 border-t border-neutral-200">
-                <div class="flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-neutral-400">
+            <footer class="py-6 sm:py-8 border-t border-neutral-800">
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-2 text-[10px] sm:text-xs text-neutral-600 tracking-label uppercase">
                     <span>© Architecture & UI/UX Experience</span>
-                    <span class="tracking-[0.2em] uppercase">Designed by
-                        <span class="text-neutral-700 font-bold">EnChung</span>
+                    <span>Designed by
+                        <span class="text-white font-bold">EnChung</span>
                     </span>
                 </div>
             </footer>
         </div>
 
-        <!-- Quiz Container (響應式高度調整：手機上高度自適應，桌機上維持獨立滾動) -->
+        <!-- Quiz Container (深色) -->
         <div id="quiz-container" class="max-w-6xl w-full hidden flex-col lg:flex-row gap-6 h-auto lg:h-[calc(100vh-140px)] items-stretch">
-            
+
             <!-- Left: Question Area -->
-            <div id="quiz-screen" class="bg-white flex-grow rounded-2xl shadow-xl p-6 sm:p-8 flex flex-col lg:overflow-y-auto relative border border-gray-100">
-                
-                <!-- 響應式 Header：手機上直列排列以獲得最大空間 -->
-                <div class="mb-4 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 border-b border-gray-100 pb-4">
+            <div id="quiz-screen" class="bg-neutral-950 flex-grow p-6 sm:p-8 flex flex-col lg:overflow-y-auto relative border border-neutral-800">
+
+                <!-- Header -->
+                <div class="mb-4 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 border-b border-neutral-800 pb-4">
                     <div class="flex items-center justify-between sm:justify-start gap-3 w-full sm:w-auto">
-                        <h3 class="text-2xl font-black text-gray-800 flex items-center gap-3">
-                            Question <span id="q-number" class="text-indigo-600"></span>
+                        <h3 class="text-2xl font-black text-white flex items-center gap-3 tracking-tight">
+                            Question <span id="q-number" class="text-white"></span>
                         </h3>
-                        <span id="q-type-badge" class="px-2 py-1 text-xs font-bold rounded bg-gray-200 text-gray-700 shadow-sm">單選題</span>
+                        <span id="q-type-badge" class="px-2 py-1 text-xs font-bold bg-neutral-900 border border-neutral-700 text-neutral-300 tracking-wider">單選題</span>
                     </div>
-                    
-                    <label class="flex items-center justify-center cursor-pointer space-x-2 bg-amber-50 hover:bg-amber-100 border border-amber-200 px-3 py-1.5 rounded-lg transition shadow-sm w-full sm:w-auto">
-                        <input type="checkbox" id="flag-checkbox" class="w-4 h-4 text-amber-500 rounded border-amber-300 focus:ring-amber-500" onchange="toggleFlag()">
-                        <span class="text-sm font-bold text-amber-700 whitespace-nowrap">📌 標記稍後審閱</span>
+
+                    <label class="flex items-center justify-center cursor-pointer space-x-2 bg-neutral-900 hover:bg-neutral-800 border border-neutral-700 hover:border-amber-500 px-3 py-1.5 transition w-full sm:w-auto">
+                        <input type="checkbox" id="flag-checkbox" class="w-4 h-4 accent-amber-500" onchange="toggleFlag()">
+                        <span class="text-sm font-bold text-neutral-300 whitespace-nowrap">📌 標記稍後審閱</span>
                     </label>
                 </div>
-                
-                <!-- Question Text & In-Quiz AI Button -->
+
+                <!-- Question Text & Analysis Button -->
                 <div class="mb-4">
-                    <p id="q-text" class="text-lg text-gray-800 leading-relaxed font-semibold mb-4"></p>
-                    <button id="translate-btn" onclick="toggleAnalysis()" class="text-sm bg-gradient-to-r from-indigo-50 to-blue-50 hover:from-indigo-100 hover:to-blue-100 text-indigo-700 font-bold py-2 px-4 rounded-lg shadow-sm transition border border-indigo-200 flex items-center gap-2">
+                    <p id="q-text" class="text-lg text-neutral-100 leading-relaxed font-semibold mb-4"></p>
+                    <button id="translate-btn" onclick="toggleAnalysis()" class="text-sm bg-white hover:bg-neutral-200 text-black font-bold py-2 px-4 transition border border-white flex items-center gap-2 tracking-wider">
                         <span>✨</span> 中文翻譯及題目解析
                     </button>
                     <!-- Translation & Analysis Output -->
-                    <div id="translation-container" class="hidden mt-4 text-gray-800 text-sm">
+                    <div id="translation-container" class="hidden mt-4 text-neutral-200 text-sm">
                         <!-- AI HTML injected here -->
                     </div>
                 </div>
-                
+
                 <!-- Options -->
                 <div id="options-container" class="space-y-3 mb-8 flex-grow">
                     <!-- Options injected by JS -->
                 </div>
 
-                <!-- Footer Navigation (手機固定底部) -->
-                <div class="flex justify-between items-center gap-3 border-t border-gray-100 pt-4 lg:pt-6 mt-auto mobile-sticky-nav">
-                    <button id="prev-btn" onclick="prevQuestion()" class="bg-white hover:bg-gray-50 border border-gray-300 text-gray-700 font-bold py-3 px-4 sm:px-6 rounded-xl shadow-sm transition duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex-1 lg:flex-none inline-flex items-center justify-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <!-- Footer Navigation -->
+                <div class="flex justify-between items-center gap-3 border-t border-neutral-800 pt-4 lg:pt-6 mt-auto mobile-sticky-nav">
+                    <button id="prev-btn" onclick="prevQuestion()" class="bg-transparent hover:bg-neutral-900 border border-neutral-700 hover:border-white text-neutral-300 hover:text-white font-bold py-3 px-4 sm:px-6 transition disabled:opacity-30 disabled:cursor-not-allowed flex-1 lg:flex-none inline-flex items-center justify-center gap-2 tracking-wider">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
                         <span>上一題</span>
                     </button>
-                    <span class="lg:hidden text-sm font-bold text-gray-500"><span id="mobile-progress">1/10</span></span>
-                    <button id="next-btn" onclick="nextQuestion()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 sm:px-8 rounded-xl shadow-md transition duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex-1 lg:flex-none inline-flex items-center justify-center gap-2">
+                    <span class="lg:hidden text-sm font-bold text-neutral-400 tabular-nums"><span id="mobile-progress">1/10</span></span>
+                    <button id="next-btn" onclick="nextQuestion()" class="bg-white hover:bg-neutral-200 text-black font-bold py-3 px-4 sm:px-8 transition disabled:opacity-30 disabled:cursor-not-allowed flex-1 lg:flex-none inline-flex items-center justify-center gap-2 tracking-wider">
                         <span>下一題</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>
                     </button>
                 </div>
             </div>
 
-            <!-- Right: Navigation Panel (桌機顯示，手機隱藏改用 FAB+Drawer) -->
-            <div id="nav-panel" class="bg-white w-full lg:w-72 shrink-0 rounded-2xl shadow-xl p-6 hidden lg:flex flex-col lg:overflow-y-auto border border-gray-100">
-                <h3 class="font-extrabold text-gray-800 mb-4 border-b border-gray-100 pb-2">題目導覽</h3>
+            <!-- Right: Navigation Panel (深色) -->
+            <div id="nav-panel" class="bg-neutral-950 w-full lg:w-72 shrink-0 p-6 hidden lg:flex flex-col lg:overflow-y-auto border border-neutral-800">
+                <h3 class="font-bold text-white mb-4 border-b border-neutral-800 pb-2 tracking-widest text-xs uppercase">— Question Navigator</h3>
 
-                <div class="grid grid-cols-2 gap-2 text-xs mb-5 text-gray-600 font-medium">
-                    <div class="flex items-center"><span class="inline-block w-3 h-3 bg-gray-100 border border-gray-300 rounded-sm mr-2"></span>未作答</div>
-                    <div class="flex items-center"><span class="inline-block w-3 h-3 bg-blue-100 border border-blue-500 rounded-sm mr-2"></span>已作答</div>
-                    <div class="flex items-center"><span class="inline-block w-3 h-3 border-2 border-indigo-600 rounded-sm mr-2"></span>目前題目</div>
-                    <div class="flex items-center"><span class="inline-block w-3 h-3 bg-amber-400 rounded-full border border-white shadow-sm mr-2"></span>已標記</div>
+                <div class="grid grid-cols-2 gap-2 text-xs mb-5 text-neutral-400 font-medium">
+                    <div class="flex items-center"><span class="inline-block w-3 h-3 bg-neutral-900 border border-neutral-700 mr-2"></span>未作答</div>
+                    <div class="flex items-center"><span class="inline-block w-3 h-3 bg-neutral-800 border border-white mr-2"></span>已作答</div>
+                    <div class="flex items-center"><span class="inline-block w-3 h-3 border-2 border-white mr-2"></span>目前題目</div>
+                    <div class="flex items-center"><span class="inline-block w-3 h-3 bg-amber-400 rounded-full border border-neutral-900 shadow-sm mr-2"></span>已標記</div>
                 </div>
 
                 <div id="question-grid" class="grid grid-cols-5 gap-2 mb-6 flex-grow content-start">
                     <!-- Buttons injected by JS -->
                 </div>
 
-                <button onclick="openEndExamModal()" class="w-full bg-red-50 text-red-600 hover:bg-red-600 hover:text-white border border-red-200 font-bold py-3 px-4 rounded-xl shadow-sm transition duration-200 mt-auto">
-                    結束考試並交卷<br><span class="text-xs font-semibold opacity-80">(Submit Exam)</span>
+                <button onclick="openEndExamModal()" class="w-full bg-black text-red-400 hover:bg-red-600 hover:text-white border border-red-900 hover:border-red-600 font-bold py-3 px-4 transition mt-auto tracking-wider text-sm">
+                    結束考試並交卷
                 </button>
             </div>
         </div>
@@ -387,65 +447,66 @@
             ☰
         </button>
 
-        <!-- 返回頂部浮動按鈕 -->
+        <!-- 返回頂部浮動按鈕 (深色) -->
         <button id="scroll-to-top-btn" class="fixed bottom-8 right-6 group flex flex-col items-center gap-2 opacity-0 invisible transition-all duration-300 z-40" onclick="scrollToTop()" title="返回頂部">
             <div class="relative">
-                <div class="w-14 h-14 bg-gradient-to-br from-rose-500 to-orange-500 text-white rounded-full shadow-xl flex items-center justify-center hover:scale-110 transition-transform cursor-pointer animate-pulse">
+                <div class="w-14 h-14 bg-white text-black rounded-full shadow-[0_0_20px_rgba(255,255,255,0.15)] flex items-center justify-center hover:scale-110 transition-transform cursor-pointer border border-neutral-300">
                     <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
                 </div>
-                <div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs font-semibold px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                <div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-white text-black text-xs font-semibold px-3 py-1.5 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none border border-neutral-300">
                     回到頂部
                 </div>
             </div>
         </button>
 
-        <!-- 手機抽屜：題目導覽 -->
+        <!-- 手機抽屜：題目導覽 (深色) -->
         <div class="nav-drawer-backdrop" id="nav-drawer-backdrop" onclick="closeNavDrawer()"></div>
         <div class="nav-drawer" id="nav-drawer">
-            <div class="flex justify-between items-center mb-4 pb-3 border-b border-gray-100">
-                <h3 class="font-extrabold text-gray-800 text-lg">題目導覽</h3>
-                <button onclick="closeNavDrawer()" class="text-gray-500 hover:text-gray-700 text-2xl leading-none">×</button>
+            <div class="flex justify-between items-center mb-4 pb-3 border-b border-neutral-800">
+                <h3 class="font-bold text-white text-sm tracking-widest uppercase">— Question Navigator</h3>
+                <button onclick="closeNavDrawer()" class="text-neutral-400 hover:text-white text-2xl leading-none">×</button>
             </div>
-            <div class="grid grid-cols-2 gap-2 text-xs mb-4 text-gray-600 font-medium">
-                <div class="flex items-center"><span class="inline-block w-3 h-3 bg-gray-100 border border-gray-300 rounded-sm mr-2"></span>未作答</div>
-                <div class="flex items-center"><span class="inline-block w-3 h-3 bg-blue-100 border border-blue-500 rounded-sm mr-2"></span>已作答</div>
-                <div class="flex items-center"><span class="inline-block w-3 h-3 border-2 border-indigo-600 rounded-sm mr-2"></span>目前題目</div>
-                <div class="flex items-center"><span class="inline-block w-3 h-3 bg-amber-400 rounded-full border border-white shadow-sm mr-2"></span>已標記</div>
+            <div class="grid grid-cols-2 gap-2 text-xs mb-4 text-neutral-400 font-medium">
+                <div class="flex items-center"><span class="inline-block w-3 h-3 bg-neutral-900 border border-neutral-700 mr-2"></span>未作答</div>
+                <div class="flex items-center"><span class="inline-block w-3 h-3 bg-neutral-800 border border-white mr-2"></span>已作答</div>
+                <div class="flex items-center"><span class="inline-block w-3 h-3 border-2 border-white mr-2"></span>目前題目</div>
+                <div class="flex items-center"><span class="inline-block w-3 h-3 bg-amber-400 rounded-full border border-neutral-900 shadow-sm mr-2"></span>已標記</div>
             </div>
             <div id="question-grid-mobile" class="grid grid-cols-6 gap-2 mb-4">
                 <!-- Buttons injected by JS -->
             </div>
-            <button onclick="openEndExamModal(); closeNavDrawer();" class="w-full bg-red-50 text-red-600 hover:bg-red-600 hover:text-white border border-red-200 font-bold py-3 px-4 rounded-xl shadow-sm transition">
+            <button onclick="openEndExamModal(); closeNavDrawer();" class="w-full bg-black text-red-400 hover:bg-red-600 hover:text-white border border-red-900 hover:border-red-600 font-bold py-3 px-4 transition tracking-wider text-sm">
                 結束考試並交卷
             </button>
         </div>
 
-        <!-- Result Screen -->
-        <div id="result-screen" class="bg-white max-w-6xl w-full rounded-2xl shadow-xl p-6 sm:p-10 hidden my-4 border border-gray-100">
-            <div class="text-center mb-8 border-b border-gray-100 pb-8 relative">
-                <div class="absolute top-0 right-0 w-24 h-24 bg-green-50 rounded-bl-full -z-10 hidden" id="pass-bg"></div>
-                <div class="absolute top-0 right-0 w-24 h-24 bg-red-50 rounded-bl-full -z-10 hidden" id="fail-bg"></div>
-
-                <h2 class="text-3xl font-extrabold text-gray-800 mb-2">測驗結算報告</h2>
-                <p class="text-gray-500 text-sm mb-6 font-medium">依據 CompTIA 官方標準換算 (滿分 900 分，及格 750 分)</p>
-                <div class="inline-block bg-white border border-gray-200 rounded-3xl px-12 py-6 shadow-sm">
-                    <span class="text-6xl font-black text-indigo-900 tracking-tight" id="final-score">0</span>
-                    <span class="text-xl text-gray-400 font-bold"> / 900</span>
+        <!-- Result Screen (深色) -->
+        <div id="result-screen" class="bg-black max-w-6xl w-full p-6 sm:p-10 hidden my-4 border border-neutral-800">
+            <div class="text-center mb-8 border-b border-neutral-800 pb-8 relative">
+                <div class="text-[10px] sm:text-xs text-neutral-500 tracking-label uppercase mb-3">— Result Report</div>
+                <h2 class="text-3xl sm:text-4xl font-black text-white mb-2 tracking-tight">測驗結算報告</h2>
+                <p class="text-neutral-500 text-xs sm:text-sm mb-7 font-medium">依據 CompTIA 官方標準換算 · 滿分 900 / 及格 750</p>
+                <div class="inline-block bg-neutral-950 border border-neutral-800 px-10 sm:px-12 py-6">
+                    <span class="text-6xl font-black text-white tabular-nums tracking-tight" id="final-score">0</span>
+                    <span class="text-xl text-neutral-600 font-bold tabular-nums"> / 900</span>
                 </div>
-                <p id="pass-status" class="mt-6 font-black text-2xl"></p>
-                <p id="raw-score-text" class="mt-2 text-sm font-bold text-gray-500"></p>
+                <p id="pass-status" class="mt-6 font-black text-2xl tracking-tight"></p>
+                <p id="raw-score-text" class="mt-2 text-sm font-medium text-neutral-500 tabular-nums"></p>
+                <!-- 隱藏的舊背景元素（保留以免 JS 出錯）-->
+                <div class="hidden" id="pass-bg"></div>
+                <div class="hidden" id="fail-bg"></div>
             </div>
 
-            <!-- 快速導覽卡片區域 -->
-            <div class="mb-8 border border-indigo-200 rounded-2xl p-6 bg-indigo-50">
-                <div class="flex items-center justify-between mb-4">
-                    <h3 class="text-xl font-black text-gray-800 flex items-center gap-2">
-                        <span class="text-2xl">📊</span> 題目快速檢視 (點擊跳轉答題頁面)
+            <!-- 快速導覽 -->
+            <div class="mb-8 border border-neutral-800 p-6 bg-neutral-950">
+                <div class="flex items-center justify-between mb-4 flex-wrap gap-3">
+                    <h3 class="text-sm font-bold text-white flex items-center gap-2 tracking-widest uppercase">
+                        — Quick Navigator
                     </h3>
-                    <div class="text-xs font-bold text-gray-600 space-x-3 flex">
-                        <span class="flex items-center gap-1"><span class="w-3 h-3 bg-green-500 rounded-full"></span>答對</span>
+                    <div class="text-xs font-medium text-neutral-400 space-x-3 flex">
+                        <span class="flex items-center gap-1"><span class="w-3 h-3 bg-emerald-500 rounded-full"></span>答對</span>
                         <span class="flex items-center gap-1"><span class="w-3 h-3 bg-red-500 rounded-full"></span>答錯</span>
-                        <span class="flex items-center gap-1"><span class="w-3 h-3 bg-gray-400 rounded-full"></span>未回答</span>
+                        <span class="flex items-center gap-1"><span class="w-3 h-3 bg-neutral-600 rounded-full"></span>未回答</span>
                     </div>
                 </div>
                 <div id="quick-nav-grid" class="grid grid-cols-5 sm:grid-cols-8 lg:grid-cols-12 gap-2 text-center">
@@ -453,9 +514,9 @@
                 </div>
             </div>
 
-            <div class="mb-6 flex flex-col sm:flex-row justify-between items-center gap-4 border-b border-gray-100 pb-6">
-                <h3 class="text-2xl font-extrabold text-gray-800">詳細答題回顧</h3>
-                <button onclick="resetExam()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2.5 px-6 rounded-xl shadow-md transition duration-200">
+            <div class="mb-6 flex flex-col sm:flex-row justify-between items-center gap-4 border-b border-neutral-800 pb-6">
+                <h3 class="text-2xl font-black text-white tracking-tight">詳細答題回顧</h3>
+                <button onclick="resetExam()" class="bg-white hover:bg-neutral-200 text-black font-bold py-2.5 px-6 transition tracking-wider text-sm">
                     返回首頁重新測驗
                 </button>
             </div>
@@ -463,61 +524,58 @@
             <div id="review-container" class="space-y-6">
                 <!-- Review items injected by JS -->
             </div>
-            
-            <div class="mt-10 text-center text-xs font-semibold text-gray-400 pt-6">
-                © Architecture & UI/UX Experience <br> 
-                <span class="text-sm text-indigo-500/80 mt-1 inline-block tracking-widest uppercase">Designed by <span class="text-indigo-600 font-black">EnChung</span></span>
+
+            <div class="mt-10 text-center text-[10px] sm:text-xs text-neutral-600 tracking-label uppercase pt-6 border-t border-neutral-800">
+                © Architecture & UI/UX Experience · Designed by <span class="text-white font-bold">EnChung</span>
             </div>
         </div>
 
     </main>
 
 
-    <!-- 專屬驗證密碼鎖 Modal -->
-    <div id="auth-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm hidden z-50 transition-opacity">
+    <!-- 驗證密碼鎖 Modal (深色) -->
+    <div id="auth-modal" class="fixed inset-0 bg-black/85 backdrop-blur-md hidden z-50 transition-opacity">
         <div class="flex items-center justify-center min-h-screen px-4">
-            <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-sm w-full border border-gray-100 relative overflow-hidden transform scale-100">
-                <!-- 頂部漸層裝飾條 -->
-                <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-indigo-500 to-purple-600"></div>
-                
-                <div class="mb-5 flex justify-center">
-                    <div class="w-16 h-16 bg-indigo-50 rounded-full flex items-center justify-center text-indigo-600 shadow-inner">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
-                    </div>
-                </div>
-                
-                <h3 class="text-2xl font-extrabold text-gray-800 text-center mb-1">系統存取驗證</h3>
-                <p class="text-sm text-gray-500 text-center mb-6 font-medium">請輸入 6 位數專屬密碼解鎖考場</p>
-                
+            <div class="bg-black p-8 max-w-sm w-full border border-neutral-700 relative">
+                <!-- 頂部白線 -->
+                <div class="absolute top-0 left-0 w-full h-px bg-white"></div>
+
+                <div class="text-[10px] sm:text-xs text-neutral-500 tracking-label uppercase mb-2 text-center">— Access Required</div>
+                <h3 class="text-2xl font-black text-white text-center mb-2 tracking-tight">系統存取驗證</h3>
+                <p class="text-xs sm:text-sm text-neutral-500 text-center mb-8 font-medium">請輸入 6 位數專屬密碼解鎖考場</p>
+
                 <div class="mb-3 relative">
-                    <input type="password" id="auth-password-input" maxlength="6" class="w-full text-center text-4xl font-mono tracking-[0.4em] border-b-2 border-gray-200 focus:border-indigo-600 focus:outline-none py-2 transition text-indigo-900 bg-transparent placeholder-gray-300" placeholder="••••••" onkeydown="if(event.key === 'Enter') verifyAuth()">
+                    <input type="password" id="auth-password-input" maxlength="6"
+                        class="w-full text-center text-4xl font-mono tracking-[0.4em] border-0 border-b-2 border-neutral-700 focus:border-white focus:outline-none py-2 transition text-white bg-transparent placeholder-neutral-700"
+                        placeholder="••••••" onkeydown="if(event.key === 'Enter') verifyAuth()">
                 </div>
-                
-                <!-- 錯誤提示訊息 -->
-                <p id="auth-error-msg" class="text-red-500 text-sm font-bold hidden mb-4 text-center animate-pulse">❌ 密碼錯誤，請重新輸入</p>
-                
+
+                <p id="auth-error-msg" class="text-red-400 text-sm font-bold hidden mb-4 text-center">密碼錯誤，請重新輸入</p>
+
                 <div class="flex justify-end gap-3 mt-8">
-                    <button onclick="closeAuthModal()" class="flex-1 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold rounded-xl transition">取消</button>
-                    <button onclick="verifyAuth()" class="flex-1 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl shadow-md transition">解鎖進入</button>
+                    <button onclick="closeAuthModal()" class="flex-1 py-3 bg-transparent hover:bg-neutral-900 border border-neutral-700 hover:border-white text-neutral-300 hover:text-white font-bold transition tracking-wider text-sm">取消</button>
+                    <button onclick="verifyAuth()" class="flex-1 py-3 bg-white hover:bg-neutral-200 text-black font-bold transition tracking-wider text-sm">解鎖進入</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- 自訂交卷確認彈窗 (Custom Modal) -->
-    <div id="end-exam-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm hidden z-50 transition-opacity">
+    <!-- 交卷確認 Modal (深色) -->
+    <div id="end-exam-modal" class="fixed inset-0 bg-black/85 backdrop-blur-md hidden z-50 transition-opacity">
         <div class="flex items-center justify-center min-h-screen px-4">
-            <div class="bg-white rounded-2xl shadow-2xl p-6 max-w-sm w-full transform scale-100 border border-gray-100">
-                <h3 class="text-2xl font-extrabold text-gray-800 mb-4 border-b border-gray-100 pb-3">確認交卷？</h3>
-                <div id="end-exam-msg" class="text-gray-700 mb-6 text-sm space-y-2">
+            <div class="bg-black p-6 max-w-sm w-full border border-neutral-700 relative">
+                <div class="absolute top-0 left-0 w-full h-px bg-white"></div>
+                <div class="text-[10px] sm:text-xs text-neutral-500 tracking-label uppercase mb-2">— Confirm Submission</div>
+                <h3 class="text-2xl font-black text-white mb-4 pb-3 border-b border-neutral-800 tracking-tight">確認交卷？</h3>
+                <div id="end-exam-msg" class="text-neutral-300 mb-6 text-sm space-y-2">
                     <!-- 警告訊息將在這裡生成 -->
                 </div>
                 <div class="flex justify-end gap-3">
-                    <button onclick="closeEndExamModal()" class="px-5 py-2.5 bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold rounded-xl transition">
-                        繼續作答 (Cancel)
+                    <button onclick="closeEndExamModal()" class="px-5 py-2.5 bg-transparent hover:bg-neutral-900 border border-neutral-700 hover:border-white text-neutral-300 hover:text-white font-bold transition tracking-wider text-sm">
+                        繼續作答
                     </button>
-                    <button onclick="forceSubmitExam()" class="px-5 py-2.5 bg-red-600 hover:bg-red-700 text-white font-bold rounded-xl shadow-md transition">
-                        確認交卷 (Submit)
+                    <button onclick="forceSubmitExam()" class="px-5 py-2.5 bg-red-600 hover:bg-red-500 text-white font-bold transition tracking-wider text-sm">
+                        確認交卷
                     </button>
                 </div>
             </div>
@@ -1253,8 +1311,9 @@
             let s = timeRemaining % 60;
             const timerText = document.getElementById('timer-text');
             timerText.innerText = `${m}:${s < 10 ? '0' : ''}${s}`;
-            if (timeRemaining < 300) { 
-                timerText.classList.replace('text-amber-400', 'text-red-400');
+            if (timeRemaining < 300) {
+                timerText.classList.remove('text-white');
+                timerText.classList.add('text-red-400');
             }
         }
 
@@ -1266,7 +1325,7 @@
                 for (let i = 0; i < totalQuestions; i++) {
                     const btn = document.createElement('button');
                     btn.id = gIdx === 0 ? `grid-btn-${i}` : `grid-btn-m-${i}`;
-                    btn.className = `nav-btn w-full py-1.5 text-sm font-bold rounded-lg border border-gray-300 bg-gray-100 text-gray-500 hover:bg-gray-200 transition`;
+                    btn.className = `nav-btn w-full py-1.5 text-sm font-bold border border-neutral-700 bg-neutral-900 text-neutral-400 hover:bg-neutral-800 hover:text-white transition tabular-nums`;
                     btn.innerHTML = `${i + 1} <div class="flag-icon"></div>`;
                     btn.onclick = () => { goToQuestion(i); closeNavDrawer(); };
                     grid.appendChild(btn);
@@ -1285,10 +1344,10 @@
                     if (!btn) return;
                     if (isAns) {
                         btn.classList.add('answered');
-                        btn.classList.remove('bg-gray-100', 'border-gray-300', 'text-gray-500');
+                        btn.classList.remove('bg-neutral-900', 'border-neutral-700', 'text-neutral-400');
                     } else {
                         btn.classList.remove('answered');
-                        btn.classList.add('bg-gray-100', 'border-gray-300', 'text-gray-500');
+                        btn.classList.add('bg-neutral-900', 'border-neutral-700', 'text-neutral-400');
                     }
 
                     if (isFlag) btn.classList.add('flagged');
@@ -1329,10 +1388,8 @@
             const transBtn = document.getElementById('translate-btn');
             transBtn.disabled = false;
             transBtn.innerHTML = `<span>✨</span> 中文翻譯及題目解析`;
-            
-            // 恢復原始的樣式，以便切換題目時還原
-            transBtn.classList.remove('text-green-700', 'from-green-50', 'to-emerald-50', 'border-green-200');
-            transBtn.classList.add('text-indigo-700', 'from-indigo-50', 'to-blue-50', 'border-indigo-200');
+            // 統一深色按鈕樣式（不再有彩色切換）
+            transBtn.className = 'text-sm bg-white hover:bg-neutral-200 text-black font-bold py-2 px-4 transition border border-white flex items-center gap-2 tracking-wider';
 
             document.getElementById('translation-container').classList.add('hidden');
             document.getElementById('translation-container').innerHTML = '';
@@ -1341,29 +1398,27 @@
             const nextBtn = document.getElementById('next-btn');
 
             prevBtn.disabled = (currentIndex === 0);
-            
-            // 處理下一題按鈕行為：若在最後一題，改為觸發交卷 Modal
+
+            // 下一題／交卷按鈕（深色）
             const NEXT_ARROW = '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>';
             if (currentIndex === totalQuestions - 1) {
                 nextBtn.innerHTML = '<span>交卷結算</span>';
-                nextBtn.classList.remove('bg-indigo-600', 'hover:bg-indigo-700');
-                nextBtn.classList.add('bg-red-600', 'hover:bg-red-700');
+                nextBtn.className = 'bg-red-600 hover:bg-red-500 text-white font-bold py-3 px-4 sm:px-8 transition disabled:opacity-30 disabled:cursor-not-allowed flex-1 lg:flex-none inline-flex items-center justify-center gap-2 tracking-wider';
             } else {
                 nextBtn.innerHTML = '<span>下一題</span>' + NEXT_ARROW;
-                nextBtn.classList.add('bg-indigo-600', 'hover:bg-indigo-700');
-                nextBtn.classList.remove('bg-red-600', 'hover:bg-red-700');
+                nextBtn.className = 'bg-white hover:bg-neutral-200 text-black font-bold py-3 px-4 sm:px-8 transition disabled:opacity-30 disabled:cursor-not-allowed flex-1 lg:flex-none inline-flex items-center justify-center gap-2 tracking-wider';
             }
-            
+
             document.getElementById('flag-checkbox').checked = flaggedQuestions[currentIndex];
 
             const qTypeBadge = document.getElementById('q-type-badge');
             const isMulti = q.answer.length > 1;
             if (isMulti) {
-                qTypeBadge.innerText = `多選題 (請選 ${q.answer.length} 項)`;
-                qTypeBadge.className = "px-2 py-1 text-xs font-black tracking-wide rounded bg-emerald-100 text-emerald-800 align-middle border border-emerald-200";
+                qTypeBadge.innerText = `多選題 / 請選 ${q.answer.length} 項`;
+                qTypeBadge.className = "px-2 py-1 text-xs font-bold tracking-wider bg-neutral-900 border border-emerald-700 text-emerald-300";
             } else {
                 qTypeBadge.innerText = `單選題`;
-                qTypeBadge.className = "px-2 py-1 text-xs font-black tracking-wide rounded bg-indigo-100 text-indigo-800 align-middle border border-indigo-200";
+                qTypeBadge.className = "px-2 py-1 text-xs font-bold tracking-wider bg-neutral-900 border border-neutral-700 text-neutral-300";
             }
 
             const optionsContainer = document.getElementById('options-container');
@@ -1376,22 +1431,22 @@
                 optDiv.className = "relative";
                 const inputId = `option-${idx}`;
                 const isChecked = savedAns.includes(idx) ? 'checked' : '';
-                const letterLabel = `<span class="font-extrabold text-indigo-600 mr-2">${letters[idx]}.</span>`;
+                const letterLabel = `<span class="font-black text-white mr-2 tracking-wider">${letters[idx]}.</span>`;
 
                 if (isMulti) {
                     optDiv.innerHTML = `
                         <input type="checkbox" name="answer" id="${inputId}" value="${idx}" class="checkbox-custom hidden" onchange="handleOptionChange()" ${isChecked}>
-                        <label for="${inputId}" class="flex items-center p-4 border-2 border-gray-100 rounded-xl cursor-pointer hover:bg-gray-50 hover:border-emerald-200 transition shadow-sm">
-                            <span class="checkbox-square w-5 h-5 border-2 border-gray-300 rounded mr-4 flex-shrink-0 transition"></span>
-                            <span class="text-gray-700 font-medium">${letterLabel}${opt}</span>
+                        <label for="${inputId}" class="flex items-center p-4 border border-neutral-700 bg-neutral-950 cursor-pointer hover:bg-neutral-900 hover:border-white transition">
+                            <span class="checkbox-square w-5 h-5 border-2 border-neutral-600 mr-4 flex-shrink-0 transition"></span>
+                            <span class="text-neutral-200 font-medium">${letterLabel}${opt}</span>
                         </label>
                     `;
                 } else {
                     optDiv.innerHTML = `
                         <input type="radio" name="answer" id="${inputId}" value="${idx}" class="radio-custom hidden" onchange="handleOptionChange()" ${isChecked}>
-                        <label for="${inputId}" class="flex items-center p-4 border-2 border-gray-100 rounded-xl cursor-pointer hover:bg-gray-50 hover:border-indigo-200 transition shadow-sm">
-                            <span class="radio-circle w-5 h-5 border-2 border-gray-300 rounded-full mr-4 flex-shrink-0 transition"></span>
-                            <span class="text-gray-700 font-medium">${letterLabel}${opt}</span>
+                        <label for="${inputId}" class="flex items-center p-4 border border-neutral-700 bg-neutral-950 cursor-pointer hover:bg-neutral-900 hover:border-white transition">
+                            <span class="radio-circle w-5 h-5 border-2 border-neutral-600 rounded-full mr-4 flex-shrink-0 transition"></span>
+                            <span class="text-neutral-200 font-medium">${letterLabel}${opt}</span>
                         </label>
                     `;
                 }
@@ -1407,9 +1462,9 @@
         // ==========================
         function renderAnalysis(q) {
             if (!q.zh) {
-                return `<div class="bg-amber-50 p-4 rounded-xl border border-amber-200 shadow-sm text-amber-900">
-                    <p class="font-bold">📋 翻譯待補充</p>
-                    <p class="text-sm mt-2">本題的中文翻譯和詳細解析正在準備中，敬請期待。</p>
+                return `<div class="bg-neutral-900 p-4 border border-amber-700 text-amber-200">
+                    <p class="font-bold tracking-wider">— 翻譯待補充</p>
+                    <p class="text-sm mt-2 text-neutral-400">本題的中文翻譯和詳細解析正在準備中。</p>
                 </div>`;
             }
 
@@ -1419,56 +1474,55 @@
             z.opts.forEach((opt, i) => {
                 const isCorrect = q.answer.includes(i);
                 const cls = isCorrect ? 'opt-correct' : 'opt-wrong';
-                const tag = isCorrect ? '✅ 正確' : '❌ 錯誤';
-                optionsHtml += `<div class="option-block ${cls}"><strong>${tag} - ${letters[i]}.</strong> ${opt}</div>`;
+                const tag = isCorrect ? '✓ 正確' : '✗ 錯誤';
+                optionsHtml += `<div class="option-block ${cls}"><strong>${tag} · ${letters[i]}.</strong> ${opt}</div>`;
             });
-            // 構建單字區段（如有單字資料）
+            // 重要單字區段
             let vocabHtml = '';
             if (z.vocab && z.vocab.length > 0) {
                 let vocabItems = '';
                 z.vocab.forEach(v => {
                     vocabItems += `
-                        <div class="border-b border-purple-100 last:border-0 py-2">
+                        <div class="border-b border-neutral-800 last:border-0 py-2.5">
                             <div class="flex flex-wrap items-baseline gap-2">
-                                <span class="font-bold text-purple-900">${v.en}</span>
-                                <span class="text-gray-400">→</span>
-                                <span class="font-semibold text-purple-700">${v.zh}</span>
+                                <span class="font-bold text-white">${v.en}</span>
+                                <span class="text-neutral-600">→</span>
+                                <span class="font-semibold text-neutral-300">${v.zh}</span>
                             </div>
-                            <p class="text-sm text-gray-700 mt-1">${v.desc}</p>
+                            <p class="text-sm text-neutral-500 mt-1">${v.desc}</p>
                         </div>`;
                 });
                 vocabHtml = `
-                    <div class="bg-purple-50 p-4 rounded-xl border border-purple-200 shadow-sm">
-                        <h4 class="text-purple-900 mb-2">📚 重要單字（${z.vocab.length} 個）</h4>
-                        <div class="divide-y divide-purple-100">${vocabItems}</div>
+                    <div class="bg-neutral-950 p-4 border border-neutral-800">
+                        <h4 class="text-white mb-2 tracking-widest text-xs uppercase">— Glossary （${z.vocab.length} 個重要單字）</h4>
+                        <div>${vocabItems}</div>
                     </div>`;
             }
 
             return `
                 <div class="zh-explanation space-y-3">
-                    <div class="bg-blue-50 p-4 rounded-xl border border-blue-200 shadow-sm">
-                        <h4 class="text-blue-900">📝 題目翻譯</h4>
-                        <p class="text-blue-900 font-medium">${z.q}</p>
+                    <div class="bg-neutral-950 p-4 border border-neutral-800">
+                        <h4 class="text-white tracking-widest text-xs uppercase">— Translation 題目翻譯</h4>
+                        <p class="text-neutral-200 font-medium mt-2">${z.q}</p>
                     </div>
-                    <div class="bg-white p-4 rounded-xl border border-gray-200 shadow-sm">
-                        <h4 class="text-gray-800 mb-3">📋 選項翻譯與正解標示</h4>
+                    <div class="bg-neutral-950 p-4 border border-neutral-800">
+                        <h4 class="text-white mb-3 tracking-widest text-xs uppercase">— Options 選項翻譯與正解</h4>
                         ${optionsHtml}
                     </div>
-                    <div class="bg-green-50 p-4 rounded-xl border border-green-200 shadow-sm">
-                        <h4 class="text-green-900">💡 觀念解析</h4>
-                        <div class="text-green-900 font-medium leading-relaxed explain-content">${renderMarkdownLite(z.explain)}</div>
+                    <div class="bg-neutral-950 p-4 border border-neutral-800">
+                        <h4 class="text-white tracking-widest text-xs uppercase">— Analysis 觀念解析</h4>
+                        <div class="text-neutral-200 font-medium leading-relaxed explain-content mt-2">${renderMarkdownLite(z.explain)}</div>
                     </div>
                     ${vocabHtml}
                 </div>`;
         }
 
-        // 簡易 markdown 渲染：**text** → <strong>, • 開頭 → <li>, \n\n → 段落
+        // 簡易 markdown 渲染（深色版）
         function renderMarkdownLite(text) {
             if (!text) return '';
-            // Escape any existing HTML tags (safety)
             let html = text.replace(/</g, '&lt;').replace(/>/g, '&gt;');
-            // **bold** → <strong>bold</strong>
-            html = html.replace(/\*\*([^*]+)\*\*/g, '<strong class="font-extrabold text-green-950">$1</strong>');
+            // **bold** → <strong>bold</strong> (白色強調)
+            html = html.replace(/\*\*([^*]+)\*\*/g, '<strong class="font-extrabold text-white">$1</strong>');
             // Group bullet lines into a <ul>
             const lines = html.split('\n');
             const result = [];
@@ -1480,13 +1534,13 @@
                         result.push('<ul class="list-none space-y-1.5 mt-2 ml-1">');
                         inBulletGroup = true;
                     }
-                    result.push(`<li class="flex"><span class="text-green-700 mr-2 flex-shrink-0">▸</span><span class="flex-1">${line.substring(1).trim()}</span></li>`);
+                    result.push(`<li class="flex"><span class="text-neutral-500 mr-2 flex-shrink-0">▸</span><span class="flex-1 text-neutral-300">${line.substring(1).trim()}</span></li>`);
                 } else if (line === '') {
                     if (inBulletGroup) { result.push('</ul>'); inBulletGroup = false; }
                     result.push('<div class="h-2"></div>');
                 } else {
                     if (inBulletGroup) { result.push('</ul>'); inBulletGroup = false; }
-                    result.push(`<p class="mb-1">${line}</p>`);
+                    result.push(`<p class="mb-1 text-neutral-300">${line}</p>`);
                 }
             }
             if (inBulletGroup) result.push('</ul>');
@@ -1498,22 +1552,13 @@
             const transBtn = document.getElementById('translate-btn');
             const transContainer = document.getElementById('translation-container');
 
-            // 切換顯示/隱藏
             if (transContainer.classList.contains('hidden')) {
                 transContainer.classList.remove('hidden');
                 transContainer.innerHTML = renderAnalysis(q);
                 transBtn.innerHTML = `<span>✨</span> 隱藏解析`;
-                transBtn.classList.replace('text-indigo-700', 'text-green-700');
-                transBtn.classList.replace('from-indigo-50', 'from-green-50');
-                transBtn.classList.replace('to-blue-50', 'to-emerald-50');
-                transBtn.classList.replace('border-indigo-200', 'border-green-200');
             } else {
                 transContainer.classList.add('hidden');
                 transBtn.innerHTML = `<span>✨</span> 中文翻譯及題目解析`;
-                transBtn.classList.replace('text-green-700', 'text-indigo-700');
-                transBtn.classList.replace('from-green-50', 'from-indigo-50');
-                transBtn.classList.replace('to-emerald-50', 'to-blue-50');
-                transBtn.classList.replace('border-green-200', 'border-indigo-200');
             }
         }
 
@@ -1556,15 +1601,15 @@
             
             endExamMsg.innerHTML = "";
             if (unansweredCount === 0 && flaggedCount === 0) {
-                endExamMsg.innerHTML = "您已完成所有題目，確定要交卷結算成績嗎？";
+                endExamMsg.innerHTML = "<div class='text-neutral-300'>您已完成所有題目，確定要交卷結算成績嗎？</div>";
             } else {
                 if (unansweredCount > 0) {
-                    endExamMsg.innerHTML += `<div class="text-red-600 font-bold bg-red-50 p-3 rounded-lg mb-2 border border-red-100 flex items-center"><span class="text-xl mr-2">⚠️</span> 您還有 ${unansweredCount} 題未作答！</div>`;
+                    endExamMsg.innerHTML += `<div class="text-red-400 font-bold bg-red-950/60 p-3 mb-2 border border-red-900 flex items-center"><span class="text-xl mr-2">⚠️</span> 您還有 ${unansweredCount} 題未作答</div>`;
                 }
                 if (flaggedCount > 0) {
-                    endExamMsg.innerHTML += `<div class="text-amber-700 font-bold bg-amber-50 p-3 rounded-lg border border-amber-100 flex items-center"><span class="text-xl mr-2">📌</span> 您還有 ${flaggedCount} 題標記為待審閱！</div>`;
+                    endExamMsg.innerHTML += `<div class="text-amber-400 font-bold bg-amber-950/60 p-3 border border-amber-900 flex items-center"><span class="text-xl mr-2">📌</span> 您還有 ${flaggedCount} 題標記為待審閱</div>`;
                 }
-                endExamMsg.innerHTML += `<div class="mt-4 text-gray-500 text-xs font-semibold text-center bg-gray-50 py-2 rounded">即使未完成，您依然可以強制交卷。</div>`;
+                endExamMsg.innerHTML += `<div class="mt-4 text-neutral-500 text-xs font-medium text-center bg-neutral-900 py-2 border border-neutral-800">即使未完成，您依然可以強制交卷</div>`;
             }
             
             document.getElementById('end-exam-modal').classList.remove('hidden');
@@ -1603,12 +1648,15 @@
 
                 // 創建新的詳解面板並插入結果頁面的最上方
                 const analysisHTML = `
-                    <div id="analysis-${idx}" class="bg-gradient-to-br from-indigo-50 to-blue-50 p-8 rounded-2xl border-2 border-indigo-200 shadow-lg mb-8 sticky top-0 z-10">
-                        <div class="flex justify-between items-center mb-4">
-                            <h3 class="text-2xl font-extrabold text-indigo-900">📚 第 ${idx + 1} 題 - 詳細解析</h3>
-                            <button onclick="toggleDetailAnalysis(${idx})" class="text-indigo-600 hover:text-indigo-800 font-bold text-2xl">✕</button>
+                    <div id="analysis-${idx}" class="bg-neutral-950 p-6 sm:p-8 border border-neutral-700 mb-8 sticky top-0 z-10">
+                        <div class="flex justify-between items-center mb-4 pb-3 border-b border-neutral-800">
+                            <div>
+                                <div class="text-[10px] text-neutral-500 tracking-label uppercase mb-1">— Detailed Analysis</div>
+                                <h3 class="text-xl sm:text-2xl font-black text-white tracking-tight">第 ${idx + 1} 題 · 完整詳解</h3>
+                            </div>
+                            <button onclick="toggleDetailAnalysis(${idx})" class="text-neutral-400 hover:text-white font-bold text-2xl leading-none">✕</button>
                         </div>
-                        <div class="bg-white p-4 rounded-xl border border-indigo-100 max-h-96 overflow-y-auto">
+                        <div class="max-h-96 overflow-y-auto">
                             ${renderAnalysis(q)}
                         </div>
                     </div>
@@ -1681,28 +1729,28 @@
             reviewContainer.innerHTML = '';
             quickNavGrid.innerHTML = '';
 
-            // 生成快速導覽卡片 (直接在結果頁面跳轉)
+            // 快速導覽卡片 (深色)
             currentQuiz.forEach((q, idx) => {
                 const uAnsArr = userAnswers[idx] || [];
                 const isCorrect = arraysEqual(uAnsArr, q.answer);
                 const isUnanswered = uAnsArr.length === 0;
 
-                let navColor = 'bg-gray-300 text-white';  // 未回答 - 灰色
-                let navIcon = '○';
+                let navColor;
+                let navIcon;
 
                 if (isUnanswered) {
-                    navColor = 'bg-gray-300 text-white';
+                    navColor = 'bg-neutral-700 text-neutral-300';
                     navIcon = '●';
                 } else if (isCorrect) {
-                    navColor = 'bg-green-500 text-white';
+                    navColor = 'bg-emerald-600 text-white';
                     navIcon = '✓';
                 } else {
-                    navColor = 'bg-red-500 text-white';
+                    navColor = 'bg-red-600 text-white';
                     navIcon = '✗';
                 }
 
                 const navCard = document.createElement('button');
-                navCard.className = `w-10 h-10 rounded-lg font-bold text-sm transition hover:scale-110 shadow-sm ${navColor}`;
+                navCard.className = `w-10 h-10 font-bold text-sm transition hover:scale-110 ${navColor}`;
                 navCard.innerHTML = navIcon;
                 navCard.title = `Q${idx + 1}: ${isUnanswered ? '未回答' : isCorrect ? '答對' : '答錯'}`;
                 navCard.onclick = () => scrollToReviewCard(idx);
@@ -1710,52 +1758,52 @@
                 quickNavGrid.appendChild(navCard);
             });
 
-            // 生成詳細回顧卡片
+            // 詳細回顧卡片 (深色)
             currentQuiz.forEach((q, idx) => {
                 const uAnsArr = userAnswers[idx] || [];
                 const isCorrect = arraysEqual(uAnsArr, q.answer);
                 if (isCorrect) correctCount++;
 
-                const statusColor = isCorrect ? "text-green-600" : "text-red-500";
+                const statusColor = isCorrect ? "text-emerald-400" : "text-red-400";
                 const statusIcon = isCorrect ? "✓ 答對" : "✗ 答錯";
-                const cardBorder = isCorrect ? "border-green-200" : "border-red-200";
-                const bgHeader = isCorrect ? "bg-green-50" : "bg-red-50";
+                const cardBorder = isCorrect ? "border-emerald-900" : "border-red-900";
+                const bgHeader = isCorrect ? "bg-emerald-950/40" : "bg-red-950/40";
 
                 let optionsHTML = '';
                 const reviewLetters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
                 q.options.forEach((opt, oIdx) => {
-                    let optClass = "text-gray-600 p-2 font-medium";
+                    let optClass = "text-neutral-400 p-2 font-medium";
                     let icon = "<span class='inline-block w-6'></span>";
 
                     const isUserSelected = uAnsArr.includes(oIdx);
                     const isActuallyCorrect = q.answer.includes(oIdx);
 
                     if (isActuallyCorrect) {
-                        optClass = "text-green-800 font-bold bg-green-100 p-2 rounded";
-                        icon = "<span class='inline-block w-6 font-bold'>✓</span>";
+                        optClass = "text-emerald-300 font-bold bg-emerald-950/60 p-2 border-l-2 border-emerald-500";
+                        icon = "<span class='inline-block w-6 font-bold text-emerald-400'>✓</span>";
                     } else if (isUserSelected && !isActuallyCorrect) {
-                        optClass = "text-red-700 line-through bg-red-100 p-2 rounded";
-                        icon = "<span class='inline-block w-6 font-bold'>✗</span>";
+                        optClass = "text-red-300 line-through bg-red-950/60 p-2 border-l-2 border-red-500";
+                        icon = "<span class='inline-block w-6 font-bold text-red-400'>✗</span>";
                     } else if (isUserSelected) {
-                        icon = "<span class='inline-block w-6 font-bold text-gray-500'>•</span>";
+                        icon = "<span class='inline-block w-6 font-bold text-neutral-500'>•</span>";
                     }
 
-                    const letterPrefix = `<span class="font-extrabold mr-1">${reviewLetters[oIdx]}.</span>`;
+                    const letterPrefix = `<span class="font-extrabold text-white mr-1">${reviewLetters[oIdx]}.</span>`;
                     optionsHTML += `<div class="${optClass} flex items-start">${icon}<span class="flex-1">${letterPrefix}${opt}</span></div>`;
                 });
 
-                const notAnsweredAlert = uAnsArr.length === 0 ? `<span class="text-xs font-black tracking-widest text-red-600 bg-white px-2 py-1 rounded shadow-sm border border-red-200 whitespace-nowrap">未作答</span>` : '';
+                const notAnsweredAlert = uAnsArr.length === 0 ? `<span class="text-[10px] font-black tracking-widest text-red-400 bg-red-950 px-2 py-1 border border-red-900 whitespace-nowrap uppercase">未作答</span>` : '';
 
                 reviewContainer.innerHTML += `
-                    <div class="border ${cardBorder} rounded-2xl overflow-hidden shadow-sm mb-6 bg-white group hover:shadow-lg transition" data-review-idx="${idx}">
+                    <div class="border ${cardBorder} overflow-hidden mb-6 bg-neutral-950 group hover:bg-neutral-900 transition" data-review-idx="${idx}">
                         <div class="px-4 sm:px-6 py-4 ${bgHeader} border-b ${cardBorder} flex flex-wrap items-center gap-x-3 gap-y-2">
-                            <span class="font-extrabold text-gray-800 text-lg whitespace-nowrap">Q${idx + 1}.</span>
+                            <span class="font-black text-white text-lg whitespace-nowrap tabular-nums">Q${idx + 1}.</span>
                             ${notAnsweredAlert}
-                            <span class="font-black ${statusColor} text-lg whitespace-nowrap ml-auto">${statusIcon}</span>
-                            <button onclick="toggleDetailAnalysis(${idx})" class="text-xs font-bold text-indigo-600 bg-indigo-100 px-3 py-1.5 rounded-lg transition cursor-pointer hover:bg-indigo-200 whitespace-nowrap w-full sm:w-auto sm:opacity-0 sm:group-hover:opacity-100">展開完整詳解</button>
+                            <span class="font-black ${statusColor} text-lg whitespace-nowrap ml-auto tracking-wider">${statusIcon}</span>
+                            <button onclick="toggleDetailAnalysis(${idx})" class="text-xs font-bold text-black bg-white hover:bg-neutral-200 px-3 py-1.5 transition cursor-pointer whitespace-nowrap w-full sm:w-auto sm:opacity-70 sm:group-hover:opacity-100 tracking-wider">展開完整詳解</button>
                         </div>
                         <div class="p-4 sm:p-6 cursor-default">
-                            <p class="text-gray-800 font-bold mb-5 text-base sm:text-lg leading-relaxed">${q.q}</p>
+                            <p class="text-white font-bold mb-5 text-base sm:text-lg leading-relaxed">${q.q}</p>
                             <div class="space-y-2 text-sm mb-2">
                                 ${optionsHTML}
                             </div>
@@ -1768,22 +1816,16 @@
             document.getElementById('final-score').innerText = finalScore;
 
             const rawScoreText = document.getElementById('raw-score-text');
-            rawScoreText.innerText = `原始答對題數: ${correctCount} / ${totalQuestions} 題 (正確率: ${Math.round(correctCount / totalQuestions * 100)}%)`;
+            rawScoreText.innerText = `答對 ${correctCount} / ${totalQuestions} 題 · 正確率 ${Math.round(correctCount / totalQuestions * 100)}%`;
 
             const passStatus = document.getElementById('pass-status');
-            const passBg = document.getElementById('pass-bg');
-            const failBg = document.getElementById('fail-bg');
 
             if (finalScore >= 750) {
-                passStatus.innerText = "🎉 PASS！已達到及格標準";
-                passStatus.className = "mt-6 font-black text-3xl text-green-600 drop-shadow-sm";
-                passBg.classList.remove('hidden');
-                failBg.classList.add('hidden');
+                passStatus.innerText = "✓ PASS · 已達及格標準";
+                passStatus.className = "mt-6 font-black text-2xl sm:text-3xl text-emerald-400 tracking-tight";
             } else {
-                passStatus.innerText = "💪 FAIL！尚未達到及格標準";
-                passStatus.className = "mt-6 font-black text-3xl text-red-500 drop-shadow-sm";
-                failBg.classList.remove('hidden');
-                passBg.classList.add('hidden');
+                passStatus.innerText = "✗ FAIL · 尚未達到及格標準";
+                passStatus.className = "mt-6 font-black text-2xl sm:text-3xl text-red-400 tracking-tight";
             }
 
             // 添加滾動監聽
@@ -1795,7 +1837,9 @@
         function resetExam() {
             document.getElementById('start-screen').classList.remove('hidden');
             document.getElementById('result-screen').classList.add('hidden');
-            document.getElementById('timer-text').classList.replace('text-red-400', 'text-amber-400');
+            const tt = document.getElementById('timer-text');
+            tt.classList.remove('text-red-400');
+            tt.classList.add('text-white');
             document.getElementById('scroll-to-top-btn').classList.add('opacity-0', 'invisible');
             document.getElementById('scroll-to-top-btn').classList.remove('opacity-100', 'visible');
             // 回到首頁時隱藏題目導覽 FAB
