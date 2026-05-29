@@ -170,143 +170,140 @@
     <main class="flex-grow overflow-y-auto p-4 sm:p-6 flex justify-center items-start">
         
         <!-- Start Screen (首頁) -->
-        <div id="start-screen" class="w-full max-w-5xl mt-4 sm:mt-6 bg-white rounded-3xl border border-slate-200/80 shadow-sm overflow-hidden px-5 sm:px-10 lg:px-14">
+        <div id="start-screen" class="w-full max-w-5xl mt-4 sm:mt-6 bg-white rounded-3xl border border-neutral-200 shadow-sm overflow-hidden px-5 sm:px-10 lg:px-14">
 
-            <!-- ============ HERO (編輯風／極簡) ============ -->
-            <section class="py-10 sm:py-14">
-                <!-- 細微標籤 -->
-                <div class="flex items-center gap-2.5 mb-6 sm:mb-8">
-                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                    <span class="text-[11px] sm:text-xs font-semibold text-slate-500 tracking-[0.2em] uppercase">SY0-701 模擬考試系統</span>
+            <!-- ============ HERO (壓縮、低調) ============ -->
+            <section class="py-7 sm:py-10">
+                <div class="flex items-center gap-2.5 mb-4 sm:mb-5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-neutral-900"></span>
+                    <span class="text-[10px] sm:text-xs font-semibold text-neutral-500 tracking-[0.25em] uppercase">SY0-701 模擬考試系統</span>
                 </div>
 
-                <!-- 大標題：純黑文字 + 一個關鍵字用深靛色（不再有漸層金）-->
-                <h1 class="font-black text-slate-900 leading-[1.15] tracking-tight mb-5 sm:mb-6
-                           text-[2rem] sm:text-5xl lg:text-6xl">
-                    準備 Security+ 認證，<br>
-                    <span class="text-indigo-700">從這裡</span>開始。
+                <h1 class="font-black text-neutral-900 leading-[1.2] tracking-tight mb-3 sm:mb-4
+                           text-2xl sm:text-3xl lg:text-4xl">
+                    準備 Security+ 認證考試。
                 </h1>
 
-                <!-- 副標：清爽兩行 -->
-                <p class="text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl mb-8 sm:mb-10">
-                    605 道完整考古題、Google 等級中文翻譯、每題附觀念解析與重要單字。<br class="hidden sm:inline">
-                    PBQ 實作題請另尋影片教材補充。
+                <p class="text-neutral-500 text-sm sm:text-[15px] leading-relaxed max-w-2xl mb-5 sm:mb-7">
+                    605 道完整考古題、Google 等級中文翻譯，每題附觀念解析與重要單字。
                 </p>
 
-                <!-- 細線分隔 -->
-                <div class="h-px bg-gradient-to-r from-slate-200 via-slate-200 to-transparent mb-6 sm:mb-8"></div>
-
-                <!-- 內聯數字（不再是彩色大方塊）-->
-                <div class="flex flex-wrap items-baseline gap-x-6 sm:gap-x-10 gap-y-3">
+                <!-- Inline 統計（移除 FREE）-->
+                <div class="flex flex-wrap items-baseline gap-x-5 sm:gap-x-8 gap-y-2 text-sm">
                     <div class="flex items-baseline gap-1.5">
-                        <span class="text-2xl sm:text-3xl font-black text-slate-900 tabular-nums">605</span>
-                        <span class="text-xs sm:text-sm text-slate-500 font-medium">道題目</span>
+                        <span class="text-lg sm:text-xl font-black text-neutral-900 tabular-nums">605</span>
+                        <span class="text-xs sm:text-sm text-neutral-500">道題目</span>
                     </div>
+                    <div class="w-px h-4 bg-neutral-200"></div>
                     <div class="flex items-baseline gap-1.5">
-                        <span class="text-2xl sm:text-3xl font-black text-slate-900 tabular-nums">100%</span>
-                        <span class="text-xs sm:text-sm text-slate-500 font-medium">中文翻譯</span>
+                        <span class="text-lg sm:text-xl font-black text-neutral-900 tabular-nums">100%</span>
+                        <span class="text-xs sm:text-sm text-neutral-500">中文翻譯</span>
                     </div>
+                    <div class="w-px h-4 bg-neutral-200"></div>
                     <div class="flex items-baseline gap-1.5">
-                        <span class="text-2xl sm:text-3xl font-black text-slate-900 tabular-nums">250+</span>
-                        <span class="text-xs sm:text-sm text-slate-500 font-medium">重要單字</span>
-                    </div>
-                    <div class="flex items-baseline gap-1.5">
-                        <span class="text-2xl sm:text-3xl font-black text-slate-900">FREE</span>
-                        <span class="text-xs sm:text-sm text-slate-500 font-medium">免費使用</span>
+                        <span class="text-lg sm:text-xl font-black text-neutral-900 tabular-nums">250+</span>
+                        <span class="text-xs sm:text-sm text-neutral-500">重要單字</span>
                     </div>
                 </div>
             </section>
 
-            <!-- ============ 系統特色 (極簡兩欄) ============ -->
-            <section class="py-6 sm:py-8 border-t border-slate-200">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-12">
+            <!-- ============ 測驗模式 (主角，大卡片) ============ -->
+            <section class="py-7 sm:py-10 border-t border-neutral-200">
+                <div class="flex items-end justify-between mb-6 sm:mb-8">
                     <div>
-                        <!-- 簡潔線稿 icon -->
-                        <div class="w-10 h-10 rounded-lg bg-blue-50 border border-blue-100 flex items-center justify-center mb-4">
-                            <svg class="w-5 h-5 text-blue-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                        </div>
-                        <h4 class="text-base sm:text-lg font-bold text-slate-900 mb-1.5">作答時即時解析</h4>
-                        <p class="text-sm text-slate-600 leading-relaxed">點擊「中文翻譯及題目解析」按鈕，即時看到中文翻譯、各選項分析與重要單字定義。</p>
+                        <h2 class="text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight mb-1">選擇測驗模式</h2>
+                        <p class="text-xs sm:text-sm text-neutral-500">點擊任一卡片即可開始</p>
                     </div>
-                    <div>
-                        <div class="w-10 h-10 rounded-lg bg-emerald-50 border border-emerald-100 flex items-center justify-center mb-4">
-                            <svg class="w-5 h-5 text-emerald-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
-                        </div>
-                        <h4 class="text-base sm:text-lg font-bold text-slate-900 mb-1.5">交卷後完整詳解</h4>
-                        <p class="text-sm text-slate-600 leading-relaxed">結果頁面點「展開完整詳解」即可閱讀每題的觀念分析、正解原因與其他選項評析。</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- ============ 測驗模式 (極簡：白底+靛色重點) ============ -->
-            <section class="py-6 sm:py-10 border-t border-slate-200">
-                <div class="flex items-baseline justify-between mb-5 sm:mb-7">
-                    <h2 class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">選擇測驗模式</h2>
-                    <span class="text-xs text-slate-400 font-medium tabular-nums">3 種模式</span>
+                    <span class="text-[10px] sm:text-xs text-neutral-400 font-medium tracking-[0.2em] uppercase hidden sm:inline">3 Modes</span>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4">
-                    <!-- Mode 1: Full Exam -->
+                    <!-- Mode 1: Full Exam (反白：黑底白字，強調推薦) -->
                     <button onclick="promptAuth('full')"
-                            class="group relative text-left bg-white border border-slate-200 hover:border-indigo-600 rounded-2xl p-5 sm:p-6 transition-all hover:shadow-lg flex flex-col cursor-pointer">
-                        <!-- 推薦標記：小、低調 -->
-                        <div class="absolute top-4 right-4 flex items-center gap-1 text-[10px] font-bold text-indigo-700 tracking-wider">
-                            <span class="w-1 h-1 rounded-full bg-indigo-600"></span>RECOMMENDED
+                            class="group relative text-left bg-neutral-900 hover:bg-neutral-800 text-white rounded-2xl p-6 sm:p-7 transition-all hover:shadow-2xl hover:shadow-neutral-900/20 hover:-translate-y-1 flex flex-col cursor-pointer min-h-[260px] sm:min-h-[300px]">
+                        <div class="flex items-start justify-between mb-5 sm:mb-6">
+                            <div class="text-3xl sm:text-4xl">🚀</div>
+                            <div class="flex items-center gap-1.5 text-[9px] sm:text-[10px] font-bold text-neutral-400 tracking-[0.2em] uppercase">
+                                <span class="w-1 h-1 rounded-full bg-white"></span>Recommended
+                            </div>
                         </div>
-                        <div class="text-3xl sm:text-4xl mb-3 sm:mb-4">🚀</div>
-                        <h3 class="text-base sm:text-lg font-bold text-slate-900 mb-1.5">正式考場模擬</h3>
-                        <p class="text-sm text-slate-600 flex-grow leading-relaxed mb-4 sm:mb-5">
-                            完全模擬考試環境。90 分鐘倒數計時，依官方標準隨機抽取
-                            <span class="font-semibold text-slate-900">75 – 90 題</span>。
+                        <h3 class="text-lg sm:text-xl font-black text-white mb-2 tracking-tight">正式考場模擬</h3>
+                        <p class="text-xs sm:text-sm text-neutral-400 flex-grow leading-relaxed mb-5 sm:mb-6">
+                            90 分鐘倒數計時，依官方標準隨機抽取
+                            <span class="font-semibold text-white">75 – 90 題</span>。完全模擬正式考試環境。
                         </p>
-                        <div class="mt-auto flex items-center justify-between text-sm font-bold text-indigo-700 group-hover:text-indigo-900">
+                        <div class="mt-auto flex items-center justify-between text-sm font-bold">
                             <span>開始模擬</span>
-                            <svg class="w-4 h-4 transform group-hover:translate-x-1 transition" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            <svg class="w-5 h-5 transform group-hover:translate-x-1 transition" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                         </div>
                     </button>
 
-                    <!-- Mode 2: Quick Test -->
+                    <!-- Mode 2: Quick Test (白底) -->
                     <button onclick="promptAuth('quick')"
-                            class="group text-left bg-white border border-slate-200 hover:border-emerald-600 rounded-2xl p-5 sm:p-6 transition-all hover:shadow-lg flex flex-col cursor-pointer">
-                        <div class="text-3xl sm:text-4xl mb-3 sm:mb-4">⏱️</div>
-                        <h3 class="text-base sm:text-lg font-bold text-slate-900 mb-1.5">快速測驗</h3>
-                        <p class="text-sm text-slate-600 flex-grow leading-relaxed mb-4 sm:mb-5">
+                            class="group text-left bg-white border border-neutral-200 hover:border-neutral-900 rounded-2xl p-6 sm:p-7 transition-all hover:shadow-xl hover:-translate-y-1 flex flex-col cursor-pointer min-h-[260px] sm:min-h-[300px]">
+                        <div class="text-3xl sm:text-4xl mb-5 sm:mb-6">⏱️</div>
+                        <h3 class="text-lg sm:text-xl font-black text-neutral-900 mb-2 tracking-tight">快速測驗</h3>
+                        <p class="text-xs sm:text-sm text-neutral-500 flex-grow leading-relaxed mb-5 sm:mb-6">
                             無時間壓力，固定隨機抽取
-                            <span class="font-semibold text-slate-900">10 題</span>。
+                            <span class="font-semibold text-neutral-900">10 題</span>。
                             適合通勤或零碎時間觀念複習。
                         </p>
-                        <div class="mt-auto flex items-center justify-between text-sm font-bold text-emerald-700 group-hover:text-emerald-900">
+                        <div class="mt-auto flex items-center justify-between text-sm font-bold text-neutral-900">
                             <span>開始練習</span>
-                            <svg class="w-4 h-4 transform group-hover:translate-x-1 transition" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            <svg class="w-5 h-5 transform group-hover:translate-x-1 transition" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                         </div>
                     </button>
 
-                    <!-- Mode 3: Custom -->
+                    <!-- Mode 3: Custom (白底) -->
                     <button onclick="promptAuth('custom')"
-                            class="group text-left bg-white border border-slate-200 hover:border-purple-600 rounded-2xl p-5 sm:p-6 transition-all hover:shadow-lg flex flex-col cursor-pointer">
-                        <div class="text-3xl sm:text-4xl mb-3 sm:mb-4">⚙️</div>
-                        <h3 class="text-base sm:text-lg font-bold text-slate-900 mb-1.5">自訂題數模式</h3>
-                        <p class="text-sm text-slate-600 leading-relaxed mb-3">自由決定題量，依您所需練習。</p>
-                        <div class="bg-slate-50 border border-slate-200 rounded-lg flex items-center gap-2 px-3 py-2 mb-4 sm:mb-5" onclick="event.stopPropagation()">
-                            <label for="custom-num" class="text-xs text-slate-500 font-medium whitespace-nowrap">題數</label>
+                            class="group text-left bg-white border border-neutral-200 hover:border-neutral-900 rounded-2xl p-6 sm:p-7 transition-all hover:shadow-xl hover:-translate-y-1 flex flex-col cursor-pointer min-h-[260px] sm:min-h-[300px]">
+                        <div class="text-3xl sm:text-4xl mb-5 sm:mb-6">⚙️</div>
+                        <h3 class="text-lg sm:text-xl font-black text-neutral-900 mb-2 tracking-tight">自訂題數</h3>
+                        <p class="text-xs sm:text-sm text-neutral-500 leading-relaxed mb-3">自由決定題量，依您所需練習。</p>
+                        <div class="bg-neutral-50 border border-neutral-200 rounded-lg flex items-center gap-2 px-3 py-2 mb-5 sm:mb-6" onclick="event.stopPropagation()">
+                            <label for="custom-num" class="text-xs text-neutral-500 font-medium whitespace-nowrap">題數</label>
                             <input type="number" id="custom-num" min="1" max="605" value="20"
-                                   class="w-full text-right border-0 px-1 py-0.5 text-base font-bold text-slate-900 focus:outline-none bg-transparent tabular-nums">
-                            <span class="text-xs text-slate-400 font-medium">題</span>
+                                   class="w-full text-right border-0 px-1 py-0.5 text-base font-bold text-neutral-900 focus:outline-none bg-transparent tabular-nums">
+                            <span class="text-xs text-neutral-400 font-medium">題</span>
                         </div>
-                        <div class="mt-auto flex items-center justify-between text-sm font-bold text-purple-700 group-hover:text-purple-900">
+                        <div class="mt-auto flex items-center justify-between text-sm font-bold text-neutral-900">
                             <span>開始練習</span>
-                            <svg class="w-4 h-4 transform group-hover:translate-x-1 transition" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            <svg class="w-5 h-5 transform group-hover:translate-x-1 transition" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                         </div>
                     </button>
+                </div>
+            </section>
+
+            <!-- ============ 系統特色 (極簡兩欄，次要區塊) ============ -->
+            <section class="py-6 sm:py-8 border-t border-neutral-200">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-10">
+                    <div class="flex items-start gap-3">
+                        <div class="w-9 h-9 rounded-lg bg-neutral-100 border border-neutral-200 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-4 h-4 text-neutral-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <div class="min-w-0">
+                            <h4 class="text-sm font-bold text-neutral-900 mb-1">作答時即時解析</h4>
+                            <p class="text-xs sm:text-[13px] text-neutral-500 leading-relaxed">點擊翻譯及題目解析按鈕，看中文翻譯、選項分析、重要單字。</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-9 h-9 rounded-lg bg-neutral-100 border border-neutral-200 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-4 h-4 text-neutral-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+                        </div>
+                        <div class="min-w-0">
+                            <h4 class="text-sm font-bold text-neutral-900 mb-1">交卷後完整詳解</h4>
+                            <p class="text-xs sm:text-[13px] text-neutral-500 leading-relaxed">結果頁面點展開完整詳解，看每題的觀念分析與正解原因。</p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
             <!-- ============ Footer ============ -->
-            <footer class="py-6 sm:py-8 border-t border-slate-200">
-                <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400">
+            <footer class="py-5 sm:py-6 border-t border-neutral-200">
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-neutral-400">
                     <span>© Architecture & UI/UX Experience</span>
                     <span class="tracking-[0.2em] uppercase">Designed by
-                        <span class="text-slate-700 font-bold not-italic">EnChung</span>
+                        <span class="text-neutral-700 font-bold">EnChung</span>
                     </span>
                 </div>
             </footer>
