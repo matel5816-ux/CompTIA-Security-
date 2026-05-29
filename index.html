@@ -5,37 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CompTIA Security+ (SY0-701) 專業模擬考場</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- 高品質中英文字體 (Noto Sans TC 繁中 + Inter 英數) -->
+    <!-- 雙來源中英文字體：Inter 英數 + Noto Sans TC 繁中 (display=swap 確保載入中也能顯示) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
     <style>
         html {
             -webkit-text-size-adjust: 100%;
             text-size-adjust: 100%;
         }
+        /*
+         * 字體策略：系統 Chinese 字體優先（瞬間生效），Google Fonts 作增強。
+         * Inter 處理英數，Noto Sans TC / PingFang / JhengHei 處理繁中。
+         * 重點：系統字體必須排在前面，避免 Google Fonts 載入慢時看到糟糕的 fallback。
+         */
         body {
-            font-family: 'Inter', 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-                         'PingFang TC', 'Microsoft JhengHei', '微軟正黑體',
-                         'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-family:
+                'Inter',
+                -apple-system, BlinkMacSystemFont,
+                'PingFang TC', '蘋方-繁',
+                'Microsoft JhengHei', '微軟正黑體',
+                'Noto Sans TC',
+                'Helvetica Neue', Arial,
+                sans-serif;
             background-color: #000000;
             color: #e5e5e5;
-            /* 字體抗鋸齒（清晰度關鍵）*/
+            /* 字體抗鋸齒 */
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             text-rendering: optimizeLegibility;
             font-feature-settings: 'kern' 1, 'liga' 1, 'palt' 1;
             font-variant-ligatures: common-ligatures;
+            font-synthesis: none;
+            font-weight: 400;
         }
-        /* 中文部分用 Noto Sans TC，英文/數字用 Inter — 透過字體優先級自動分配 */
-        h1, h2, h3, h4, h5, h6, button, .font-bold, .font-extrabold, .font-black {
-            font-feature-settings: 'kern' 1, 'liga' 1, 'palt' 1, 'tnum' 1;
+        /* 中文字符明確指定 — 系統優先，雲端 fallback */
+        :lang(zh), :lang(zh-TW), :lang(zh-Hant),
+        h1, h2, h3, h4, h5, h6, p, span, div, button, label, input {
+            font-family:
+                'Inter',
+                -apple-system, BlinkMacSystemFont,
+                'PingFang TC', '蘋方-繁',
+                'Microsoft JhengHei', '微軟正黑體',
+                'Noto Sans TC',
+                'Helvetica Neue', Arial,
+                sans-serif;
         }
-        /* 等寬數字（Tabular Nums）*/
+        /* 重要：標題類用更粗字重，提升中文清晰度 */
+        h1, .font-black { font-weight: 900; }
+        h2, .font-extrabold { font-weight: 800; }
+        h3, .font-bold { font-weight: 700; }
+        /* 等寬數字 */
         .tabular-nums {
             font-variant-numeric: tabular-nums;
             font-feature-settings: 'tnum' 1;
         }
+        /* 確保 Tailwind 的 .font-* utility 用清楚字重 */
+        .font-medium { font-weight: 500; }
+        .font-semibold { font-weight: 600; }
 
         /* 全局滾動條（深色）*/
         ::-webkit-scrollbar { width: 8px; height: 8px; }
