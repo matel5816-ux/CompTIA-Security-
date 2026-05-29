@@ -170,68 +170,150 @@
     <main class="flex-grow overflow-y-auto p-4 sm:p-6 flex justify-center items-start">
         
         <!-- Start Screen (首頁) -->
-        <div id="start-screen" class="bg-white max-w-4xl w-full rounded-2xl shadow-xl p-5 sm:p-8 mt-4 sm:mt-6 border border-gray-100 relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-20 sm:w-32 h-20 sm:h-32 bg-indigo-50 rounded-bl-full -z-10"></div>
-            
-            <div class="text-center mb-8 sm:mb-10">
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-800 mb-3 sm:mb-4">請選擇測驗模式</h2>
-                <p class="text-gray-500 text-sm sm:text-base font-medium max-w-2xl mx-auto leading-relaxed">
-                    基本系統已完成最後優化，考古題題目已全數納入題庫，PBQ 實作題請自行上網找影片。
-                </p>
-            </div>
+        <div id="start-screen" class="w-full max-w-5xl mt-4 sm:mt-6">
 
-            <!-- 功能說明卡片 (響應式：手機直列、桌機 2 欄) -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-8 sm:mb-10 max-w-3xl mx-auto">
-                <div class="flex items-start gap-3 p-3 sm:p-4 rounded-xl bg-blue-50/70 border border-blue-100">
-                    <div class="text-2xl flex-shrink-0 leading-none">✨</div>
-                    <div class="min-w-0">
-                        <h4 class="text-sm font-bold text-blue-900 mb-1">作答時看解析</h4>
-                        <p class="text-xs sm:text-sm text-gray-700 leading-relaxed">點擊「中文翻譯及題目解析」按鈕，即可即時看到中文翻譯、選項分析與重要單字。</p>
-                    </div>
-                </div>
-                <div class="flex items-start gap-3 p-3 sm:p-4 rounded-xl bg-green-50/70 border border-green-100">
-                    <div class="text-2xl flex-shrink-0 leading-none">📝</div>
-                    <div class="min-w-0">
-                        <h4 class="text-sm font-bold text-green-900 mb-1">交卷後看詳解</h4>
-                        <p class="text-xs sm:text-sm text-gray-700 leading-relaxed">結果頁面點「展開完整詳解」可看每題的觀念分析、正解原因與其他選項解析。</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <!-- Mode 1: Full Exam -->
-                <div class="border-2 border-indigo-100 hover:border-indigo-500 rounded-2xl p-6 cursor-pointer transition flex flex-col bg-indigo-50/50 hover:bg-indigo-50 relative group shadow-sm hover:shadow-md" onclick="promptAuth('full')">
-                    <div class="text-4xl mb-3 transform group-hover:scale-110 transition">🚀</div>
-                    <h3 class="text-xl font-extrabold text-indigo-900 mb-2">正式考場模擬</h3>
-                    <p class="text-sm text-gray-600 flex-grow leading-relaxed">完全模擬正式考試環境。包含 90 分鐘倒數計時，系統將依據官方標準<strong class="text-indigo-700">隨機抽取 75 到 90 題</strong>進行測驗。</p>
-                    <div class="mt-4 text-xs font-bold text-indigo-600 bg-indigo-100/80 inline-block px-3 py-1.5 rounded-lg border border-indigo-200 text-center">🔒 點擊解鎖 (隨機派題)</div>
-                </div>
+            <!-- ============ HERO ============ -->
+            <div class="relative bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 rounded-3xl shadow-2xl overflow-hidden mb-6 sm:mb-8">
+                <!-- 裝飾性光點 -->
+                <div class="absolute top-0 right-0 w-64 h-64 bg-indigo-500/20 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-0 left-0 w-48 h-48 bg-purple-500/20 rounded-full blur-3xl"></div>
+                <!-- 點狀網格背景 -->
+                <div class="absolute inset-0 opacity-[0.15]" style="background-image: radial-gradient(circle, white 1px, transparent 1px); background-size: 24px 24px;"></div>
 
-                <!-- Mode 2: Quick Test -->
-                <div class="border-2 border-emerald-100 hover:border-emerald-500 rounded-2xl p-6 cursor-pointer transition flex flex-col bg-emerald-50/50 hover:bg-emerald-50 relative group shadow-sm hover:shadow-md" onclick="promptAuth('quick')">
-                    <div class="text-4xl mb-3 transform group-hover:scale-110 transition">⏱️</div>
-                    <h3 class="text-xl font-extrabold text-emerald-900 mb-2">快速測驗</h3>
-                    <p class="text-sm text-gray-600 flex-grow leading-relaxed">無時間壓力，固定從題庫中隨機抽取 10 題。非常適合通勤或零碎時間進行觀念複習。</p>
-                    <div class="mt-4 text-xs font-bold text-emerald-700 bg-emerald-100/80 inline-block px-3 py-1.5 rounded-lg border border-emerald-200 text-center">🔒 點擊解鎖 (固定 10 題)</div>
-                </div>
-
-                <!-- Mode 3: Custom -->
-                <div class="border-2 border-purple-100 hover:border-purple-500 rounded-2xl p-6 cursor-pointer transition flex flex-col bg-purple-50/50 hover:bg-purple-50 relative group shadow-sm hover:shadow-md" onclick="promptAuth('custom')">
-                    <div class="text-4xl mb-3 transform group-hover:scale-110 transition">⚙️</div>
-                    <h3 class="text-xl font-extrabold text-purple-900 mb-2">自訂題數模式</h3>
-                    <p class="text-sm text-gray-600 flex-grow leading-relaxed">依據您的需求自由決定題數。可自由設定想練習的題量（最高依題庫上限）。</p>
-                    <div class="mt-4 flex items-center space-x-2 bg-white p-2 rounded-lg border border-purple-100 shadow-sm" onclick="event.stopPropagation()">
-                        <label for="custom-num" class="text-xs font-bold text-purple-700 whitespace-nowrap">題數設定:</label>
-                        <input type="number" id="custom-num" min="1" max="600" value="20" class="w-full text-center border-b-2 border-purple-300 focus:border-purple-600 px-1 py-0.5 text-sm font-bold text-purple-900 focus:outline-none bg-transparent">
+                <div class="relative px-6 py-10 sm:px-10 sm:py-14 text-center">
+                    <!-- 認證徽章 -->
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm mb-5">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span class="text-xs font-bold text-slate-200 tracking-widest uppercase">CompTIA Security+ · SY0-701</span>
                     </div>
-                    <div class="mt-3 text-xs font-bold text-purple-700 bg-purple-100/80 inline-block px-3 py-1.5 rounded-lg border border-purple-200 text-center">🔒 點擊上方區塊解鎖</div>
+
+                    <!-- 主標題 -->
+                    <h1 class="text-3xl sm:text-5xl font-black text-white mb-4 tracking-tight leading-tight">
+                        最完整的中文化<br class="sm:hidden">
+                        <span class="bg-gradient-to-r from-amber-300 via-yellow-400 to-orange-400 text-transparent bg-clip-text">考古題模擬系統</span>
+                    </h1>
+
+                    <!-- 副標 -->
+                    <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed mb-7 sm:mb-8">
+                        基本系統已完成最後優化，考古題題目已全數納入題庫，<br class="hidden sm:inline">
+                        PBQ 實作題請自行上網找影片補充。
+                    </p>
+
+                    <!-- 數據條 -->
+                    <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 sm:gap-x-10 text-center">
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-black text-white">605</div>
+                            <div class="text-[10px] sm:text-xs text-slate-400 tracking-widest uppercase mt-0.5">道題目</div>
+                        </div>
+                        <div class="w-px h-8 bg-slate-700"></div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-black text-white">100%</div>
+                            <div class="text-[10px] sm:text-xs text-slate-400 tracking-widest uppercase mt-0.5">中文翻譯</div>
+                        </div>
+                        <div class="w-px h-8 bg-slate-700"></div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-black text-white">250+</div>
+                            <div class="text-[10px] sm:text-xs text-slate-400 tracking-widest uppercase mt-0.5">重要單字</div>
+                        </div>
+                        <div class="w-px h-8 bg-slate-700"></div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-black text-white">FREE</div>
+                            <div class="text-[10px] sm:text-xs text-slate-400 tracking-widest uppercase mt-0.5">免費使用</div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="mt-8 flex flex-col items-center gap-6">
-                <div class="text-center text-xs font-semibold text-gray-400 border-t pt-6 w-full">
-                    © Architecture & UI/UX Experience <br>
-                    <span class="text-sm text-indigo-500/80 mt-1 inline-block tracking-widest uppercase">Designed by <span class="text-indigo-600 font-black">EnChung</span></span>
+            <!-- ============ 功能說明 ============ -->
+            <div class="bg-white rounded-2xl shadow-md border border-slate-100 p-5 sm:p-7 mb-6 sm:mb-8">
+                <div class="flex items-center gap-2 mb-5">
+                    <div class="w-1 h-5 bg-indigo-600 rounded-full"></div>
+                    <h3 class="text-sm font-black text-slate-700 tracking-wider uppercase">系統特色</h3>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+                    <div class="group flex items-start gap-4 p-4 rounded-xl border border-slate-100 hover:border-blue-200 hover:bg-blue-50/30 transition-all">
+                        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center flex-shrink-0 shadow-md shadow-blue-500/20">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        </div>
+                        <div class="min-w-0">
+                            <h4 class="text-base font-extrabold text-slate-800 mb-1">作答時即時解析</h4>
+                            <p class="text-sm text-slate-600 leading-relaxed">點擊「中文翻譯及題目解析」按鈕，即時看到中文翻譯、各選項分析與重要單字定義。</p>
+                        </div>
+                    </div>
+                    <div class="group flex items-start gap-4 p-4 rounded-xl border border-slate-100 hover:border-emerald-200 hover:bg-emerald-50/30 transition-all">
+                        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-emerald-500 to-green-600 flex items-center justify-center flex-shrink-0 shadow-md shadow-emerald-500/20">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+                        </div>
+                        <div class="min-w-0">
+                            <h4 class="text-base font-extrabold text-slate-800 mb-1">交卷後完整詳解</h4>
+                            <p class="text-sm text-slate-600 leading-relaxed">結果頁面點「展開完整詳解」即可閱讀每題的觀念分析、正解原因與其他選項評析。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============ 測驗模式 ============ -->
+            <div class="bg-white rounded-2xl shadow-md border border-slate-100 p-5 sm:p-7 mb-6 sm:mb-8">
+                <div class="flex items-center justify-between mb-5">
+                    <div class="flex items-center gap-2">
+                        <div class="w-1 h-5 bg-indigo-600 rounded-full"></div>
+                        <h3 class="text-sm font-black text-slate-700 tracking-wider uppercase">選擇測驗模式</h3>
+                    </div>
+                    <span class="text-xs text-slate-400 font-medium hidden sm:inline">點擊卡片開始</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5">
+                    <!-- Mode 1: Full Exam -->
+                    <div class="group relative bg-gradient-to-br from-indigo-50 to-white border-2 border-indigo-100 hover:border-indigo-500 rounded-2xl p-5 sm:p-6 cursor-pointer transition-all hover:shadow-lg hover:shadow-indigo-200/40 hover:-translate-y-0.5 flex flex-col" onclick="promptAuth('full')">
+                        <div class="absolute top-3 right-3 text-[10px] font-black text-indigo-600 bg-indigo-100 px-2 py-0.5 rounded-full tracking-wider">推薦</div>
+                        <div class="text-3xl sm:text-4xl mb-3 transform group-hover:scale-110 transition">🚀</div>
+                        <h3 class="text-base sm:text-lg font-black text-indigo-950 mb-1.5">正式考場模擬</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 flex-grow leading-relaxed mb-4">
+                            完全模擬正式考試環境。90 分鐘倒數計時，依官方標準
+                            <span class="font-bold text-indigo-700">隨機抽取 75–90 題</span>。
+                        </p>
+                        <div class="mt-auto inline-flex items-center justify-center gap-1.5 text-xs font-bold text-indigo-700 bg-indigo-100/80 border border-indigo-200 px-3 py-2 rounded-lg group-hover:bg-indigo-600 group-hover:text-white group-hover:border-indigo-600 transition">
+                            🔒 點擊解鎖
+                        </div>
+                    </div>
+
+                    <!-- Mode 2: Quick Test -->
+                    <div class="group bg-gradient-to-br from-emerald-50 to-white border-2 border-emerald-100 hover:border-emerald-500 rounded-2xl p-5 sm:p-6 cursor-pointer transition-all hover:shadow-lg hover:shadow-emerald-200/40 hover:-translate-y-0.5 flex flex-col" onclick="promptAuth('quick')">
+                        <div class="text-3xl sm:text-4xl mb-3 transform group-hover:scale-110 transition">⏱️</div>
+                        <h3 class="text-base sm:text-lg font-black text-emerald-950 mb-1.5">快速測驗</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 flex-grow leading-relaxed mb-4">
+                            無時間壓力，固定隨機抽取
+                            <span class="font-bold text-emerald-700">10 題</span>。
+                            適合通勤或零碎時間複習。
+                        </p>
+                        <div class="mt-auto inline-flex items-center justify-center gap-1.5 text-xs font-bold text-emerald-700 bg-emerald-100/80 border border-emerald-200 px-3 py-2 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition">
+                            🔒 點擊解鎖
+                        </div>
+                    </div>
+
+                    <!-- Mode 3: Custom -->
+                    <div class="group bg-gradient-to-br from-purple-50 to-white border-2 border-purple-100 hover:border-purple-500 rounded-2xl p-5 sm:p-6 cursor-pointer transition-all hover:shadow-lg hover:shadow-purple-200/40 hover:-translate-y-0.5 flex flex-col" onclick="promptAuth('custom')">
+                        <div class="text-3xl sm:text-4xl mb-3 transform group-hover:scale-110 transition">⚙️</div>
+                        <h3 class="text-base sm:text-lg font-black text-purple-950 mb-1.5">自訂題數模式</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-3">自由決定練習題量，最高依題庫上限。</p>
+                        <div class="bg-white p-2.5 rounded-lg border border-purple-100 shadow-inner flex items-center gap-2 mb-3" onclick="event.stopPropagation()">
+                            <label for="custom-num" class="text-[11px] font-bold text-purple-700 whitespace-nowrap">題數</label>
+                            <input type="number" id="custom-num" min="1" max="605" value="20" class="w-full text-center border-b-2 border-purple-300 focus:border-purple-600 px-1 py-0.5 text-sm font-black text-purple-900 focus:outline-none bg-transparent">
+                            <span class="text-[11px] font-bold text-slate-400 whitespace-nowrap">題</span>
+                        </div>
+                        <div class="mt-auto inline-flex items-center justify-center gap-1.5 text-xs font-bold text-purple-700 bg-purple-100/80 border border-purple-200 px-3 py-2 rounded-lg group-hover:bg-purple-600 group-hover:text-white group-hover:border-purple-600 transition">
+                            🔒 點擊上方區塊解鎖
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============ Footer ============ -->
+            <div class="text-center pb-6">
+                <div class="inline-flex items-center gap-3 text-xs text-slate-400">
+                    <span>© Architecture & UI/UX Experience</span>
+                    <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+                    <span class="tracking-widest uppercase">Designed by <span class="bg-gradient-to-r from-amber-500 to-orange-500 text-transparent bg-clip-text font-black">EnChung</span></span>
                 </div>
             </div>
         </div>
