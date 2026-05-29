@@ -170,12 +170,32 @@
     <main class="flex-grow overflow-y-auto p-4 sm:p-6 flex justify-center items-start">
         
         <!-- Start Screen (首頁) -->
-        <div id="start-screen" class="bg-white max-w-4xl w-full rounded-2xl shadow-xl p-8 mt-6 border border-gray-100 relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-32 h-32 bg-indigo-50 rounded-bl-full -z-10"></div>
+        <div id="start-screen" class="bg-white max-w-4xl w-full rounded-2xl shadow-xl p-5 sm:p-8 mt-4 sm:mt-6 border border-gray-100 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-20 sm:w-32 h-20 sm:h-32 bg-indigo-50 rounded-bl-full -z-10"></div>
             
-            <div class="text-center mb-10">
-                <h2 class="text-3xl font-extrabold text-gray-800 mb-4">請選擇測驗模式</h2>
-                <p class="text-gray-600 font-medium">系統即將載入完整題庫。具備標記與跳題功能，提供最真實的考試體驗。<br>測驗過程中可隨時點擊「✨ 中文翻譯及題目解析」按鈕查看詳細解析。<br>交卷後也可在結果頁面點擊「展開完整詳解」查看每題的中文翻譯和觀念分析。</p>
+            <div class="text-center mb-8 sm:mb-10">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-800 mb-3 sm:mb-4">請選擇測驗模式</h2>
+                <p class="text-gray-500 text-sm sm:text-base font-medium max-w-2xl mx-auto leading-relaxed">
+                    基本系統已完成最後優化，考古題題目已全數納入題庫，PBQ 實作題請自行上網找影片。
+                </p>
+            </div>
+
+            <!-- 功能說明卡片 (響應式：手機直列、桌機 2 欄) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-8 sm:mb-10 max-w-3xl mx-auto">
+                <div class="flex items-start gap-3 p-3 sm:p-4 rounded-xl bg-blue-50/70 border border-blue-100">
+                    <div class="text-2xl flex-shrink-0 leading-none">✨</div>
+                    <div class="min-w-0">
+                        <h4 class="text-sm font-bold text-blue-900 mb-1">作答時看解析</h4>
+                        <p class="text-xs sm:text-sm text-gray-700 leading-relaxed">點擊「中文翻譯及題目解析」按鈕，即可即時看到中文翻譯、選項分析與重要單字。</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-3 p-3 sm:p-4 rounded-xl bg-green-50/70 border border-green-100">
+                    <div class="text-2xl flex-shrink-0 leading-none">📝</div>
+                    <div class="min-w-0">
+                        <h4 class="text-sm font-bold text-green-900 mb-1">交卷後看詳解</h4>
+                        <p class="text-xs sm:text-sm text-gray-700 leading-relaxed">結果頁面點「展開完整詳解」可看每題的觀念分析、正解原因與其他選項解析。</p>
+                    </div>
+                </div>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
