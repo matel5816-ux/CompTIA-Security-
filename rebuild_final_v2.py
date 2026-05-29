@@ -33,6 +33,15 @@ from translations_batch_12 import TRANSLATIONS as B12
 
 batch_trans = {**B1, **B2, **B3, **B4, **B5, **B6, **B7, **B8, **B9, **B10, **B11, **B12}
 
+# Apply verified corrections to questions whose batch translations were wrong topics
+try:
+    from translation_corrections import CORRECTIONS
+    for num, fix in CORRECTIONS.items():
+        batch_trans[num] = fix
+    print(f"Applied {len(CORRECTIONS)} translation corrections")
+except ImportError:
+    pass
+
 print(f"PDF questions: {len(pdf_qs)}")
 print(f"Translated options: {len(trans_opts)}")
 print(f"Batch translations (for q/explain): {len(batch_trans)}")
