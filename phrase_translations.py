@@ -646,6 +646,38 @@ PHRASE_TRANSLATIONS = {
     # Buffer overflow / vuln types
     "Buffer overflow attack": "緩衝區溢位攻擊",
 
+    # Q449 VM escape
+    "Malicious instructions can be inserted into memory and give the attacker elevated privileges":
+        "可將惡意指令注入記憶體並賦予攻擊者提升的權限",
+    "Malicious instructions can be inserted into memory and give the attacker elevated privileges.":
+        "可將惡意指令注入記憶體並賦予攻擊者提升的權限",
+
+    # Q475 MFA
+    "Voice and fingerprint verification with an SMS one-time passcode":
+        "語音與指紋驗證搭配 SMS 一次性密碼",
+    "Voice and ngerprint verication with an SMS one-time passcode":
+        "語音與指紋驗證搭配 SMS 一次性密碼",
+
+    # Q484 memory injection
+    "An executable is overwritten on the disk, and malicious code runs the next time it is executed.":
+        "磁碟上的執行檔被覆寫，下次執行時運行惡意程式碼",
+    "An executable is overwritten on the disk, and malicious code runs the next time it is loaded.":
+        "磁碟上的執行檔被覆寫，下次載入時運行惡意程式碼",
+
+    # Q540 environmental variables
+    "The contents of environmental variables could affect the scope and impact of an attack.":
+        "環境變數的內容可能影響攻擊的範圍與衝擊",
+    "In-memory environmental variable values can be overwritten and used by attackers.":
+        "記憶體中的環境變數值可被覆寫並被攻擊者利用",
+    "Environmental variables will determine when updates are run and could mitigate the risk.":
+        "環境變數會決定何時執行更新並可減緩風險",
+    "Environmental variables define cryptographic standards for the system and could cause vulnerabilities.":
+        "環境變數定義系統的密碼學標準，可能造成漏洞",
+
+    # Q562 Security governance
+    "Assigning roles and responsibilities for owners, controllers, and custodians":
+        "為擁有者、控制者、保管者分配角色與責任",
+
     # Q4 ACL syntax options (keep technical but add brief Chinese)
     "Access list outbound permit 0.0.0.0/0 0.0.0.0/0 port 53 Access list outbound deny 10.50.10.25/32 0.0.0.0/0 port 53":
         "允許 0.0.0.0/0→0.0.0.0/0 port 53；拒絕 10.50.10.25/32→0.0.0.0/0 port 53（邏輯顛倒）",

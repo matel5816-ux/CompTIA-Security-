@@ -300,7 +300,7 @@
     "zh": {
       "q": "下列哪份文件規範與第三方滲透測試人員執行測試的條款細節？",
       "opts": [
-        "Rules of engagement",
+        "交戰守則 (ROE)",
         "供應鏈分析",
         "稽核權條款",
         "盡職調查"
@@ -323,10 +323,10 @@
     "zh": {
       "q": "滲透測試員開始時對客戶環境執行 port 與服務掃描。下列何者是這個活動最可能的目的？",
       "opts": [
-        "Active",
-        "Passive",
-        "Defensive",
-        "Offensive"
+        "主動模式",
+        "被動模式",
+        "防守型",
+        "攻擊型"
       ],
       "explain": "Port/Service scan 屬於滲透測試的偵察階段，目的在識別目標環境中開放的 port 與正在執行的服務，作為後續弱點評估與攻擊規劃的依據。"
     }
@@ -349,7 +349,7 @@
         "IRP 事件回應計畫",
         "DRP 災害復原計畫",
         "RPO 恢復點目標",
-        "SDLC"
+        "SDLC 軟體開發生命週期"
       ],
       "explain": "Restore 流程的成功與否最關鍵的就是「備份本身是否可靠且可成功還原」。若備份本身有問題，後面再多流程都無法復原資料。"
     }
@@ -371,7 +371,7 @@
       "opts": [
         "越獄",
         "記憶體注入",
-        "Resource reuse",
+        "資源重用",
         "Side-loading 旁路安裝"
       ],
       "explain": "Side-loading 即繞過官方應用商店安裝程式，等同於跳過廠商的安全審查與簽章驗證，會引入「供應鏈攻擊」風險（程式可能被竄改、含後門等）。"
@@ -441,7 +441,7 @@
         "RDP 伺服器",
         "跳板伺服器",
         "代理 伺服器",
-        "Hypervisor"
+        "Hypervisor 虛擬化軟體"
       ],
       "explain": "TPM (Trusted Platform Module) 可儲存 BIOS 完整性度量值與密鑰，配合 Secure Boot 可偵測或阻止未經授權的 BIOS/韌體變更。是硬體層級的信任根。"
     }
@@ -462,9 +462,9 @@
       "q": "公司網頁過濾器設定為在 URL 字串中偵測比對到字串就拒絕存取。這屬於哪一類型過濾？",
       "opts": [
         "加密=off",
-        "HTTP://",
-        "www.*.com",
-        ":443"
+        "http:// (未加密)",
+        "www.*.com (萬用網域)",
+        "Port :443"
       ],
       "explain": "對 URL 字串進行字串比對屬於「URL Scanning」。它逐字檢視 URL 內容並依規則阻擋。內容分類是依網站類別 (賭博、社群等) 過濾，DNS 過濾則在網域層處理。"
     }
@@ -533,7 +533,7 @@
         "應用",
         "IPS 入侵防護/IDS 入侵偵測",
         "網路",
-        "Endpoint"
+        "端點 (Endpoint)"
       ],
       "explain": "處理 SIEM 警報的優先步驟是檢視觸發此警報的具體事件、關聯規則與證據，判斷是真正威脅還是誤報，才能決定後續行動，而非盲目追查 IP 或修改規則。"
     }
@@ -553,10 +553,10 @@
     "zh": {
       "q": "安全團隊要監控內部網路的異常流量。下列哪種技術最適合偵測「未知」威脅？",
       "opts": [
-        "Digital forensics",
-        "E-discovery",
-        "Incident response",
-        "Threat hunting"
+        "數位鑑識",
+        "電子證據開示 (E-Discovery)",
+        "事件回應 (IR)",
+        "威脅獵捕"
       ],
       "explain": "行為分析建立正常基準後偵測異常模式，可發現「未知」(0-day) 攻擊。簽章式只能比對已知威脅，對新型態無能為力。"
     }
@@ -599,9 +599,9 @@
     "zh": {
       "q": "公司使用「風險矩陣」(Risk matrix) 評估風險。矩陣的兩個主軸通常是什麼？",
       "opts": [
-        "Partition",
+        "分割區",
         "非對稱式加密",
-        "Full disk",
+        "全磁碟 (FDE)",
         "資料庫"
       ],
       "explain": "風險矩陣的標準兩軸是「發生可能性 (Likelihood)」與「發生時的影響程度 (Impact)」。兩軸相乘得到風險等級 (低/中/高/極高)。"
@@ -645,10 +645,10 @@
     "zh": {
       "q": "組織需確保災難期間關鍵業務功能能持續運作。應建立下列哪一份計畫？",
       "opts": [
-        "Hardening",
+        "強化 (Hardening)",
         "員工 監控",
-        "Conguration enforcement",
-        "Least privilege"
+        "組態強制執行",
+        "最小權限"
       ],
       "explain": "BCP (Business Continuity Plan) 目標是「災難期間關鍵業務功能不中斷」。DRP 是 BCP 的子集，專注於 IT 系統恢復；IRP 處理安全事件本身。"
     }
@@ -669,9 +669,9 @@
       "q": "下列哪一份文件最常用來「記錄風險、責任人、威脅」？",
       "opts": [
         "風險容忍度",
-        "Risk transfer",
+        "風險轉移",
         "風險登記簿",
-        "Risk analysis"
+        "風險分析"
       ],
       "explain": "Risk Register 是風險管理的核心文件，記錄已識別風險、可能性、影響、責任人 (Risk Owner)、處理方式與後續追蹤狀況。"
     }
@@ -715,7 +715,7 @@
       "q": "公司擴大「漏洞回報計畫」(Bug Bounty)，允許個人對網路進行安全測試。應先做什麼？",
       "opts": [
         "開源情報 (OSINT)",
-        "Bug bounty",
+        "漏洞獎金計畫",
         "紅隊",
         "Penetration 測試"
       ],
@@ -762,7 +762,7 @@
       "opts": [
         "XSS 跨站腳本",
         "Side-loading 旁路安裝",
-        "Buffer overow",
+        "緩衝區溢位",
         "SQL 注入"
       ],
       "explain": "SQL Injection 利用未做輸入驗證的應用程式，將惡意 SQL 注入到輸入欄位中，使資料庫執行未經授權的命令以查詢或竄改資料。"
@@ -783,8 +783,8 @@
     "zh": {
       "q": "研發部門員工接受廣泛訓練以理解敏感資料的價值。此舉的目的是？",
       "opts": [
-        "Encrypted",
-        "Intellectual property",
+        "加密",
+        "智慧財產 (IP)",
         "關鍵",
         "資料 in transit"
       ],
@@ -857,10 +857,10 @@
     "zh": {
       "q": "新任董事具備網安背景，希望董事會定期收到網安報告。應提供什麼樣的報告？",
       "opts": [
-        "Packet captures",
-        "Vulnerability scans",
-        "Metadata",
-        "Dashboard"
+        "封包擷取",
+        "弱點掃描",
+        "中繼資料 (Metadata)",
+        "儀表板"
       ],
       "explain": "董事會層級需要高階風險與合規摘要 (Executive summary)，包含 KRI、重大事件、合規狀態，以利戰略決策。技術細節屬於 IT/SOC 層級。"
     }
@@ -903,10 +903,10 @@
     "zh": {
       "q": "依共享責任模型，下列哪個角色負責「保護雲端服務提供者的基礎設施」？",
       "opts": [
-        "Client",
+        "客戶端",
         "第三方供應商",
-        "Cloud provider",
-        "DBA"
+        "雲端服務商",
+        "DBA 資料庫管理員"
       ],
       "explain": "CSP 負責「雲的安全」(Security of the cloud)：實體資料中心、網路、虛擬化層；客戶負責「在雲中的安全」(Security in the cloud)：自己的應用、資料、IAM。"
     }
@@ -928,7 +928,7 @@
       "opts": [
         "MSA 主服務協議",
         "SLA 服務水準協議",
-        "BPA",
+        "BPA 業務合作協議",
         "SOW 工作說明書"
       ],
       "explain": "SOW (Statement of Work) 是專案合約附件，明確描述工作範圍、可交付項目、時程、成本與驗收標準。SLA 則規範服務可用性與績效指標。"
@@ -949,9 +949,9 @@
     "zh": {
       "q": "安全團隊在審視第三方執行的稽核報告。下列何者最可能代表「弱點存在」的指標？",
       "opts": [
-        "Secure cookies",
-        "Version control",
-        "Input validation",
+        "安全 Cookie",
+        "版本控制",
+        "輸入驗證",
         "程式碼簽章"
       ],
       "explain": "稽核 (Audit) 報告中的「Findings」就是明確指出的弱點或不合規項目，是需要優先補救的具體事項，也是稽核的核心輸出。"
@@ -975,12 +975,12 @@
     "zh": {
       "q": "設計高可用性 (HA) 網路時應考慮哪兩個因素？(多選)",
       "opts": [
-        "Ease of recovery",
-        "Ability to patch",
-        "Physical isolation",
-        "Responsiveness",
-        "Attack surface",
-        "Extensible authentication"
+        "復原便利性",
+        "可修補能力",
+        "實體隔離",
+        "回應性",
+        "攻擊面",
+        "可擴展驗證 (EAP)"
       ],
       "explain": "HA 設計核心：(1) Redundancy（備援，多組設備防止單點故障）；(2) Failover（自動切換，發生故障時無縫接管），兩者配合才能達成 99.9%+ 可用性。"
     }
@@ -1046,10 +1046,10 @@
     "zh": {
       "q": "大型銀行內部 PCI DSS 合規稽核失敗，最可能的後果是？",
       "opts": [
-        "Fines",
-        "Audit ndings",
-        "Sanctions",
-        "Reputation damage"
+        "罰款",
+        "稽核發現",
+        "制裁",
+        "聲譽損害"
       ],
       "explain": "PCI DSS 失敗會被支付卡品牌 (Visa/MC) 罰款，嚴重時失去處理卡片交易的權利，對銀行業務是毀滅性打擊。也可能造成商譽損害與客戶流失。"
     }
@@ -1069,10 +1069,10 @@
     "zh": {
       "q": "公司在制定 BCP 並要決定「需要多少員工」進行恢復。應考慮什麼？",
       "opts": [
-        "Capacity planning",
-        "Redundancy",
+        "容量規劃",
+        "冗餘 / 備援",
         "地理分散",
-        "Tabletop exercise"
+        "桌上演練 (Tabletop)"
       ],
       "explain": "BCP 中的人員配置應依「該角色對關鍵業務功能的重要性」與「技能可替代性」決定。關鍵職能 (如資料庫工程師、領導者) 必須優先確保有可用人力。"
     }
@@ -1115,8 +1115,8 @@
     "zh": {
       "q": "下列何者屬於「硬體特有」的弱點？",
       "opts": [
-        "Firmware version",
-        "Buffer overow",
+        "韌體版本",
+        "緩衝區溢位",
         "SQL 注入",
         "XSS 跨站腳本"
       ],
@@ -1184,7 +1184,7 @@
     "zh": {
       "q": "公司要求硬碟在報廢回收前須安全清除資料。下列哪一項最符合此做法？",
       "opts": [
-        "Enumeration",
+        "列舉 (Enumeration)",
         "資料淨化",
         "銷毀",
         "資產清冊"
@@ -1255,7 +1255,7 @@
       "opts": [
         "存取 control list",
         "應用程式允許名單",
-        "Host-based rewall",
+        "主機型防火牆",
         "DLP 資料外洩防護 solution"
       ],
       "explain": "Allow list (白名單) 採「預設拒絕」原則：只允許明確核准的程式執行，未列入清單的「未知」程式一律阻擋。Block list 只能擋已知威脅，對未知無能為力。"
@@ -1302,7 +1302,7 @@
         "測試使用者輸入欄位的輸入驗證",
         "Performing 程式碼簽章 on 公司-developed 軟體",
         "對軟體執行靜態程式碼分析 (SAST)",
-        "Ensuring secure cookies are use"
+        "確保使用安全 Cookie"
       ],
       "explain": "Code signing 使用組織數位憑證簽署程式碼，使用者可驗證程式來自宣稱的開發者且未被竄改，是確認「真實性 (Authenticity) + 完整性 (Integrity)」的標準做法。"
     }
@@ -1324,7 +1324,7 @@
       "opts": [
         "蜜罐",
         "影像監視",
-        "Zero Trust",
+        "零信任 (Zero Trust)",
         "地理圍欄"
       ],
       "explain": "Honeypot 是刻意暴露的誘餌系統，與生產隔離，攻擊者攻擊蜜罐時不會影響真實業務，且可分析攻擊者的手法、工具、IOC。"
@@ -1368,7 +1368,7 @@
     "zh": {
       "q": "安全分析員完成弱點評估，運維團隊已修補所有弱點。「下一步」應做什麼？",
       "opts": [
-        "Conduct an audit.",
+        "進行稽核",
         "Initiate a 滲透測試.",
         "Rescan the 網路.",
         "Submit a 報告."
@@ -1415,7 +1415,7 @@
       "q": "下列何者讓「訊息可歸屬到特定個人」？",
       "opts": [
         "自適應身分",
-        "Non-repudiation",
+        "不可否認性",
         "驗證",
         "存取 日誌"
       ],
@@ -1437,10 +1437,10 @@
     "zh": {
       "q": "下列何者最適合「每天一致地檢查伺服器安全設定是否被修改」？",
       "opts": [
-        "Automation",
-        "Compliance checklist",
+        "自動化",
+        "合規檢查清單",
         "證明文件",
-        "Manual audit"
+        "手動稽核"
       ],
       "explain": "「每天一致」表示需要重複、可靠、無人為差異的執行方式，自動化 (Automation) 工具（如 Ansible/Chef + 組態漂移偵測）最適合，可確保每日比對基準。"
     }
@@ -1460,9 +1460,9 @@
     "zh": {
       "q": "下列何者可協助偵測員工「不小心透過郵件外傳含 PII 的檔案」？",
       "opts": [
-        "SCAP",
-        "NetFlow",
-        "Antivirus",
+        "SCAP 安全內容自動化",
+        "NetFlow 流量分析",
+        "防毒軟體",
         "DLP 資料外洩防護"
       ],
       "explain": "DLP 可掃描郵件附件、內文中的敏感資料模式 (信用卡號、身分證號、PII 關鍵字)，在外傳時觸發警報或阻擋。是針對「資料外洩」的專屬工具。"
@@ -1484,8 +1484,8 @@
       "q": "組織安全政策納入新規定：「在程式原始碼中加入正則表達式以驗證使用者輸入」。這是什麼安全做法？",
       "opts": [
         "識別嵌入金鑰",
-        "Code debugging",
-        "Input validation",
+        "程式碼除錯",
+        "輸入驗證",
         "靜態程式碼分析 (SAST)"
       ],
       "explain": "用正則表達式驗證輸入格式是 Input validation 的典型實作，可阻擋 SQL Injection、XSS、Command Injection 等注入類攻擊。是 Secure coding 的基本要求。"
@@ -1529,10 +1529,10 @@
     "zh": {
       "q": "舊式 Linux 系統的主機防火牆「僅允許特定內部 IP 連線並阻擋外部 IP」。這實作了什麼控制？",
       "opts": [
-        "Compensating control",
+        "補償控制",
         "網路分段",
-        "Transfer of risk",
-        "SNMP traps"
+        "風險轉移",
+        "SNMP Trap 警示"
       ],
       "explain": "舊系統無法套用標準安全控制（如最新版作業系統），改用其他控制達成等效保護，這就是 Compensating control（補償控制）。本身也是 Preventive 性質但「為了彌補主控制失效」這層語意是 Compensating。"
     }
@@ -1553,8 +1553,8 @@
       "q": "管理團隊發現「手動建立的新帳號」常有錯誤的存取權限。下列何者最適合？",
       "opts": [
         "防護腳本",
-        "Ticketing work ow",
-        "Escalation script",
+        "工單流程",
+        "升級腳本",
         "使用者 provisioning script"
       ],
       "explain": "User provisioning 自動化可確保新帳號權限依預設角色一致設定，消除手動建立的差異與錯誤。是 IGA (Identity Governance & Administration) 的核心實作。"
@@ -1599,9 +1599,9 @@
       "q": "系統管理員想找「低成本的雲端應用託管」方案。下列何者符合？",
       "opts": [
         "無伺服器框架",
-        "Type 1 hypervisor",
+        "Type 1 裸機虛擬化",
         "SD-WAN",
-        "SDN"
+        "SDN 軟體定義網路"
       ],
       "explain": "Serverless (FaaS，如 AWS Lambda) 按執行次數與時長計費，無需維護伺服器，對流量低或不穩的應用最具成本效益。"
     }
@@ -1622,9 +1622,9 @@
       "q": "SOC 判定「伺服器上的某偵測活動」其實是正常行為。下列哪個活動最能描述其後續做的事？",
       "opts": [
         "規則調校",
-        "Aggregating",
-        "Quarantining",
-        "Archiving"
+        "彙整分析",
+        "隔離",
+        "歸檔"
       ],
       "explain": "當偵測規則產生大量誤報時，SOC 需 Tuning（調校）規則，例如加入白名單、調整門檻、改寫關聯邏輯，以降低 alert fatigue（警報疲乏）。"
     }
@@ -1669,7 +1669,7 @@
       "opts": [
         "Clustering 伺服器",
         "地理分散",
-        "Load balancers",
+        "負載平衡器",
         "Off-site 備份"
       ],
       "explain": "Geographic dispersion 將系統與資料分散至不同地理位置，當單一地點遭天災影響時，其他地點可接管。是區域性災難的標準防範。"
@@ -1690,8 +1690,8 @@
     "zh": {
       "q": "公司設立 BYOD 計畫的主要安全考量是？",
       "opts": [
-        "End of life",
-        "Buffer overow",
+        "生命終期 (EOL)",
+        "緩衝區溢位",
         "VM 逃逸",
         "越獄"
       ],
@@ -1783,8 +1783,8 @@
       "q": "下列何者最能描述「Single sign-on (SSO) 解決方案的主要優勢」？",
       "opts": [
         "Console 存取",
-        "Routing protocols",
-        "VLANs",
+        "路由協定",
+        "VLAN 虛擬區網",
         "基於 Web 的管理"
       ],
       "explain": "SSO 讓使用者只需一組憑證即可存取多個應用，減少密碼疲乏、降低重複使用密碼的風險，並提升使用體驗。常結合 MFA 強化安全性。"
@@ -1805,7 +1805,7 @@
     "zh": {
       "q": "組織想統一管理員工 iPhone 與 Android 的安全設定。應使用？",
       "opts": [
-        "SPF",
+        "SPF 寄件者驗證",
         "GPO 群組原則",
         "NAC 網路存取控制",
         "FIM 檔案完整性監控"
@@ -1951,7 +1951,7 @@
         "RTOS 即時作業系統",
         "容器",
         "Embedded 系統",
-        "SCADA"
+        "SCADA 監控與資料擷取"
       ],
       "explain": "EDR 持續監控端點 (筆電/伺服器) 上的程式行為、檔案變更、網路連線，可即時偵測並回應惡意活動。是次世代的反病毒方案。"
     }
@@ -1971,10 +1971,10 @@
     "zh": {
       "q": "公司想集中蒐集分析多種來源 (防火牆、伺服器、App) 的日誌。應使用？",
       "opts": [
-        "E-discovery",
-        "Chain of custody",
-        "Legal hold",
-        "Preservation"
+        "電子證據開示 (E-Discovery)",
+        "證據鏈",
+        "法律保留",
+        "證據保全"
       ],
       "explain": "SIEM 集中蒐集多源日誌、執行關聯分析、產生安全警報、提供調查取證的搜尋介面。是 SOC 的核心平台。"
     }
@@ -2018,8 +2018,8 @@
       "q": "下列何者最適合用於「強化使用者密碼以抵禦離線破解」？",
       "opts": [
         "現成軟體",
-        "Orchestration",
-        "Baseline",
+        "編排 (Orchestration)",
+        "基準 (Baseline)",
         "政策 enforcement"
       ],
       "explain": "bcrypt/scrypt/Argon2 是專為密碼設計的慢速雜湊演算法，配合 Salt 可大幅增加 GPU 破解的計算成本。MD5 已過時不安全，Base64 不是加密只是編碼。"
@@ -2040,10 +2040,10 @@
     "zh": {
       "q": "下列何者是「對稱式加密」的特性？",
       "opts": [
-        "Processor",
-        "Custodian",
-        "Subject",
-        "Owner"
+        "資料處理者 (Processor)",
+        "資料保管者 (Custodian)",
+        "主體 (Subject)",
+        "資料所有者 (Owner)"
       ],
       "explain": "對稱式加密 (AES、DES、3DES) 加解密使用同一把金鑰，速度快適合大量資料。但需安全交換金鑰，常與非對稱式 (RSA) 搭配解決金鑰交換問題。"
     }
@@ -2063,10 +2063,10 @@
     "zh": {
       "q": "下列何者最適合「驗證下載軟體未被竄改」？",
       "opts": [
-        "Risk indicator",
-        "Risk level",
-        "Risk score",
-        "Risk threshold"
+        "風險指標",
+        "風險等級",
+        "風險分數",
+        "風險門檻"
       ],
       "explain": "SHA-256 雜湊比對是驗證檔案完整性的標準做法。發布者公布原始 hash，使用者下載後計算 hash 比對；如不同表示檔案被竄改或下載損毀。"
     }
@@ -2132,10 +2132,10 @@
     "zh": {
       "q": "下列何者是 IAM (身分與存取管理) 的核心元件？",
       "opts": [
-        "Zero Trust",
-        "AAA",
-        "Non-repudiation",
-        "CIA"
+        "零信任 (Zero Trust)",
+        "AAA (驗證、授權、稽核)",
+        "不可否認性",
+        "CIA 機密/完整/可用性"
       ],
       "explain": "AAA 是 IAM 三大核心：Authentication (你是誰)、Authorization (你可以做什麼)、Accounting/Auditing (你做了什麼)，缺一不可。"
     }
@@ -2155,7 +2155,7 @@
     "zh": {
       "q": "員工請假後返回，發現帳號權限仍含其前一個職位的權限。違反了什麼原則？",
       "opts": [
-        "Buffer overow",
+        "緩衝區溢位",
         "SQL 注入",
         "VM 逃逸",
         "記憶體注入"
@@ -2178,10 +2178,10 @@
     "zh": {
       "q": "下列何者最適合用於「核心系統管理員帳號」？",
       "opts": [
-        "OCSP",
+        "OCSP 線上憑證狀態",
         "CSR 憑證簽署請求",
         "CA",
-        "CRC"
+        "CRC 循環冗餘檢查"
       ],
       "explain": "Privileged Access Management (PAM) 標準做法：MFA 強化身分驗證、Jump server 集中存取、稽核日誌追蹤、Just-in-time 即時授權、避免共用憑證。"
     }
@@ -2202,7 +2202,7 @@
       "q": "下列哪一項屬於「Something you have」驗證因素？",
       "opts": [
         "虛擬化",
-        "Firmware",
+        "韌體",
         "應用",
         "Operating 系統"
       ],
@@ -2224,10 +2224,10 @@
     "zh": {
       "q": "下列哪一項屬於「Something you are」驗證因素？",
       "opts": [
-        "CVE",
-        "CVSS",
-        "CIA",
-        "CERT"
+        "CVE 通用漏洞編號",
+        "CVSS 漏洞評分系統",
+        "CIA 機密/完整/可用性",
+        "CERT 緊急應變小組"
       ],
       "explain": "生物特徵 (Biometrics) 屬於 Something you are，包含指紋、臉部、虹膜、聲紋等。優點是難偽造但無法更改（一旦洩漏終身受影響）。"
     }
@@ -2272,7 +2272,7 @@
       "opts": [
         "資料 in use",
         "資料 in transit",
-        "Geographic restrictions",
+        "地理限制",
         "資料 sovereignty"
       ],
       "explain": "Site-to-site VPN 透過 IPsec 等協定，在公開網路（網際網路）上建立加密隧道連接兩個網段，提供傳輸加密 + 兩端身分驗證，使遠端網段如同內網。"
@@ -2294,8 +2294,8 @@
       "q": "弱點掃描報告中分析師執行進一步驗證後判斷該結果不是真實威脅。這屬於什麼？",
       "opts": [
         "It is a 誤判 (False Positive).",
-        "A rescan is required.",
-        "It is considered noise.",
+        "需要重新掃描",
+        "視為雜訊",
         "存在補償控制"
       ],
       "explain": "弱點掃描工具偵測到「看似」漏洞但實際無問題，稱為 False positive (假陽性)。分析師需手動驗證並標記，避免浪費修補資源。"
@@ -2316,10 +2316,10 @@
     "zh": {
       "q": "組織關閉不必要服務、在關鍵舊系統前架設防火牆。這實作了什麼控制？",
       "opts": [
-        "Exception",
+        "例外處理",
         "網路分段",
-        "Risk transfer",
-        "Compensating controls"
+        "風險轉移",
+        "補償控制"
       ],
       "explain": "舊系統無法套用標準安全控制，改用其他方式（關閉服務 + 前置防火牆）達成等效保護，這就是 Compensating control（補償控制）。"
     }
@@ -2339,10 +2339,10 @@
     "zh": {
       "q": "安全顧問需「安全遠端存取」客戶環境。應使用？",
       "opts": [
-        "EAP",
+        "EAP 可擴展驗證協定",
         "DHCP",
         "IPSec",
-        "NAT"
+        "NAT 網路位址轉換"
       ],
       "explain": "IPSec VPN 在第 3 層建立加密隧道，可保護所有上層通訊。是企業級遠端存取的標準。Telnet/FTP/HTTP 都未加密，不適合。"
     }
@@ -2363,8 +2363,8 @@
       "q": "系統管理員想要「在多個雲端中輕鬆部署一致的資源」。應使用？",
       "opts": [
         "軟體 as a service",
-        "Infrastructure as code",
-        "Internet of Things",
+        "基礎設施即程式碼 (IaC)",
+        "物聯網 (IoT)",
         "軟體-de ned networking"
       ],
       "explain": "Infrastructure as Code (Terraform/CloudFormation/Pulumi) 用程式碼定義基礎設施，可在多雲環境快速、一致地部署，並可版本控制與審查。"
@@ -2457,7 +2457,7 @@
       "q": "公司與廠商合作執行滲透測試。下列何者包含「實際工作範圍與時程」？",
       "opts": [
         "SOW 工作說明書",
-        "BPA",
+        "BPA 業務合作協議",
         "SLA 服務水準協議",
         "NDA 保密協議"
       ],
@@ -2525,9 +2525,9 @@
     "zh": {
       "q": "下列何者最能防止員工「在公司電腦上不慎安裝惡意軟體」？",
       "opts": [
-        "Host-based rewall",
+        "主機型防火牆",
         "系統 isolation",
-        "Least privilege",
+        "最小權限",
         "應用程式允許名單"
       ],
       "explain": "Allow list 只允許明確核准的程式執行，未列入清單者一律阻擋（即使員工誤點下載也無法執行）。是端點最強的防護機制之一。"
@@ -2549,7 +2549,7 @@
       "q": "公司在 AUP 加入「員工不得修改行動裝置作業系統」條款，主要為防範什麼？",
       "opts": [
         "XSS 跨站腳本",
-        "Buffer overow",
+        "緩衝區溢位",
         "越獄",
         "Side-loading 旁路安裝"
       ],
@@ -2600,8 +2600,8 @@
       "q": "組織想把客戶資料存放在「員工無法存取」的網段。應使用？",
       "opts": [
         "網路分段",
-        "Isolation",
-        "Patching",
+        "隔離",
+        "修補管理",
         "加密"
       ],
       "explain": "Network Segmentation (網路分段) 將敏感資料區隔到獨立網段，配合 ACL/防火牆限制只有特定授權主機/帳號可存取，是縱深防禦的網路層核心。"
@@ -2623,8 +2623,8 @@
       "q": "氣隙網路 (Air-gapped) 最常見的資料外洩路徑是？",
       "opts": [
         "堡壘主機",
-        "Unsecured Bluetooth",
-        "Unpatched OS",
+        "未保護的藍牙",
+        "未修補的 OS",
         "Removable 裝置"
       ],
       "explain": "氣隙網路沒有外網連線，USB 等可移除媒體就成為主要的資料進出管道，也是惡意程式 (如 Stuxnet) 與資料竊取的常見路徑。應禁用 USB 或實施嚴格管控。"
@@ -2646,7 +2646,7 @@
       "q": "員工瀏覽某產業部落格後公司網路遭惡意程式感染。這是什麼攻擊？",
       "opts": [
         "冒充",
-        "Disinformation",
+        "造謠 / 假訊息",
         "水坑攻擊",
         "簡訊釣魚"
       ],
@@ -2714,10 +2714,10 @@
     "zh": {
       "q": "HR 檔案伺服器設定權限，最佳理由的安全概念是？",
       "opts": [
-        "Integrity",
-        "Availability",
-        "Condentiality",
-        "Non-repudiation"
+        "完整性 (Integrity)",
+        "可用性 (Availability)",
+        "機密性 (Confidentiality)",
+        "不可否認性"
       ],
       "explain": "HR 檔案含員工個資、薪資、評核等機敏資料，限制權限是為保護「機密性」(只授權人員能讀取)。CIA 三元組中本題為 Confidentiality。"
     }
@@ -2766,9 +2766,9 @@
       "q": "公司要求每年執行風險評估。這屬於哪種風險評估類型？",
       "opts": [
         "持續",
-        "Ad hoc",
+        "臨時 (Ad hoc)",
         "週期性",
-        "One time"
+        "一次性 (One-time)"
       ],
       "explain": "Recurring 風險評估指依固定週期 (年/季) 執行的評估。是 ISMS/合規框架的標準要求。Continuous 是即時持續監控，更先進但成本更高。"
     }
@@ -2811,9 +2811,9 @@
     "zh": {
       "q": "下列哪種演練最適合「改善事件回應流程」而不真的衝擊系統？",
       "opts": [
-        "Tabletop",
-        "Replication",
-        "Failover",
+        "桌上演練",
+        "複寫 (Replication)",
+        "故障切換",
         "復原"
       ],
       "explain": "Tabletop 演練是參與者圍坐討論「假設情境」如何回應的紙上推演，成本低且不衝擊生產，可發現流程漏洞、釐清角色責任，是訓練 IR 流程最常用方式。"
@@ -2834,7 +2834,7 @@
     "zh": {
       "q": "下列何者最能確保「關鍵客戶服務的停機時間與資料流失最小化」？",
       "opts": [
-        "Generators and UPS",
+        "發電機與 UPS",
         "離站複寫",
         "Redundant 冷 sites",
         "高可用性網路"
@@ -2857,10 +2857,10 @@
     "zh": {
       "q": "新發現的網路存取漏洞影響舊式 IoT 裝置 OS，但無法修補。應採取？",
       "opts": [
-        "Insurance",
-        "Patching",
+        "保險",
+        "修補管理",
         "網路分段",
-        "Replacement"
+        "替換"
       ],
       "explain": "無法修補的舊裝置應隔離到獨立 VLAN，限制其能存取/被存取的主機與服務，作為補償控制 (Compensating)。這是 OT/IoT 安全的常用做法。"
     }
@@ -2881,7 +2881,7 @@
       "q": "稽核後發現「所有員工都能存取機密檔案伺服器」。應實施？",
       "opts": [
         "Group 政策",
-        "Content ltering",
+        "內容過濾",
         "資料 loss prevention",
         "存取 control lists"
       ],
@@ -2903,7 +2903,7 @@
     "zh": {
       "q": "客戶要求服務商提供至少 99.99% 可用性的「網安託管服務」。應寫入什麼文件？",
       "opts": [
-        "MOA",
+        "MOA 協議備忘錄",
         "SOW 工作說明書",
         "MOU 諒解備忘錄",
         "SLA 服務水準協議"
@@ -2926,10 +2926,10 @@
     "zh": {
       "q": "公司報廢機密儲存陣列並聘外部廠商處理。應要求廠商提供什麼？",
       "opts": [
-        "Certication",
-        "Inventory list",
-        "Classication",
-        "Proof of ownership"
+        "認證/證明",
+        "清冊",
+        "資料分類",
+        "所有權證明"
       ],
       "explain": "資料銷毀後須有 Certificate of Destruction 載明媒介編號、銷毀方式、執行日期、執行人。是合規稽核的法律證據，也是保護公司免責的關鍵。"
     }
@@ -2950,7 +2950,7 @@
       "q": "公司規劃災難復原站點，需確保「單一天災不會同時影響主站與備援站」。應採取？",
       "opts": [
         "地理分散",
-        "Platform diversity",
+        "平台多樣化",
         "熱備站",
         "負載平衡"
       ],
@@ -3018,10 +3018,10 @@
     "zh": {
       "q": "小公司在賣場使用 Kiosk 顯示產品資訊。安全分析師查 Kiosk 應特別注意？",
       "opts": [
-        "Patch availability",
+        "修補可用性",
         "Product 軟體 compatibility",
-        "Ease of recovery",
-        "Cost of replacement"
+        "復原便利性",
+        "替換成本"
       ],
       "explain": "Kiosk 常用舊版作業系統或定制軟體，需確認「是否仍受廠商支援、是否能取得安全修補」。無法修補的 Kiosk 是嚴重風險源 (常被忽略)。"
     }
@@ -3064,7 +3064,7 @@
     "zh": {
       "q": "下列哪一項最佳實務讓管理員「在一段預定時間內」執行作業系統變更？",
       "opts": [
-        "Impact analysis",
+        "影響分析",
         "預定停機時間",
         "回退計畫",
         "變更 management boards"
@@ -3110,10 +3110,10 @@
     "zh": {
       "q": "舊裝置即將報廢且不再接收更新。最大的安全考量是？",
       "opts": [
-        "End of business",
+        "停業",
         "End of 測試",
-        "End of support",
-        "End of life"
+        "結束支援 (EOS)",
+        "生命終期 (EOL)"
       ],
       "explain": "EOL/EOS 裝置不再收到安全更新，新發現的漏洞永遠無法修補，是「累積性風險」。應替換、隔離或加強補償控制。"
     }
@@ -3136,7 +3136,7 @@
         "靜態加密",
         "資料遮罩",
         "資料 classication",
-        "Permission restrictions"
+        "權限限制"
       ],
       "explain": "FDE (Full Disk Encryption) 例如 BitLocker、FileVault、LUKS，加密整顆硬碟。即使筆電被竊，未通過開機驗證無法讀取任何資料。"
     }
@@ -3159,7 +3159,7 @@
         "並行會話使用",
         "DNS 安全密碼降級",
         "中間人攻擊 資源耗盡",
-        "Reected denial of service"
+        "反射型阻斷服務"
       ],
       "explain": "Reflected DoS 攻擊者偽造受害者來源 IP，向許多公開服務 (如開放 DNS、NTP) 發送請求，回應大量湧向受害者造成 DoS。常見如 DNS Amplification。"
     }
@@ -3206,7 +3206,7 @@
       "q": "新員工入職時建立內網密碼。新員工系統用同一密碼以另一系統登入工作站。這是什麼？",
       "opts": [
         "聯邦身分",
-        "Identity proong",
+        "身分驗證",
         "密碼複雜度",
         "更改預設密碼",
         "密碼管理器",
@@ -3230,10 +3230,10 @@
     "zh": {
       "q": "下列何者描述「收集系統/應用/網路日誌並產生關聯警報」的工具？",
       "opts": [
-        "SIEM",
+        "SIEM 安全資訊事件管理",
         "DLP 資料外洩防護",
         "IDS 入侵偵測",
-        "SNMP"
+        "SNMP 網路管理"
       ],
       "explain": "SIEM (Security Information and Event Management) 集中收集多源日誌、執行關聯分析、產生安全警報、提供搜尋介面，是 SOC 的核心平台。"
     }
@@ -3277,9 +3277,9 @@
       "q": "下列何者最適合處理「執行未支援作業系統的關鍵業務應用」？",
       "opts": [
         "網路分段",
-        "Isolation",
-        "Hardening",
-        "Decommissioning"
+        "隔離",
+        "強化 (Hardening)",
+        "除役"
       ],
       "explain": "Legacy 系統無法替換時，應 Segmentation 隔離到專屬 VLAN，配合 ACL/防火牆限制其網路通訊範圍，作為補償控制降低風險，等待替換計畫。"
     }
@@ -3301,8 +3301,8 @@
       "opts": [
         "VM 逃逸",
         "SQL 注入",
-        "Buffer overow",
-        "Race condition"
+        "緩衝區溢位",
+        "競爭條件 (Race Condition)"
       ],
       "explain": "Buffer overflow 攻擊者寫入超過緩衝區大小的資料，覆蓋相鄰記憶體 (包括返回位址/暫存器)，改變程式執行流程到攻擊者控制的 shellcode。"
     }
@@ -3462,7 +3462,7 @@
       "opts": [
         "防撞柱",
         "存取 badge",
-        "Motion sensor",
+        "動作感測器",
         "影像監視"
       ],
       "explain": "Access badge 配合多區域權限與稽核軌跡，可限制誰能進入機房並留下記錄，是實體安全核心。"
@@ -3483,10 +3483,10 @@
     "zh": {
       "q": "工程師換到新團隊但仍能存取舊團隊資料夾且無法存取新團隊的。應使用？",
       "opts": [
-        "Role-based",
-        "Discretionary",
-        "Time of day",
-        "Least privilege"
+        "角色為基 (RBAC)",
+        "自主存取 (DAC)",
+        "時段限制",
+        "最小權限"
       ],
       "explain": "RBAC 依職位/角色派發權限，當角色變更時可一次性更新所有相關存取權，避免 Privilege creep。"
     }
@@ -3534,10 +3534,10 @@
     "zh": {
       "q": "雲端環境部署負載平衡器主要解決什麼安全特性？",
       "opts": [
-        "Privacy",
-        "Integrity",
-        "Condentiality",
-        "Availability"
+        "隱私 (Privacy)",
+        "完整性 (Integrity)",
+        "機密性 (Confidentiality)",
+        "可用性 (Availability)"
       ],
       "explain": "Load balancer 將流量分散到多伺服器，單一伺服器故障時仍能提供服務，提升 Availability。是 CIA 三元組中的 A。"
     }
@@ -3653,8 +3653,8 @@
       "opts": [
         "ARP 投毒",
         "蠻力破解",
-        "Buffer overow",
-        "DDoS"
+        "緩衝區溢位",
+        "DDoS 分散式阻斷服務"
       ],
       "explain": "「公網斷線、內網正常」是典型 DDoS 徵兆：攻擊者塞滿公網入口頻寬使外部使用者無法存取，但內部服務本身運作正常。"
     }
@@ -3725,9 +3725,9 @@
     "zh": {
       "q": "滲透測試員試圖用門禁卡進入未授權區域。這是哪一類測試？",
       "opts": [
-        "Defensive",
-        "Passive",
-        "Offensive",
+        "防守型",
+        "被動模式",
+        "攻擊型",
         "實體控制"
       ],
       "explain": "嘗試非授權進入實體區域屬於 Physical penetration testing，測試門禁、警衛、監視器、尾隨等實體安全控制的有效性。"
@@ -3772,7 +3772,7 @@
       "q": "訪客在大廳網路插孔插上筆電竟能連到公司網路。應啟用？",
       "opts": [
         "Port security 連接埠安全",
-        "Web application rewall",
+        "Web 應用防火牆 (WAF)",
         "傳輸層安全 (TLS)",
         "Virtual private 網路"
       ],
@@ -3798,11 +3798,11 @@
       "q": "管理員重發給離職員工筆電前最佳做法？",
       "opts": [
         "資料 retention",
-        "Certication",
+        "認證/證明",
         "銷毀",
-        "Classication",
+        "資料分類",
         "資料淨化",
-        "Enumeration"
+        "列舉 (Enumeration)"
       ],
       "explain": "正確流程：清除→Sanitization→取得 Certification 證明原資料已不可復原。可滿足合規稽核並保護敏感資料。"
     }
@@ -3823,9 +3823,9 @@
       "q": "管理員要將變更部署到生產系統。事前應準備？",
       "opts": [
         "回退計畫",
-        "Impact analysis",
+        "影響分析",
         "測試 procedure",
-        "Approval procedure"
+        "核可程序"
       ],
       "explain": "Backout plan 是當變更失敗或造成問題時，可快速回復到變更前狀態的步驟與資源。是 ITIL 變更管理的必要文件。"
     }
@@ -3915,8 +3915,8 @@
       "q": "下列何者最影響「修補 CVE 漏洞」的能力？",
       "opts": [
         "Rescanning 要求",
-        "Patch availability",
-        "Organizational impact",
+        "修補可用性",
+        "組織影響",
         "風險容忍度"
       ],
       "explain": "若廠商未發布修補（如 EOL 系統、新爆 0-day），管理員無法直接套用修補。此時須採補償控制（隔離、WAF、虛擬修補）。"
@@ -3963,7 +3963,7 @@
         "WAF Web應用防火牆 utilizing SSL decryption",
         "NGFW 搭配應用程式檢測",
         "UTM 搭配威脅情報來源",
-        "SD-WAN utilizing IPSec"
+        "SD-WAN 搭配 IPSec"
       ],
       "explain": "NGFW 的 Application-aware inspection 可識別並控管特定應用流量（如阻擋 LinkedIn Messenger 上傳檔案）。傳統 L3/L4 防火牆只看 IP/port。"
     }
@@ -3983,7 +3983,7 @@
     "zh": {
       "q": "企業要在內網與第三方系統間安全通訊。應使用？",
       "opts": [
-        "EAP",
+        "EAP 可擴展驗證協定",
         "IPSec",
         "SD-WAN",
         "TLS"
@@ -4007,8 +4007,8 @@
       "q": "管理員指紋特定檔案，外傳時觸發警報。這是？",
       "opts": [
         "DLP 資料外洩防護",
-        "SNMP traps",
-        "SCAP",
+        "SNMP Trap 警示",
+        "SCAP 安全內容自動化",
         "IPS 入侵防護"
       ],
       "explain": "DLP 可對機敏檔案做 fingerprint，當該檔（或其衍生內容）被嘗試外傳 (email/upload/USB) 時觸發告警或阻擋。"
@@ -4030,8 +4030,8 @@
       "q": "開發者透過開發者網站發布應用程式檔案。要讓使用者驗證下載完整性？",
       "opts": [
         "雜湊值",
-        "Certicates",
-        "Algorithms",
+        "憑證",
+        "演算法",
         "加鹽"
       ],
       "explain": "發布者公布檔案的 SHA-256/MD5 雜湊值，使用者下載後計算 hash 比對，可驗證下載完整且未被竄改。"
@@ -4098,10 +4098,10 @@
     "zh": {
       "q": "外部網站當機，管理員發現大量來自不同 IP 的連線。最可能是？",
       "opts": [
-        "DDoS",
+        "DDoS 分散式阻斷服務",
         "目錄遍歷",
         "蠻力破解",
-        "HTTPS downgrade"
+        "HTTPS 降級"
       ],
       "explain": "「大量、來自不同 IP」是 DDoS 的特徵。應啟動 DDoS 緩解（CDN/清洗服務、流量限速、ISP 協助）。"
     }
@@ -4146,8 +4146,8 @@
       "opts": [
         "監控",
         "感測器",
-        "Audit",
-        "Active"
+        "稽核",
+        "主動模式"
       ],
       "explain": "要「阻擋」攻擊，IPS 必須 Inline (Active) 串接於流量路徑，可實際攔截封包。Passive mode 只能偵測警報無法阻擋。"
     }
@@ -4167,10 +4167,10 @@
     "zh": {
       "q": "IT 經理在資料分類後要強化安全能力。應部署？",
       "opts": [
-        "XDR",
-        "SPF",
+        "XDR 延伸偵測回應",
+        "SPF 寄件者驗證",
         "DLP 資料外洩防護",
-        "DMARC"
+        "DMARC 郵件驗證"
       ],
       "explain": "資料分類後，DLP 可依不同分類執行不同政策（如機密資料禁止外傳）。沒有分類的 DLP 無法精準執行。"
     }
@@ -4213,10 +4213,10 @@
     "zh": {
       "q": "客戶檔案只能由「需要知道且有特定角色」的員工存取。這保護什麼？",
       "opts": [
-        "Availability",
-        "Condentiality",
-        "Integrity",
-        "Non-repudiation"
+        "可用性 (Availability)",
+        "機密性 (Confidentiality)",
+        "完整性 (Integrity)",
+        "不可否認性"
       ],
       "explain": "Need-to-know + role-based 存取保護的是「機密性」(只授權人員可讀)。CIA 三元組中的 C。"
     }
@@ -4259,7 +4259,7 @@
     "zh": {
       "q": "新員工首次登入郵件即看到 HR 來信。但 HR 還未建立信件。這是？",
       "opts": [
-        "Business email",
+        "商業郵件 (BEC)",
         "社交工程",
         "Unsecured 網路",
         "預設 credentials"
@@ -4284,8 +4284,8 @@
       "opts": [
         "SLA 服務水準協議",
         "MOU 諒解備忘錄",
-        "MOA",
-        "BPA"
+        "MOA 協議備忘錄",
+        "BPA 業務合作協議"
       ],
       "explain": "SLA (Service Level Agreement) 明訂可量化的服務承諾（可用性、回應時間、修復時間），違反通常有賠償條款。"
     }
@@ -4306,7 +4306,7 @@
       "q": "位於颱風好發區的公司規劃 DR 站點，希望「故障切換時最少資料遺失」。應選？",
       "opts": [
         "冷備站 (Cold site)",
-        "Tertiary",
+        "第三級",
         "溫備站 (Warm site)",
         "熱備站 (Hot site)"
       ],
@@ -4352,7 +4352,7 @@
       "q": "下列何者描述「研究國際業務相關法律與法規」？",
       "opts": [
         "Compliance 報告",
-        "GDPR",
+        "GDPR 一般資料保護規則",
         "盡職調查",
         "證明文件"
       ],
@@ -4399,8 +4399,8 @@
       "opts": [
         "IPS 入侵防護",
         "防火牆",
-        "AСL",
-        "Windows security"
+        "ACL 存取控制清單",
+        "Windows 安全"
       ],
       "explain": "Firewall 日誌記錄所有對外連線，可追蹤該工作站的外連目的 IP/port，比對威脅情報判斷是否為 C2 通訊。"
     }
@@ -4420,10 +4420,10 @@
     "zh": {
       "q": "IT 經理製作文件描述「組織在中斷期間如何維持營運」。這是？",
       "opts": [
-        "Business continuity",
-        "Physical security",
+        "業務持續性 (BCP)",
+        "實體安全",
         "變更 management",
-        "Disaster recovery"
+        "災害復原 (DRP)"
       ],
       "explain": "BCP 描述組織如何在任何中斷（災害、攻擊、流行病等）期間持續運作關鍵業務。DRP 是 BCP 的 IT 子集。"
     }
@@ -4446,7 +4446,7 @@
         "熱備站 (Hot site)",
         "冷備站 (Cold site)",
         "溫備站 (Warm site)",
-        "Geographically dispersed"
+        "地理分散部署"
       ],
       "explain": "Warm site 已具備硬體與部分資料，但需手動切換與資料同步，RTO 中等，是平衡成本與恢復速度的折衷。"
     }
@@ -4491,7 +4491,7 @@
       "opts": [
         "End 使用者 training",
         "政策 檢視",
-        "URL scanning",
+        "URL 掃描",
         "純文字郵件"
       ],
       "explain": "釣魚最終靠人判斷。End user training 教育員工識別釣魚特徵（檢查連結、寄件者、語氣），是長期防護的核心。"
@@ -4581,7 +4581,7 @@
     "zh": {
       "q": "管理員發現研發部使用公司「未核可」的雲端應用。這是？",
       "opts": [
-        "Espionage",
+        "間諜活動",
         "資料 exltration",
         "民族國家 attack",
         "影子 IT"
@@ -4607,7 +4607,7 @@
         "影子 IT",
         "內部威脅",
         "資料 exltration",
-        "Service disruption"
+        "服務中斷"
       ],
       "explain": "未經 IT 核可、繞過正式採購與資安審查的軟體部署即為 Shadow IT。應建立發現機制（CASB/網路監控）與便利的合法申請流程。"
     }
@@ -4673,8 +4673,8 @@
     "zh": {
       "q": "雲端 IoT 管理平台所需的安全措施？",
       "opts": [
-        "Encrypted connection",
-        "Federated identity",
+        "加密連線",
+        "聯邦身分",
         "防火牆",
         "單一登入 (SSO)"
       ],
@@ -4742,10 +4742,10 @@
     "zh": {
       "q": "CISO 判定公司不符合當地法規。最可能的影響？",
       "opts": [
-        "Fines",
+        "罰款",
         "聲譽損害",
-        "Sanctions",
-        "Contractual implications"
+        "制裁",
+        "合約上的影響"
       ],
       "explain": "不合規 (Non-compliance) 通常會被監管機關處以罰款，嚴重時可能失去營業執照、面臨訴訟、聲譽受損。"
     }
@@ -4789,7 +4789,7 @@
       "q": "分析師發現應用伺服器執行其他程序的記憶體中有額外程式碼。這是？",
       "opts": [
         "記憶體注入",
-        "Race condition",
+        "競爭條件 (Race Condition)",
         "Side-loading 旁路安裝",
         "SQL 注入"
       ],
@@ -4811,10 +4811,10 @@
     "zh": {
       "q": "重要應用發布關鍵修補。管理員需先確認？",
       "opts": [
-        "Asset inventory",
+        "資產清冊",
         "網路 enumeration",
         "資料 certication",
-        "Procurement process"
+        "採購流程"
       ],
       "explain": "需先確認哪些資產執行該應用、版本為何、是否已修補。沒有完整 Asset inventory 就無法評估漏洞影響範圍。"
     }
@@ -4834,10 +4834,10 @@
     "zh": {
       "q": "SOC 要改進事件回應流程效率。應使用？",
       "opts": [
-        "Playbooks",
-        "Frameworks",
-        "Baselines",
-        "Benchmarks"
+        "事件劇本",
+        "框架",
+        "基準",
+        "基準 (Benchmark)"
       ],
       "explain": "Playbook 是預先寫好的事件回應步驟（針對特定事件類型如釣魚、勒索、DDoS），確保一致、快速、可重複的處理。"
     }
@@ -4857,10 +4857,10 @@
     "zh": {
       "q": "高階主管在會議室「測試公司事件回應流程」屬於？",
       "opts": [
-        "Continuity of operations",
-        "Capacity planning",
-        "Tabletop exercise",
-        "Parallel processing"
+        "營運持續性",
+        "容量規劃",
+        "桌上演練 (Tabletop)",
+        "平行處理"
       ],
       "explain": "Tabletop 是參與者圍坐討論「假設情境」如何回應的紙上推演，不衝擊系統，主要訓練決策與協調。"
     }
@@ -4880,10 +4880,10 @@
     "zh": {
       "q": "醫療機構想提供「網路應用讓人們數位接收檢驗結果」。應確保？",
       "opts": [
-        "Scalability",
-        "Availability",
-        "Cost",
-        "Ease of deployment"
+        "可擴展性",
+        "可用性 (Availability)",
+        "成本",
+        "部署便利性"
       ],
       "explain": "病患需要隨時存取檢驗結果以決定治療，系統可用性 (Availability) 是核心。應考慮備援、災難復原、SLA。"
     }
@@ -4905,7 +4905,7 @@
       "opts": [
         "SOW 工作說明書",
         "SLA 服務水準協議",
-        "MOA",
+        "MOA 協議備忘錄",
         "MOU 諒解備忘錄"
       ],
       "explain": "SLA 明定可量化的服務承諾，包含「事件回應時間」、「故障修復時間」等。違反通常有財務罰則。"
@@ -4929,7 +4929,7 @@
         "病毒 簽章",
         "自動化回應動作",
         "安全代理部署",
-        "Vulnerability scanning"
+        "弱點掃描"
       ],
       "explain": "次世代 SIEM/SOAR 整合自動化劇本：偵測 → 自動隔離、封鎖、通知，大幅縮短 MTTD/MTTR。"
     }
@@ -4978,7 +4978,7 @@
       "q": "下列何者「最能透過輸入清理 (Input sanitization) 緩解」？",
       "opts": [
         "",
-        "Nmap - 10.11.1.130",
+        "nmap 對 10.11.1.130 掃描",
         "郵件內容：「點此連結領取免費禮品卡」",
         "瀏覽器訊息：「您的連線不是私密連線」"
       ],
@@ -5001,7 +5001,7 @@
       "q": "攻擊者冒充 CEO 致電員工要求買禮品卡。這是？",
       "opts": [
         "簡訊釣魚",
-        "Disinformation",
+        "造謠 / 假訊息",
         "冒充",
         "鯨釣 (針對高層)"
       ],
@@ -5069,7 +5069,7 @@
     "zh": {
       "q": "使用者想安裝 OS 預設不允許的功能。這需要？",
       "opts": [
-        "SQLi",
+        "SQLi SQL 注入",
         "XSS 跨站腳本",
         "越獄",
         "Side-loading 旁路安裝"
@@ -5118,7 +5118,7 @@
         "漏洞獎金計畫",
         "弱點掃描",
         "Package 監控",
-        "Dynamic analysis"
+        "動態分析 (DAST)"
       ],
       "explain": "弱點掃描可識別 OS 版本、未修補漏洞、過時服務，由此判斷哪些是 Legacy 系統。比手動清點更可靠。"
     }
@@ -5140,8 +5140,8 @@
       "opts": [
         "代理 伺服器",
         "NGFW 次世代防火牆",
-        "VPN",
-        "Security zone"
+        "VPN 虛擬私人網路",
+        "安全區"
       ],
       "explain": "VPN 在不安全的網路 (Internet) 上建立加密隧道，讓遠端裝置安全存取內部資源。是遠端工作的標準方案。"
     }
@@ -5185,7 +5185,7 @@
       "q": "分析師開發腳本自動化重複工作。下列何者「不是」自動化的好處？",
       "opts": [
         "To 降低 implementation cost",
-        "To identify complexity",
+        "識別複雜度",
         "補救技術債",
         "To prevent a 單點故障 (SPOF 單點故障)"
       ],
@@ -5210,7 +5210,7 @@
         "微服務",
         "容器化",
         "虛擬化",
-        "Infrastructure as code"
+        "基礎設施即程式碼 (IaC)"
       ],
       "explain": "Container (如 Docker) 共用宿主 OS 核心但相互隔離，比 VM 輕量、啟動快、密度高，是現代雲原生標準。"
     }
@@ -5261,7 +5261,7 @@
         "第三方證明文件",
         "Penetration 測試",
         "內部稽核",
-        "Vulnerability scans"
+        "弱點掃描"
       ],
       "explain": "Internal audit 由組織內稽部門執行，可頻繁、深入檢視合規狀態。外部稽核通常為年度且範圍受限。"
     }
@@ -5281,10 +5281,10 @@
     "zh": {
       "q": "安裝 RADIUS 伺服器實現哪個安全概念？",
       "opts": [
-        "CIA",
-        "AAA",
+        "CIA 機密/完整/可用性",
+        "AAA (驗證、授權、稽核)",
         "ACL 存取控制清單",
-        "PEM"
+        "PEM 憑證格式"
       ],
       "explain": "RADIUS 是 AAA 協定，提供集中式 Authentication、Authorization、Accounting，常用於 VPN、Wi-Fi、網路裝置存取控制。"
     }
@@ -5304,10 +5304,10 @@
     "zh": {
       "q": "HR 修改 IT 承包商合約多個條款後合約混亂。應使用？",
       "opts": [
-        "Version validation",
+        "版本驗證",
         "Version 變更",
-        "Version updates",
-        "Version control"
+        "版本更新",
+        "版本控制"
       ],
       "explain": "Version control 追蹤所有變更歷史、誰改了什麼、何時改的，可清楚比較版本差異與回溯。"
     }
@@ -5329,7 +5329,7 @@
       "opts": [
         "熱備站",
         "冷備站",
-        "Failover site",
+        "故障切換站點",
         "溫備站"
       ],
       "explain": "Cold site 只提供場地、電源、基本網路，硬體與資料需於災難後運入。成本最低但 RTO 最長 (數天以上)。"
@@ -5376,7 +5376,7 @@
         "紫隊",
         "藍隊",
         "紅隊",
-        "White team"
+        "白隊"
       ],
       "explain": "Red team 模擬真實攻擊者進行滲透測試，從外部視角找出可被利用的弱點。Blue team 是防守方專注偵測與回應。"
     }
@@ -5397,8 +5397,8 @@
       "q": "公司因帳號被接管要強化登入驗證。下列何者使用「可信裝置」？",
       "opts": [
         "可信裝置",
-        "Geotagging",
-        "Smart cards",
+        "地理標記",
+        "智慧卡",
         "時間型登入"
       ],
       "explain": "Trusted device 註冊員工裝置為授信裝置 (透過憑證/裝置指紋)。即使密碼被盜，攻擊者從未授信裝置登入時會被擋下或要求 MFA。"
@@ -5423,10 +5423,10 @@
       "q": "下列何者用於「偵測已成功入侵網路的攻擊者」？",
       "opts": [
         "代符化",
-        "CI/CD",
+        "CI/CD 持續整合部署",
         "蜜罐",
-        "Threat modeling",
-        "DNS sinkhole",
+        "威脅建模",
+        "DNS 黑洞",
         "資料 程式碼混淆"
       ],
       "explain": "Honeypot 是刻意暴露的誘餌系統，已入侵內部的攻擊者進行橫向移動時會接觸到 Honeypot，觸發告警暴露其存在。"
@@ -5449,7 +5449,7 @@
       "opts": [
         "雜湊",
         "加密",
-        "Baselines",
+        "基準",
         "代符化"
       ],
       "explain": "對最終版本計算 SHA-256 雜湊並公布，使用者下載後重算 hash 比對。任何竄改都會造成 hash 改變，可即時發現。"
@@ -5472,8 +5472,8 @@
       "opts": [
         "RADIUS",
         "SAML",
-        "EAP",
-        "OpenID"
+        "EAP 可擴展驗證協定",
+        "OpenID 身分驗證"
       ],
       "explain": "SAML 是 web SSO 的業界標準協議，IdP (身分提供者) 簽發 token 給 SP (服務提供者) 驗證，使用者不需重複輸入密碼。"
     }
@@ -5493,8 +5493,8 @@
     "zh": {
       "q": "使用者在機場用公共 Wi-Fi 登入航空網站並忽略憑證警告。後續被入侵。是？",
       "opts": [
-        "Replay attack",
-        "Memory leak",
+        "重放攻擊",
+        "記憶體洩漏",
         "緩衝區溢位攻擊",
         "中間人攻擊 (MITM)"
       ],
@@ -5569,7 +5569,7 @@
     "zh": {
       "q": "竊賊用手機憑證登入了被竊的公司手機。最能降低損害的措施？",
       "opts": [
-        "Application management",
+        "應用程式管理",
         "全磁碟加密 (FDE)",
         "遠端 wipe",
         "容器化"
@@ -5592,9 +5592,9 @@
     "zh": {
       "q": "套用控制與緩解措施「之後」仍存在的風險是？",
       "opts": [
-        "Residual",
-        "Avoided",
-        "Inherent",
+        "剩餘風險 (Residual)",
+        "已規避",
+        "固有 (Inherent)",
         "營運控制"
       ],
       "explain": "Residual risk = Inherent risk - 已套用控制降低的部分。組織須決定是否接受 (Accept) 或進一步處理剩餘風險。"
@@ -5618,7 +5618,7 @@
         "對軟體進行數位簽章",
         "Performing code 程式碼混淆",
         "限制使用第三方函式庫",
-        "Using compile ags"
+        "使用編譯旗標"
       ],
       "explain": "Code obfuscation 將程式碼改寫為難以理解的形式（變數重新命名、控制流複雜化），增加逆向工程難度。常用於 DRM、商業軟體保護。"
     }
@@ -5759,7 +5759,7 @@
       "q": "鑑識人員找到硬碟上的圖片檔，要查地理位置等資訊。應檢視？",
       "opts": [
         "日誌 資料",
-        "Metadata",
+        "中繼資料 (Metadata)",
         "Encrypted 資料",
         "Sensitive 資料"
       ],
@@ -5805,8 +5805,8 @@
       "q": "意識訓練中提到「將文件丟入垃圾桶可能帶來威脅」。指的是？",
       "opts": [
         "鯨釣 (針對高層)",
-        "Credential harvesting",
-        "Prepending",
+        "憑證收集",
+        "字首附加 (Prepending)",
         "翻垃圾蒐情"
       ],
       "explain": "Dumpster diving 攻擊者翻找廢棄文件、硬碟、便利貼以蒐集敏感資訊。應對紙本敏感資料碎紙、硬碟銷毀。"
@@ -5827,8 +5827,8 @@
     "zh": {
       "q": "IoT 裝置加密最重要的考量？",
       "opts": [
-        "Resource constraints",
-        "Available bandwidth",
+        "資源限制",
+        "可用頻寬",
         "使用區塊加密法",
         "TLS 版本的相容性"
       ],
@@ -5850,10 +5850,10 @@
     "zh": {
       "q": "咖啡店要對 Wi-Fi 使用者驗證並收費。應使用？",
       "opts": [
-        "WPA3",
+        "WPA3 無線加密",
         "強制門戶",
-        "PSK",
-        "IEEE 802.1X"
+        "PSK 預共享金鑰",
+        "IEEE 802.1X 連接埠驗證"
       ],
       "explain": "Captive portal 是公共 Wi-Fi 標準作法：使用者連上 Wi-Fi 後瀏覽器自動跳轉到驗證/付費頁面，通過後才能上網。"
     }
@@ -5873,10 +5873,10 @@
     "zh": {
       "q": "數位鑑識時下列哪項最「易揮發」應「先」收集？",
       "opts": [
-        "Hard drive",
-        "RAM",
-        "SSD",
-        "Temporary les"
+        "硬碟",
+        "RAM 記憶體",
+        "SSD 固態硬碟",
+        "暫存檔"
       ],
       "explain": "Order of volatility：CPU 暫存器 → CPU 快取 → RAM → 暫存檔 → 硬碟。RAM 一斷電即消失，含執行中惡意程式痕跡需優先擷取。"
     }
@@ -5896,7 +5896,7 @@
     "zh": {
       "q": "託管商需證明「過去 6 個月」的安全控制有效。應提供？",
       "opts": [
-        "NIST CSF",
+        "NIST 網路安全架構",
         "SOC 安全運營中心 2 Type 2 報告",
         "CIS Top 20 compliance 報告",
         "Vulnerability 報告"
@@ -5920,7 +5920,7 @@
       "q": "市政府主資料中心被龍捲風摧毀。應啟動哪份計畫？",
       "opts": [
         "BCP 業務持續性計畫",
-        "Communication plan",
+        "溝通計畫",
         "DRP 災害復原計畫",
         "IRP 事件回應計畫"
       ],
@@ -5942,10 +5942,10 @@
     "zh": {
       "q": "下列何者屬於「預防」控制？",
       "opts": [
-        "Conguration auditing",
+        "組態稽核",
         "日誌 correlation",
         "Incident 警報",
-        "Segregation of duties"
+        "職責分離 (SoD)"
       ],
       "explain": "SoD 將敏感任務拆給多人執行，事前防止單人舞弊或誤用，屬於 Preventive。CCTV/日誌是 Detective。"
     }
@@ -5965,10 +5965,10 @@
     "zh": {
       "q": "測試系統當機，管理員發現大量同源連線。是？",
       "opts": [
-        "Denial of service",
+        "阻斷服務 (DoS)",
         "ARP 投毒",
-        "Jamming",
-        "Kerberoasting"
+        "訊號干擾 (Jamming)",
+        "Kerberoasting 攻擊"
       ],
       "explain": "大量單一來源連線造成系統當機 = DoS 攻擊。若來源是多個分散 IP 則為 DDoS。應啟用速率限制與防護設備。"
     }
@@ -6014,7 +6014,7 @@
         "Disk 加密",
         "資料 loss prevention",
         "Operating 系統 hardening",
-        "Boot security"
+        "開機安全"
       ],
       "explain": "FDE (如 BitLocker、FileVault) 加密整顆硬碟。即使筆電被竊，未通過開機驗證無法讀取任何資料。"
     }
@@ -6058,11 +6058,11 @@
     "zh": {
       "q": "雲端環境中「無意間外洩公司憑證」的常見來源？",
       "opts": [
-        "Code repositories",
-        "Dark web",
-        "Threat feeds",
-        "State actors",
-        "Vulnerability databases"
+        "程式碼儲存庫",
+        "暗網 (Dark Web)",
+        "威脅情報來源",
+        "國家級行為者",
+        "弱點資料庫"
       ],
       "explain": "開發者常無意將 AWS Key、API Token、密碼提交到 GitHub 等公開 repo。應使用 git-secrets 等工具掃描，並使用密鑰管理服務。"
     }
@@ -6131,9 +6131,9 @@
       "q": "管理員強化系統時參考「真實攻擊者使用的 TTPs」。最有用的框架？",
       "opts": [
         "MITRE ATT&CK",
-        "CSIRT",
-        "CVSS",
-        "SOAR"
+        "CSIRT 資安事件應變小組",
+        "CVSS 漏洞評分系統",
+        "SOAR 安全編排自動化回應"
       ],
       "explain": "MITRE ATT&CK 收錄真實攻擊者 TTPs (戰術、技巧、程序)。可對應到具體防禦控制（偵測規則、強化措施）。"
     }
@@ -6176,8 +6176,8 @@
     "zh": {
       "q": "下列哪項處理「個人權利」如知情權、存取權、被遺忘權？",
       "opts": [
-        "GDPR",
-        "PCI DSS",
+        "GDPR 一般資料保護規則",
+        "PCI DSS 支付卡產業標準",
         "NIST",
         "ISO"
       ],
@@ -6222,9 +6222,9 @@
     "zh": {
       "q": "用舊系統處理 PII 的最重要安全考量？",
       "opts": [
-        "Instability",
+        "不穩定",
         "缺少廠商支援",
-        "Loss of availability",
+        "可用性損失",
         "使用不安全的協定"
       ],
       "explain": "舊系統無廠商支援即無安全修補。新爆漏洞永遠無法修補，含 PII 的系統一旦被駭法律與商譽損失巨大。"
@@ -6270,10 +6270,10 @@
       "q": "使用者要 Telnet 管理遠端 Web 伺服器。但不允許明文協定。應改用？",
       "opts": [
         "HTTPS",
-        "SNMPv3",
-        "SSH",
-        "RDP",
-        "SMTP"
+        "SNMPv3 加密版網管協定",
+        "SSH 安全連線",
+        "RDP 遠端桌面",
+        "SMTP 郵件協定"
       ],
       "explain": "SSH 是 Telnet 的加密替代品，提供加密傳輸與強身份驗證，是遠端管理 Unix/Linux 系統的標準。"
     }
@@ -6294,7 +6294,7 @@
       "q": "管理員想用低成本方式為「子網域 SaaS 應用」部署憑證。應使用？",
       "opts": [
         "萬用字元憑證",
-        "Client certicate",
+        "用戶端憑證",
         "自簽",
         "程式碼簽章"
       ],
@@ -6316,10 +6316,10 @@
     "zh": {
       "q": "稽核員發現多台伺服器有不安全 port 與舊版軟體。下列哪個工具可全面掃描？",
       "opts": [
-        "Nessus",
-        "curl",
-        "Wireshark",
-        "netcat"
+        "Nessus 弱點掃描器",
+        "curl 工具",
+        "Wireshark 封包分析",
+        "netcat (nc) 工具"
       ],
       "explain": "Nessus 是業界主流弱點掃描器，可偵測開放 port、未修補漏洞、設定錯誤、合規問題。"
     }
@@ -6340,8 +6340,8 @@
     "zh": {
       "q": "分析師收到密報稱機敏資料外洩。需擷取網路流量分析。應使用？",
       "opts": [
-        "Encapsulation",
-        "MAC address spoong",
+        "封裝",
+        "MAC 位址偽造",
         "隱寫術",
         "Broken 加密",
         "Sning via 中間人攻擊 position"
@@ -6365,9 +6365,9 @@
       "q": "公司想降低程式碼部署的時間與成本。應採用？",
       "opts": [
         "無伺服器架構",
-        "Thin clients",
-        "Private cloud",
-        "Virtual machines"
+        "瘦客戶端",
+        "私有雲",
+        "虛擬機 (VM)"
       ],
       "explain": "Serverless (FaaS) 開發者只專注程式碼，平台自動處理運行與擴展。按使用付費可大幅降低成本與部署複雜度。"
     }
@@ -6389,7 +6389,7 @@
       "opts": [
         "Pass-the-雜湊 攻擊 監控",
         "File integrity 監控",
-        "Forensic analysis",
+        "鑑識分析",
         "密碼 cracker"
       ],
       "explain": "FIM (File Integrity Monitor) 計算關鍵檔案 hash，定期比對偵測未授權變更。Linux 常用 AIDE、Tripwire。"
@@ -6411,9 +6411,9 @@
       "q": "管理員要為 RTP、SIP、H.323 建防火牆規則。這些是什麼系統？",
       "opts": [
         "RTOS 即時作業系統",
-        "VoIP",
+        "VoIP 網路電話",
         "SOC 安全運營中心",
-        "HVAC"
+        "HVAC 暖通空調"
       ],
       "explain": "RTP (媒體串流)、SIP/H.323 (信令) 是 VoIP 核心協定。NAT 穿透與防火牆設定常需特別處理 (SIP ALG、固定 port)。"
     }
@@ -6436,7 +6436,7 @@
         "鯨釣 (針對高層)",
         "魚叉式釣魚",
         "冒充",
-        "Identity fraud"
+        "身分盜用"
       ],
       "explain": "Whaling 是針對 CEO、CFO、董事等「大魚」的精緻釣魚，常結合大量情報蒐集，假冒商業夥伴或律師發出高額詐騙。"
     }
@@ -6457,7 +6457,7 @@
       "q": "滲透測試中 PKI 漏洞被利用取得網域管理員權限。應做的修補？",
       "opts": [
         "更新 the CRL 憑證撤銷清單",
-        "Patching the CA",
+        "修補 CA",
         "變更 密碼",
         "實施 SOAR"
       ],
@@ -6479,10 +6479,10 @@
     "zh": {
       "q": "公司在 SSH 登入時要加入第二因素。應使用什麼？",
       "opts": [
-        "PIN",
+        "PIN 個人識別碼",
         "硬體 token",
         "使用者 ID",
-        "SMS"
+        "SMS 簡訊"
       ],
       "explain": "在 SSH 加入 MFA 通常用 TOTP (Google Authenticator)、PUSH 通知 (Duo)、硬體 Token (YubiKey) 等獨立因素。"
     }
@@ -6503,7 +6503,7 @@
     "zh": {
       "q": "公司聘外部顧問升級關鍵系統，需給予「高權限存取」。應使用？",
       "opts": [
-        "TACACS+",
+        "TACACS+ 集中驗證協定",
         "SAML",
         "An SSO 單一登入 platform",
         "角色為基存取控制 (RBAC)",
@@ -6550,10 +6550,10 @@
     "zh": {
       "q": "哪種資料角色「識別風險與資料適當的存取」？",
       "opts": [
-        "Owner",
-        "Custodian",
-        "Steward",
-        "Controller"
+        "資料所有者 (Owner)",
+        "資料保管者 (Custodian)",
+        "資料管家 (Steward)",
+        "資料控制者 (Controller)"
       ],
       "explain": "Data Owner (常為業務部門主管) 決定資料分類、誰能存取、保留多久。Custodian 是 IT 實作存取控制與備份的執行者。"
     }
@@ -6578,10 +6578,10 @@
       "opts": [
         "照明",
         "圍籬",
-        "Signage",
+        "標示牌",
         "感測器",
-        "Bollard",
-        "Lock"
+        "防撞柱",
+        "鎖"
       ],
       "explain": "照明嚇阻潛入並提升 CCTV 可見度；CCTV 嚇阻並記錄入侵。兩者皆可 Deter + Detect。鎖只是 Preventive；標誌只是 Deterrent。"
     }
@@ -6603,8 +6603,8 @@
       "opts": [
         "負載平衡器",
         "Cloud 備份",
-        "Geographic dispersal",
-        "Disk multipathing"
+        "地理分散",
+        "磁碟多路徑"
       ],
       "explain": "Load balancer 監控後端健康狀態，自動將流量路由到健康節點，可實現服務高可用性與水平擴展。"
     }
@@ -6624,9 +6624,9 @@
     "zh": {
       "q": "軟體作者擔心「程式被重包並注入惡意」。應採用？",
       "opts": [
-        "Input validation",
+        "輸入驗證",
         "程式碼簽章",
-        "Secure cookies",
+        "安全 Cookie",
         "模糊測試"
       ],
       "explain": "Code signing 用作者私鑰簽署軟體，使用者驗證簽章可確認軟體來源真實且未被竄改。被竄改後簽章會失效。"
@@ -6649,7 +6649,7 @@
       "opts": [
         "缺少安全更新",
         "缺少新功能",
-        "Lack of support",
+        "缺少支援",
         "缺少原始碼存取"
       ],
       "explain": "EOL 應用不再有安全修補，新漏洞永遠無法修補。應升級到支援版本或加裝補償控制（隔離、WAF）。"
@@ -6670,10 +6670,10 @@
     "zh": {
       "q": "分析師讀到某印表機型號的弱點報告。應使用哪個工具掃描網路？",
       "opts": [
-        "Wireshark",
-        "netcat",
-        "Nessus",
-        "Nmap"
+        "Wireshark 封包分析",
+        "netcat (nc) 工具",
+        "Nessus 弱點掃描器",
+        "Nmap 連接埠掃描器"
       ],
       "explain": "Nmap 可掃網路找出符合該機型的印表機；Wireshark 可分析流量看是否被利用。兩者是網路安全評估的核心。"
     }
@@ -6694,7 +6694,7 @@
       "q": "開發團隊發布新公開 Web 應用前，要測試「未預期輸入」如何處理。應做？",
       "opts": [
         "模糊測試",
-        "Continuous deployment",
+        "持續部署 (CD)",
         "靜態程式碼分析 (SAST)",
         "Manual peer 檢視"
       ],
@@ -6739,10 +6739,10 @@
     "zh": {
       "q": "決定漏洞嚴重程度的最佳工具？",
       "opts": [
-        "CVE",
+        "CVE 通用漏洞編號",
         "OSINT 開源情報",
-        "SOAR",
-        "CVSS"
+        "SOAR 安全編排自動化回應",
+        "CVSS 漏洞評分系統"
       ],
       "explain": "CVSS 用標準化分數 (0-10) 評估漏洞嚴重度，考慮可利用性、影響範圍。Critical (9-10)、High (7-8.9) 為優先處理。"
     }
@@ -6787,8 +6787,8 @@
       "q": "查詢「最常見的應用安全漏洞」最佳資源？",
       "opts": [
         "OWASP",
-        "STIX",
-        "OVAL",
+        "STIX 威脅情報格式",
+        "OVAL 漏洞評估語言",
         "威脅情報來源",
         "通用漏洞編號 (CVE)"
       ],
@@ -6866,12 +6866,12 @@
     "zh": {
       "q": "安全團隊要減低 Web 應用的攻擊面。應部署？",
       "opts": [
-        "NIDS",
+        "NIDS 網路入侵偵測",
         "蜜罐",
         "憑證撤銷清單 (CRL)",
-        "HIPS",
+        "HIPS 主機型入侵防護",
         "WAF Web應用防火牆",
-        "SIEM"
+        "SIEM 安全資訊事件管理"
       ],
       "explain": "保護 Web 應用的標準作法：WAF (應用層防護) + 定期滲透測試。NIDS 偏向網路層偵測，但 WAF 才是 Web 應用專屬。"
     }
@@ -6891,8 +6891,8 @@
     "zh": {
       "q": "管理員要對 VM 建立「時間點備份」。應使用？",
       "opts": [
-        "Replication",
-        "Simulation",
+        "複寫 (Replication)",
+        "模擬演練",
         "快照",
         "容器化"
       ],
@@ -6915,9 +6915,9 @@
       "q": "管理員發現許多未使用且不合規的桌機連在網路上。應採取？",
       "opts": [
         "監控",
-        "Decommissioning",
-        "Patching",
-        "Isolating"
+        "除役",
+        "修補管理",
+        "隔離"
       ],
       "explain": "未使用且不合規的裝置應正式 Decommission：清除資料、移除網路、更新清冊、安全處置硬體。降低攻擊面與管理成本。"
     }
@@ -6938,9 +6938,9 @@
       "q": "公司想擦除敏感資料同時保留硬體。常見做法？",
       "opts": [
         "資料淨化",
-        "Formatting",
-        "Degaussing",
-        "Defragmentation"
+        "格式化",
+        "消磁銷毀",
+        "磁碟重組"
       ],
       "explain": "Sanitization 透過覆寫、消磁、密碼學擦除等方式清除資料但保留媒介，可再利用或捐贈，符合 NIST 800-88 標準。"
     }
@@ -6961,8 +6961,8 @@
       "q": "組織要改善遠端員工的身分驗證方法。應實施？",
       "opts": [
         "使用者名稱與密碼",
-        "Biometrics",
-        "SMS verication",
+        "生物辨識",
+        "SMS 簡訊驗證",
         "時間型令牌 (TOTP)"
       ],
       "explain": "TOTP (如 Google Authenticator) 每 30 秒更新 6 位數字，即使被截獲也很快失效。比靜態密碼大幅提升遠端登入安全。"
@@ -6986,7 +6986,7 @@
         "密碼 政策",
         "存取 badges",
         "釣魚演練",
-        "Risk assessment"
+        "風險評估"
       ],
       "explain": "模擬釣魚活動可量化點擊率、回報率，是衡量安全意識訓練效果最直接的指標。"
     }
@@ -7006,10 +7006,10 @@
     "zh": {
       "q": "惡意更新分發到通用軟體平台造成多家組織服務癱瘓。這是？",
       "opts": [
-        "DDoS attack",
+        "DDoS 分散式阻斷服務攻擊",
         "Rogue 員工",
         "內部威脅",
-        "Supply chain"
+        "供應鏈"
       ],
       "explain": "攻擊者竄改廣泛使用的軟體更新（如 SolarWinds），讓所有客戶在「合法更新」過程中被植入後門。"
     }
@@ -7052,10 +7052,10 @@
     "zh": {
       "q": "組織要求第三方做「全光譜供應鏈分析」。應使用？",
       "opts": [
-        "Vulnerability scanner",
+        "弱點掃描器",
         "滲透測試",
-        "SCAP",
-        "Illumination tool"
+        "SCAP 安全內容自動化",
+        "供應鏈照明工具"
       ],
       "explain": "供應鏈 Illumination 工具映射出組織所有第三方廠商、N 階供應商、依賴關係，幫助識別未知供應鏈風險。"
     }
@@ -7075,9 +7075,9 @@
     "zh": {
       "q": "管理員部署「不需在終端裝置安裝軟體」的監控方案。是？",
       "opts": [
-        "Agentless solution",
+        "無代理方案",
         "客戶端為基（即將）",
-        "Open port",
+        "開放連接埠",
         "以檔案為基礎的方案"
       ],
       "explain": "Agentless 透過 WMI、SSH、SNMP、API 等遠端協議收集資料，不需安裝軟體。優點是部署快，缺點是功能受限。"
@@ -7098,10 +7098,10 @@
     "zh": {
       "q": "分析師要審查程式碼找設定錯誤。屬於什麼類型分析？",
       "opts": [
-        "Dynamic",
-        "Static",
-        "Gap",
-        "Impact"
+        "動態 (Dynamic)",
+        "靜態分析 (SAST)",
+        "差距 (Gap)",
+        "影響 (Impact)"
       ],
       "explain": "SAST (Static Application Security Testing) 在不執行程式的情況下分析原始碼，可早期發現安全弱點。"
     }
@@ -7121,7 +7121,7 @@
     "zh": {
       "q": "用來「限制外部討論」的協議是？",
       "opts": [
-        "BPA",
+        "BPA 業務合作協議",
         "NDA 保密協議",
         "SLA 服務水準協議",
         "MSA 主服務協議"
@@ -7190,10 +7190,10 @@
     "zh": {
       "q": "新服務透過 Web Portal 提供。應部署什麼保護？",
       "opts": [
-        "Layer 4 rewall",
+        "第 4 層防火牆",
         "NGFW 次世代防火牆",
         "WAF Web應用防火牆",
-        "UTM"
+        "UTM 統合威脅管理"
       ],
       "explain": "Web Portal 暴露於 Internet 易受 OWASP Top 10 攻擊。WAF 在應用層偵測並阻擋 SQLi、XSS、命令注入等。"
     }
@@ -7260,9 +7260,9 @@
       "q": "組織快速採用 SaaS，現需統一 SSO。第一步應？",
       "opts": [
         "啟用 SAML.",
-        "Create OAuth tokens.",
+        "建立 OAuth 令牌",
         "Use 密碼 vaulting.",
-        "Select an IdP."
+        "選擇身分提供者 (IdP)"
       ],
       "explain": "SSO 需先選定 IdP (Okta、Azure AD、PingFederate)，再與各 SaaS 透過 SAML/OIDC 整合。IdP 是 SSO 的中樞。"
     }
@@ -7305,8 +7305,8 @@
     "zh": {
       "q": "測試「主電源故障時的韌性」最佳方式？",
       "opts": [
-        "Parallel processing",
-        "Tabletop exercise",
+        "平行處理",
+        "桌上演練 (Tabletop)",
         "Simulation 測試",
         "生產環境 failover"
       ],
@@ -7329,9 +7329,9 @@
       "q": "保護傳輸中資料的最佳方法？",
       "opts": [
         "SHA-256",
-        "SSL3.0",
+        "SSL 3.0 (已過時)",
         "TLS 1.3",
-        "AES-256"
+        "AES-256 加密"
       ],
       "explain": "TLS 1.3 是目前最新最安全的傳輸層加密協定，移除舊版弱密碼套件，提供前向保密與更快握手。"
     }
@@ -7352,9 +7352,9 @@
       "q": "下列哪項是滲透測試常用的「被動偵察」技術？",
       "opts": [
         "開源情報 (OSINT)",
-        "Port scanning",
+        "連接埠掃描",
         "橫向移動",
-        "Exploit validation"
+        "漏洞利用驗證"
       ],
       "explain": "OSINT 從公開資訊（網站、社群媒體、DNS 紀錄、WHOIS）蒐集情報，不直接接觸目標屬被動。port 掃描則屬主動。"
     }
@@ -7377,7 +7377,7 @@
         "組織犯罪集團",
         "內部威脅",
         "民族國家",
-        "Hacktivists"
+        "駭客主義者"
       ],
       "explain": "勒索軟體攻擊的主要動機是金錢，最常見於有組織犯罪集團（如 LockBit、BlackCat）。"
     }
@@ -7437,8 +7437,8 @@
       "opts": [
         "IPSec",
         "SHA-1",
-        "RSA",
-        "TGT"
+        "RSA 非對稱加密",
+        "TGT Ticket Granting Ticket"
       ],
       "explain": "IPSec 提供加密與身分驗證的網路層安全通道，可保護內部敏感資料的端到端傳輸。"
     }
@@ -7459,7 +7459,7 @@
       "q": "內部稽核員稽核組織安全姿態時最先檢視？",
       "opts": [
         "政策 and procedures",
-        "Asset management",
+        "資產管理",
         "弱點評估",
         "業務影響分析 (BIA)"
       ],
@@ -7485,11 +7485,11 @@
       "q": "下列哪兩項屬於弱點管理活動？(多選)",
       "opts": [
         "報告",
-        "Prioritization",
-        "Exploiting",
-        "Correlation",
+        "優先化",
+        "利用漏洞",
+        "關聯分析",
         "遏制",
-        "Tabletop exercise"
+        "桌上演練 (Tabletop)"
       ],
       "explain": "弱點管理生命週期：發現 (掃描) → 評估 → 修補 → 驗證 → 報告。Reporting 與 Scanning 都是核心活動。"
     }
@@ -7512,7 +7512,7 @@
         "網路 scanning",
         "Penetration 測試",
         "開源情報 (OSINT)",
-        "Conguration auditing"
+        "組態稽核"
       ],
       "explain": "OSINT 利用公開資訊評估外部攻擊面，不需內部存取，常用於資產暴露評估與第三方風險評估。"
     }
@@ -7534,7 +7534,7 @@
       "q": "管理員擔心雲端運算實例的弱點。最嚴重的雲端特有威脅？",
       "opts": [
         "SQL 注入",
-        "TOC/TOU",
+        "TOC/TOU 競爭條件漏洞",
         "VM 逃逸",
         "代符化",
         "密碼 spraying"
@@ -7580,7 +7580,7 @@
     "zh": {
       "q": "供應商多樣化 (Vendor diversity) 的好處？",
       "opts": [
-        "Patch availability",
+        "修補可用性",
         "零日漏洞 (零日漏洞) resiliency",
         "安全設定指南適用性",
         "負載平衡"
@@ -7721,7 +7721,7 @@
       "q": "組織想保護智財。應採用？",
       "opts": [
         "內部威脅 detection",
-        "Simulated threats",
+        "模擬威脅",
         "釣魚攻擊 awareness",
         "業務持續性規劃"
       ],
@@ -7743,10 +7743,10 @@
     "zh": {
       "q": "組織擴展到國際但要把資料留在當地。應採用？",
       "opts": [
-        "Cloud-based",
-        "Peer-to-peer",
-        "On-premises",
-        "Hybrid"
+        "雲端為基",
+        "點對點 (P2P)",
+        "本地部署 (On-premises)",
+        "混合 (Hybrid)"
       ],
       "explain": "資料主權 (Data sovereignty) 要求資料留在特定國家。On-premises 在當地實體機房可完全控制資料位置。"
     }
@@ -7791,7 +7791,7 @@
       "opts": [
         "數位簽章",
         "全磁碟加密 (FDE)",
-        "Private key",
+        "私鑰",
         "隱寫術"
       ],
       "explain": "FDE (BitLocker、FileVault) 加密整顆磁碟保護待機資料。TLS/VPN/IPsec 是傳輸中資料的加密。"
@@ -7814,8 +7814,8 @@
       "opts": [
         "ACL 存取控制清單",
         "IDS 入侵偵測",
-        "HIDS",
-        "NIPS"
+        "HIDS 主機型入侵偵測",
+        "NIPS 網路入侵防護"
       ],
       "explain": "NIPS 在網路邊界 inline 部署，可偵測並主動阻擋來自外部 IP 的攻擊封包。NIDS 只能偵測不能阻擋。"
     }
@@ -7837,8 +7837,8 @@
       "opts": [
         "發電機",
         "不斷電系統 (UPS)",
-        "Replication",
-        "Parallel processing"
+        "複寫 (Replication)",
+        "平行處理"
       ],
       "explain": "UPS 只能短時供電（幾分鐘到 30 分鐘）。Generator (柴油/天然氣) 可持續供電數天，是長時停電的標準方案。"
     }
@@ -7910,9 +7910,9 @@
       "q": "管理員為何利用安裝檔的 3DES 雜湊？",
       "opts": [
         "To 測試 the integrity of the le",
-        "To validate the authenticity of the le",
-        "To activate the license for the le",
-        "To calculate the checksum of the le"
+        "驗證檔案的真實性",
+        "為檔案啟用授權",
+        "計算檔案的校驗值"
       ],
       "explain": "雜湊（即使是 3DES 衍生）可驗證下載檔案的完整性：發布者公布 hash，使用者重算比對。但 3DES 已過時應改用 SHA-256。"
     }
@@ -7932,10 +7932,10 @@
     "zh": {
       "q": "公司重設架構想減少實體伺服器。應採用？",
       "opts": [
-        "Isolation",
+        "隔離",
         "網路分段",
         "虛擬化",
-        "Redundancy"
+        "冗餘 / 備援"
       ],
       "explain": "一台實體伺服器執行多 VM，可大幅減少實體硬體需求，降低成本、簡化管理、提升彈性。"
     }
@@ -7955,10 +7955,10 @@
     "zh": {
       "q": "實作具「持續正常運轉」特性的產品遵循什麼安全概念？",
       "opts": [
-        "Availability",
-        "Non-repudiation",
-        "Integrity",
-        "Condentiality"
+        "可用性 (Availability)",
+        "不可否認性",
+        "完整性 (Integrity)",
+        "機密性 (Confidentiality)"
       ],
       "explain": "持續正常運轉 = uptime = Availability。CIA 三元組中的 A，常透過備援、HA、故障切換達成。"
     }
@@ -8001,10 +8001,10 @@
     "zh": {
       "q": "組織連續兩次稽核失敗，被政府機關要求依法改善。這代表？",
       "opts": [
-        "Non-compliance",
-        "Contract violations",
-        "Government sanctions",
-        "Rules of engagement"
+        "不合規",
+        "違反合約",
+        "政府制裁",
+        "交戰守則 (ROE)"
       ],
       "explain": "Non-compliance 是未達法規要求。後果包含罰款、營業限制、法律訴訟、聲譽損害。"
     }
@@ -8031,7 +8031,7 @@
         "機密",
         "公開",
         "營運控制",
-        "Urgent",
+        "緊急",
         "受限"
       ],
       "explain": "政府關鍵系統相關資訊屬於 Confidential（最高分類），需嚴格存取控制、加密、稽核與最小權限原則。"
@@ -8077,8 +8077,8 @@
       "opts": [
         "密碼 cracking",
         "中間人攻擊",
-        "Digital signing",
-        "Side-channel"
+        "數位簽章",
+        "側通道攻擊"
       ],
       "explain": "弱加密（如 RC4、SSL 2.0、MD5）可被攻擊者破解或降級攻擊，使 MITM 攻擊能解密或竄改流量。應使用 TLS 1.2+ 與強密碼套件。"
     }
@@ -8101,7 +8101,7 @@
         "Video surveillance 系統",
         "防撞柱",
         "Alarm 系統",
-        "Motion sensors"
+        "動作感測器"
       ],
       "explain": "Bollards 是阻擋車輛衝撞建築物的實體障礙物，屬於 Preventive 控制。CCTV 是 Detective，告示是 Deterrent。"
     }
@@ -8122,9 +8122,9 @@
       "q": "下列何者最常作為安全運營中的「即時參考文件」？",
       "opts": [
         "變更 management 政策",
-        "Risk prole",
-        "Playbook",
-        "SIEM pro le"
+        "風險檔案",
+        "事件劇本 (Playbook)",
+        "SIEM 設定檔"
       ],
       "explain": "Playbook 是針對特定事件類型的標準回應流程文件，分析師處理事件時隨時參考確保步驟正確完整。"
     }
@@ -8147,7 +8147,7 @@
         "GRE 通用路由封裝",
         "IPSec",
         "SD-WAN",
-        "EAP"
+        "EAP 可擴展驗證協定"
       ],
       "explain": "GRE 是封裝協定本身無加密。實務上常與 IPSec 搭配 (GRE over IPSec) 提供加密。本題明確問通道協定即 GRE。"
     }
@@ -8236,9 +8236,9 @@
     "zh": {
       "q": "零售連鎖遭資料外洩，客戶面臨什麼後果？",
       "opts": [
-        "Contractual impacts",
-        "Sanctions",
-        "Fines",
+        "對合約的影響",
+        "制裁",
+        "罰款",
         "聲譽損害"
       ],
       "explain": "資料外洩後客戶失去信任、轉向競爭對手，造成銷售與品牌價值長期損害。是無形但常超過罰款的損失。"
@@ -8259,10 +8259,10 @@
     "zh": {
       "q": "日誌中看到惡意 SQL 語法。應實施？",
       "opts": [
-        "Input sanitization",
-        "Secure cookies",
+        "輸入清理",
+        "安全 Cookie",
         "靜態程式碼分析 (SAST)",
-        "Sandboxing"
+        "沙箱隔離"
       ],
       "explain": "SQL Injection 應從應用層修補：輸入驗證、Sanitization、Parameterized query (Prepared statement) 避免使用者輸入直接拼接到 SQL。"
     }
@@ -8305,7 +8305,7 @@
     "zh": {
       "q": "組織要高效管理分析多個日誌來源。應部署？",
       "opts": [
-        "Deploy a SIEM solution",
+        "部署 SIEM 方案",
         "建立自訂腳本彙整分析日誌",
         "實施 EDR 端點偵測回應 technology.",
         "安裝統合威脅管理 (UTM) 裝置"
@@ -8374,10 +8374,10 @@
     "zh": {
       "q": "組織決定實作 SSO，需透過 access token 從外部 IdP 接收使用者屬性。應採用？",
       "opts": [
-        "LDAP",
+        "LDAP 輕量目錄存取",
         "聯邦身分",
         "SAML",
-        "OAuth"
+        "OAuth 授權框架"
       ],
       "explain": "SAML 是 web SSO 標準，IdP 簽發含使用者屬性的 SAML assertion (token) 給 SP 進行驗證與授權。是企業 SSO 主流。"
     }
@@ -8400,7 +8400,7 @@
         "社交工程",
         "供應鏈攻擊",
         "Third-party 軟體",
-        "Rainbow table"
+        "彩虹表攻擊"
       ],
       "explain": "Credential harvesting 主要透過釣魚假網站、語音釣魚騙取使用者主動輸入帳密。比技術破解更有效率。"
     }
@@ -8420,7 +8420,7 @@
     "zh": {
       "q": "工程師想加強 SIEM 的自動化與編排。Playbook 的價值？",
       "opts": [
-        "It increases complexity.",
+        "增加複雜度",
         "消除技術債",
         "新增額外的防護機制",
         "可作為人力倍增器"
@@ -8466,10 +8466,10 @@
     "zh": {
       "q": "資料庫伺服器正在「主動處理」的資料屬於哪種狀態？",
       "opts": [
-        "In use",
-        "At rest",
-        "In transit",
-        "Being hashed"
+        "使用中 (In Use)",
+        "靜態資料 (Data at rest)",
+        "傳輸中 (In Transit)",
+        "進行雜湊"
       ],
       "explain": "資料三狀態：At rest (儲存)、In transit (傳輸)、In use (處理)。Active processing 的資料即 In use，需透過記憶體加密、安全飛地保護。"
     }
@@ -8492,7 +8492,7 @@
         "網路-enabled",
         "伺服器-side",
         "雲原生",
-        "Multitenant"
+        "多租戶"
       ],
       "explain": "Cloud-native 架構透過多區域部署、自動擴展、無狀態微服務、容器編排提供原生冗餘，是現代高可用性的標準。"
     }
@@ -8512,10 +8512,10 @@
     "zh": {
       "q": "管理員要購買 NAC 平台。優先涵蓋哪一類連線？",
       "opts": [
-        "Bluetooth",
+        "藍牙",
         "有線",
-        "NFC",
-        "SCADA"
+        "NFC 近場通訊",
+        "SCADA 監控與資料擷取"
       ],
       "explain": "員工日常多透過有線連線，NAC 應先涵蓋 Wired 確保只有合規裝置能連入企業網路。Wireless 與 VPN 通常為次優先。"
     }
@@ -8536,8 +8536,8 @@
       "q": "管理員看到日誌中含 script 標籤的程式碼。是？",
       "opts": [
         "XSS 跨站腳本",
-        "SQLi",
-        "DDoS",
+        "SQLi SQL 注入",
+        "DDoS 分散式阻斷服務",
         "CSRF 跨站請求偽造"
       ],
       "explain": "<script>...</script> 等標籤注入到網頁是 XSS 特徵。應透過 Output encoding、CSP、HttpOnly cookie 等措施防禦。"
@@ -8558,10 +8558,10 @@
     "zh": {
       "q": "公司發新筆電給所有員工並要提供「在公司內外都能用」的 Web 過濾。應使用？",
       "opts": [
-        "Agent-based",
+        "代理人式 (Agent-based)",
         "Centralized 代理",
-        "URL scanning",
-        "Content categorization"
+        "URL 掃描",
+        "內容分類"
       ],
       "explain": "Agent-based 端點代理可在任何地點 (公司內、家裡、咖啡店) 套用統一過濾政策。邊界防火牆只在公司內生效。"
     }
@@ -8581,7 +8581,7 @@
     "zh": {
       "q": "下列何者用於「彙整日誌資料以建立警報與偵測異常」？",
       "opts": [
-        "SIEM",
+        "SIEM 安全資訊事件管理",
         "WAF Web應用防火牆",
         "網路 taps",
         "IDS 入侵偵測"
@@ -8605,7 +8605,7 @@
       "q": "保護「不必要或不安全的對外通訊」最佳的端點防護？",
       "opts": [
         "系統 hardening",
-        "Host-based rewall",
+        "主機型防火牆",
         "入侵偵測 系統",
         "Anti-惡意軟體 軟體"
       ],
@@ -8627,8 +8627,8 @@
     "zh": {
       "q": "追蹤「使用者何時登入並停留多久」服務的主要目的？",
       "opts": [
-        "Availability",
-        "Accounting",
+        "可用性 (Availability)",
+        "稽核記帳 (Accounting)",
         "驗證",
         "授權"
       ],
@@ -8673,10 +8673,10 @@
     "zh": {
       "q": "IT 管理員要確保企業應用實作資料保留標準。應由誰確認？",
       "opts": [
-        "Processor",
-        "Custodian",
-        "Privacy o cer",
-        "Owner"
+        "資料處理者 (Processor)",
+        "資料保管者 (Custodian)",
+        "隱私長 (Privacy Officer)",
+        "資料所有者 (Owner)"
       ],
       "explain": "Data Custodian (IT 部門) 實際執行 Owner 制定的政策，包含備份、保留、銷毀的技術實作。Owner 制定政策，Custodian 執行。"
     }
@@ -8700,10 +8700,10 @@
       "q": "公司要：防止員工外傳敏感資料、加密敏感公司資產。應採用？",
       "opts": [
         "DLP 資料外洩防護 軟體",
-        "DNS ltering",
+        "DNS 過濾",
         "檔案完整性監控 (FIM)",
-        "Stateful rewall",
-        "Guardrails",
+        "狀態檢查防火牆",
+        "防護機制 (Guard rails)",
         "Antivirus 簽章"
       ],
       "explain": "DLP 可偵測並阻擋敏感資料外傳 (email、USB、上傳)，同時可強制企業檔案加密。是資料安全的核心控制。"
@@ -8817,9 +8817,9 @@
       "q": "安全團隊研究新架構以保護分散的工作力。應採用？",
       "opts": [
         "IPS 入侵防護",
-        "SIEM",
-        "SASE",
-        "CASB"
+        "SIEM 安全資訊事件管理",
+        "SASE 安全存取服務邊緣",
+        "CASB 雲端存取安全代理"
       ],
       "explain": "SASE 整合 SD-WAN + 雲端安全 (SWG、CASB、ZTNA、FWaaS)，將安全控制移到雲端邊緣，適合遠端與分散工作力。"
     }
@@ -8862,10 +8862,10 @@
     "zh": {
       "q": "下列何者讓「漏洞利用不被 OS 偵測」？",
       "opts": [
-        "Firmware vulnerabilities",
+        "韌體弱點",
         "Side-loading 旁路安裝",
         "記憶體注入",
-        "Encrypted payloads"
+        "加密負載"
       ],
       "explain": "韌體 (BIOS/UEFI、SMM) 在 OS 之下執行，OS 看不到其活動。Rootkit 利用韌體弱點可持久且隱蔽。"
     }
@@ -8885,9 +8885,9 @@
     "zh": {
       "q": "行銷部門惡意內部人員竄改紀錄並挪用公款。應採用？",
       "opts": [
-        "Permission restrictions",
+        "權限限制",
         "雜湊",
-        "Input validation",
+        "輸入驗證",
         "存取 control list"
       ],
       "explain": "Insider 舞弊應透過 Least privilege + Separation of duties + 多級核可 + 稽核日誌限制能力與留下痕跡。"
@@ -8908,7 +8908,7 @@
     "zh": {
       "q": "組織要證明其控制「設計合宜且運作有效」。應使用？",
       "opts": [
-        "Red teaming",
+        "紅隊演練",
         "Penetration 測試",
         "獨立稽核",
         "弱點評估"
@@ -8956,8 +8956,8 @@
       "opts": [
         "資料 sovereignty",
         "地理位置",
-        "Intellectual property",
-        "Geographic restrictions"
+        "智慧財產 (IP)",
+        "地理限制"
       ],
       "explain": "Data sovereignty 規範資料必須遵守儲存地的法律。如 GDPR 限制歐盟個資出口；中國要求關鍵資料境內儲存。"
     }
@@ -8979,7 +8979,7 @@
       "opts": [
         "網路分段",
         "雜湊",
-        "Journaling",
+        "日誌記錄 (Journaling)",
         "資料遮罩"
       ],
       "explain": "PCI DSS 要求日誌不得儲存完整 PAN，應遮罩 (****1234) 或不記錄。是合規與資安的基本要求。"
@@ -9000,10 +9000,10 @@
     "zh": {
       "q": "分析師啟動資料庫伺服器收到驗證失敗。發現有效帳號被重導向到攻擊者控制的伺服器。MITRE 戰術？",
       "opts": [
-        "Browser extension",
-        "Process injection",
+        "瀏覽器擴充功能",
+        "程序注入 (Process Injection)",
         "Valid 帳號",
-        "Escape to host"
+        "逃逸到宿主"
       ],
       "explain": "MITRE ATT&CK 的 Valid Accounts 技術：攻擊者用合法被盜的憑證進入系統，繞過大多數偵測。是 APT 常用手法。"
     }
@@ -9024,9 +9024,9 @@
       "q": "滲透測試員未授權但跟隨員工一起進入辦公樓。是？",
       "opts": [
         "尾隨進入",
-        "Shoulder surng",
-        "RFID cloning",
-        "Forgery"
+        "肩窺攻擊",
+        "RFID 複製",
+        "偽造"
       ],
       "explain": "Tailgating 緊跟有權限員工通過門禁，常利用「禮貌不關門」的心理。應透過 Mantrap、安全意識訓練防範。"
     }
@@ -9048,7 +9048,7 @@
       "opts": [
         "IPS 入侵防護",
         "DLP 資料外洩防護",
-        "SIEM",
+        "SIEM 安全資訊事件管理",
         "防火牆"
       ],
       "explain": "SIEM 從多種來源 (防火牆、伺服器、App、雲) 收集日誌並產出統一儀表板與報告，是集中可視化的核心。"
@@ -9069,10 +9069,10 @@
     "zh": {
       "q": "組織做弱點修補決策時最應關注？",
       "opts": [
-        "Exposure factor",
-        "CVSS",
-        "CVE",
-        "Industry impact"
+        "暴露因子 (EF)",
+        "CVSS 漏洞評分系統",
+        "CVE 通用漏洞編號",
+        "產業影響"
       ],
       "explain": "CVSS 分數量化漏洞嚴重度與可利用性，是決定修補優先順序的標準指標。Critical (9-10) 與 High (7-8.9) 應優先處理。"
     }
@@ -9092,7 +9092,7 @@
     "zh": {
       "q": "組織要監控使用者活動防範內部威脅。應使用？",
       "opts": [
-        "Behavioral analytics",
+        "行為分析",
         "存取 control lists",
         "身分與存取管理 (IAM)",
         "網路 入侵偵測 系統"
@@ -9139,7 +9139,7 @@
       "q": "分析師要找出工作站的 C2 通訊目的地。應檢視？",
       "opts": [
         "IDS 入侵偵測",
-        "Antivirus",
+        "防毒軟體",
         "防火牆",
         "應用"
       ],
@@ -9162,8 +9162,8 @@
       "q": "員工存取內部網站收到「網站不可信」提示。可能是？",
       "opts": [
         "萬用字元憑證",
-        "Root of trust",
-        "Third-party",
+        "信任根",
+        "第三方",
         "自簽"
       ],
       "explain": "內部網站常用自簽憑證或內部 CA。客戶端不信任此 CA 即出現警告。應將內部 CA 根憑證部署到所有工作站信任根。"
@@ -9187,7 +9187,7 @@
         "防火牆",
         "IDS 入侵偵測",
         "蜜罐",
-        "Layer 3 switch"
+        "第 3 層交換器"
       ],
       "explain": "Honeypot 是刻意暴露的誘餌系統，攻擊者攻擊蜜罐時可收集其手法、工具、IOC，作為威脅情報補強防禦。"
     }
@@ -9230,9 +9230,9 @@
     "zh": {
       "q": "網站私鑰被竊已重新簽發新憑證。應如何處理舊憑證？",
       "opts": [
-        "SCEP",
+        "SCEP 憑證註冊協定",
         "CRL 憑證撤銷清單",
-        "OCSP",
+        "OCSP 線上憑證狀態",
         "CSR 憑證簽署請求"
       ],
       "explain": "CRL (Certificate Revocation List) 由 CA 發布列出被撤銷的憑證序號，瀏覽器查詢後就不會信任被竊憑證。OCSP 也類似但即時。"
@@ -9255,8 +9255,8 @@
       "opts": [
         "AUP 可接受使用政策",
         "SLA 服務水準協議",
-        "EULA",
-        "MOA"
+        "EULA 終端使用者授權",
+        "MOA 協議備忘錄"
       ],
       "explain": "AUP 規範員工使用公司 IT 資源 (網路、設備、資料) 的可接受行為，是員工入職必簽的核心政策。"
     }
@@ -9278,7 +9278,7 @@
       "opts": [
         "地理分散",
         "資料 sovereignty",
-        "Geographic restrictions",
+        "地理限制",
         "資料 網路分段"
       ],
       "explain": "Data sovereignty 規範資料受其儲存地的法律管轄。雲端服務時需明確選定資料中心位置以符合特定法規。"
@@ -9305,7 +9305,7 @@
         "定期更新伺服器軟體與修補",
         "實施 strong 密碼 政策",
         "對靜態與傳輸中的敏感資料加密",
-        "Utilizing a web-application rewall",
+        "使用 Web 應用防火牆 (WAF)",
         "定期執行弱點掃描",
         "從伺服器移除付款資訊"
       ],
@@ -9330,7 +9330,7 @@
         "IPS 入侵防護",
         "FIM 檔案完整性監控",
         "NAC 網路存取控制",
-        "SIEM"
+        "SIEM 安全資訊事件管理"
       ],
       "explain": "SIEM 集中收集雲端服務 (CloudTrail、Azure Monitor、GCP Logging) 日誌，配合 SOC 監控，是雲端可視化的核心。"
     }
@@ -9350,7 +9350,7 @@
     "zh": {
       "q": "SQL 更新時暫存欄位被攻擊者替換為惡意值。是？",
       "opts": [
-        "Race condition",
+        "競爭條件 (Race Condition)",
         "記憶體注入",
         "Malicious 更新",
         "Side-loading 旁路安裝"
@@ -9373,8 +9373,8 @@
     "zh": {
       "q": "開發團隊共用備份帳號存取程式碼儲存庫。應採用？",
       "opts": [
-        "RAS",
-        "EAP",
+        "RAS 遠端存取服務",
+        "EAP 可擴展驗證協定",
         "SAML",
         "PAM 特權存取管理"
       ],
@@ -9396,8 +9396,8 @@
     "zh": {
       "q": "公司要確保證據在訴訟中可被採信。應實作數位鑑識的哪一階段？",
       "opts": [
-        "Preservation",
-        "E-discovery",
+        "證據保全",
+        "電子證據開示 (E-Discovery)",
         "證據擷取",
         "遏制"
       ],
@@ -9442,10 +9442,10 @@
     "zh": {
       "q": "下列哪份文件規範滲透測試員必須遵守的程序？",
       "opts": [
-        "Rules of engagement",
-        "Rules of acceptance",
-        "Rules of understanding",
-        "Rules of execution"
+        "交戰守則 (ROE)",
+        "接受規則",
+        "理解規則",
+        "執行規則"
       ],
       "explain": "ROE 明訂測試範圍、允許手法、時段、緊急聯絡。是滲透測試的「遊戲規則」避免測試失控或衝擊生產。"
     }
@@ -9468,7 +9468,7 @@
         "入侵防護 系統",
         "沙箱",
         "端點偵測回應 (EDR)",
-        "Antivirus"
+        "防毒軟體"
       ],
       "explain": "EDR 持續監控端點上的程序、檔案、網路、使用者行為，產生可視化儀表板，是現代端點安全的核心。"
     }
@@ -9489,7 +9489,7 @@
       "q": "法務部要求保留所有「被裁切回收的裝置上的備份」。屬於？",
       "opts": [
         "資料 retention",
-        "Certication",
+        "認證/證明",
         "資料淨化",
         "銷毀"
       ],
@@ -9513,7 +9513,7 @@
       "opts": [
         "XSS 跨站腳本",
         "記憶體注入",
-        "Replay attack",
+        "重放攻擊",
         "勒索軟體"
       ],
       "explain": "RTOS (即時作業系統，多用於工控、汽車) 常缺少現代安全機制，易遭記憶體注入攻擊。應加強記憶體保護與韌體驗證。"
@@ -9560,7 +9560,7 @@
         "套用 IP 信譽資料",
         "Tap 並監控郵件流",
         "對郵件流量進行串接掃描",
-        "Check SPF records."
+        "檢查 SPF 紀錄"
       ],
       "explain": "Email Gateway (如 Proofpoint、Mimecast) inline 掃描所有附件，配合沙箱分析可疑檔案，是 Email 安全的核心。"
     }
@@ -9581,9 +9581,9 @@
       "q": "事件回應流程的「第一階段」？",
       "opts": [
         "偵測",
-        "Declaration",
+        "聲明書",
         "遏制",
-        "Verication"
+        "驗證"
       ],
       "explain": "NIST IR 流程：Preparation → Detection & Analysis → Containment/Eradication/Recovery → Post-Incident。Detection 是響應流程的起點。"
     }
@@ -9603,10 +9603,10 @@
     "zh": {
       "q": "舊系統是關鍵流程的一部分，主要安全考量？",
       "opts": [
-        "Resource provisioning",
-        "Cost",
+        "資源配置",
+        "成本",
         "單點故障 (SPOF)",
-        "Complexity"
+        "複雜度"
       ],
       "explain": "舊系統常無備援且無法修補。一旦故障或被駭整個業務停擺，是嚴重 SPOF。應規劃替換或加強備援。"
     }
@@ -9678,7 +9678,7 @@
       "q": "Web 日誌中看到 `../../etc/passwd`。是？",
       "opts": [
         "權限提升",
-        "Credential replay",
+        "憑證重放攻擊",
         "蠻力破解",
         "目錄遍歷"
       ],
@@ -9702,7 +9702,7 @@
       "opts": [
         "Partially known 環境",
         "Unknown 環境",
-        "Integrated",
+        "整合式",
         "Known 環境"
       ],
       "explain": "Gray box 測試者擁有部分內部資訊 (如網路圖、帳號)。模擬「有限內部知識」的攻擊者，平衡測試效率與真實性。"
@@ -9746,10 +9746,10 @@
     "zh": {
       "q": "清除硬碟資料但裝置「仍可重複使用」的方法？",
       "opts": [
-        "Degaussing",
-        "Drive shredder",
-        "Retention platform",
-        "Wipe tool"
+        "消磁銷毀",
+        "硬碟銷毀機",
+        "保留平台",
+        "擦除工具"
       ],
       "explain": "Wipe tool 透過多次覆寫使原資料不可復原但保留磁碟可用。物理銷毀則使磁碟報廢。本題要保留使用性故選 Wipe。"
     }
@@ -9770,8 +9770,8 @@
       "q": "攻擊者送出含非預期字元的請求嘗試未授權存取。是？",
       "opts": [
         "Side-loading 旁路安裝",
-        "Target of evaluation",
-        "Resource reuse",
+        "評估目標 (TOE)",
+        "資源重用",
         "SQL 注入"
       ],
       "explain": "SQL Injection 利用未經驗證的輸入，注入 SQL 命令如 `' OR '1'='1`。應使用 Parameterized query 與輸入驗證防範。"
@@ -9815,7 +9815,7 @@
     "zh": {
       "q": "系統不再受廠商支援但仍提供關鍵業務功能且不能下架。風險策略？",
       "opts": [
-        "Reject",
+        "拒絕",
         "接受 (Accept)",
         "轉移 (Transfer)",
         "規避 (Avoid)"
@@ -9861,7 +9861,7 @@
     "zh": {
       "q": "想低成本部署「含硬體與部分資料即時更新」的備援站。應？",
       "opts": [
-        "Recovery site",
+        "復原站點",
         "冷備站",
         "熱備站",
         "溫備站"
@@ -9915,7 +9915,7 @@
         "跳板伺服器",
         "WAF Web應用防火牆",
         "MFA 多因素驗證",
-        "VPN"
+        "VPN 虛擬私人網路"
       ],
       "explain": "PHI (Protected Health Information) 受 HIPAA 規範。遠端存取應使用 VPN + MFA + 端點檢查 + 加密等多層防護。"
     }
@@ -9938,7 +9938,7 @@
         "密碼 政策",
         "存取 badges",
         "釣魚演練",
-        "Risk assessment"
+        "風險評估"
       ],
       "explain": "模擬釣魚活動可量化點擊率、回報率，是衡量安全意識訓練效果最直接的方法。"
     }
@@ -9958,10 +9958,10 @@
     "zh": {
       "q": "顧問建議客戶「實體隔離」其安全系統。應採用？",
       "opts": [
-        "SDN",
+        "SDN 軟體定義網路",
         "氣隙網路",
-        "Containerized",
-        "Highly available"
+        "容器化",
+        "高可用性"
       ],
       "explain": "Air gap 是與任何網路完全隔離的系統，是最高安全等級。常用於工控、軍事、加密貨幣冷錢包。"
     }
@@ -9983,8 +9983,8 @@
       "opts": [
         "IPS 入侵防護",
         "WAF Web應用防火牆",
-        "SASE",
-        "IAM"
+        "SASE 安全存取服務邊緣",
+        "IAM 身分與存取管理"
       ],
       "explain": "SASE 整合 SD-WAN + 雲安全 (SWG、CASB、ZTNA)，提供員工從任何地點安全存取雲服務的統一可視性與控制。"
     }
@@ -10027,8 +10027,8 @@
     "zh": {
       "q": "哪種弱點主要因「設定不當」造成？",
       "opts": [
-        "Misconguration",
-        "Resource reuse",
+        "錯誤設定",
+        "資源重用",
         "不安全的金鑰儲存",
         "弱密碼套件"
       ],
@@ -10080,7 +10080,7 @@
       "opts": [
         "魚叉式釣魚 attachment",
         "水坑攻擊",
-        "Infected website",
+        "受感染網站",
         "錯字搶註"
       ],
       "explain": "Spear-phishing 是針對特定個人的精緻釣魚，常含惡意附件 (Macro、PDF) 投放勒索軟體。應結合 Email 沙箱與 EDR 防護。"
@@ -10104,7 +10104,7 @@
         "Port security 連接埠安全",
         "傳輸層安全 (TLS)",
         "代理 伺服器",
-        "Security zones"
+        "安全區"
       ],
       "explain": "Port security 在 switch port 限制 MAC 數量、可指定允許 MAC 或啟用 802.1X 驗證，可阻擋未授權裝置。"
     }
@@ -10125,7 +10125,7 @@
       "q": "確保攻擊者無法讀取行動裝置上的內容。應使用？",
       "opts": [
         "TPM 受信任平台模組",
-        "ECC",
+        "ECC 橢圓曲線加密",
         "FDE 全磁碟加密",
         "HSM 硬體安全模組"
       ],
@@ -10147,7 +10147,7 @@
     "zh": {
       "q": "稽核發現 DNS 紀錄被改向到攻擊者 IP。是？",
       "opts": [
-        "DDoS attack",
+        "DDoS 分散式阻斷服務攻擊",
         "DNS 投毒",
         "勒索軟體 compromise",
         "間諜軟體 infection"
@@ -10193,10 +10193,10 @@
     "zh": {
       "q": "公司擔心報廢筆電上的客戶資料被竊。應採取？",
       "opts": [
-        "Wiping",
-        "Recycling",
-        "Shredding",
-        "Deletion"
+        "資料擦除",
+        "回收",
+        "碎紙銷毀",
+        "刪除"
       ],
       "explain": "Wiping 透過多次覆寫使原資料不可復原，符合 NIST 800-88 標準。是報廢前的標準資料銷毀步驟。"
     }
@@ -10218,7 +10218,7 @@
       "opts": [
         "IoT 物聯網",
         "IaC 基礎設施即程式碼",
-        "IaaS",
+        "IaaS 基礎設施即服務",
         "ICS 工業控制系統"
       ],
       "explain": "IaC (Terraform、CloudFormation) 用程式碼定義基礎設施，可版本控制、自動部署、一致性高。是 DevOps 與雲端的基礎。"
@@ -10240,8 +10240,8 @@
       "q": "政府官員收到含照片與要求離職的信。是？",
       "opts": [
         "組織犯罪集團",
-        "Philosophical beliefs",
-        "Espionage",
+        "哲學理念",
+        "間諜活動",
         "勒索"
       ],
       "explain": "Blackmail 是用機敏資訊威脅他人配合（如付款、洩漏資訊、行動）。應立即報告執法單位與資安部門。"
@@ -10309,7 +10309,7 @@
       "q": "攻擊者蠻力破解 Web 伺服器最終取得存取。應實施？",
       "opts": [
         "Regular patching of 伺服器",
-        "Web application rewalls",
+        "Web 應用防火牆 (WAF)",
         "多因素驗證 (MFA)",
         "啟用 加密 of 客戶 資料"
       ],
@@ -10333,7 +10333,7 @@
       "opts": [
         "快照",
         "On-site 備份",
-        "Journaling",
+        "日誌記錄 (Journaling)",
         "熱備站"
       ],
       "explain": "Hot site 與主站近即時同步，RTO 與 RPO 近乎零。雖成本最高但對最低停機與資料遺失是唯一選擇。"
@@ -10517,7 +10517,7 @@
     "zh": {
       "q": "組織購買含敏感資料的關鍵業務應用。應部署什麼保護？",
       "opts": [
-        "URL scanning",
+        "URL 掃描",
         "WAF Web應用防火牆",
         "反向代理",
         "NAC 網路存取控制"
@@ -10541,9 +10541,9 @@
       "q": "公司想用「最少基礎設施改變」提升應用可用性。應採用？",
       "opts": [
         "負載平衡",
-        "Fault tolerance",
+        "容錯",
         "代理 伺服器",
-        "Replication"
+        "複寫 (Replication)"
       ],
       "explain": "Load balancer 在現有伺服器前加入即可提升可用性與擴展性，不需大幅改變應用架構。"
     }
@@ -10612,7 +10612,7 @@
         "MOU 諒解備忘錄",
         "AUP 可接受使用政策",
         "NDA 保密協議",
-        "MOA"
+        "MOA 協議備忘錄"
       ],
       "explain": "AUP 明訂員工可接受的網路使用行為。違反通常導致紀律處分。新員工入職應簽 AUP 並接受訓練。"
     }
@@ -10633,7 +10633,7 @@
       "q": "VPN 日誌顯示使用者在非工作時間上傳數 GB 資料到外部位置。是？",
       "opts": [
         "錯字搶註",
-        "Root or trust",
+        "信任根",
         "資料 exltration",
         "勒索"
       ],
@@ -10656,9 +10656,9 @@
       "q": "公司發現可疑交易進入資料庫，攻擊者用了一個誘餌帳號。是？",
       "opts": [
         "蜜餌",
-        "Honeynet",
+        "蜜網 (Honeynet)",
         "蜜罐",
-        "Honeyle"
+        "蜜檔 (Honeyfile)"
       ],
       "explain": "Honeytoken 是刻意建立的假帳號/檔案/憑證，任何存取都觸發告警可識別攻擊者。是內部威脅偵測的有效工具。"
     }
@@ -10680,7 +10680,7 @@
       "opts": [
         "Conguring centralized 記錄",
         "Generating 本地 administrator 帳號",
-        "Replacing Telnet with SSH",
+        "把 Telnet 改為 SSH",
         "啟用 HTTP administration"
       ],
       "explain": "Telnet 是明文協定，憑證與命令易被竊聽。SSH 提供加密傳輸與強身分驗證，是遠端管理的標準。"
@@ -10748,7 +10748,7 @@
       "q": "資料管理生命週期中「最受當地法規影響」的環節？",
       "opts": [
         "銷毀",
-        "Certication",
+        "認證/證明",
         "保留",
         "資料淨化"
       ],
@@ -10770,10 +10770,10 @@
     "zh": {
       "q": "分析師檢視求才公告以確保不洩露敏感公司資訊。應關注？",
       "opts": [
-        "Oce addresses",
+        "辦公室位址",
         "軟體 versions",
         "董事會成員名單",
-        "Government identication numbers"
+        "政府識別號碼"
       ],
       "explain": "求才公告若含技術堆疊細節 (如「精通 XYZ 防火牆 v5.2」) 或人員 ID，可洩露內部資訊給攻擊者用於偵察。"
     }
@@ -10794,9 +10794,9 @@
       "q": "工程師確保交換器使用最新 OS、伺服器修補。最不可能的問題？",
       "opts": [
         "零日漏洞 (零日漏洞) attacks",
-        "Insider threats",
+        "內部威脅",
         "生命終期支援",
-        "Known exploits"
+        "已知漏洞"
       ],
       "explain": "修補後「已知漏洞」風險最低。仍有 0-day、零信任配置錯誤、社交工程等其他風險來源。"
     }
@@ -10816,9 +10816,9 @@
     "zh": {
       "q": "安裝使用低成本 IoT 裝置的安全考量？",
       "opts": [
-        "Country of origin",
+        "原產國",
         "裝置 responsiveness",
-        "Ease of deployment",
+        "部署便利性",
         "Storage of 資料"
       ],
       "explain": "低成本 IoT 常將敏感資料 (帳密、感測資料) 以明文儲存或弱加密，且少有韌體更新。是 IoT 安全的主要弱點。"
@@ -10864,7 +10864,7 @@
       "q": "安全團隊強化網路抵禦「外部惡意封包」。應採用？",
       "opts": [
         "Anti-惡意軟體 solutions",
-        "Host-based rewalls",
+        "主機型防火牆",
         "入侵防護 系統",
         "網路存取控制 (NAC)",
         "網路 允許 list"
@@ -10887,10 +10887,10 @@
     "zh": {
       "q": "防止「未授權使用者插入筆電到網路插孔」最佳方式？",
       "opts": [
-        "MAC ltering",
+        "MAC 篩選",
         "網路分段",
-        "Certication",
-        "Isolation"
+        "認證/證明",
+        "隔離"
       ],
       "explain": "MAC filtering (在 switch port 或 NAC) 只允許已知 MAC 連線。配合 802.1X 可進一步要求身分驗證。"
     }
@@ -10910,9 +10910,9 @@
     "zh": {
       "q": "管理員要降低公司硬體攻擊面。應使用？",
       "opts": [
-        "Replication",
-        "Isolation",
-        "Centralization",
+        "複寫 (Replication)",
+        "隔離",
+        "集中化管理",
         "虛擬化"
       ],
       "explain": "虛擬化整合多服務到少數實體機，可大幅減少實體硬體數量、簡化管理、降低被攻擊面。"
@@ -10935,7 +10935,7 @@
       "opts": [
         "智慧卡搭配 PIN 與密碼",
         "安全問題與郵件 OTP",
-        "Voice and ngerprint verication with an SMS one-time passcode",
+        "語音與指紋驗證搭配 SMS 一次性密碼",
         "行動應用產生的一次性密碼搭配臉部辨識"
       ],
       "explain": "MFA 需跨不同因素類別。語音(are)+指紋(are)+SMS(have) 含兩個 are 較不理想，但仍比單一因素強，是有效的 MFA。"
@@ -10956,9 +10956,9 @@
     "zh": {
       "q": "公司用舊 FTP 傳金融資料給第三方。系統老舊無法加密。應採取？",
       "opts": [
-        "Telnet connection",
-        "SSH tunneling",
-        "Patch installation",
+        "Telnet 連線",
+        "SSH 隧道",
+        "修補安裝",
         "全磁碟加密 (FDE)"
       ],
       "explain": "SSH tunneling 將不安全的舊協定流量包在 SSH 加密隧道中傳輸，是「無法改造舊系統時」加密通訊的常見補償控制。"
@@ -10979,10 +10979,10 @@
     "zh": {
       "q": "資安經理想減少識別與遏制基本威脅所需的步驟數。應實作？",
       "opts": [
-        "SOAR",
-        "SIEM",
-        "DMARC",
-        "NIDS"
+        "SOAR 安全編排自動化回應",
+        "SIEM 安全資訊事件管理",
+        "DMARC 郵件驗證",
+        "NIDS 網路入侵偵測"
       ],
       "explain": "SOAR 整合 SIEM 警報 + Playbook 自動化執行：自動隔離主機、封鎖 IP、查 IOC、開 Ticket。大幅縮短 MTTR。"
     }
@@ -11025,10 +11025,10 @@
     "zh": {
       "q": "OS 漏洞「被發現後」最有效的處理？",
       "opts": [
-        "Endpoint protection",
+        "端點防護",
         "Removal of unnecessary 軟體",
-        "Conguration enforcement",
-        "Patching"
+        "組態強制執行",
+        "修補管理"
       ],
       "explain": "Patching 是 OS 漏洞最直接的修補方式。應建立 Patch management 流程：測試 → 部署 → 驗證 → 文件化。"
     }
@@ -11049,7 +11049,7 @@
       "q": "管理層回報員工反映公司平板缺少功能且因未授權變更導致。應實施？",
       "opts": [
         "EDR 端點偵測回應",
-        "COPE",
+        "COPE 公司擁有員工可私用",
         "MDM 行動裝置管理",
         "FDE 全磁碟加密"
       ],
@@ -11143,7 +11143,7 @@
         "兩個程序存取同一變數造成競爭條件並權限提升",
         "A process receives an unexpected amount of 資料, which causes malicious code to be executed.",
         "惡意程式碼被複製到執行中程序的記憶體配置空間（記憶體注入）",
-        "An executable is overwritten on the disk, and malicious code runs the next time it is executed."
+        "磁碟上的執行檔被覆寫，下次執行時運行惡意程式碼"
       ],
       "explain": "Memory injection 將惡意 payload 寫入合法程序的記憶體並執行，繞過檔案層防護。常用於 fileless malware。"
     }
@@ -11163,10 +11163,10 @@
     "zh": {
       "q": "管理員在所有硬碟實作加密。主要保護什麼？",
       "opts": [
-        "Integrity",
+        "完整性 (Integrity)",
         "驗證",
-        "Zero Trust",
-        "Condentiality"
+        "零信任 (Zero Trust)",
+        "機密性 (Confidentiality)"
       ],
       "explain": "FDE (Full Disk Encryption) 保護資料「不被未授權方讀取」即 Confidentiality。CIA 三元組的 C。"
     }
@@ -11209,8 +11209,8 @@
     "zh": {
       "q": "客戶與 CSP 簽約後想識別「客戶端應實作哪些控制」。應參考？",
       "opts": [
-        "Statement of work",
-        "Responsibility matrix",
+        "工作說明書 (SOW)",
+        "責任矩陣",
         "服務水準協議 (SLA)",
         "主服務協議 (MSA)"
       ],
@@ -11232,7 +11232,7 @@
     "zh": {
       "q": "CISO 制定「事件後偵測與矯正」程序文件。是？",
       "opts": [
-        "SDLC",
+        "SDLC 軟體開發生命週期",
         "IRP 事件回應計畫",
         "BCP 業務持續性計畫",
         "AUP 可接受使用政策"
@@ -11258,7 +11258,7 @@
         "藍隊",
         "黃隊",
         "紅隊",
-        "Green"
+        "綠色 (Green)"
       ],
       "explain": "Yellow team 是建造者 (開發者)，與紅藍隊合作將安全融入 SDLC。傳統紅藍紫是測試導向，黃隊強調防禦設計。"
     }
@@ -11278,10 +11278,10 @@
     "zh": {
       "q": "管理員想自動化大量帳號的權限更新。應使用？",
       "opts": [
-        "Security groups",
+        "安全群組",
         "聯邦身分",
         "使用者 provisioning",
-        "Vertical scaling"
+        "垂直擴展"
       ],
       "explain": "User provisioning 透過 IAM 系統 (Azure AD、Okta) 自動依角色變更同步權限到所有應用，是 IGA 的核心。"
     }
@@ -11324,10 +11324,10 @@
     "zh": {
       "q": "各方利害相關者聚會討論事件回應角色與責任。是？",
       "opts": [
-        "Tabletop exercise",
+        "桌上演練 (Tabletop)",
         "滲透測試",
         "地理分散",
-        "Incident response"
+        "事件回應 (IR)"
       ],
       "explain": "Tabletop 是利害相關者圍坐討論「假設情境」如何回應的紙上推演，重點在角色、流程、決策的釐清。"
     }
@@ -11371,7 +11371,7 @@
       "q": "「未授權安裝來自第三方來源的應用」是哪種弱點？",
       "opts": [
         "XSS 跨站腳本",
-        "Buffer overow",
+        "緩衝區溢位",
         "越獄",
         "Side-loading 旁路安裝"
       ],
@@ -11393,10 +11393,10 @@
     "zh": {
       "q": "在「部署的應用程式」運行時可進行的識別方法？",
       "opts": [
-        "Dynamic analysis",
+        "動態分析 (DAST)",
         "Code 檢視",
         "Package 監控",
-        "Bug bounty"
+        "漏洞獎金計畫"
       ],
       "explain": "DAST 在執行中的應用測試行為 (如送惡意輸入觀察反應)，可發現執行階段才出現的問題如 SQLi、XSS。"
     }
@@ -11419,7 +11419,7 @@
         "隱寫術",
         "資料遮罩",
         "代符化",
-        "Private key"
+        "私鑰"
       ],
       "explain": "Steganography 將訊息嵌入無關媒體 (圖片、音檔)，外觀正常但內藏資料。「不暴露通訊存在」是其與一般加密的差別。"
     }
@@ -11462,7 +11462,7 @@
     "zh": {
       "q": "工程師要從已知惡意檔案中快速識別簽章。應使用？",
       "opts": [
-        "Static",
+        "靜態分析 (SAST)",
         "沙箱",
         "網路 tra c",
         "Package 監控"
@@ -11512,10 +11512,10 @@
       "q": "管理員處理舊系統用「不安全應用協定」傳資料的問題。應採用？",
       "opts": [
         "代符化",
-        "Cryptographic downgrade",
-        "SSH tunneling",
+        "密碼降級",
+        "SSH 隧道",
         "網路分段",
-        "Patch installation",
+        "修補安裝",
         "資料遮罩"
       ],
       "explain": "SSH tunneling 將不安全協定包在 SSH 加密通道中。是無法改造舊系統時保護傳輸的常見補償控制。"
@@ -11536,9 +11536,9 @@
     "zh": {
       "q": "風險管理流程中「建立範圍與潛在影響」的階段？",
       "opts": [
-        "Risk assessment",
-        "Risk identi cation",
-        "Risk treatment",
+        "風險評估",
+        "風險識別",
+        "風險處理",
         "Risk 監控 and 檢視"
       ],
       "explain": "Risk identification 是流程起點：列舉資產、威脅、漏洞，定義評估範圍。後續才能分析、評估、處理。"
@@ -11582,10 +11582,10 @@
     "zh": {
       "q": "下列何者讓管理員調整檔案權限？",
       "opts": [
-        "Patching",
+        "修補管理",
         "存取 control list",
-        "Conguration enforcement",
-        "Least privilege"
+        "組態強制執行",
+        "最小權限"
       ],
       "explain": "ACL 在檔案系統定義 user/group 對檔案的權限 (讀/寫/執行)，是最常見的細粒度存取控制機制。"
     }
@@ -11605,8 +11605,8 @@
     "zh": {
       "q": "公司知道不合規後果但選擇接受，最大顧慮應是？",
       "opts": [
-        "Right to be forgotten",
-        "Sanctions",
+        "被遺忘權",
+        "制裁",
         "外部 compliance 報告",
         "證明文件"
       ],
@@ -11629,8 +11629,8 @@
       "q": "「身分驗證後」才授予存取屬於什麼概念？",
       "opts": [
         "授權",
-        "Identication",
-        "Non-repudiation",
+        "識別",
+        "不可否認性",
         "驗證"
       ],
       "explain": "AAA：Authentication (確認身分) → Authorization (決定權限) → Accounting (記錄活動)。三者連續但分工。"
@@ -11675,7 +11675,7 @@
       "q": "管理員擔心使用者透過「複製版郵件網站」存取信件。是？",
       "opts": [
         "冒充",
-        "Replication",
+        "複寫 (Replication)",
         "釣魚攻擊",
         "簡訊釣魚"
       ],
@@ -11697,10 +11697,10 @@
     "zh": {
       "q": "工程師強化 IAM 確保員工「只能在公司時間存取」。應採用？",
       "opts": [
-        "Role-based",
+        "角色為基 (RBAC)",
         "時段限制",
-        "Least privilege",
-        "Biometric authentication"
+        "最小權限",
+        "生物辨識驗證"
       ],
       "explain": "Time-of-day restriction 限制帳號只能在指定時段使用 (如 09:00-18:00)。非工作時間嘗試登入會被拒絕並告警。"
     }
@@ -11744,9 +11744,9 @@
       "q": "員工離職時簽協議限制特定活動。違反此協議有法律後果。是？",
       "opts": [
         "SLA 服務水準協議",
-        "BPA",
+        "BPA 業務合作協議",
         "NDA 保密協議",
-        "MOA"
+        "MOA 協議備忘錄"
       ],
       "explain": "NDA (Non-Disclosure Agreement) 在合作或雇傭結束後仍持續，禁止洩漏機密資訊。違反通常有民事與刑事責任。"
     }
@@ -11791,7 +11791,7 @@
       "opts": [
         "封包擷取",
         "弱點掃描",
-        "Metadata analysis",
+        "中繼資料分析",
         "Automated 報告"
       ],
       "explain": "先掃描確認「哪些系統實際受影響、影響程度」。沒有掃描就直接修補可能遺漏或浪費資源。"
@@ -11838,12 +11838,12 @@
     "zh": {
       "q": "下列哪兩項是「現場存取」最佳的安全控制？(多選)",
       "opts": [
-        "Swipe card",
-        "Picture ID",
+        "感應卡",
+        "照片身分證件",
         "手機驗證應用程式",
-        "Biometric scanner",
-        "Camera",
-        "Memorable question"
+        "生物辨識掃描器",
+        "監視攝影機",
+        "記憶問題"
       ],
       "explain": "現場存取應用實體控制：Swipe card 識別身分 + Biometric 確認本人 = 雙因素的實體控制。VPN/DLP 等屬數位控制。"
     }
@@ -11863,10 +11863,10 @@
     "zh": {
       "q": "公司評估擴展應用存取給承包商與實習生，要先確認什麼？",
       "opts": [
-        "Threshold",
-        "Appetite",
+        "門檻值",
+        "風險偏好 (Risk Appetite)",
         "規避",
-        "Register"
+        "暫存器 (Register)"
       ],
       "explain": "Risk appetite 是組織願意承擔的風險程度。擴展存取會增加風險，需先確認是否在 appetite 內，並設定 tolerance。"
     }
@@ -11886,8 +11886,8 @@
     "zh": {
       "q": "證明「開發者已接受安全程式碼訓練」的行為？",
       "opts": [
-        "Assurance",
-        "Contract",
+        "保證 (Assurance)",
+        "合約",
         "盡職調查",
         "證明文件"
       ],
@@ -11933,9 +11933,9 @@
       "q": "分析師發現異常但 IDS 無法偵測。IDS 需要更新什麼？",
       "opts": [
         "簽章",
-        "Trends",
+        "趨勢分析",
         "蜜罐",
-        "Reputation"
+        "聲譽 / 信譽"
       ],
       "explain": "簽章式 IDS 依靠已知威脅簽章資料庫。新型攻擊未在資料庫中即漏報，應持續更新 signatures 並補上行為分析。"
     }
@@ -11978,7 +11978,7 @@
     "zh": {
       "q": "公司用開源軟體庫建構產品。最大的軟體安全風險？",
       "opts": [
-        "Buffer overow",
+        "緩衝區溢位",
         "SQL 注入",
         "XSS 跨站腳本",
         "零日漏洞 (0-day)"
@@ -12025,9 +12025,9 @@
       "q": "調查階段中「取得鑑識映像」屬於哪個階段？",
       "opts": [
         "證據擷取",
-        "Preservation",
+        "證據保全",
         "報告",
-        "E-discovery"
+        "電子證據開示 (E-Discovery)"
       ],
       "explain": "數位鑑識流程：Identification → Acquisition (建立 bit-for-bit 映像) → Analysis → Presentation。Acquisition 須維持完整性。"
     }
@@ -12140,9 +12140,9 @@
       "q": "分析師建立假帳號並把密碼存在「不易達」的目錄。如有人嘗試使用即可警示。是？",
       "opts": [
         "蜜罐",
-        "Honeyle",
+        "蜜檔 (Honeyfile)",
         "蜜餌",
-        "Honeynet"
+        "蜜網 (Honeynet)"
       ],
       "explain": "Honeyfile 是刻意建立的誘餌檔案 (含假憑證或標記)，正常員工不會接觸。任何存取都觸發告警，識別內部威脅。"
     }
@@ -12162,8 +12162,8 @@
     "zh": {
       "q": "為員工提供「安全遠端存取」同時最小化合規顧慮？",
       "opts": [
-        "VPN",
-        "LDAP",
+        "VPN 虛擬私人網路",
+        "LDAP 輕量目錄存取",
         "FTP",
         "RADIUS"
       ],
@@ -12186,8 +12186,8 @@
       "q": "公司想追蹤「建構新 VM 的程式碼變更」。應使用？",
       "opts": [
         "變更 management ticketing 系統",
-        "Behavioral analyzer",
-        "Collaboration platform",
+        "行為分析器",
+        "協作平台",
         "版本控制工具"
       ],
       "explain": "Git 等版本控制工具追蹤所有變更歷史、誰改了什麼、何時、為何，可審查、回滾、比對版本。是 IaC 的基礎。"
@@ -12208,10 +12208,10 @@
     "zh": {
       "q": "下列哪份文件「詳述如何完成技術安全任務」？",
       "opts": [
-        "Standard",
+        "標準",
         "政策",
-        "Guideline",
-        "Procedure"
+        "指南",
+        "程序"
       ],
       "explain": "Policy 定義「為何」、Standard 定義「什麼」、Procedure 定義「如何做」(具體步驟)、Guideline 是「建議做法」。"
     }
@@ -12279,7 +12279,7 @@
       "opts": [
         "TPM 受信任平台模組",
         "CRL 憑證撤銷清單",
-        "PKI",
+        "PKI 公開金鑰基礎設施",
         "CSR 憑證簽署請求"
       ],
       "explain": "CRL 列出 CA 撤銷的憑證序號。瀏覽器查詢後就不會信任該憑證。OCSP 是即時版本但 CRL 更廣為支援。"
@@ -12300,10 +12300,10 @@
     "zh": {
       "q": "下列何者最能協助「優先化修補應用」？",
       "opts": [
-        "CVSS",
-        "SCAP",
+        "CVSS 漏洞評分系統",
+        "SCAP 安全內容自動化",
         "OSINT 開源情報",
-        "CVE"
+        "CVE 通用漏洞編號"
       ],
       "explain": "CVSS 分數量化漏洞嚴重度與可利用性。Critical (9-10) 優先 24 小時內修補，High 7 天，依此安排優先級。"
     }
@@ -12323,9 +12323,9 @@
     "zh": {
       "q": "管理員建立腳本驗證 OS 版本、修補等級、安裝應用。是什麼概念？",
       "opts": [
-        "Resource scaling",
+        "資源擴展",
         "政策 enumeration",
-        "Baseline enforcement",
+        "基準強制執行",
         "實作防護機制"
       ],
       "explain": "Baseline enforcement 透過腳本/工具確認系統符合安全基準。發現偏離即矯正或告警，是 Configuration management 核心。"
@@ -12346,7 +12346,7 @@
     "zh": {
       "q": "分析師發現攻擊向量已被廠商揭露多年但仍被利用。應加強什麼？",
       "opts": [
-        "Endpoint",
+        "端點 (Endpoint)",
         "應用",
         "防火牆",
         "NAC 網路存取控制"
@@ -12369,9 +12369,9 @@
     "zh": {
       "q": "公司門禁日誌顯示員工 ID 短時間內進入多次。是？",
       "opts": [
-        "RFID cloning",
+        "RFID 複製",
         "側通道攻擊",
-        "Shoulder surng",
+        "肩窺攻擊",
         "尾隨進入"
       ],
       "explain": "員工本人不可能短時間多次進入。最可能是 RFID badge 被複製。應改用更安全的卡片 (HID iCLASS、加密卡) 與生物辨識。"
@@ -12461,8 +12461,8 @@
     "zh": {
       "q": "公司評估允許員工遠端存取的選項。下列哪項提供加密與集中驗證？",
       "opts": [
-        "IPSec with RADIUS",
-        "RDP connection with LDAPS",
+        "IPSec 搭配 RADIUS",
+        "RDP 連線搭配 LDAPS",
         "對所有遠端流量使用 Web 代理",
         "跳板伺服器 with 802.1X"
       ],
@@ -12485,8 +12485,8 @@
       "q": "管理員要更換過期 SSL 憑證。應準備？",
       "opts": [
         "CSR 憑證簽署請求",
-        "OCSP",
-        "Key",
+        "OCSP 線上憑證狀態",
+        "金鑰",
         "CRL 憑證撤銷清單"
       ],
       "explain": "更換憑證流程：產生 CSR (含公鑰與識別資訊) → 提交給 CA → 取得新憑證 → 安裝。CSR 是與 CA 互動的標準格式。"
@@ -12530,10 +12530,10 @@
     "zh": {
       "q": "CISO 想預防員工下載惡意附件、阻擋連線到風險網域、執行應用檢測。應部署？",
       "opts": [
-        "Web application rewall",
+        "Web 應用防火牆 (WAF)",
         "Secure DNS 伺服器",
         "跳板伺服器",
-        "Next-generation rewall"
+        "次世代防火牆 (NGFW)"
       ],
       "explain": "NGFW 整合 IPS、Application control、URL filter、TLS inspection、Sandbox，能在單一裝置實現多種防護需求。"
     }
@@ -12553,8 +12553,8 @@
     "zh": {
       "q": "公司知道特定市場區段的風險後選擇「不進入該市場」。是？",
       "opts": [
-        "Exemption",
-        "Exception",
+        "豁免",
+        "例外處理",
         "規避 (Avoid)",
         "轉移 (Transfer)"
       ],
@@ -12578,12 +12578,12 @@
     "zh": {
       "q": "密碼稽核後，分析師要改善驗證政策。最有效的改善？",
       "opts": [
-        "Length",
-        "Complexity",
-        "Least privilege",
+        "長度",
+        "複雜度",
+        "最小權限",
         "你擁有的東西 (Possession 因素)",
-        "Security keys",
-        "Biometrics"
+        "安全金鑰",
+        "生物辨識"
       ],
       "explain": "NIST SP 800-63B 指出密碼長度比複雜度更重要。14 字元的簡單密碼比 8 字元的複雜密碼更難破解。"
     }
@@ -12626,9 +12626,9 @@
     "zh": {
       "q": "組織要部署容器環境提升安全。應避免？",
       "opts": [
-        "Regulatory compliance",
-        "Patch availability",
-        "Kernel version",
+        "法規合規",
+        "修補可用性",
+        "核心版本",
         "巨型應用 (Monolithic)"
       ],
       "explain": "Monolithic 應用難以容器化、攻擊面大、難以細粒度控制。應拆分為微服務以充分利用容器的安全優勢。"
@@ -12650,9 +12650,9 @@
       "q": "實作設計變更前須經過多步驟確保不會對營運造成負面影響。應包含？",
       "opts": [
         "Board 檢視",
-        "Service restart",
-        "Backout planning",
-        "Maintenance"
+        "服務重啟",
+        "回退計畫",
+        "維護"
       ],
       "explain": "Backout plan 是變更失敗時的回復計畫。是 Change management 必備文件，確保問題發生時可快速還原。"
     }
@@ -12673,7 +12673,7 @@
       "q": "內部稽核判定某應用不在外部報告範圍內。應更新什麼？",
       "opts": [
         "資料清冊與保留",
-        "Right to be forgotten",
+        "被遺忘權",
         "盡職保密與盡職調查",
         "確認與證明"
       ],
@@ -12723,9 +12723,9 @@
     "zh": {
       "q": "下列何者「改善安全與功能但不損失關鍵資料」？",
       "opts": [
-        "Reformatting",
-        "Decommissioning",
-        "Patching",
+        "重新格式化",
+        "除役",
+        "修補管理",
         "加密"
       ],
       "explain": "Patching 修復漏洞與 bug，通常不影響資料。應先在測試環境驗證，再依 Change management 部署到生產。"
@@ -12749,7 +12749,7 @@
         "程式碼簽章",
         "程式碼混淆",
         "代符化",
-        "Blockchain"
+        "區塊鏈"
       ],
       "explain": "Obfuscation 將程式碼改寫為難以理解的形式，增加逆向工程成本，保護智財與商業邏輯。"
     }
@@ -12793,8 +12793,8 @@
       "q": "確保裝置「無法存取網路連接的資源」應使用？",
       "opts": [
         "停用未使用服務",
-        "Web application rewall",
-        "Host isolation",
+        "Web 應用防火牆 (WAF)",
+        "主機隔離",
         "N etwork-based IDS 入侵偵測"
       ],
       "explain": "Host isolation 在 NAC/EDR 中將被感染或可疑主機從網路隔離，僅保留必要連線（如允許管理員調查）。"
@@ -12815,10 +12815,10 @@
     "zh": {
       "q": "下列何者最可能發現「未加密網路流量」？",
       "opts": [
-        "SDN",
+        "SDN 軟體定義網路",
         "IoT 物聯網",
-        "VPN",
-        "SCADA"
+        "VPN 虛擬私人網路",
+        "SCADA 監控與資料擷取"
       ],
       "explain": "IoT 裝置常因資源限制或設計疏忽使用明文協定 (如 HTTP、未加密 MQTT)。應隔離 IoT 網段並啟用網路加密。"
     }
@@ -12841,7 +12841,7 @@
         "處理稽核發現",
         "蒐集補救回應時間",
         "To 更新 the IRP 事件回應計畫",
-        "To calculate the ROI"
+        "計算投資回報率"
       ],
       "explain": "Tabletop 透過討論假設情境發現流程缺口、釐清角色責任。最常見輸出是更新事件回應計畫 (IRP)。"
     }
@@ -12884,7 +12884,7 @@
     "zh": {
       "q": "公司產品上市聘行銷公司，老闆是 CEO 的近親。應參考？",
       "opts": [
-        "Independent assessments",
+        "獨立評估",
         "供應鏈分析",
         "稽核權條款",
         "Conict of interest 政策"
@@ -12907,10 +12907,10 @@
     "zh": {
       "q": "組織設計含「fail-open」的入站防火牆同時實作網站。實現什麼？",
       "opts": [
-        "Condentiality",
-        "Non-repudiation",
-        "Availability",
-        "Integrity"
+        "機密性 (Confidentiality)",
+        "不可否認性",
+        "可用性 (Availability)",
+        "完整性 (Integrity)"
       ],
       "explain": "Fail-open 在裝置故障時讓流量通過 (反之 fail-closed 阻擋全部)。優先 Availability 而犧牲 Security。應評估場景權衡。"
     }
@@ -12955,7 +12955,7 @@
       "opts": [
         "發現並記錄外部考量因素",
         "制定員工到職與離職程序",
-        "Assigning roles and responsibilities for owners, controllers, and custodians",
+        "為擁有者、控制者、保管者分配角色與責任",
         "Dening and 監控 變更 management procedures"
       ],
       "explain": "Governance 核心是責任分配：Owner (擁有者) 決定政策、Custodian (保管者) 執行、Consumer (使用者) 遵循。明確分工才能執行有效治理。"
@@ -12976,9 +12976,9 @@
     "zh": {
       "q": "承包商需「目視檢查」所有新伺服器主機板。是？",
       "opts": [
-        "Embedded Rootkit",
-        "Supply chain",
-        "Firmware failure",
+        "嵌入式 Rootkit",
+        "供應鏈",
+        "韌體故障",
         "RFID 鍵盤側錄"
       ],
       "explain": "目視檢查可發現未授權晶片、植入硬體 (如後門)。是針對 Supply chain attack 的補強控制，但有效性有限。"
@@ -13000,9 +13000,9 @@
       "q": "Side loading 時可能被引入什麼？",
       "opts": [
         "使用者 冒充",
-        "Rootkit",
+        "Rootkit 隱藏程式",
         "中間人攻擊 (MITM)",
-        "Buffer overow"
+        "緩衝區溢位"
       ],
       "explain": "Side-loading 繞過官方應用商店，可能安裝含 Rootkit 的惡意應用。Rootkit 隱藏自身於 OS 底層難以偵測。"
     }
@@ -13117,10 +13117,10 @@
     "zh": {
       "q": "新政策要求所有員工用 MFA 存取公司資源。下列何者實現？",
       "opts": [
-        "Authentication tokens",
-        "Least privilege",
-        "Biometrics",
-        "LDAP",
+        "驗證令牌 (Token)",
+        "最小權限",
+        "生物辨識",
+        "LDAP 輕量目錄存取",
         "密碼 vaulting",
         "SAML"
       ],
@@ -13143,7 +13143,7 @@
       "q": "服務台員工接到「自稱 CEO」電話。是？",
       "opts": [
         "語音釣魚",
-        "Hacktivism",
+        "駭客主義",
         "勒索",
         "假訊息"
       ],
@@ -13211,10 +13211,10 @@
     "zh": {
       "q": "管理員要加密所有員工筆電的資料。應採用？",
       "opts": [
-        "Volume",
-        "Partition",
-        "Full disk",
-        "File"
+        "音量 / 數量",
+        "分割區",
+        "全磁碟 (FDE)",
+        "檔案"
       ],
       "explain": "FDE 加密整顆硬碟保護 Data at rest。即使筆電遺失或被竊，未通過解鎖驗證無法讀取任何資料。"
     }
@@ -13234,9 +13234,9 @@
     "zh": {
       "q": "處理「網頁伺服器上發現的漏洞」最佳行動？",
       "opts": [
-        "Patching",
+        "修補管理",
         "網路分段",
-        "Decommissioning",
+        "除役",
         "監控"
       ],
       "explain": "Patching 是修復漏洞的根本方式。應依 CVSS 排序、測試後部署、記錄修補狀態。"
@@ -13258,9 +13258,9 @@
       "q": "公司要求：員工不可用公司行動裝置處理私事。應採用？",
       "opts": [
         "BYOD 自帶裝置",
-        "CYOD",
-        "COPE",
-        "COBO"
+        "CYOD 員工自選清單裝置",
+        "COPE 公司擁有員工可私用",
+        "COBO 公司擁有業務專用"
       ],
       "explain": "COBO (Company Owned Business Only) 嚴格只允許業務使用。COPE 允許個人使用；BYOD 是員工自有；CYOD 從清單中選。"
     }
@@ -13281,7 +13281,7 @@
       "q": "公司擔心員工無意引入惡意軟體。應實施？",
       "opts": [
         "社交工程 training",
-        "SPF conguration",
+        "SPF 設定",
         "Simulated 釣魚攻擊 campaign",
         "內部威脅 awareness"
       ],
@@ -13305,7 +13305,7 @@
       "opts": [
         "GPO 群組原則",
         "ACL 存取控制清單",
-        "SFTP",
+        "SFTP 安全檔案傳輸",
         "DLP 資料外洩防護"
       ],
       "explain": "GPO 可一次性對網域中所有電腦套用設定 (停用 SMBv1、啟用安全選項)，是 Windows 環境的標準集中管理工具。"
@@ -13373,11 +13373,11 @@
     "zh": {
       "q": "編製基礎設施漏洞清單，「首先」應做？",
       "opts": [
-        "Automated scanning",
+        "自動化掃描",
         "Penetration 測試",
-        "Threat hunting",
+        "威脅獵捕",
         "日誌 aggregation",
-        "Adversarial emulation"
+        "對手模擬演練"
       ],
       "explain": "Vulnerability scanner 可在短時間掃描整個網路找出弱點，比手動快上百倍。是 Vulnerability management 的起點。"
     }
@@ -13443,7 +13443,7 @@
     "zh": {
       "q": "公司唯一資料中心因停電停機。應添加？",
       "opts": [
-        "Platform diversity",
+        "平台多樣化",
         "發電機",
         "快照",
         "負載平衡"
@@ -13466,10 +13466,10 @@
     "zh": {
       "q": "讓組織「測量資產的暴露因素」的分析方法？",
       "opts": [
-        "Heuristic",
+        "啟發式 (Heuristic)",
         "定量分析",
         "使用者-driven",
-        "Trend-based"
+        "趨勢為基 (Trend-based)"
       ],
       "explain": "Quantitative 用具體數字（$）量化資產價值、暴露因素 (EF)、SLE、ALE。比 Qualitative (高/中/低) 更精確。"
     }
@@ -13489,10 +13489,10 @@
     "zh": {
       "q": "邊界網路 port 掃描增加。應檢視？",
       "opts": [
-        "OS security",
+        "OS 安全",
         "防火牆",
         "應用",
-        "Endpoint"
+        "端點 (Endpoint)"
       ],
       "explain": "Port scan 是攻擊的偵察階段，會在防火牆日誌留下被拒絕的連線記錄。檢視可定位攻擊來源、目標、頻率。"
     }
@@ -13512,10 +13512,10 @@
     "zh": {
       "q": "團隊回報多分支辦公室高延遲與網路不可用。是？",
       "opts": [
-        "Buffer overow",
-        "NTP amplication attack",
+        "緩衝區溢位",
+        "NTP 放大攻擊",
         "蠕蟲",
-        "DoS attack"
+        "DoS 阻斷服務攻擊"
       ],
       "explain": "Worm 自我複製跨主機傳播，快速消耗網路與主機資源造成延遲與當機。應隔離受感染主機並更新所有系統。"
     }
@@ -13558,10 +13558,10 @@
     "zh": {
       "q": "與門禁通道 (Mantrap) 搭配「最有效預防尾隨」的是？",
       "opts": [
-        "PIN",
+        "PIN 個人識別碼",
         "存取 card",
         "保全人員",
-        "CCTV"
+        "CCTV 監視器"
       ],
       "explain": "Mantrap 同時只允許一人通過。配合 Security guard 可確認身分並阻止尾隨，是雙重實體控制的標準。"
     }
@@ -13581,10 +13581,10 @@
     "zh": {
       "q": "資安人員發現「含員工個人資訊」的資料夾放在公開伺服器上。最大顧慮？",
       "opts": [
-        "Legal",
-        "Financial",
-        "Privacy",
-        "Intellectual property"
+        "法律",
+        "財務",
+        "隱私 (Privacy)",
+        "智慧財產 (IP)"
       ],
       "explain": "員工 PII 公開暴露違反隱私法規 (GDPR、CCPA、PDPA)，可能造成監管罰款與訴訟。應立即下架並評估外洩影響。"
     }
@@ -13604,7 +13604,7 @@
     "zh": {
       "q": "SRE 設計恢復策略需「快速切換到相同的備援站」。應採用？",
       "opts": [
-        "Recovery site",
+        "復原站點",
         "熱備站",
         "冷備站",
         "溫備站"
@@ -13628,7 +13628,7 @@
       "q": "「最小化檔案伺服器資料遺失」最可能使用？",
       "opts": [
         "快照",
-        "Journaling",
+        "日誌記錄 (Journaling)",
         "程式碼混淆",
         "代符化"
       ],
@@ -13674,9 +13674,9 @@
       "q": "因「過時演算法或金鑰」造成的弱點類型？",
       "opts": [
         "雜湊 collision",
-        "Cryptographic",
-        "Buffer over ow",
-        "Input validation"
+        "密碼學",
+        "緩衝區溢位",
+        "輸入驗證"
       ],
       "explain": "使用過時演算法 (MD5、SHA-1、DES) 或弱金鑰 (短長度) 易被破解。應升級到 SHA-256、AES-256、TLS 1.3 等現代標準。"
     }
@@ -13696,7 +13696,7 @@
     "zh": {
       "q": "公司要防止「機敏資訊被分享到外部」。最相關文件？",
       "opts": [
-        "MOA",
+        "MOA 協議備忘錄",
         "SLA 服務水準協議",
         "MSA 主服務協議",
         "NDA 保密協議"
@@ -13766,9 +13766,9 @@
       "q": "提供金融業長期冷儲存的廠商，銀行要求依「監管批准的方法」處理資料。應提供？",
       "opts": [
         "加密",
-        "Classication",
-        "Certication",
-        "Procurement"
+        "資料分類",
+        "認證/證明",
+        "採購"
       ],
       "explain": "Certification of destruction 是書面證明資料已依規範安全銷毀。是合規稽核的法律證據。"
     }
@@ -13789,7 +13789,7 @@
       "q": "實體安全團隊報告員工未顯示識別證。應改善？",
       "opts": [
         "社交工程",
-        "Situational awareness",
+        "情境意識",
         "釣魚攻擊",
         "Acceptable use 政策"
       ],
@@ -13811,10 +13811,10 @@
     "zh": {
       "q": "Hacktivist 的動機最可能是？",
       "opts": [
-        "Financial gain",
-        "Espionage",
-        "Philosophical beliefs",
-        "Revenge"
+        "財務獲利",
+        "間諜活動",
+        "哲學理念",
+        "報復"
       ],
       "explain": "Hacktivist 為政治、社會、環境理念進行駭客活動。目標常為「與其理念對立」的組織 (政府、企業、媒體)。"
     }
@@ -13835,9 +13835,9 @@
       "q": "日誌中發現成功的注入攻擊跡象。應實作？",
       "opts": [
         "驗證",
-        "Secure cookies",
+        "安全 Cookie",
         "靜態程式碼分析 (SAST)",
-        "Input validation"
+        "輸入驗證"
       ],
       "explain": "Input validation 在應用層驗證所有輸入符合預期格式，可阻擋 SQL Injection、XSS、命令注入等。是 Secure coding 的基本要求。"
     }
@@ -13927,7 +13927,7 @@
       "q": "員工接到「自稱 CEO」陌生號碼簡訊。是什麼社交工程手法？",
       "opts": [
         "水坑攻擊",
-        "Disinformation",
+        "造謠 / 假訊息",
         "釣魚攻擊",
         "冒充"
       ],
@@ -13973,7 +13973,7 @@
       "q": "組織要能「審查供應商的控制與績效」應在合約中加？",
       "opts": [
         "服務水準協議 (SLA)",
-        "Memorandum of agreement",
+        "協議備忘錄 (MOA)",
         "稽核權條款",
         "供應鏈分析"
       ],
@@ -14042,9 +14042,9 @@
       "q": "管理員實作 Web 過濾但仍看到使用者瀏覽惡意連結。應加強？",
       "opts": [
         "入侵防護 系統",
-        "Content categorization",
+        "內容分類",
         "加密",
-        "DNS service"
+        "DNS 服務"
       ],
       "explain": "Web 過濾依分類庫判斷。應更新分類定義、加入威脅情報，並結合 DNS filter、Sandbox 等多層防護。"
     }
@@ -14066,7 +14066,7 @@
       "opts": [
         "不可能的旅行",
         "帳號 lockout",
-        "Blocked content",
+        "已阻擋內容",
         "並行會話使用"
       ],
       "explain": "Impossible travel 是地理上不可能的兩次登入 (如 1 小時內從台北到紐約)。是帳號被盜的強烈指標，應立即觸發告警。"

@@ -564,6 +564,16 @@ try:
 except ImportError:
     EXTRA_PHRASES = {}
 
+# Load short option translations (single-word/short-phrase entries)
+try:
+    from short_translations import SHORT_TRANSLATIONS
+    # Merge into EXTRA_PHRASES; existing PHRASE entries take priority
+    for k, v in SHORT_TRANSLATIONS.items():
+        if k not in EXTRA_PHRASES:
+            EXTRA_PHRASES[k] = v
+except ImportError:
+    pass
+
 def clean_input(text):
     """Clean input text"""
     if not text:
