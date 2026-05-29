@@ -71,6 +71,14 @@ for num_str in sorted(pdf_qs.keys(), key=lambda x: int(x)):
         zh_q = f"【第 {num} 題】{en_q[:60]}..."
         zh_explain = f"正確答案：{pdf_q['answer_str']}。本題詳細解析待補充。"
 
+    # Extract vocabulary from question text and options
+    try:
+        from vocabulary import extract_vocabulary
+        vocab_source = en_q + ' ' + ' '.join(en_opts)
+        vocab_list = extract_vocabulary(vocab_source)
+    except ImportError:
+        vocab_list = []
+
     integrated.append({
         "num": num,
         "q": en_q,
@@ -79,7 +87,8 @@ for num_str in sorted(pdf_qs.keys(), key=lambda x: int(x)):
         "zh": {
             "q": zh_q,
             "opts": zh_opts,
-            "explain": zh_explain
+            "explain": zh_explain,
+            "vocab": vocab_list
         }
     })
 

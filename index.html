@@ -466,7 +466,7 @@
         }
 
 
-                                                                                                        const questionPool = [
+                                                                                                                const questionPool = [
             { q: "Which of the following threat actors is the most likely to be hired by a foreign government to attack critical systems located in other countries?", options: ["Hacktivist", "Whistleblower", "Organized crime", "Unskilled attacker"], answer: [2], zh: {"q": "下列哪一種威脅行為者最有可能被外國政府雇用以攻擊位於其他國家的關鍵系統？","opts": ["駭客主義者","吹哨者","組織犯罪集團","技術不熟練攻擊者"],"explain": "組織犯罪集團有充足財務資源、技術能力與運作經驗，最容易被外國政府雇用執行國家利益相關攻擊（外包模式）。Nation-state 也常攻擊但本題強調「被雇用」即外包，最符合的就是組織犯罪。"} },
             { q: "Which of the following is used to add extra complexity before using a one-way data transformation algorithm?", options: ["Key stretching", "Data masking", "Steganography", "Salting"], answer: [3], zh: {"q": "下列哪一項是用來在使用單向資料轉換演算法（如雜湊）前增加額外複雜度？","opts": ["金鑰延展","資料遮罩","隱寫術","加鹽"],"explain": "Salting 在密碼雜湊前加入隨機字串，使相同密碼產生不同雜湊值，可抵禦彩虹表攻擊。Key stretching 是在加鹽後反覆雜湊增加破解成本，作用不同。"} },
             { q: "An employee clicked a link in an email from a payment website that asked the employee to update contact information. The employee entered the log-in information but received a \"page not found\" error message. Which of the following types of social engineering attacks occurred?", options: ["Brand impersonation", "Pretexting", "Typosquatting", "Phishing"], answer: [3], zh: {"q": "員工點擊付款網站郵件連結被要求更新聯絡資訊，輸入登入資訊後卻收到「找不到網頁」錯誤。這屬於哪種社交工程攻擊？","opts": ["品牌冒充","假借身分","錯字搶註","釣魚攻擊"],"explain": "透過郵件連結進入假網站並輸入帳密，是經典 Phishing。Pretexting 偏重編造情境劇本；Typosquatting 利用拼錯網域。本題關鍵是「郵件連結 + 輸入登入資訊」，即 Phishing 的特徵。"} },
@@ -1326,6 +1326,28 @@
                 const tag = isCorrect ? '✅ 正確' : '❌ 錯誤';
                 optionsHtml += `<div class="option-block ${cls}"><strong>${tag} - ${letters[i]}.</strong> ${opt}</div>`;
             });
+            // 構建單字區段（如有單字資料）
+            let vocabHtml = '';
+            if (z.vocab && z.vocab.length > 0) {
+                let vocabItems = '';
+                z.vocab.forEach(v => {
+                    vocabItems += `
+                        <div class="border-b border-purple-100 last:border-0 py-2">
+                            <div class="flex flex-wrap items-baseline gap-2">
+                                <span class="font-bold text-purple-900">${v.en}</span>
+                                <span class="text-gray-400">→</span>
+                                <span class="font-semibold text-purple-700">${v.zh}</span>
+                            </div>
+                            <p class="text-sm text-gray-700 mt-1">${v.desc}</p>
+                        </div>`;
+                });
+                vocabHtml = `
+                    <div class="bg-purple-50 p-4 rounded-xl border border-purple-200 shadow-sm">
+                        <h4 class="text-purple-900 mb-2">📚 重要單字（${z.vocab.length} 個）</h4>
+                        <div class="divide-y divide-purple-100">${vocabItems}</div>
+                    </div>`;
+            }
+
             return `
                 <div class="zh-explanation space-y-3">
                     <div class="bg-blue-50 p-4 rounded-xl border border-blue-200 shadow-sm">
@@ -1340,6 +1362,7 @@
                         <h4 class="text-green-900">💡 觀念解析</h4>
                         <div class="text-green-900 font-medium">${z.explain}</div>
                     </div>
+                    ${vocabHtml}
                 </div>`;
         }
 
